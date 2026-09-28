@@ -1,0 +1,47 @@
+{{ $u := .Site.Params }}
+<div class="utility-bar">
+  <div class="container utility-inner">
+    <div class="utility-left">
+      <a href="tel:{{ $u.phone }}" class="utility-phone">
+        <span class="icon-sm">{{ partial "icon.html" "phone" }}</span>
+        {{ $u.phone }}
+      </a>
+      <a href="/pay-bill/" class="utility-link">Pay My Bill</a>
+      <a href="/patient-resources/" class="utility-link">Patient Resources</a>
+    </div>
+    <div class="utility-right">
+      <span class="utility-follow">Follow @bionicpo</span>
+      <a href="#" class="utility-social" aria-label="Facebook">{{ partial "icon.html" "facebook" }}</a>
+      <a href="#" class="utility-social" aria-label="Instagram">{{ partial "icon.html" "instagram" }}</a>
+      <a href="#" class="utility-social" aria-label="LinkedIn">{{ partial "icon.html" "linkedin" }}</a>
+    </div>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="brand">
+      <img src="/images/Bionic-logo.avif" alt="Bionic Prosthetics &amp; Orthotics" class="brand-logo">
+    </a>
+
+    <nav class="main-nav" aria-label="Main navigation">
+      <ul>
+        {{ range .Site.Menus.main }}
+        <li><a href="{{ .URL }}" class="nav-link">{{ .Name }}{{ if in (slice "Prosthetics" "Orthotics" "Our Story" "Resources") .Name }}<span class="nav-chevron">{{ partial "icon.html" "chevron" }}</span>{{ end }}</a></li>
+        {{ end }}
+      </ul>
+    </nav>
+
+    <div class="header-cta">
+      <a href="/locations/" class="btn btn-outline-dark">
+        <span class="icon-sm">{{ partial "icon.html" "pin" }}</span>
+        Find a Clinic
+      </a>
+      <a href="/contact/" class="btn btn-primary">Request Consultation</a>
+    </div>
+
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>

@@ -1,0 +1,239 @@
+{{ define "main" }}
+{{ $hero := .Params.hero }}
+{{ $stats := .Params.stats }}
+{{ $about := .Params.about }}
+{{ $credentials := .Params.credentials }}
+{{ $services := .Params.services }}
+{{ $technology := .Params.technology }}
+{{ $findClinic := .Params.find_clinic }}
+{{ $testimonials := .Params.testimonials }}
+{{ $resources := .Params.resources }}
+{{ $finalCta := .Params.final_cta }}
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-copy reveal" data-reveal="fade">
+      <span class="eyebrow eyebrow-accent">
+        <span class="icon-sm">{{ partial "icon.html" "star" }}</span>
+        {{ $hero.eyebrow }}
+      </span>
+      <h1>{{ $hero.headline_start }} <span class="text-highlight">{{ $hero.headline_highlight }}</span></h1>
+      <p class="hero-subhead">{{ $hero.subhead }}</p>
+      <div class="hero-actions">
+        <a href="{{ $hero.cta_primary_link }}" class="btn btn-primary btn-lg">{{ $hero.cta_primary }}</a>
+        <a href="{{ $hero.cta_secondary_link }}" class="btn btn-outline-dark btn-lg">{{ $hero.cta_secondary }}</a>
+      </div>
+      <div class="quick-pills">
+        {{ range $hero.quick_links }}
+        <a href="{{ .link }}" class="quick-pill">
+          <span class="pill-ic">{{ partial "icon.html" .icon }}</span>
+          {{ .label }}
+        </a>
+        {{ end }}
+      </div>
+    </div>
+    <div class="hero-media reveal" data-reveal="up">
+      <img src="{{ $hero.image }}" alt="{{ $hero.image_alt }}" width="800" height="600" loading="eager">
+      <div class="hero-badge">
+        <span class="hero-badge-icon">{{ partial "icon.html" "check" }}</span>
+        <div>
+          <strong>{{ $hero.badge_title }}</strong>
+          <span>{{ $hero.badge_text }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== STAT / TRUST BAND ===== -->
+<section class="stat-band">
+  <div class="container stat-grid">
+    {{ range $stats }}
+    <div class="stat-item">
+      <div class="stat-number">{{ .number }}</div>
+      <div class="stat-label">{{ .label }}</div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<!-- ===== ABOUT / EMPOWERING ===== -->
+<section class="section about-section">
+  <div class="container about-inner">
+    <div class="about-media reveal" data-reveal="up">
+      <img src="{{ $about.image }}" alt="{{ $about.image_alt }}" width="700" height="700" loading="lazy">
+    </div>
+    <div class="about-copy reveal" data-reveal="fade">
+      <span class="eyebrow">{{ $about.eyebrow }}</span>
+      <h2>{{ $about.title }}</h2>
+      <p class="lead">{{ $about.body }}</p>
+      <a href="{{ $about.cta_link }}" class="btn btn-outline-dark">{{ $about.cta_text }}</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CREDENTIALS / SINCE 2007 ===== -->
+<section class="section credentials-section">
+  <div class="container credentials-inner">
+    <div class="credentials-copy reveal" data-reveal="fade">
+      <span class="eyebrow">{{ $credentials.eyebrow }}</span>
+      <h2>{{ $credentials.title }}</h2>
+      <p class="lead">{{ $credentials.body }}</p>
+      <div class="about-points">
+        {{ range $credentials.points }}
+        <div class="about-point">
+          <span class="point-check">{{ partial "icon.html" "check" }}</span>
+          <span>{{ . }}</span>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    <div class="credentials-media reveal" data-reveal="up">
+      <img src="{{ $credentials.image }}" alt="{{ $credentials.image_alt }}" width="700" height="500" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section class="section services-section">
+  <div class="container">
+    <div class="section-heading reveal" data-reveal="fade">
+      <span class="eyebrow">{{ $services.eyebrow }}</span>
+      <h2>{{ $services.title }}</h2>
+      <p class="lead">{{ $services.body }}</p>
+    </div>
+    <div class="card-grid services-grid">
+      {{ range $i, $item := $services.items }}
+      <a href="{{ .link }}" class="service-card reveal" data-reveal="up" style="--delay: {{ mul $i 0.1 }}s">
+        <div class="service-icon service-icon-{{ .icon }}">{{ partial "icon.html" .icon }}</div>
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+        <span class="card-link">Learn more <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span></span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- ===== TECHNOLOGY BANNER ===== -->
+<section class="technology-band">
+  <div class="container technology-inner">
+    <div class="technology-copy reveal" data-reveal="fade">
+      <span class="eyebrow eyebrow-light">{{ $technology.eyebrow }}</span>
+      <h2>{{ $technology.title }}</h2>
+      <p>{{ $technology.body }}</p>
+      <a href="{{ $technology.cta_link }}" class="btn btn-primary btn-lg">{{ $technology.cta_text }}</a>
+    </div>
+    <div class="technology-media reveal" data-reveal="up">
+      <img src="{{ $technology.image }}" alt="{{ $technology.image_alt }}" width="700" height="500" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<!-- ===== FIND A CLINIC ===== -->
+<section class="section find-clinic-section">
+  <div class="container find-clinic-inner">
+    <div class="find-clinic-copy reveal" data-reveal="fade">
+      <span class="eyebrow">{{ $findClinic.eyebrow }}</span>
+      <h2>{{ $findClinic.title }}</h2>
+      <p class="lead">{{ $findClinic.body }}</p>
+      <form class="clinic-search-form" role="search">
+        <label for="clinic-search" class="visually-hidden">Search by ZIP, city, or state</label>
+        <input id="clinic-search" type="text" placeholder="{{ $findClinic.search_placeholder }}">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+      <a href="#" class="current-location-link">
+        <span class="icon-sm">{{ partial "icon.html" "location" }}</span>
+        {{ $findClinic.location_text }}
+      </a>
+    </div>
+    <div class="find-clinic-panel reveal" data-reveal="up">
+      <div class="state-chip-grid">
+        {{ range $findClinic.states }}
+        <a href="/locations/{{ . | urlize }}/" class="state-chip">{{ . }}</a>
+        {{ end }}
+      </div>
+      <div class="clinic-map-media">
+        <img src="{{ $findClinic.map_image }}" alt="Map of clinic locations across our service states" width="700" height="400" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="section testimonials-section">
+  <div class="container testimonials-inner">
+    <div class="testimonials-media reveal" data-reveal="up">
+      <img src="{{ $testimonials.image }}" alt="{{ $testimonials.image_alt }}" width="900" height="500" loading="lazy">
+    </div>
+    <div class="testimonials-body">
+      <div class="section-heading reveal" data-reveal="fade">
+        <span class="eyebrow">{{ $testimonials.eyebrow }}</span>
+        <h2>{{ $testimonials.title }}</h2>
+      </div>
+      <div class="card-grid testimonial-grid">
+        {{ range $i, $item := $testimonials.items }}
+        <div class="testimonial-card reveal" data-reveal="up" style="--delay: {{ mul $i 0.1 }}s">
+          <div class="star-row" aria-hidden="true">
+            {{ range seq 5 }}<span class="star-ic">{{ partial "icon.html" "star" }}</span>{{ end }}
+          </div>
+          <p class="testimonial-quote">&ldquo;{{ .quote }}&rdquo;</p>
+          <div class="testimonial-person">
+            <span class="testimonial-avatar" aria-hidden="true"></span>
+            <div>
+              <strong>{{ .name }}</strong>
+              <span>{{ .role }}</span>
+            </div>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+      <a href="{{ $testimonials.cta_link }}" class="resources-view-all">
+        {{ $testimonials.cta_text }}
+        <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== RESOURCES ===== -->
+<section class="section resources-section">
+  <div class="container">
+    <div class="resources-heading reveal" data-reveal="fade">
+      <div>
+        <span class="eyebrow">{{ $resources.eyebrow }}</span>
+        <h2>{{ $resources.title }}</h2>
+      </div>
+      <a href="{{ $resources.cta_link }}" class="resources-view-all">
+        {{ $resources.cta_text }}
+        <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span>
+      </a>
+    </div>
+    <div class="card-grid resources-grid">
+      {{ range $i, $item := $resources.items }}
+      <a href="{{ .link }}" class="blog-card reveal" data-reveal="up" style="--delay: {{ mul $i 0.1 }}s">
+        <div class="blog-card-media blog-card-media-{{ $i }}"></div>
+        <div class="blog-card-body">
+          <span class="blog-card-category">{{ .category }}</span>
+          <h3>{{ .title }}</h3>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<!-- ===== FINAL CTA ===== -->
+<section class="final-cta reveal" data-reveal="fade">
+  <div class="container final-cta-inner">
+    <h2>{{ $finalCta.title }}</h2>
+    <p>{{ $finalCta.body }}</p>
+    <div class="final-cta-actions">
+      <a href="{{ $finalCta.cta_primary_link }}" class="btn btn-primary btn-lg">{{ $finalCta.cta_primary }}</a>
+      <a href="{{ $finalCta.cta_secondary_link }}" class="btn btn-outline btn-lg">{{ $finalCta.cta_secondary }}</a>
+    </div>
+    <a href="{{ $finalCta.cta_tertiary_link }}" class="final-cta-tertiary">{{ $finalCta.cta_tertiary }}</a>
+  </div>
+</section>
+{{ end }}

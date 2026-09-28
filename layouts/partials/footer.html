@@ -1,0 +1,58 @@
+{{ $p := .Site.Params }}
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col footer-brand">
+      <a href="/" class="footer-brand-mark">
+        <img src="/images/Bionic-logo-footer.avif" alt="Bionic Prosthetics &amp; Orthotics" class="footer-logo">
+      </a>
+      <p>Personalized prosthetic and orthotic care — close to home, across 12 states.</p>
+      <div class="footer-contact">
+        {{ $p.phone }}<br>
+        {{ $p.email }}<br>
+        {{ $p.address }}
+      </div>
+      <div class="social-links" aria-label="Social media">
+        <a href="#" aria-label="Facebook" class="footer-link">{{ partial "icon.html" "facebook" }}</a>
+        <a href="#" aria-label="Instagram" class="footer-link">{{ partial "icon.html" "instagram" }}</a>
+        <a href="#" aria-label="LinkedIn" class="footer-link">{{ partial "icon.html" "linkedin" }}</a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Quick Links</h4>
+      <ul>
+        {{ range .Site.Menus.footerQuick }}
+        <li><a href="{{ .URL }}" class="footer-link">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        {{ range .Site.Menus.footerServices }}
+        <li><a href="{{ .URL }}" class="footer-link">{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Stay Updated</h4>
+      <p>Get monthly care tips and clinic news from Bionic Beats.</p>
+      <form class="footer-newsletter">
+        <label for="footer-email" class="visually-hidden">Email address</label>
+        <input id="footer-email" type="email" placeholder="Email address">
+        <button type="submit" class="btn btn-primary">Join</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>&copy; {{ now.Year }} Bionic Prosthetics &amp; Orthotics Group LLC. All Rights Reserved.</p>
+    <div class="footer-bottom-links">
+      <a href="/privacy-policy/" class="footer-link">Privacy Policy</a>
+      <a href="/terms-of-use/" class="footer-link">Terms of Use</a>
+      <a href="/accredited/" class="footer-link">Accredited &mdash; ABC</a>
+    </div>
+  </div>
+</footer>

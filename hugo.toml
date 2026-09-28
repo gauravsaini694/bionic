@@ -1,0 +1,101 @@
+baseURL = "https://example.com/"
+languageCode = "en-us"
+locale = "en-us"
+title = "Bionic Prosthetics & Orthotics"
+
+[params]
+  brandColor = "#1D3F96"
+  accentColor = "#F2994A"
+  phone = "1-855-524-6642"
+  email = "information@bionicpo.com"
+  address = "8695 Connecticut St, Suite E, Merrillville, Indiana 46410"
+
+[[menu.main]]
+  name = "Our Story"
+  url = "/about/"
+  weight = 10
+
+[[menu.main]]
+  name = "Prosthetics"
+  url = "/prosthetics/"
+  weight = 20
+
+[[menu.main]]
+  name = "Orthotics"
+  url = "/orthotics/"
+  weight = 30
+
+[[menu.main]]
+  name = "Locations"
+  url = "/locations/"
+  weight = 40
+
+[[menu.main]]
+  name = "Resources"
+  url = "/resources/"
+  weight = 50
+
+[[menu.main]]
+  name = "Careers"
+  url = "/careers/"
+  weight = 60
+
+[[menu.footerServices]]
+  name = "Prosthetics"
+  url = "/prosthetics/"
+  weight = 10
+
+[[menu.footerServices]]
+  name = "Orthotics"
+  url = "/orthotics/"
+  weight = 20
+
+[[menu.footerServices]]
+  name = "Diabetic Foot Care"
+  url = "/diabetic-foot-care/"
+  weight = 30
+
+[[menu.footerServices]]
+  name = "Pediatric Care"
+  url = "/pediatric/"
+  weight = 40
+
+[[menu.footerServices]]
+  name = "Find a Clinic"
+  url = "/locations/"
+  weight = 50
+
+[[menu.footerServices]]
+  name = "Pay My Bill"
+  url = "/pay-bill/"
+  weight = 60
+
+[[menu.footerQuick]]
+  name = "About Us"
+  url = "/about/"
+  weight = 10
+
+[[menu.footerQuick]]
+  name = "Book Appointment"
+  url = "/resources/pay-bill/"
+  weight = 20
+
+[[menu.footerQuick]]
+  name = "Find Nearest Clinic"
+  url = "/locations/"
+  weight = 30
+
+[[menu.footerQuick]]
+  name = "Clinical Team"
+  url = "/about/clinical-team/"
+  weight = 40
+
+[[menu.footerQuick]]
+  name = "Patient Resources"
+  url = "/resources/patient-resources/"
+  weight = 50
+
+[[menu.footerQuick]]
+  name = "Blog"
+  url = "/resources/blog/"
+  weight = 60
