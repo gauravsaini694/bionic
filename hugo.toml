@@ -12,18 +12,98 @@ title = "Bionic Prosthetics & Orthotics"
 
 [[menu.main]]
   name = "Our Story"
+  identifier = "our-story"
   url = "/about/"
   weight = 10
 
 [[menu.main]]
+  name = "About Us"
+  parent = "our-story"
+  url = "/about/"
+  weight = 10
+  params = { icon = "certified", desc = "Who we are and our mission" }
+
+[[menu.main]]
+  name = "Clinical Team"
+  parent = "our-story"
+  url = "/about/clinical-team/"
+  weight = 20
+  params = { icon = "people", desc = "Meet our board-certified clinicians" }
+
+[[menu.main]]
+  name = "Success Stories"
+  parent = "our-story"
+  url = "/about/success-stories/"
+  weight = 30
+  params = { icon = "star", desc = "Real patient outcomes and stories" }
+
+[[menu.main]]
   name = "Prosthetics"
+  identifier = "prosthetics"
   url = "/prosthetics/"
   weight = 20
 
 [[menu.main]]
+  name = "All Prosthetics"
+  parent = "prosthetics"
+  url = "/prosthetics/"
+  weight = 10
+  params = { icon = "prosthetic", desc = "Explore all prosthetic care options" }
+
+[[menu.main]]
+  name = "Upper Limb"
+  parent = "prosthetics"
+  url = "/prosthetics/upper-limb/"
+  weight = 20
+  params = { icon = "personalized", desc = "Arm and hand prosthetic solutions" }
+
+[[menu.main]]
+  name = "Lower Limb"
+  parent = "prosthetics"
+  url = "/prosthetics/lower-limb/"
+  weight = 30
+  params = { icon = "technology", desc = "Leg and foot prosthetic solutions" }
+
+[[menu.main]]
   name = "Orthotics"
+  identifier = "orthotics"
   url = "/orthotics/"
   weight = 30
+
+[[menu.main]]
+  name = "All Orthotics"
+  parent = "orthotics"
+  url = "/orthotics/"
+  weight = 10
+  params = { icon = "orthotic", desc = "Explore all orthotic care options" }
+
+[[menu.main]]
+  name = "Cranial & Spinal"
+  parent = "orthotics"
+  url = "/orthotics/cranial-spinal/"
+  weight = 20
+  params = { icon = "pediatric", desc = "Helmets and spinal bracing support" }
+
+[[menu.main]]
+  name = "Upper Extremity"
+  parent = "orthotics"
+  url = "/orthotics/upper-extremity/"
+  weight = 30
+  params = { icon = "personalized", desc = "Arm, wrist and hand bracing" }
+
+[[menu.main]]
+  name = "Lower Extremity"
+  parent = "orthotics"
+  url = "/orthotics/lower-extremity/"
+  weight = 40
+  params = { icon = "technology", desc = "Leg, knee and ankle bracing" }
+
+[[menu.main]]
+  name = "Diabetic Foot Care"
+  parent = "orthotics"
+  url = "/orthotics/diabetic-foot-care/"
+  weight = 50
+  params = { icon = "diabetic", desc = "Protective footwear and foot care" }
 
 [[menu.main]]
   name = "Locations"
@@ -32,13 +112,85 @@ title = "Bionic Prosthetics & Orthotics"
 
 [[menu.main]]
   name = "Resources"
+  identifier = "resources"
   url = "/resources/"
   weight = 50
 
 [[menu.main]]
+  name = "All Resources"
+  parent = "resources"
+  url = "/resources/"
+  weight = 10
+  params = { icon = "insurance", desc = "Browse all patient resources" }
+
+[[menu.main]]
+  name = "Pay My Bill"
+  parent = "resources"
+  url = "/resources/pay-bill/"
+  weight = 20
+  params = { icon = "card", desc = "Book an appointment or pay online" }
+
+[[menu.main]]
+  name = "Patient Resources"
+  parent = "resources"
+  url = "/resources/patient-resources/"
+  weight = 30
+  params = { icon = "personalized", desc = "Forms, insurance info and guides" }
+
+[[menu.main]]
+  name = "FAQs"
+  parent = "resources"
+  url = "/resources/faqs/"
+  weight = 40
+  params = { icon = "check", desc = "Answers to common questions" }
+
+[[menu.main]]
+  name = "Blog"
+  parent = "resources"
+  url = "/resources/blog/"
+  weight = 50
+  params = { icon = "photo", desc = "Patient education and real stories" }
+
+[[menu.main]]
+  name = "Bionic Beats"
+  parent = "resources"
+  url = "/resources/bionic-beats/"
+  weight = 60
+  params = { icon = "star", desc = "Our podcast and video series" }
+
+[[menu.main]]
   name = "Careers"
+  identifier = "careers"
   url = "/careers/"
   weight = 60
+
+[[menu.main]]
+  name = "All Careers"
+  parent = "careers"
+  url = "/careers/"
+  weight = 10
+  params = { icon = "people", desc = "Explore careers at Bionic" }
+
+[[menu.main]]
+  name = "Grow With Us"
+  parent = "careers"
+  url = "/careers/grow/"
+  weight = 20
+  params = { icon = "personalized", desc = "Open roles for experienced clinicians" }
+
+[[menu.main]]
+  name = "Residency Program"
+  parent = "careers"
+  url = "/careers/residency-program/"
+  weight = 30
+  params = { icon = "certified", desc = "Start your clinical career with us" }
+
+[[menu.main]]
+  name = "Shadowing Opportunities"
+  parent = "careers"
+  url = "/careers/shadowing-opportunities/"
+  weight = 40
+  params = { icon = "people", desc = "Observe our clinical team in action" }
 
 [[menu.footerServices]]
   name = "Prosthetics"
@@ -52,23 +204,18 @@ title = "Bionic Prosthetics & Orthotics"
 
 [[menu.footerServices]]
   name = "Diabetic Foot Care"
-  url = "/diabetic-foot-care/"
+  url = "/orthotics/diabetic-foot-care/"
   weight = 30
-
-[[menu.footerServices]]
-  name = "Pediatric Care"
-  url = "/pediatric/"
-  weight = 40
 
 [[menu.footerServices]]
   name = "Find a Clinic"
   url = "/locations/"
-  weight = 50
+  weight = 40
 
 [[menu.footerServices]]
   name = "Pay My Bill"
-  url = "/pay-bill/"
-  weight = 60
+  url = "/resources/pay-bill/"
+  weight = 50
 
 [[menu.footerQuick]]
   name = "About Us"

@@ -6,8 +6,8 @@
         <span class="icon-sm">{{ partial "icon.html" "phone" }}</span>
         {{ $u.phone }}
       </a>
-      <a href="/pay-bill/" class="utility-link">Pay My Bill</a>
-      <a href="/patient-resources/" class="utility-link">Patient Resources</a>
+      <a href="/resources/pay-bill/" class="utility-link">Pay My Bill</a>
+      <a href="/resources/patient-resources/" class="utility-link">Patient Resources</a>
     </div>
     <div class="utility-right">
       <span class="utility-follow">Follow @bionicpo</span>
@@ -25,9 +25,32 @@
     </a>
 
     <nav class="main-nav" aria-label="Main navigation">
-      <ul>
+      <ul >
         {{ range .Site.Menus.main }}
-        <li><a href="{{ .URL }}" class="nav-link">{{ .Name }}{{ if in (slice "Prosthetics" "Orthotics" "Our Story" "Resources") .Name }}<span class="nav-chevron">{{ partial "icon.html" "chevron" }}</span>{{ end }}</a></li>
+        {{ if .Children }}
+        <li class="has-dropdown">
+          <button type="button" class="nav-link nav-link-toggle" aria-expanded="false">
+            {{ .Name }}<span class="nav-chevron">{{ partial "icon.html" "chevron" }}</span>
+          </button>
+          <div class="dropdown-panel">
+            <ul class="dropdown-menu">
+              {{ range .Children }}
+              <li>
+                <a href="{{ .URL }}" class="dropdown-item">
+                  <span class="dropdown-item-icon">{{ partial "icon.html" (.Params.icon | default "check") }}</span>
+                  <span class="dropdown-item-text">
+                    <span class="dropdown-item-title">{{ .Name }}</span>
+                    {{ with .Params.desc }}<span class="dropdown-item-desc">{{ . }}</span>{{ end }}
+                  </span>
+                </a>
+              </li>
+              {{ end }}
+            </ul>
+          </div>
+        </li>
+        {{ else }}
+        <li><a href="{{ .URL }}" class="nav-link">{{ .Name }}</a></li>
+        {{ end }}
         {{ end }}
       </ul>
     </nav>

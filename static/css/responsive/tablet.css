@@ -28,10 +28,25 @@ h2 { font-size: 28px; }
 }
 .main-nav.is-open { display: block; padding: 8px 24px 20px; }
 .main-nav ul { flex-direction: column; gap: 4px; }
-.nav-link { padding: 12px 0; justify-content: space-between; border-bottom: 1px solid var(--border-soft); }
+.nav-link,
+.nav-link-toggle { padding: 12px 0; justify-content: space-between; border-bottom: 1px solid var(--border-soft); width: 100%; text-align: left; }
 .site-header { position: relative; }
 .header-cta .btn-outline-dark { display: none; }
 .nav-toggle { display: flex; }
+
+/* Dropdowns become inline/stacked inside the mobile menu */
+.has-dropdown { position: static; }
+.dropdown-panel {
+  position: static; opacity: 1; visibility: visible; transform: none;
+  width: auto;
+  display: none;
+  margin: 4px 0 8px; padding: 0 0 0 14px;
+  border: none; box-shadow: none; border-radius: 0;
+}
+.has-dropdown.is-open .dropdown-panel { display: block; }
+.dropdown-item { padding: 10px 0; border-bottom: 1px solid var(--border-soft); border-radius: 0; }
+.dropdown-item-title { white-space: normal; }
+.has-dropdown::after { content: none; }
 
 /* Hero */
 .hero-inner { flex-direction: column; align-items: stretch; gap: 40px; }

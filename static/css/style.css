@@ -175,15 +175,70 @@ button { font-family: inherit; cursor: pointer; }
 .brand { display: flex; align-items: center; gap: 10px; flex: none; }
 .brand-logo { height: 46px; width: auto; display: block; }
 
-.main-nav ul { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; }
+ .main-nav > ul {
+     display: flex;
+     gap: 30px;
+     list-style: none;
+     margin: 0;
+     padding: 0;
+   }
 .nav-link {
   font-size: 14.5px; font-weight: 600; color: #000;
   display: flex; align-items: center; gap: 5px;
   transition: color 0.15s ease;
 }
 .nav-link:hover { color: var(--accent-hover); }
-.nav-chevron { width: 10px; height: 10px; display: flex; color: var(--ink-faint); }
+.nav-link-toggle { background: none; border: 0; padding: 0; font-family: inherit; }
+.nav-chevron { width: 10px; height: 10px; display: flex; color: var(--ink-faint); transition: transform 0.15s ease; }
 .nav-chevron svg { width: 100%; height: 100%; }
+
+.has-dropdown { position: relative; }
+.dropdown-panel {
+  position: absolute; top: 100%; left: 0;
+  width: 320px;
+  margin: 14px 0 0; padding: 12px;
+  background: #fff; border: 1px solid var(--border); border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-float);
+  opacity: 0; visibility: hidden; transform: translateY(6px);
+  transition: opacity 0.15s ease, transform 0.15s ease, visibility 0.15s ease;
+  z-index: 40;
+}
+.has-dropdown:hover .dropdown-panel,
+.has-dropdown:focus-within .dropdown-panel,
+.has-dropdown.is-open .dropdown-panel {
+  opacity: 1; visibility: visible; transform: translateY(0);
+}
+.has-dropdown:hover .nav-chevron,
+.has-dropdown:focus-within .nav-chevron,
+.has-dropdown.is-open .nav-chevron { transform: rotate(180deg); }
+
+.dropdown-menu {
+  list-style: none; margin: 0; padding: 0;
+  display: block;
+}
+.dropdown-menu > li { min-width: 0; margin: 0; }
+
+.dropdown-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 10px; border-radius: 10px;
+  min-width: 0;
+  transition: background 0.15s ease;
+}
+.dropdown-item:hover { background: var(--bg-cream); }
+.dropdown-item-icon {
+  width: 38px; height: 38px; border-radius: 10px; flex: none;
+  background: var(--brand-light); color: var(--brand);
+  display: flex; align-items: center; justify-content: center;
+}
+.dropdown-item-icon svg { width: 19px; height: 19px; }
+.dropdown-item-text { display: flex; flex-direction: column; gap: 2px; min-width: 0; flex: 1; }
+.dropdown-item-title { font-size: 13.5px; font-weight: 700; color: var(--ink-strong); white-space: normal; }
+.dropdown-item-desc { font-size: 12px; line-height: 1.4; color: var(--ink-faint); white-space: normal; }
+
+/* Invisible bridge so the pointer can travel from the trigger down into the menu without it closing */
+.has-dropdown::after {
+  content: ""; position: absolute; left: 0; right: 0; top: 100%; height: 14px;
+}
 
 .header-cta { display: flex; align-items: center; gap: 12px; flex: none; }
 
