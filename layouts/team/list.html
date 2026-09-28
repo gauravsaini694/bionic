@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{ partial "page-sections.html" . }}
+<section class="section">
+  <div class="container">
+    <div class="section-heading reveal" data-reveal="fade">
+      <span class="eyebrow">FULL DIRECTORY</span>
+      <h2>Our Clinicians</h2>
+    </div>
+    <div class="card-grid team-grid">
+      {{ range .Pages.ByTitle }}
+      <a href="{{ .RelPermalink }}" class="team-card reveal" data-reveal="up">
+        <div class="team-avatar">
+          {{ if .Params.photo }}
+            <img src="{{ .Params.photo }}" alt="{{ .Params.name }}">
+          {{ else }}
+            {{ with .Params.name }}{{ substr . 0 1 }}{{ end }}
+          {{ end }}
+        </div>
+        <h3>{{ .Params.name }}</h3>
+        {{ with .Params.credentials }}<div class="team-credentials">{{ . }}</div>{{ end }}
+        {{ with .Params.role }}<div class="team-role">{{ . }}</div>{{ end }}
+        {{ with .Params.location }}<div class="team-location">{{ . }}</div>{{ end }}
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,41 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <span class="eyebrow eyebrow-light">FIND CARE NEAR YOU</span><br>
+    <h1>Bionic Clinics in {{ .Title }}</h1>
+    {{ with .Params.hero.subhead }}<p class="page-hero-subhead">{{ . }}</p>{{ end }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <a href="/locations/" class="article-back">
+      <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span> Back to All Locations
+    </a>
+    <div class="section-heading reveal" data-reveal="fade">
+      <span class="eyebrow">OUR CLINICS</span>
+      <h2>Clinics in {{ .Title }}</h2>
+    </div>
+    <div class="card-grid clinic-list-grid">
+      {{ range .Pages.ByTitle }}
+      <a href="{{ .RelPermalink }}" class="clinic-card reveal" data-reveal="up">
+        <h3>{{ .Title }}</h3>
+        {{ with .Params.address }}<p>{{ partial "icon.html" "pin" }} {{ . }}</p>{{ end }}
+        {{ with .Params.phone }}<p>{{ partial "icon.html" "phone" }} {{ . }}</p>{{ end }}
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="final-cta reveal" data-reveal="fade">
+  <div class="container final-cta-inner">
+    <h2>Ready to Get Started?</h2>
+    <p>Our {{ .Title }} team is ready to help you take the next step in your care.</p>
+    <div class="final-cta-actions">
+      <a href="/contact/" class="btn btn-primary btn-lg">Request a Consultation</a>
+      <a href="/locations/" class="btn btn-outline btn-lg">See All States</a>
+    </div>
+  </div>
+</section>
+{{ end }}

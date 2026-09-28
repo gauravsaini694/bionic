@@ -1,0 +1,44 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <span class="eyebrow eyebrow-light">BIONIC CLINIC</span><br>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.state }}<p class="page-hero-subhead">Serving {{ . }} and surrounding communities.</p>{{ end }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container about-inner">
+    <div class="about-copy reveal" data-reveal="fade">
+      <span class="eyebrow">VISIT US</span>
+      <h2>Clinic Details</h2>
+      {{ with .Params.description }}<p class="lead">{{ . }}</p>{{ end }}
+      <div class="clinic-info">
+        {{ with .Params.address }}
+        <div class="clinic-info-row"><span class="icon-sm">{{ partial "icon.html" "pin" }}</span> {{ . }}</div>
+        {{ end }}
+        {{ with .Params.phone }}
+        <div class="clinic-info-row"><span class="icon-sm">{{ partial "icon.html" "phone" }}</span> {{ . }}</div>
+        {{ end }}
+        {{ with .Params.hours }}
+        <div class="clinic-info-row"><span class="icon-sm">{{ partial "icon.html" "check" }}</span> {{ . }}</div>
+        {{ end }}
+      </div>
+    </div>
+    <div class="about-media reveal" data-reveal="up">
+      <img src="{{ .Params.image | default "/images/clinic-map.svg" }}" alt="Map of {{ .Title }} clinic area" width="700" height="500" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section class="final-cta reveal" data-reveal="fade">
+  <div class="container final-cta-inner">
+    <h2>Ready to Visit Our {{ .Title }} Clinic?</h2>
+    <p>Request a consultation and our team will help you schedule your visit.</p>
+    <div class="final-cta-actions">
+      <a href="/contact/" class="btn btn-primary btn-lg">Request a Consultation</a>
+      <a href="{{ .Parent.RelPermalink }}" class="btn btn-outline btn-lg">See Other {{ .Params.state }} Clinics</a>
+    </div>
+  </div>
+</section>
+{{ end }}

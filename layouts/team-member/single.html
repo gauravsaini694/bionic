@@ -1,0 +1,44 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <span class="eyebrow eyebrow-light">CLINICAL TEAM</span><br>
+    <h1>{{ .Params.name }}</h1>
+    {{ with .Params.credentials }}<p class="page-hero-subhead">{{ . }}</p>{{ end }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container" style="max-width: 780px;">
+    <a href="/about/clinical-team/" class="article-back">
+      <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span> Back to Clinical Team
+    </a>
+    <div class="team-profile-header">
+      <div class="team-profile-avatar">
+        {{ if .Params.photo }}
+          <img src="{{ .Params.photo }}" alt="{{ .Params.name }}">
+        {{ else }}
+          {{ with .Params.name }}{{ substr . 0 1 }}{{ end }}
+        {{ end }}
+      </div>
+      <div class="team-profile-meta">
+        {{ with .Params.role }}<div class="team-role">{{ . }}</div>{{ end }}
+        {{ with .Params.location }}<div class="team-location">{{ partial "icon.html" "pin" }} {{ . }}</div>{{ end }}
+      </div>
+    </div>
+    <div class="article-body">
+      {{ with .Params.bio }}{{ . | safeHTML }}{{ else }}{{ .Content }}{{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="final-cta reveal" data-reveal="fade">
+  <div class="container final-cta-inner">
+    <h2>Ready to Take the Next Step?</h2>
+    <p>Connect with {{ .Params.name }} or another certified clinician near you.</p>
+    <div class="final-cta-actions">
+      <a href="/contact/" class="btn btn-primary btn-lg">Request a Consultation</a>
+      <a href="/locations/" class="btn btn-outline btn-lg">Find a Location Near You</a>
+    </div>
+  </div>
+</section>
+{{ end }}

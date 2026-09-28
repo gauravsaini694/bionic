@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{ partial "page-sections.html" . }}
+<section class="section resources-section">
+  <div class="container">
+    <div class="section-heading reveal" data-reveal="fade">
+      <span class="eyebrow">ALL ARTICLES</span>
+      <h2>Latest from the Blog</h2>
+    </div>
+    <div class="card-grid resources-grid">
+      {{ range .Pages.ByDate.Reverse }}
+      <a href="{{ .RelPermalink }}" class="blog-card reveal" data-reveal="up">
+        <div class="blog-card-media" {{ with .Params.image }}style="background-image:url('{{ . }}');background-size:cover;background-position:center;"{{ end }}></div>
+        <div class="blog-card-body">
+          {{ with .Params.category }}<span class="blog-card-category">{{ . }}</span>{{ end }}
+          <h3>{{ .Title }}</h3>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}

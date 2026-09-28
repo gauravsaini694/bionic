@@ -1,0 +1,151 @@
+{{ $hero := .Params.hero }}
+
+{{ with $hero }}
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    {{ with .eyebrow }}<span class="eyebrow eyebrow-light">{{ . }}</span><br>{{ end }}
+    <h1>{{ .title }}</h1>
+    {{ with .subhead }}<p class="page-hero-subhead">{{ . }}</p>{{ end }}
+    {{ if or .cta_primary .cta_secondary }}
+    <div class="page-hero-actions">
+      {{ with .cta_primary }}<a href="{{ $hero.cta_primary_link }}" class="btn btn-primary btn-lg">{{ . }}</a>{{ end }}
+      {{ with .cta_secondary }}<a href="{{ $hero.cta_secondary_link }}" class="btn btn-outline btn-lg">{{ . }}</a>{{ end }}
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+{{ range $i, $s := .Params.sections }}
+
+{{ if eq $s.type "text-image" }}
+<section class="section about-section text-image-section">
+  <div class="container about-inner {{ if eq $s.image_position "left" }}reverse{{ end }}">
+    <div class="about-media reveal" data-reveal="up">
+      <img src="{{ $s.image }}" alt="{{ $s.image_alt }}" width="700" height="500" loading="lazy">
+    </div>
+    <div class="about-copy reveal" data-reveal="fade">
+      {{ with $s.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
+      <h2>{{ $s.title }}</h2>
+      <p class="lead">{{ $s.body }}</p>
+      {{ with $s.cta_text }}<a href="{{ $s.cta_link }}" class="btn btn-outline-dark">{{ . }}</a>{{ end }}
+    </div>
+  </div>
+</section>
+
+{{ else if eq $s.type "points" }}
+<section class="section credentials-section">
+  <div class="container credentials-inner">
+    <div class="credentials-copy reveal" data-reveal="fade">
+      {{ with $s.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
+      <h2>{{ $s.title }}</h2>
+      {{ with $s.body }}<p class="lead">{{ . }}</p>{{ end }}
+      <div class="about-points">
+        {{ range $s.points }}
+        <div class="about-point">
+          <span class="point-check">{{ partial "icon.html" "check" }}</span>
+          <span>{{ . }}</span>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+    {{ with $s.image }}
+    <div class="credentials-media reveal" data-reveal="up">
+      <img src="{{ . }}" alt="{{ $s.image_alt }}" width="700" height="500" loading="lazy">
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+{{ else if eq $s.type "cards" }}
+<section class="section services-section">
+  <div class="container">
+    <div class="section-heading reveal" data-reveal="fade">
+      {{ with $s.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
+      <h2>{{ $s.title }}</h2>
+      {{ with $s.body }}<p class="lead">{{ . }}</p>{{ end }}
+    </div>
+    <div class="card-grid services-grid">
+      {{ range $j, $item := $s.items }}
+      <a href="{{ .link }}" class="service-card reveal" data-reveal="up" style="--delay: {{ mul $j 0.1 }}s">
+        <div class="service-icon service-icon-{{ .icon }}">{{ partial "icon.html" .icon }}</div>
+        <h3>{{ .title }}</h3>
+        <p>{{ .description }}</p>
+        <span class="card-link">Learn more <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span></span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ else if eq $s.type "stats" }}
+<section class="stat-band">
+  <div class="container stat-grid">
+    {{ range $s.items }}
+    <div class="stat-item">
+      <div class="stat-number">{{ .number }}</div>
+      <div class="stat-label">{{ .label }}</div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+{{ else if eq $s.type "chip-list" }}
+<section class="section find-clinic-section chip-list-section">
+  <div class="container find-clinic-inner">
+    <div class="find-clinic-copy reveal" data-reveal="fade">
+      {{ with $s.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
+      <h2>{{ $s.title }}</h2>
+      {{ with $s.body }}<p class="lead">{{ . }}</p>{{ end }}
+    </div>
+    <div class="find-clinic-panel reveal" data-reveal="up">
+      <div class="state-chip-grid">
+        {{ range $s.items }}
+        <a href="{{ .link }}" class="state-chip">{{ .label }}</a>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ else if eq $s.type "faq" }}
+<section class="section faq-section">
+  <div class="container">
+    <div class="section-heading reveal" data-reveal="fade">
+      {{ with $s.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
+      <h2>{{ $s.title }}</h2>
+      {{ with $s.body }}<p class="lead">{{ . }}</p>{{ end }}
+    </div>
+    <div class="faq-list">
+      {{ range $s.items }}
+      <details class="faq-item">
+        <summary>{{ .question }}</summary>
+        <p>{{ .answer }}</p>
+      </details>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ else if eq $s.type "cta-band" }}
+<section class="final-cta reveal" data-reveal="fade">
+  <div class="container final-cta-inner">
+    <h2>{{ $s.title }}</h2>
+    <p>{{ $s.body }}</p>
+    <div class="final-cta-actions">
+      {{ with $s.cta_primary }}<a href="{{ $s.cta_primary_link }}" class="btn btn-primary btn-lg">{{ . }}</a>{{ end }}
+      {{ with $s.cta_secondary }}<a href="{{ $s.cta_secondary_link }}" class="btn btn-outline btn-lg">{{ . }}</a>{{ end }}
+    </div>
+  </div>
+</section>
+
+{{ else if eq $s.type "richtext" }}
+<section class="section">
+  <div class="container" style="max-width: 780px;">
+    {{ with $s.title }}<h2>{{ . }}</h2>{{ end }}
+    <div class="lead">{{ $s.body | safeHTML }}</div>
+  </div>
+</section>
+
+{{ end }}
+{{ end }}

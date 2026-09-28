@@ -1,0 +1,34 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <span class="eyebrow eyebrow-light">BIONIC BLOG</span><br>
+    <h1>{{ .Title }}</h1>
+    <div class="article-meta">
+      {{ with .Params.category }}<span class="article-category-badge">{{ . }}</span>{{ end }}
+      {{ if not .Date.IsZero }}<span class="article-date">{{ .Date.Format "January 2, 2006" }}</span>{{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <a href="/resources/blog/" class="article-back">
+      <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span> Back to Blog
+    </a>
+    <div class="article-body">
+      {{ .Content }}
+    </div>
+  </div>
+</section>
+
+<section class="final-cta reveal" data-reveal="fade">
+  <div class="container final-cta-inner">
+    <h2>Have Questions About Your Care?</h2>
+    <p>Our certified clinical team is here to help guide your next step.</p>
+    <div class="final-cta-actions">
+      <a href="/contact/" class="btn btn-primary btn-lg">Request a Consultation</a>
+      <a href="/resources/blog/" class="btn btn-outline btn-lg">Read More Articles</a>
+    </div>
+  </div>
+</section>
+{{ end }}

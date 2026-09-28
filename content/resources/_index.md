@@ -1,0 +1,47 @@
+---
+title: "Resources"
+
+hero:
+  eyebrow: "RESOURCES"
+  title: "Support Beyond the Clinic"
+  subhead: "From booking an appointment to answering your everyday questions, our resource center is here to support you at every step."
+  cta_primary: "Request a Consultation"
+  cta_primary_link: "/contact/"
+  cta_secondary: "Find a Clinic Location"
+  cta_secondary_link: "/locations/"
+
+sections:
+  - type: "cards"
+    eyebrow: "EXPLORE OUR RESOURCES"
+    title: "Everything You Need, in One Place"
+    body: "Whether you need to pay a bill, find a support organization, or catch up on patient education, start here."
+    items:
+      - title: "Pay My Bill & Book Appointments"
+        description: "Complete new-patient paperwork ahead of time and securely pay your bill online."
+        icon: "insurance"
+        link: "/resources/pay-bill/"
+      - title: "Patient Resources"
+        description: "Forms, insurance information, and organizations offering support to amputees and their families."
+        icon: "personalized"
+        link: "/resources/patient-resources/"
+      - title: "FAQs"
+        description: "Answers to the questions we hear most often about consultations, prescriptions, and insurance."
+        icon: "check"
+        link: "/resources/faqs/"
+      - title: "Blog"
+        description: "Patient education, real stories, and practical guidance for living well with a prosthetic or orthotic device."
+        icon: "photo"
+        link: "/resources/blog/"
+      - title: "Bionic Beats"
+        description: "Our monthly newsletter with updates from across the Bionic family."
+        icon: "star"
+        link: "/resources/bionic-beats/"
+
+  - type: "cta-band"
+    title: "Can't Find What You're Looking For?"
+    body: "Our team is happy to help point you in the right direction. Reach out anytime."
+    cta_primary: "Contact Us"
+    cta_primary_link: "/contact/"
+    cta_secondary: "Find a Location Near You"
+    cta_secondary_link: "/locations/"
+---
