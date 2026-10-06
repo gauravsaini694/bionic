@@ -1,0 +1,24 @@
+{{- /* Responsive image. Context: dict "src" "alt" ["class" "loading" "sizes" "width" "height"].
+       Raster images found under static/images are converted to WebP with srcset; anything else (svg, avif, remote) is output as-is. */ -}}
+{{- $src := .src -}}
+{{- $loading := .loading | default "lazy" -}}
+{{- $sizes := .sizes | default "(max-width: 768px) 100vw, 700px" -}}
+{{- $res := "" -}}
+{{- if and $src (not (hasPrefix $src "http")) (not (hasSuffix $src ".svg")) (not (hasSuffix $src ".avif")) -}}
+  {{- $res = resources.Get (strings.TrimPrefix "/" $src) -}}
+{{- end -}}
+{{- if $res -}}
+  {{- $set := slice -}}
+  {{- $def := "" -}}
+  {{- range (slice 480 800 1200) -}}
+    {{- if lt . $res.Width -}}
+      {{- $r := $res.Resize (printf "%dx webp q82" .) -}}
+      {{- $set = $set | append (printf "%s %dw" $r.RelPermalink .) -}}
+      {{- $def = $r -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if not $def }}{{ $def = $res.Process "webp q82" }}{{ $set = $set | append (printf "%s %dw" $def.RelPermalink $def.Width) }}{{ end -}}
+<img src="{{ $def.RelPermalink }}" srcset="{{ delimit $set ", " }}" sizes="{{ $sizes }}" alt="{{ .alt }}" width="{{ $def.Width }}" height="{{ $def.Height }}"{{ with .class }} class="{{ . }}"{{ end }} loading="{{ $loading }}"{{ if eq $loading "eager" }} fetchpriority="high"{{ else }} decoding="async"{{ end }}>
+{{- else -}}
+<img src="{{ $src }}" alt="{{ .alt }}"{{ with .width }} width="{{ . }}"{{ end }}{{ with .height }} height="{{ . }}"{{ end }}{{ with .class }} class="{{ . }}"{{ end }} loading="{{ $loading }}">
+{{- end -}}

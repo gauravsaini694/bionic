@@ -1,0 +1,6 @@
+{{ define "main" }}
+<section class="page-hero"><div class="container page-hero-inner"><h1>Blog Categories</h1></div></section>
+<section class="section"><div class="container">
+  <div class="filter-chips">{{ range .Data.Terms.Alphabetical }}<a href="{{ .Page.RelPermalink }}" class="filter-chip">{{ .Page.Title }} <span>({{ .Count }})</span></a>{{ end }}</div>
+</div></section>
+{{ end }}

@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <span class="eyebrow eyebrow-light">BIONIC BLOG</span><br>
+    <h1>{{ .Title }}</h1>
+    <p class="page-hero-subhead">{{ len .Pages }} {{ cond (eq (len .Pages) 1) "article" "articles" }} in this category.</p>
+  </div>
+</section>
+{{ partial "blog-index.html" (dict "page" . "pages" .Pages.ByDate.Reverse "params" (dict "eyebrow" "CATEGORY" "title" .Title) "active" .Title) }}
+{{ partial "cta-band.html" (dict "title" "Have a Question We Haven't Covered?" "body" "Our clinical team is always happy to help." "primary" "Contact Us" "primary_link" "/contact/" "secondary" "Read Our FAQs" "secondary_link" "/resources/faqs/") }}
+{{ end }}

@@ -1,0 +1,11 @@
+{{- /* Shared CTA banner. Context: dict title, body, primary, primary_link, secondary, secondary_link */ -}}
+<section class="final-cta reveal" data-reveal="fade">
+  <div class="container final-cta-inner">
+    <h2>{{ .title }}</h2>
+    {{ with .body }}<p>{{ . }}</p>{{ end }}
+    <div class="final-cta-actions">
+      {{ with .primary }}<a href="{{ $.primary_link }}" class="btn btn-primary btn-lg">{{ . }}</a>{{ end }}
+      {{ with .secondary }}<a href="{{ $.secondary_link }}" class="btn btn-outline btn-lg">{{ . }}</a>{{ end }}
+    </div>
+  </div>
+</section>

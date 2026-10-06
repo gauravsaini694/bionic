@@ -1,0 +1,5 @@
+{{- $tel := .Params.phone | default site.Params.phone -}}
+<div class="mobile-bar" role="complementary" aria-label="Quick actions">
+  {{ with $tel }}<a href="tel:{{ replaceRE `[^\d+]` "" . }}" class="btn btn-primary"><span class="icon-sm">{{ partial "icon.html" "phone" }}</span> Call</a>{{ end }}
+  <a href="/locations/" class="btn btn-outline-dark"><span class="icon-sm">{{ partial "icon.html" "pin" }}</span> Find a Clinic</a>
+</div>

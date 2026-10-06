@@ -1,0 +1,6 @@
+{{- /* Shared section heading. Context: dict eyebrow, title, body */ -}}
+<div class="section-heading reveal" data-reveal="fade">
+  {{ with .eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
+  <h2>{{ .title }}</h2>
+  {{ with .body }}<p class="lead">{{ . }}</p>{{ end }}
+</div>

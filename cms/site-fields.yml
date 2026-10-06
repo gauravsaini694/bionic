@@ -1,0 +1,30 @@
+# Reference field definitions for non-clinic content added during the audit work (Decap-style).
+site_params:            # hugo.toml [params]
+  - { name: legalName, widget: string, hint: "Footer copyright name" }
+  - { name: defaultAuthor, widget: string, hint: "Shown on blog posts without an author" }
+  - { name: defaultTimezone, widget: string, required: false, hint: "Clinic hours fallback, e.g. America/New_York" }
+  - { name: ogImage, widget: image, required: false, hint: "Default social-share image" }
+  - { name: defaultImage, widget: image, required: false, hint: "Fallback for text-image sections with no image" }
+menus:                  # hugo.toml [[menu.*]]
+  - main            # navbar (Find a Clinic mega-menu is generated from content/locations)
+  - footer_links    # footer Quick Links
+  - footer_services # footer Services
+  - footer_legal    # Privacy / Terms / Accredited
+page:                   # any page front matter
+  - { name: description, widget: text, required: false, hint: "Meta description (falls back to hero.subhead)" }
+  - { name: image, widget: image, required: false, hint: "Page image: social share + fallback for text-image sections" }
+sections_new_types:
+  children-grid: { eyebrow: string, title: string }   # renders the team grid / paginated blog grid where placed
+  points: { id: string }                              # optional anchor id
+home:
+  testimonials: { image: optional (hidden if empty) }
+  resources.items: { icon: "card|insurance|check|…", image: optional }
+team_member:
+  - { name: specialties, widget: list, required: false }
+  - { name: locations, widget: list, required: false, hint: "Extra 'City, ST' entries; each links to its clinic page when one exists" }
+  - { name: location, widget: string, hint: "'City, ST' – links to the matching clinic page" }
+blog_post:
+  - { name: categories, widget: list, hint: "First entry drives category chip, filter page and related posts" }
+  - { name: author, widget: string, required: false }
+  - { name: image, widget: image, required: false }
+  - { name: image_alt, widget: string, required: false }

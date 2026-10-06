@@ -5,7 +5,7 @@
       <a href="/" class="footer-brand-mark">
         <img src="/images/Bionic-logo-footer.avif" alt="Bionic Prosthetics &amp; Orthotics" class="footer-logo">
       </a>
-      <p>Personalized prosthetic and orthotic care — close to home, across 12 states.</p>
+      <p>Personalized prosthetic and orthotic care — close to home, across {{ (partialCached "locations-data.html" .).stateCount }} states.</p>
       <div class="footer-contact">
         {{ $p.phone }}<br>
         {{ $p.email }}<br>
@@ -21,7 +21,7 @@
     <div class="footer-col">
       <h4>Quick Links</h4>
       <ul>
-        {{ range .Site.Menus.footerQuick }}
+        {{ range index site.Menus "footer_links" }}
         <li><a href="{{ .URL }}" class="footer-link">{{ .Name }}</a></li>
         {{ end }}
       </ul>
@@ -30,7 +30,7 @@
     <div class="footer-col">
       <h4>Services</h4>
       <ul>
-        {{ range .Site.Menus.footerServices }}
+        {{ range index site.Menus "footer_services" }}
         <li><a href="{{ .URL }}" class="footer-link">{{ .Name }}</a></li>
         {{ end }}
       </ul>
@@ -48,11 +48,9 @@
   </div>
 
   <div class="container footer-bottom">
-    <p>&copy; {{ now.Year }} Bionic Prosthetics &amp; Orthotics Group LLC. All Rights Reserved.</p>
+    <p>&copy; {{ now.Year }} {{ site.Params.legalName | default site.Title }}. All Rights Reserved.</p>
     <div class="footer-bottom-links">
-      <a href="/privacy-policy/" class="footer-link">Privacy Policy</a>
-      <a href="/terms-of-use/" class="footer-link">Terms of Use</a>
-      <a href="/accredited/" class="footer-link">Accredited &mdash; ABC</a>
+      {{ range index site.Menus "footer_legal" }}<a href="{{ .URL }}" class="footer-link">{{ .Name }}</a>{{ end }}
     </div>
   </div>
 </footer>

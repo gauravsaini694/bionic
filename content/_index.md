@@ -19,10 +19,10 @@ hero:
       link: "/locations/"
       icon: "pin"
     - label: "Pay My Bill"
-      link: "/pay-bill/"
+      link: "/resources/pay-bill/"
       icon: "card"
     - label: "Find Support Group"
-      link: "/support-groups/"
+      link: "/resources/patient-resources/#support-organizations"
       icon: "people"
 
 stats:
@@ -93,26 +93,10 @@ find_clinic:
   body: "Our board-certified prosthetists and orthotists provide personalized care focused on comfort, function, and long-term support. With clinics across multiple locations, expert care is always within reach — use our location finder to connect with a clinician near you."
   search_placeholder: "ZIP, city or state"
   location_text: "Use My Current Location"
-  map_image: "/images/clinic-map.svg"
-  states:
-    - "Florida"
-    - "Kentucky"
-    - "Illinois"
-    - "Michigan"
-    - "Indiana"
-    - "New Jersey"
-    - "North Carolina"
-    - "Tennessee"
-    - "Ohio"
-    - "Texas"
-    - "Pennsylvania"
-    - "Wisconsin"
 
 testimonials:
   eyebrow: "PATIENT STORIES"
   title: "What Our Patients Say"
-  image: "/images/testimonial-fistbump.svg"
-  image_alt: "Illustration of two patients celebrating with a fist bump"
   cta_text: "Read More Success Stories"
   cta_link: "/about/success-stories/"
   items:
@@ -133,12 +117,15 @@ resources:
   cta_link: "/resources/"
   items:
     - category: "BILLING"
+      icon: "card"
       title: "Book an Appointment & Pay Your Bill Online"
       link: "/resources/pay-bill/"
     - category: "PATIENT RESOURCES"
+      icon: "insurance"
       title: "Forms, Insurance Info & Getting Started Guides"
       link: "/resources/patient-resources/"
     - category: "FAQS"
+      icon: "check"
       title: "Answers to Common Prosthetic & Orthotic Questions"
       link: "/resources/faqs/"
 

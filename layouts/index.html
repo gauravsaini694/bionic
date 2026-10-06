@@ -1,3 +1,8 @@
+{{ define "head" }}
+{{- $o := dict "@context" "https://schema.org" "@type" "MedicalOrganization" "name" site.Title "url" site.Home.Permalink "telephone" site.Params.phone "email" site.Params.email -}}
+<script type="application/ld+json">{{ $o | jsonify | safeJS }}</script>
+{{ end }}
+
 {{ define "main" }}
 {{ $hero := .Params.hero }}
 {{ $stats := .Params.stats }}
@@ -34,7 +39,7 @@
       </div>
     </div>
     <div class="hero-media reveal" data-reveal="up">
-      <img src="{{ $hero.image }}" alt="{{ $hero.image_alt }}" width="800" height="600" loading="eager">
+      {{ partial "img.html" (dict "src" $hero.image "alt" $hero.image_alt "loading" "eager" "sizes" "(max-width: 1024px) 100vw, 50vw") }}
       <div class="hero-badge">
         <span class="hero-badge-icon">{{ partial "icon.html" "check" }}</span>
         <div>
@@ -62,7 +67,7 @@
 <section class="section about-section">
   <div class="container about-inner">
     <div class="about-media reveal" data-reveal="up">
-      <img src="{{ $about.image }}" alt="{{ $about.image_alt }}" width="700" height="700" loading="lazy">
+      {{ partial "img.html" (dict "src" $about.image "alt" $about.image_alt) }}
     </div>
     <div class="about-copy reveal" data-reveal="fade">
       <span class="eyebrow">{{ $about.eyebrow }}</span>
@@ -90,7 +95,7 @@
       </div>
     </div>
     <div class="credentials-media reveal" data-reveal="up">
-      <img src="{{ $credentials.image }}" alt="{{ $credentials.image_alt }}" width="700" height="500" loading="lazy">
+      {{ partial "img.html" (dict "src" $credentials.image "alt" $credentials.image_alt) }}
     </div>
   </div>
 </section>
@@ -126,53 +131,29 @@
       <a href="{{ $technology.cta_link }}" class="btn btn-primary btn-lg">{{ $technology.cta_text }}</a>
     </div>
     <div class="technology-media reveal" data-reveal="up">
-      <img src="{{ $technology.image }}" alt="{{ $technology.image_alt }}" width="700" height="500" loading="lazy">
+      {{ partial "img.html" (dict "src" $technology.image "alt" $technology.image_alt) }}
     </div>
   </div>
 </section>
 
 <!-- ===== FIND A CLINIC ===== -->
-<section class="section find-clinic-section">
-  <div class="container find-clinic-inner">
-    <div class="find-clinic-copy reveal" data-reveal="fade">
-      <span class="eyebrow">{{ $findClinic.eyebrow }}</span>
-      <h2>{{ $findClinic.title }}</h2>
-      <p class="lead">{{ $findClinic.body }}</p>
-      <form class="clinic-search-form" role="search">
-        <label for="clinic-search" class="visually-hidden">Search by ZIP, city, or state</label>
-        <input id="clinic-search" type="text" placeholder="{{ $findClinic.search_placeholder }}">
-        <button type="submit" class="btn btn-primary">Search</button>
-      </form>
-      <a href="#" class="current-location-link">
-        <span class="icon-sm">{{ partial "icon.html" "location" }}</span>
-        {{ $findClinic.location_text }}
-      </a>
-    </div>
-    <div class="find-clinic-panel reveal" data-reveal="up">
-      <div class="state-chip-grid">
-        {{ range $findClinic.states }}
-        <a href="/locations/{{ . | urlize }}/" class="state-chip">{{ . }}</a>
-        {{ end }}
-      </div>
-      <div class="clinic-map-media">
-        <img src="{{ $findClinic.map_image }}" alt="Map of clinic locations across our service states" width="700" height="400" loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
+{{ partial "clinic-finder.html" (dict "page" . "params" $findClinic) }}
 
 <!-- ===== TESTIMONIALS ===== -->
 <section class="section testimonials-section">
   <div class="container testimonials-inner">
+    {{ with $testimonials.image }}
     <div class="testimonials-media reveal" data-reveal="up">
-      <img src="{{ $testimonials.image }}" alt="{{ $testimonials.image_alt }}" width="900" height="500" loading="lazy">
+      <img src="{{ . }}" alt="{{ $testimonials.image_alt }}" width="900" height="500" loading="lazy">
     </div>
+    {{ end }}
     <div class="testimonials-body">
       <div class="section-heading reveal" data-reveal="fade">
         <span class="eyebrow">{{ $testimonials.eyebrow }}</span>
         <h2>{{ $testimonials.title }}</h2>
       </div>
-      <div class="card-grid testimonial-grid">
+      {{ $carousel := gt (len $testimonials.items) 3 }}
+      <div class="card-grid testimonial-grid{{ if $carousel }} is-carousel{{ end }}"{{ if $carousel }} data-carousel{{ end }}>
         {{ range $i, $item := $testimonials.items }}
         <div class="testimonial-card reveal" data-reveal="up" style="--delay: {{ mul $i 0.1 }}s">
           <div class="star-row" aria-hidden="true">
@@ -180,7 +161,7 @@
           </div>
           <p class="testimonial-quote">&ldquo;{{ .quote }}&rdquo;</p>
           <div class="testimonial-person">
-            <span class="testimonial-avatar" aria-hidden="true"></span>
+            <span class="testimonial-avatar" aria-hidden="true">{{ partial "initials.html" .name }}</span>
             <div>
               <strong>{{ .name }}</strong>
               <span>{{ .role }}</span>
@@ -189,6 +170,12 @@
         </div>
         {{ end }}
       </div>
+      {{ if $carousel }}
+      <div class="carousel-controls">
+        <button type="button" class="carousel-btn" data-carousel-prev aria-label="Previous testimonials"><span class="icon-sm flip">{{ partial "icon.html" "arrow-right" }}</span></button>
+        <button type="button" class="carousel-btn" data-carousel-next aria-label="Next testimonials"><span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span></button>
+      </div>
+      {{ end }}
       <a href="{{ $testimonials.cta_link }}" class="resources-view-all">
         {{ $testimonials.cta_text }}
         <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span>
@@ -213,7 +200,8 @@
     <div class="card-grid resources-grid">
       {{ range $i, $item := $resources.items }}
       <a href="{{ .link }}" class="blog-card reveal" data-reveal="up" style="--delay: {{ mul $i 0.1 }}s">
-        <div class="blog-card-media blog-card-media-{{ $i }}"></div>
+        {{ if .image }}<div class="blog-card-media" style="background-image:url('{{ .image }}');background-size:cover;background-position:center;"></div>
+        {{ else }}<div class="blog-card-media blog-card-media-icon blog-card-media-{{ mod $i 3 }}"><span class="service-icon service-icon-{{ cond (in (slice "prosthetic" "orthotic" "diabetic" "pediatric") .icon) .icon "prosthetic" }}">{{ partial "icon.html" (.icon | default "check") }}</span></div>{{ end }}
         <div class="blog-card-body">
           <span class="blog-card-category">{{ .category }}</span>
           <h3>{{ .title }}</h3>

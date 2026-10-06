@@ -1,0 +1,47 @@
+{{ define "head" }}
+{{- $s := dict "@context" "https://schema.org" "@type" "Person" "name" .Title "url" .Permalink "worksFor" (dict "@type" "Organization" "name" site.Title "url" site.Home.Permalink) -}}
+{{- with .Params.role }}{{ $s = merge $s (dict "jobTitle" .) }}{{ end -}}
+{{- with .Params.email }}{{ $s = merge $s (dict "email" .) }}{{ end -}}
+{{- with .Params.description }}{{ $s = merge $s (dict "description" .) }}{{ end -}}
+{{- $img := .Params.image -}}
+{{- if and $img (fileExists (path.Join "static" $img)) }}{{ $s = merge $s (dict "image" ($img | absURL)) }}{{ end -}}
+<script type="application/ld+json">{{ $s | jsonify | safeJS }}</script>
+{{ end }}
+
+{{ define "main" }}
+{{- $photo := .Params.image -}}
+{{- if and $photo (not (fileExists (path.Join "static" $photo))) }}{{ $photo = "" }}{{ end -}}
+{{- $clinical := "" -}}
+{{- with .Params.clinical_profile }}{{ with site.GetPage . }}{{ $clinical = . }}{{ end }}{{ end -}}
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    <span class="eyebrow eyebrow-light">EXECUTIVE TEAM</span><br>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.role }}<p class="page-hero-subhead">{{ . }}</p>{{ end }}
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    {{ partial "breadcrumbs.html" (dict "page" .) }}
+    <div class="tm-grid">
+      <aside class="tm-aside">
+        <div class="team-profile-avatar tm-avatar">
+          {{ if $photo }}<img src="{{ $photo }}" alt="{{ .Params.image_alt | default .Title }}">{{ else }}{{ partial "initials.html" .Title }}{{ end }}
+        </div>
+        <h2 class="tm-name">{{ .Title }}</h2>
+        {{ with .Params.credentials }}<div class="team-credentials">{{ . }}</div>{{ end }}
+        {{ with .Params.role }}<div class="team-role">{{ . }}</div>{{ end }}
+        {{ with .Params.email }}<ul class="tm-list"><li><span class="icon-sm">{{ partial "icon.html" "mail" }}</span><a href="mailto:{{ . }}">{{ . }}</a></li></ul>{{ end }}
+        {{ with $clinical }}<p class="tm-also"><a href="{{ .RelPermalink }}">Also on our Clinical Team <span aria-hidden="true">→</span></a></p>{{ end }}
+      </aside>
+      <div class="tm-bio">
+        <h2 class="tm-bio-title">About {{ .Title }}</h2>
+        <div class="article-body tm-body">{{ .Content }}</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ partial "cta-band.html" (dict "title" "Ready to Take the Next Step?" "body" "Connect with our team or a certified clinician near you." "primary" "Request a Consultation" "primary_link" "/contact/" "secondary" "Find a Location Near You" "secondary_link" "/locations/") }}
+{{ end }}

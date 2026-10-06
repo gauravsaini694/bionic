@@ -33,9 +33,13 @@ sections:
       - "Continuity of care from evaluation through fitting, adjustment, and follow-up"
       - "Specialized experience in pediatric, adult, and complex-case care"
 
+  - type: "children-grid"
+    eyebrow: "FULL DIRECTORY"
+    title: "Our Clinicians"
+
   - type: "cta-band"
     title: "Meet the Team Behind Your Care"
-    body: "Individual clinician profiles for each of our locations are coming soon. In the meantime, our care coordinators can connect you with the right specialist near you."
+    body: "Our care coordinators can connect you with the right specialist near you and help you book your first visit."
     cta_primary: "Find a Clinic Near You"
     cta_primary_link: "/locations/"
     cta_secondary: "Request a Consultation"

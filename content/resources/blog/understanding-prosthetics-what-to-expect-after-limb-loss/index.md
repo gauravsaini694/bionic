@@ -1,7 +1,7 @@
 ---
 title: "Understanding Prosthetics: What to Expect After Limb Loss"
 date: 2026-02-03
-category: "Prosthetics and Orthotics"
+categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/understanding-prosthetics-what-to-expect-after-limb-loss.jpg"
 ---
 

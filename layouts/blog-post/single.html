@@ -1,34 +1,67 @@
+{{ define "head" }}
+{{- $s := dict "@context" "https://schema.org" "@type" "BlogPosting" "headline" .Title "url" .Permalink "author" (dict "@type" "Organization" "name" (.Params.author | default site.Params.defaultAuthor | default site.Title)) "publisher" (dict "@type" "Organization" "name" site.Title) "mainEntityOfPage" .Permalink -}}
+{{- if not .Date.IsZero }}{{ $s = merge $s (dict "datePublished" (.Date.Format "2006-01-02") "dateModified" ((.Lastmod | default .Date).Format "2006-01-02")) }}{{ end -}}
+{{- with .Params.image }}{{ $s = merge $s (dict "image" (. | absURL)) }}{{ end -}}
+<script type="application/ld+json">{{ $s | jsonify | safeJS }}</script>
+{{ end }}
+
 {{ define "main" }}
+{{- $author := .Params.author | default site.Params.defaultAuthor -}}
+{{- $toc := and (gt .WordCount 700) (gt (len .TableOfContents) 120) -}}
 <section class="page-hero">
   <div class="container page-hero-inner">
     <span class="eyebrow eyebrow-light">BIONIC BLOG</span><br>
     <h1>{{ .Title }}</h1>
     <div class="article-meta">
-      {{ with .Params.category }}<span class="article-category-badge">{{ . }}</span>{{ end }}
-      {{ if not .Date.IsZero }}<span class="article-date">{{ .Date.Format "January 2, 2006" }}</span>{{ end }}
+      {{ with .GetTerms "categories" }}{{ with index . 0 }}<a href="{{ .Page.RelPermalink }}" class="article-category-badge">{{ .Page.Title }}</a>{{ end }}{{ end }}
+      {{ if not .Date.IsZero }}<time class="article-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>{{ end }}
+      <span class="article-date">{{ .ReadingTime }} min read</span>
+      {{ with $author }}<span class="article-date">By {{ . }}</span>{{ end }}
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
-    <a href="/resources/blog/" class="article-back">
-      <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span> Back to Blog
-    </a>
-    <div class="article-body">
-      {{ .Content }}
+    {{ partial "breadcrumbs.html" (dict "page" .) }}
+    <div class="post-layout{{ if $toc }} has-toc{{ end }}">
+      <article class="post-main">
+        {{ with .Params.image }}{{ partial "img.html" (dict "src" . "alt" ($.Params.image_alt | default $.Title) "class" "post-featured" "loading" "eager" "sizes" "(max-width: 900px) 100vw, 780px") }}{{ end }}
+        <div class="article-body">{{ .Content }}</div>
+        <div class="share-row">
+          <span class="share-label">Share this article</span>
+          {{ $u := .Permalink | urlquery }}{{ $t := .Title | urlquery }}
+          <a class="share-btn" href="https://www.facebook.com/sharer/sharer.php?u={{ $u }}" target="_blank" rel="noopener" aria-label="Share on Facebook">{{ partial "icon.html" "facebook" }}</a>
+          <a class="share-btn" href="https://www.linkedin.com/sharing/share-offsite/?url={{ $u }}" target="_blank" rel="noopener" aria-label="Share on LinkedIn">{{ partial "icon.html" "linkedin" }}</a>
+          <a class="share-btn" href="https://twitter.com/intent/tweet?url={{ $u }}&text={{ $t }}" target="_blank" rel="noopener" aria-label="Share on X">{{ partial "icon.html" "x" }}</a>
+          <a class="share-btn" href="mailto:?subject={{ $t }}&body={{ $u }}" aria-label="Share by email">{{ partial "icon.html" "mail" }}</a>
+          <button type="button" class="share-btn" data-copy-link="{{ .Permalink }}" aria-label="Copy link">{{ partial "icon.html" "link" }}</button>
+        </div>
+      </article>
+      {{ if $toc }}
+      <aside class="post-toc" aria-label="Table of contents">
+        <h2 class="tm-label">On this page</h2>
+        {{ .TableOfContents }}
+      </aside>
+      {{ end }}
     </div>
   </div>
 </section>
 
-<section class="final-cta reveal" data-reveal="fade">
-  <div class="container final-cta-inner">
-    <h2>Have Questions About Your Care?</h2>
-    <p>Our certified clinical team is here to help guide your next step.</p>
-    <div class="final-cta-actions">
-      <a href="/contact/" class="btn btn-primary btn-lg">Request a Consultation</a>
-      <a href="/resources/blog/" class="btn btn-outline btn-lg">Read More Articles</a>
-    </div>
+{{- $related := slice -}}
+{{- with .GetTerms "categories" -}}
+  {{- $cat := (index . 0).Page.Title -}}
+  {{- $same := where (where site.RegularPages "Type" "blog-post") "Params.categories" "intersect" (slice $cat) -}}
+  {{- $related = first 3 (where $same "RelPermalink" "ne" $.RelPermalink) -}}
+{{- end -}}
+{{ if $related }}
+<section class="section services-section">
+  <div class="container">
+    {{ partial "section-header.html" (dict "eyebrow" "KEEP READING" "title" "Related Articles") }}
+    <div class="card-grid resources-grid">{{ range $related }}{{ partial "post-card.html" . }}{{ end }}</div>
   </div>
 </section>
+{{ end }}
+
+{{ partial "cta-band.html" (dict "title" "Have Questions About Your Care?" "body" "Our certified clinical team is here to help guide your next step." "primary" "Request a Consultation" "primary_link" "/contact/" "secondary" "Read More Articles" "secondary_link" "/resources/blog/") }}
 {{ end }}

@@ -90,3 +90,30 @@ h2 { font-size: 28px; }
 
 /* CTA band */
 .final-cta-inner { padding-block: 56px; }
+
+/* Find a Clinic mega menu: desktop button hidden, accordion shown in the mobile menu */
+.header-find { display: none; }
+.nav-find-mobile { display: block; }
+.mega-panel { width: auto; padding: 0 0 0 14px; }
+.mega-head { flex-direction: column; align-items: flex-start; gap: 4px; padding: 6px 0 8px; }
+.mega-link { padding: 11px 0; border-radius: 0; border-bottom: 1px solid var(--border-soft); }
+
+/* Clinic detail page */
+.cl-main-grid { grid-template-columns: minmax(0, 1fr); }
+.cl-map-col { position: static; }
+.cl-map { height: 380px; }
+.cl-services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.team-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.clinic-list-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.about-inner { flex-direction: column; gap: 32px; align-items: stretch; }
+.about-media { flex: none; width: 100%; height: 280px; }
+.st-layout { grid-template-columns: minmax(0, 1fr); }
+.st-map-col { position: static; order: -1; }
+.st-map-col .cl-map { height: 380px; }
+.st-chips { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+
+.testimonial-grid.is-carousel > * { flex-basis: calc((100% - 22px) / 2); }
+.tm-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+.tm-aside { position: static; }
+.post-layout.has-toc { grid-template-columns: minmax(0, 1fr); }
+.post-toc { position: static; order: -1; max-height: none; }

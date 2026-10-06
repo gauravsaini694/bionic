@@ -1,7 +1,7 @@
 ---
 title: "Phantom Pain: Understanding and Managing Phantom Limb Sensation"
 date: 2025-09-14
-category: "Health and Wellness"
+categories: ["Health and Wellness"]
 ---
 
 ## What Is Phantom Limb Pain?

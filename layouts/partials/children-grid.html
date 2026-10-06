@@ -1,0 +1,26 @@
+{{- /* Grid of a section's child pages. Context: dict "page" <section page> "params" <section item> */ -}}
+{{- $pg := .page -}}{{- $p := .params | default dict -}}
+{{- if eq $pg.Type "team" -}}
+<section class="section">
+  <div class="container">
+    <div class="section-heading reveal" data-reveal="fade">
+      <span class="eyebrow">{{ $p.eyebrow | default "FULL DIRECTORY" }}</span>
+      <h2>{{ $p.title | default "Our Clinicians" }}</h2>
+    </div>
+    <div class="card-grid team-grid">
+      {{ range $pg.Pages.ByTitle }}{{ partial "team-card.html" . }}{{ end }}
+    </div>
+  </div>
+</section>
+{{- else if eq $pg.Type "executive" -}}
+<section class="section">
+  <div class="container">
+    {{ partial "section-header.html" (dict "eyebrow" ($p.eyebrow | default "LEADERSHIP") "title" ($p.title | default "Meet Our Leaders")) }}
+    <div class="card-grid team-grid">
+      {{ range $pg.Pages.ByWeight }}{{ partial "team-card.html" . }}{{ end }}
+    </div>
+  </div>
+</section>
+{{- else if eq $pg.Type "blog" -}}
+{{ partial "blog-index.html" (dict "page" $pg "pages" $pg.Pages.ByDate.Reverse "params" $p) }}
+{{- end -}}

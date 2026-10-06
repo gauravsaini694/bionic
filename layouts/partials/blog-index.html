@@ -1,0 +1,26 @@
+{{- /* Blog listing with category filter + pagination. Context: dict "page" "pages" "params" ["active" term title] */ -}}
+{{- $pg := .page -}}{{- $p := .params | default dict -}}
+{{- $pager := $pg.Paginate .pages 9 -}}
+{{- $blog := site.GetPage "/resources/blog" -}}
+<section class="section resources-section">
+  <div class="container">
+    {{ partial "section-header.html" (dict "eyebrow" ($p.eyebrow | default "ALL ARTICLES") "title" ($p.title | default "Latest from the Blog")) }}
+    {{ $terms := site.Taxonomies.categories.Alphabetical }}
+    {{ if $terms }}
+    <div class="filter-chips" role="navigation" aria-label="Filter by category">
+      <a href="{{ $blog.RelPermalink }}" class="filter-chip{{ if not .active }} is-active{{ end }}"{{ if not .active }} aria-current="page"{{ end }}>All</a>
+      {{ range $terms }}<a href="{{ .Page.RelPermalink }}" class="filter-chip{{ if eq $.active .Page.Title }} is-active{{ end }}"{{ if eq $.active .Page.Title }} aria-current="page"{{ end }}>{{ .Page.Title }} <span>({{ .Count }})</span></a>{{ end }}
+    </div>
+    {{ end }}
+    <div class="card-grid resources-grid">
+      {{ range $pager.Pages }}{{ partial "post-card.html" . }}{{ end }}
+    </div>
+    {{ if gt $pager.TotalPages 1 }}
+    <nav class="pagination" aria-label="Pagination">
+      {{ if $pager.HasPrev }}<a href="{{ $pager.Prev.URL }}" class="page-link" rel="prev">&larr; Previous</a>{{ end }}
+      {{ range $pager.Pagers }}<a href="{{ .URL }}" class="page-link{{ if eq . $pager }} is-active{{ end }}"{{ if eq . $pager }} aria-current="page"{{ end }}>{{ .PageNumber }}</a>{{ end }}
+      {{ if $pager.HasNext }}<a href="{{ $pager.Next.URL }}" class="page-link" rel="next">Next &rarr;</a>{{ end }}
+    </nav>
+    {{ end }}
+  </div>
+</section>

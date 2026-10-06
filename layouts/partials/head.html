@@ -1,7 +1,27 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>{{ if .IsHome }}{{ .Site.Title }} | Custom Prosthetic & Orthotic Care{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
-<meta name="description" content="{{ with .Description }}{{ . }}{{ else }}Board-certified prosthetic and orthotic care for children and adults, with clinics across 12 states.{{ end }}">
+<title>{{ if .IsHome }}{{ .Site.Title }} | Custom Prosthetic &amp; Orthotic Care{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+{{- $desc := .Description -}}
+{{- if not $desc }}{{ with .Params.hero }}{{ $desc = .subhead }}{{ end }}{{ end -}}
+{{- if not $desc }}{{ if and (not .IsHome) (eq .Kind "page") }}{{ $desc = .Summary | plainify | truncate 160 }}{{ end }}{{ end -}}
+{{- if not $desc }}{{ $desc = printf "Board-certified prosthetic and orthotic care for children and adults, with clinics across %v states." (partialCached "locations-data.html" .).stateCount }}{{ end -}}
+{{- $desc = $desc | plainify | truncate 160 -}}
+{{- $title := cond .IsHome (printf "%s | Custom Prosthetic & Orthotic Care" site.Title) (printf "%s | %s" .Title site.Title) -}}
+{{- $img := .Params.image -}}
+{{- if not $img }}{{ with .Params.hero }}{{ $img = .image }}{{ end }}{{ end -}}
+{{- if not $img }}{{ $img = site.Params.ogImage }}{{ end -}}
+<meta name="description" content="{{ $desc }}">
+<link rel="canonical" href="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:type" content="{{ if eq .Type "blog-post" }}article{{ else }}website{{ end }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{ with $img }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+<meta name="twitter:card" content="{{ if $img }}summary_large_image{{ else }}summary{{ end }}">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+{{ with $img }}<meta name="twitter:image" content="{{ . | absURL }}">{{ end }}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">

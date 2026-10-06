@@ -1,0 +1,3 @@
+{{- /* First letter of first and last word of a name */ -}}
+{{- $w := split (trim (. | default "") " ") " " -}}
+{{- if gt (len $w) 1 }}{{ upper (substr (index $w 0) 0 1) }}{{ upper (substr (index $w (sub (len $w) 1)) 0 1) }}{{ else }}{{ upper (substr (index $w 0) 0 1) }}{{ end -}}

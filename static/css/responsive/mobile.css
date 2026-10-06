@@ -4,7 +4,7 @@
    ========================================================================== */
 
 :root {
-  --section-py: 40px;
+  --section-py: 52px;
 }
 
 .container { padding: 0 16px; }
@@ -69,3 +69,28 @@ h2 { font-size: 24px; }
 .footer-brand p { max-width: none; }
 .footer-bottom { padding: 16px; }
 .footer-bottom-links { flex-wrap: wrap; gap: 14px; justify-content: center; }
+
+.clinic-map { height: 300px; }
+.mega-grid { grid-template-columns: 1fr; }
+.clinic-search-form { flex-direction: column; }
+.clinic-search-form .btn { padding: 12px 22px; }
+
+/* Clinic detail page */
+.cl-hero { padding-block: 28px 40px; }
+.cl-hero-actions { flex-direction: column; }
+.cl-hero-actions .btn { width: 100%; }
+.cl-card { padding: 20px; }
+.cl-map { height: 300px; }
+.cl-services-grid { grid-template-columns: 1fr; }
+.cl-step { padding: 16px; }
+.cl-insurance { flex-direction: column; }
+.team-grid, .clinic-list-grid { grid-template-columns: 1fr; }
+.st-map-col .cl-map { height: 300px; }
+.st-chips { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.clinic-card-actions .btn { flex: 1; }
+
+.testimonial-grid.is-carousel > * { flex-basis: 88%; }
+
+.mobile-bar { display: flex; gap: 10px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); background: #fff; border-top: 1px solid var(--border); box-shadow: 0 -6px 18px rgba(20, 30, 60, 0.08); }
+.mobile-bar .btn { flex: 1; padding: 12px 10px; }
+body { padding-bottom: 72px; }

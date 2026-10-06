@@ -1,44 +1,286 @@
+{{ define "head" }}{{ partial "clinic-schema.html" . }}{{ end }}
+
 {{ define "main" }}
-<section class="page-hero">
-  <div class="container page-hero-inner">
-    <span class="eyebrow eyebrow-light">BIONIC CLINIC</span><br>
+{{- $state := .Parent -}}
+{{- $city := .Params.city | default .Title -}}
+{{- $addr := .Params.address -}}
+{{- $phone := .Params.phone -}}
+{{- $hasGeo := and .Params.lat .Params.lng -}}
+{{- $dir := "" -}}
+{{- if $addr }}{{ $dir = printf "https://www.google.com/maps/dir/?api=1&destination=%s" ($addr | urlquery) }}
+{{- else if $hasGeo }}{{ $dir = printf "https://www.google.com/maps/dir/?api=1&destination=%v,%v" .Params.lat .Params.lng }}{{ end -}}
+{{- $hours := .Params.hours -}}
+{{- $hoursList := cond (reflect.IsSlice $hours) $hours slice -}}
+{{- $dayNum := dict "sun" 0 "mon" 1 "tue" 2 "wed" 3 "thu" 4 "fri" 5 "sat" 6 -}}
+{{- $tz := .Params.timezone | default site.Params.defaultTimezone | default "America/New_York" -}}
+
+<!-- ===== HERO ===== -->
+<section class="cl-hero">
+  <div class="container">
+    <nav class="cl-crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a><span aria-hidden="true">›</span>
+      <a href="/locations/">Locations</a><span aria-hidden="true">›</span>
+      <a href="{{ $state.RelPermalink }}">{{ $state.Title }}</a><span aria-hidden="true">›</span>
+      <span aria-current="page">{{ .Title }}</span>
+    </nav>
+    <span class="eyebrow eyebrow-light">BIONIC CLINIC</span>
     <h1>{{ .Title }}</h1>
-    {{ with .Params.state }}<p class="page-hero-subhead">Serving {{ . }} and surrounding communities.</p>{{ end }}
+    {{ with $addr }}<p class="cl-hero-address"><span class="icon-sm">{{ partial "icon.html" "pin" }}</span> {{ . }}</p>{{ end }}
+    {{ if $hoursList }}<span class="cl-badge" id="clinic-open-badge" hidden></span>{{ end }}
+    <div class="cl-hero-actions">
+      {{ with $phone }}<a href="tel:{{ replaceRE `[^\d+]` "" . }}" class="btn btn-primary btn-lg"><span class="icon-sm">{{ partial "icon.html" "phone" }}</span> Call {{ . }}</a>{{ end }}
+      {{ with $dir }}<a href="{{ . }}" class="btn btn-outline btn-lg" target="_blank" rel="noopener"><span class="icon-sm">{{ partial "icon.html" "pin" }}</span> Get Directions</a>{{ end }}
+      <a href="/contact/" class="btn btn-outline btn-lg">Request Consultation</a>
+    </div>
   </div>
 </section>
 
+<!-- ===== CONTACT / HOURS | MAP ===== -->
+{{- $hasContact := or $addr $phone .Params.fax .Params.email -}}
+{{- $hasLeft := or $hasContact $hours .Params.parking .Params.accessibility -}}
+{{ if or $hasLeft $hasGeo }}
+<section class="section cl-main">
+  <div class="container cl-main-grid {{ if not (and $hasLeft $hasGeo) }}cl-single{{ end }}">
+    {{ if $hasLeft }}
+    <div class="cl-details">
+      {{ if $hasContact }}
+      <div class="cl-card">
+        <h2 class="cl-card-title">Contact</h2>
+        <ul class="cl-list">
+          {{ with $addr }}<li><span class="icon-sm">{{ partial "icon.html" "pin" }}</span><span>{{ . }}</span></li>{{ end }}
+          {{ with $phone }}<li><span class="icon-sm">{{ partial "icon.html" "phone" }}</span><span><strong>Phone</strong> <a href="tel:{{ replaceRE `[^\d+]` "" . }}">{{ . }}</a></span></li>{{ end }}
+          {{ with .Params.fax }}<li><span class="icon-sm">{{ partial "icon.html" "card" }}</span><span><strong>Fax</strong> {{ . }}</span></li>{{ end }}
+          {{ with .Params.email }}<li><span class="icon-sm">{{ partial "icon.html" "insurance" }}</span><span><strong>Email</strong> <a href="mailto:{{ . }}">{{ . }}</a></span></li>{{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+      {{ if $hoursList }}
+      <div class="cl-card">
+        <h2 class="cl-card-title">Office Hours</h2>
+        <table class="cl-hours" id="clinic-hours" data-tz="{{ $tz }}">
+          <tbody>
+            {{ range $hoursList }}
+            {{ $isOpen := and .open .close (not .closed) }}
+            <tr data-day="{{ index $dayNum (lower (substr .day 0 3)) }}"{{ if $isOpen }} data-open="{{ .open }}" data-close="{{ .close }}"{{ end }}>
+              <th scope="row">{{ .day }}</th>
+              <td>{{ if $isOpen }}{{ dateFormat "3:04 PM" (printf "2006-01-02T%s:00" .open) }} – {{ dateFormat "3:04 PM" (printf "2006-01-02T%s:00" .close) }}{{ else }}Closed{{ end }}</td>
+            </tr>
+            {{ end }}
+          </tbody>
+        </table>
+        {{ with .Params.hours_note }}<p class="cl-note">{{ . }}</p>{{ end }}
+      </div>
+      {{ else if $hours }}
+      <div class="cl-card">
+        <h2 class="cl-card-title">Office Hours</h2>
+        <p class="cl-note" style="margin:0">{{ $hours }}</p>
+      </div>
+      {{ end }}
+
+      {{ if or .Params.parking .Params.accessibility }}
+      <div class="cl-card">
+        <h2 class="cl-card-title">Parking &amp; Accessibility</h2>
+        <ul class="cl-list">
+          {{ with .Params.parking }}<li><span class="icon-sm">{{ partial "icon.html" "map" }}</span><span><strong>Parking</strong> {{ . }}</span></li>{{ end }}
+          {{ with .Params.accessibility }}<li><span class="icon-sm">{{ partial "icon.html" "check" }}</span><span><strong>Accessibility</strong> {{ . }}</span></li>{{ end }}
+        </ul>
+      </div>
+      {{ end }}
+    </div>
+    {{ end }}
+
+    {{ if $hasGeo }}
+    <div class="cl-map-col">
+      <div id="clinic-detail-map" class="cl-map" role="region" aria-label="Map showing {{ .Title }} clinic"
+           data-lat="{{ .Params.lat }}" data-lng="{{ .Params.lng }}" data-name="{{ .Title }}" data-address="{{ $addr }}" data-dir="{{ $dir }}"></div>
+    </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}
+
+<!-- ===== SERVICES ===== -->
+{{ with .Params.services }}
+<section class="section services-section">
+  <div class="container">
+    <div class="section-heading reveal" data-reveal="fade">
+      <span class="eyebrow">SERVICES</span>
+      <h2>Care Available at Our {{ $.Title }} Clinic</h2>
+    </div>
+    <div class="card-grid cl-services-grid">
+      {{ range $i, $s := . }}
+      {{ $title := $s }}{{ $desc := "" }}{{ $icon := "" }}{{ $link := "" }}
+      {{ if reflect.IsMap $s }}{{ $title = $s.title }}{{ $desc = $s.description }}{{ $icon = $s.icon }}{{ $link = $s.link }}{{ end }}
+      {{ if not $icon }}
+        {{ $l := lower $title }}
+        {{ if findRE `prosthe|limb|amput` $l }}{{ $icon = "prosthetic" }}
+        {{ else if findRE `orthot|brac|splint` $l }}{{ $icon = "orthotic" }}
+        {{ else if findRE `pediatric|child|kid` $l }}{{ $icon = "pediatric" }}
+        {{ else if findRE `diabet|foot|shoe` $l }}{{ $icon = "diabetic" }}
+        {{ else if findRE `cranial|helmet|spin|scolio` $l }}{{ $icon = "certified" }}
+        {{ else }}{{ $icon = "personalized" }}{{ end }}
+      {{ end }}
+      {{ $tone := cond (in (slice "prosthetic" "orthotic" "diabetic" "pediatric") $icon) $icon "prosthetic" }}
+      {{ if $title }}
+      {{ if $link }}<a href="{{ $link }}" class="service-card reveal" data-reveal="up" style="--delay: {{ mul $i 0.05 }}s">{{ else }}<div class="service-card reveal" data-reveal="up" style="--delay: {{ mul $i 0.05 }}s">{{ end }}
+        <div class="service-icon service-icon-{{ $tone }}">{{ partial "icon.html" $icon }}</div>
+        <h3>{{ $title }}</h3>
+        {{ with $desc }}<p>{{ . }}</p>{{ end }}
+        {{ if $link }}<span class="card-link">Learn more <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span></span>{{ end }}
+      {{ if $link }}</a>{{ else }}</div>{{ end }}
+      {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- ===== ABOUT / TEAM ===== -->
+{{- $members := slice -}}
+{{- range .Params.team -}}
+  {{- $name := .name -}}{{- $title := .title -}}{{- $photo := .photo -}}{{- $creds := .credentials -}}{{- $link := .link | default "" -}}
+  {{- with .clinician -}}
+    {{- with site.GetPage (printf "/about/clinical-team/%s" .) -}}
+      {{- $name = $name | default .Params.name -}}{{- $title = $title | default .Params.role -}}{{- $photo = $photo | default .Params.photo -}}{{- $creds = $creds | default .Params.credentials -}}{{- $link = $link | default .RelPermalink -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if $name }}{{ $members = $members | append (dict "name" $name "title" $title "photo" $photo "creds" $creds "link" $link) }}{{ end -}}
+{{- end -}}
+{{- $gallery := slice -}}
+{{- range .Params.gallery -}}{{- if reflect.IsMap . }}{{ with .image }}{{ $gallery = $gallery | append (dict "src" . "alt" ($.Title | printf "%s clinic")) }}{{ end }}{{ else }}{{ $gallery = $gallery | append (dict "src" . "alt" ($.Title | printf "%s clinic")) }}{{ end -}}{{- end -}}
+{{- $about := or .Params.description (strings.TrimSpace .Content) -}}
+{{ if or $about .Params.image $gallery }}
 <section class="section">
-  <div class="container about-inner">
+  <div class="container about-inner {{ if not .Params.image }}cl-about-text{{ end }}">
     <div class="about-copy reveal" data-reveal="fade">
-      <span class="eyebrow">VISIT US</span>
-      <h2>Clinic Details</h2>
+      <span class="eyebrow">ABOUT THE CLINIC</span>
+      <h2>About Our {{ $city }} Clinic</h2>
       {{ with .Params.description }}<p class="lead">{{ . }}</p>{{ end }}
-      <div class="clinic-info">
-        {{ with .Params.address }}
-        <div class="clinic-info-row"><span class="icon-sm">{{ partial "icon.html" "pin" }}</span> {{ . }}</div>
-        {{ end }}
-        {{ with .Params.phone }}
-        <div class="clinic-info-row"><span class="icon-sm">{{ partial "icon.html" "phone" }}</span> {{ . }}</div>
-        {{ end }}
-        {{ with .Params.hours }}
-        <div class="clinic-info-row"><span class="icon-sm">{{ partial "icon.html" "check" }}</span> {{ . }}</div>
-        {{ end }}
+      {{ with .Content }}<div class="cl-prose">{{ . }}</div>{{ end }}
+    </div>
+    {{ with .Params.image }}
+    <div class="about-media reveal" data-reveal="up">{{ partial "img.html" (dict "src" . "alt" ($.Params.image_alt | default (printf "%s clinic" $.Title))) }}</div>
+    {{ end }}
+  </div>
+  {{ if $gallery }}
+  <div class="container cl-gallery">
+    {{ range $gallery }}<img src="{{ .src }}" alt="{{ .alt }}" loading="lazy">{{ end }}
+  </div>
+  {{ end }}
+</section>
+{{ end }}
+
+{{ if $members }}
+<section class="section services-section">
+  <div class="container">
+    <div class="section-heading reveal" data-reveal="fade">
+      <span class="eyebrow">YOUR CARE TEAM</span>
+      <h2>Meet the {{ $city }} Clinicians</h2>
+    </div>
+    <div class="card-grid team-grid">
+      {{ range $members }}
+      {{ if .link }}<a href="{{ .link }}" class="team-card reveal" data-reveal="up">{{ else }}<div class="team-card reveal" data-reveal="up">{{ end }}
+        <div class="team-avatar">{{ if .photo }}<img src="{{ .photo }}" alt="{{ .name }}" loading="lazy">{{ else }}{{ substr .name 0 1 }}{{ end }}</div>
+        <h3>{{ .name }}</h3>
+        {{ with .creds }}<div class="team-credentials">{{ . }}</div>{{ end }}
+        {{ with .title }}<div class="team-role">{{ . }}</div>{{ end }}
+      {{ if .link }}</a>{{ else }}</div>{{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
+
+<!-- ===== WHAT TO EXPECT ===== -->
+{{- $plans := .Params.insurance_plans -}}
+{{ if or .Params.first_visit .Params.insurance $plans .Params.faqs }}
+<section class="section">
+  <div class="container">
+    <div class="section-heading reveal" data-reveal="fade">
+      <span class="eyebrow">WHAT TO EXPECT</span>
+      <h2>Your First Visit</h2>
+    </div>
+    {{ with .Params.first_visit }}
+    <ol class="cl-steps">
+      {{ range $i, $s := . }}
+      {{ $t := $s }}{{ $d := "" }}{{ if reflect.IsMap $s }}{{ $t = $s.title }}{{ $d = $s.text }}{{ end }}
+      {{ if $t }}<li class="cl-step reveal" data-reveal="up"><span class="cl-step-num">{{ add $i 1 }}</span><div><h3>{{ $t }}</h3>{{ with $d }}<p>{{ . }}</p>{{ end }}</div></li>{{ end }}
+      {{ end }}
+    </ol>
+    {{ end }}
+
+    {{ if or .Params.insurance $plans }}
+    <div class="cl-insurance reveal" data-reveal="up">
+      <span class="service-icon service-icon-prosthetic">{{ partial "icon.html" "insurance" }}</span>
+      <div>
+        <h3>Insurance &amp; Payment</h3>
+        {{ with .Params.insurance }}<p>{{ . | markdownify }}</p>{{ end }}
+        {{ with $plans }}<ul class="cl-plans">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
       </div>
     </div>
-    <div class="about-media reveal" data-reveal="up">
-      <img src="{{ .Params.image | default "/images/clinic-map.svg" }}" alt="Map of {{ .Title }} clinic area" width="700" height="500" loading="lazy">
+    {{ end }}
+
+    {{ with .Params.faqs }}
+    <div class="faq-list cl-faq">
+      {{ range . }}{{ if and .question .answer }}
+      <details class="faq-item"><summary>{{ .question }}</summary><p>{{ .answer }}</p></details>
+      {{ end }}{{ end }}
     </div>
+    {{ end }}
   </div>
 </section>
+{{ end }}
 
+<!-- ===== NEARBY CLINICS ===== -->
+{{- $self := . -}}
+{{- $near := slice -}}
+{{- range where $state.RegularPages "RelPermalink" "ne" .RelPermalink -}}
+  {{- $c := dict "page" . "name" .Title -}}
+  {{- if and $hasGeo .Params.lat .Params.lng -}}
+    {{- $r := div math.Pi 180 -}}
+    {{- $dLat := mul (sub (float .Params.lat) (float $self.Params.lat)) $r -}}
+    {{- $dLng := mul (sub (float .Params.lng) (float $self.Params.lng)) $r -}}
+    {{- $a := add (math.Pow (math.Sin (div $dLat 2)) 2) (mul (mul (math.Cos (mul (float $self.Params.lat) $r)) (math.Cos (mul (float .Params.lat) $r))) (math.Pow (math.Sin (div $dLng 2)) 2)) -}}
+    {{- $c = merge $c (dict "dist" (mul 2 (mul 3958.8 (math.Asin (math.Sqrt $a))))) -}}
+  {{- end -}}
+  {{- $near = $near | append $c -}}
+{{- end -}}
+{{- if and $hasGeo $near }}{{ $near = sort $near "dist" }}{{ else }}{{ $near = sort $near "name" }}{{ end -}}
+{{ if $near }}
+<section class="section services-section">
+  <div class="container">
+    <div class="section-heading reveal" data-reveal="fade">
+      <span class="eyebrow">NEARBY</span>
+      <h2>Other {{ $state.Title }} Clinics</h2>
+    </div>
+    <div class="card-grid clinic-list-grid">
+      {{ range first 3 $near }}
+      {{ partial "clinic-card.html" (dict "page" .page "dist" .dist) }}
+      {{ end }}
+    </div>
+    <p class="cl-all-link"><a href="{{ $state.RelPermalink }}" class="card-link">See all {{ add (len $near) 1 }} clinics in {{ $state.Title }} <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span></a></p>
+  </div>
+</section>
+{{ end }}
+
+<!-- ===== CTA ===== -->
 <section class="final-cta reveal" data-reveal="fade">
   <div class="container final-cta-inner">
-    <h2>Ready to Visit Our {{ .Title }} Clinic?</h2>
+    <h2>Ready to Visit Our {{ $city }} Clinic?</h2>
     <p>Request a consultation and our team will help you schedule your visit.</p>
     <div class="final-cta-actions">
       <a href="/contact/" class="btn btn-primary btn-lg">Request a Consultation</a>
-      <a href="{{ .Parent.RelPermalink }}" class="btn btn-outline btn-lg">See Other {{ .Params.state }} Clinics</a>
+      {{ with $phone }}<a href="tel:{{ replaceRE `[^\d+]` "" . }}" class="btn btn-outline btn-lg">Call {{ . }}</a>{{ end }}
     </div>
   </div>
 </section>
+
+{{ if or $hasGeo $hoursList }}
+{{ if $hasGeo }}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+{{ end }}
+<script src="/js/clinic-detail.js" defer></script>
+{{ end }}
 {{ end }}

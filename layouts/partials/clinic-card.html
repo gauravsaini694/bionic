@@ -1,0 +1,14 @@
+{{- /* Shared clinic card. Context: dict "page" <clinic page> ["dist" miles] ["pin" index for map sync] */ -}}
+{{- $c := .page -}}
+<article class="clinic-card"{{ with .pin }}{{ if ne . "" }} data-pin="{{ . }}"{{ end }}{{ end }}>
+  <div class="clinic-card-top">
+    <h3><a href="{{ $c.RelPermalink }}">{{ $c.Title }}</a></h3>
+    {{ with .dist }}<span class="clinic-result-dist">{{ printf "%.1f" . }} mi</span>{{ end }}
+  </div>
+  {{ with $c.Params.address }}<p class="clinic-card-line"><span class="icon-sm">{{ partial "icon.html" "pin" }}</span><span>{{ . }}</span></p>{{ end }}
+  {{ with $c.Params.phone }}<p class="clinic-card-line"><span class="icon-sm">{{ partial "icon.html" "phone" }}</span><a href="tel:{{ replaceRE `[^\d+]` "" . }}">{{ . }}</a></p>{{ end }}
+  <div class="clinic-card-actions">
+    <a href="{{ $c.RelPermalink }}" class="btn btn-primary">View Clinic</a>
+    {{ with $c.Params.address }}<a href="https://www.google.com/maps/dir/?api=1&destination={{ . | urlquery }}" class="btn btn-outline-dark" target="_blank" rel="noopener">Get Directions</a>{{ end }}
+  </div>
+</article>

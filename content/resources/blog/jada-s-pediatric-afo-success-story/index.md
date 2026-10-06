@@ -1,7 +1,7 @@
 ---
 title: "From First Steps to the School Dance: Jada's Pediatric AFO Success Story"
 date: 2026-01-28
-category: "Success Stories"
+categories: ["Success Stories"]
 image: "/images/blog/jada-s-pediatric-afo-success-story.jpg"
 ---
 

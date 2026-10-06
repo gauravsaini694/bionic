@@ -1,7 +1,7 @@
 ---
 title: "Residual Limb Care: Your Guide to Comfort, Confidence & Healing"
 date: 2025-11-29
-category: "Health and Wellness"
+categories: ["Health and Wellness"]
 image: "/images/blog/residual-limb-care-your-guide-to-comfort-confidence-healing.jpg"
 ---
 

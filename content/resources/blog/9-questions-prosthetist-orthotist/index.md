@@ -1,7 +1,7 @@
 ---
 title: "9 Questions You Need to Ask Your Prosthetist or Orthotist"
 date: 2022-07-05
-category: "Prosthetics and Orthotics"
+categories: ["Prosthetics and Orthotics"]
 ---
 
 Appointments with your prosthetics or orthotics specialist offer real opportunities to enhance mobility, reduce pain, and improve overall quality of life. Getting the most out of these visits depends on asking informed questions and advocating for yourself. Here are nine essential questions to bring to your next appointment.

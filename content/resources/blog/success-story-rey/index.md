@@ -1,7 +1,7 @@
 ---
 title: "The Bionic Difference: Reynaldo Morales"
 date: 2022-02-24
-category: "Success Stories"
+categories: ["Success Stories"]
 image: "/images/blog/success-story-rey.png"
 ---
 

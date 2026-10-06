@@ -32,6 +32,11 @@ sections:
       - "Community — strong local relationships and engagement"
       - "Commitment to Patients — dedicated to improving lives through competent care"
 
+  - type: "leadership"
+    eyebrow: "LEADERSHIP"
+    title: "The People Guiding Bionic"
+    body: "Our executive team brings clinical expertise and business leadership to every patient we serve."
+
   - type: "cards"
     eyebrow: "GET TO KNOW US"
     title: "Explore More About Bionic"

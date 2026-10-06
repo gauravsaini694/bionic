@@ -30,7 +30,7 @@ sections:
         link: "/careers/grow/"
       - title: "O&P Residency Program"
         description: "Our nationally recognized post-graduate residency gives you real-world clinical experience, mentorship, and access to advanced technology to become a confident, capable clinician."
-        icon: "star"
+        icon: "award"
         link: "/careers/residency-program/"
       - title: "Students & Early Explorers"
         description: "Hands-on unpaid internships and job shadowing opportunities across clinical, fabrication, and business disciplines — your first step into the world of O&P."

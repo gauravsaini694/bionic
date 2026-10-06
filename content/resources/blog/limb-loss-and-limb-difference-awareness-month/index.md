@@ -1,7 +1,7 @@
 ---
 title: "Limb Loss and Limb Difference Awareness Month"
 date: 2023-04-03
-category: "Health and Wellness"
+categories: ["Health and Wellness"]
 ---
 
 ## Key Statistics

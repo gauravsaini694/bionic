@@ -22,6 +22,10 @@ sections:
     image_alt: "Illustration of a person taking a confident step forward"
     image_position: "left"
 
+  - type: "children-grid"
+    eyebrow: "ALL ARTICLES"
+    title: "Latest from the Blog"
+
   - type: "cta-band"
     title: "Have a Question We Haven't Covered?"
     body: "Our clinical team is always happy to help. Reach out and we'll point you in the right direction."

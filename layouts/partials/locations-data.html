@@ -1,0 +1,23 @@
+{{- /* Single source of truth: builds states + clinics from content/locations/. Returns a dict. */ -}}
+{{- $loc := site.GetPage "/locations" -}}
+{{- $states := slice -}}
+{{- $clinics := slice -}}
+{{- range $loc.Sections.ByTitle -}}
+  {{- $st := . -}}
+  {{- $n := 0 -}}
+  {{- range .RegularPages.ByTitle -}}
+    {{- $zip := .Params.zip -}}
+    {{- if not $zip -}}
+      {{- with findRE `\b\d{5}\s*$` (.Params.address | default "" | strings.TrimSpace) 1 -}}{{- $zip = strings.TrimSpace (index . 0) -}}{{- end -}}
+    {{- end -}}
+    {{- $c := dict "name" .Title "city" (.Params.city | default .Title) "state" $st.Title "stateUrl" $st.RelPermalink "address" (.Params.address | default "") "phone" (.Params.phone | default "") "zip" ($zip | default "") "url" .RelPermalink -}}
+    {{- with .Params.lat }}{{ $c = merge $c (dict "lat" .) }}{{ end -}}
+    {{- with .Params.lng }}{{ $c = merge $c (dict "lng" .) }}{{ end -}}
+    {{- $clinics = $clinics | append $c -}}
+    {{- $n = add $n 1 -}}
+  {{- end -}}
+  {{- if $n -}}
+    {{- $states = $states | append (dict "name" $st.Title "url" $st.RelPermalink "count" $n) -}}
+  {{- end -}}
+{{- end -}}
+{{- return (dict "states" $states "clinics" $clinics "total" (len $clinics) "stateCount" (len $states)) -}}

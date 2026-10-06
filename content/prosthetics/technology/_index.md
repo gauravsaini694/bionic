@@ -1,0 +1,51 @@
+---
+title: "Prosthetic & Orthotic Technology"
+description: "Microprocessor-controlled joints, functional electrical stimulation, myoelectric devices and 3D printing at Bionic."
+
+hero:
+  eyebrow: "TECHNOLOGY"
+  title: "Technology That Moves With You"
+  subhead: "We evaluate and fit advanced prosthetic and orthotic technology — matched carefully to what actually helps you move, not just what is newest."
+  cta_primary: "Request a Consultation"
+  cta_primary_link: "/contact/"
+  cta_secondary: "Find a Clinic Near You"
+  cta_secondary_link: "/locations/"
+
+sections:
+  - type: "text-image"
+    eyebrow: "RIGHT TECHNOLOGY, RIGHT PERSON"
+    title: "Advanced Options, Chosen Around Your Goals"
+    body: "The best device is the one that fits your body, your activity level and your daily life. Your clinician will walk you through the options, what each one can and cannot do, and what your insurance may cover before anything is decided."
+    image: "/images/technology-device.png"
+    image_alt: "Illustration of bionic prosthetic technology"
+    image_position: "right"
+
+  - type: "cards"
+    eyebrow: "WHAT WE WORK WITH"
+    title: "Technologies We Evaluate and Fit"
+    items:
+      - title: "Microprocessor-Controlled Joints"
+        description: "Knees and ankles with sensors that adjust resistance in real time, supporting stability on slopes, stairs and uneven ground."
+        icon: "technology"
+        link: "/prosthetics/lower-limb/"
+      - title: "Myoelectric Arms & Hands"
+        description: "Devices controlled by the electrical signals of your own muscles for natural, adjustable grip."
+        icon: "prosthetic"
+        link: "/prosthetics/upper-limb/"
+      - title: "Functional Electrical Stimulation (FES)"
+        description: "Systems that stimulate nerves to help lift the foot or support movement after neurological conditions."
+        icon: "orthotic"
+        link: "/orthotics/lower-extremity/"
+      - title: "3D Printing & Digital Scanning"
+        description: "Digital scans and 3D-printed designs for faster, precisely customized sockets and orthoses."
+        icon: "personalized"
+        link: "/contact/"
+
+  - type: "cta-band"
+    title: "Curious Which Technology Fits You?"
+    body: "Book a consultation and a certified clinician will help you compare options for your situation."
+    cta_primary: "Request a Consultation"
+    cta_primary_link: "/contact/"
+    cta_secondary: "Find a Clinic Near You"
+    cta_secondary_link: "/locations/"
+---

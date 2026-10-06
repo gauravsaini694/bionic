@@ -1,0 +1,13 @@
+{{- /* Shared blog post card. Context: post page */ -}}
+<a href="{{ .RelPermalink }}" class="blog-card reveal" data-reveal="up">
+  <div class="blog-card-media"{{ with .Params.image }} style="background-image:url('{{ . }}');background-size:cover;background-position:center;"{{ end }}></div>
+  <div class="blog-card-body">
+    <div class="blog-card-meta">
+      {{ with .GetTerms "categories" }}<span class="blog-card-category">{{ (index . 0).Page.Title }}</span>{{ end }}
+      {{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>{{ end }}
+    </div>
+    <h3>{{ .Title }}</h3>
+    {{ $ex := .Params.description | default (.Summary | plainify | truncate 130) }}
+    {{ with $ex }}<p class="blog-card-excerpt">{{ . }}</p>{{ end }}
+  </div>
+</a>

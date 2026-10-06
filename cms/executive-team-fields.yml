@@ -1,0 +1,13 @@
+# Executive team collection: content/about/executive-team/<name>.md (Decap-style reference)
+fields:
+  - { name: title, label: Full name, widget: string }
+  - { name: role, label: Role / job title, widget: string }
+  - { name: credentials, label: Credentials, widget: string, required: false }
+  - { name: weight, label: Display order (1 = first), widget: number, value_type: int }
+  - { name: image, label: Photo, widget: image, required: false, hint: "Missing photo falls back to an initials avatar" }
+  - { name: image_alt, label: Photo alt text, widget: string, required: false }
+  - { name: email, label: Email, widget: string, required: false }
+  - { name: clinical_profile, label: "Clinical team profile path (e.g. /about/clinical-team/dheeraj-bhambhani/)", widget: string, required: false, hint: "Adds 'Also on our Executive/Clinical Team' links both ways; bio is not duplicated" }
+  - { name: description, label: Meta description, widget: text, required: false }
+  - { name: aliases, label: Old URLs to redirect, widget: list, required: false }
+  - { name: body, label: Bio, widget: markdown }

@@ -1,0 +1,67 @@
+# Field definitions for a clinic page (content/locations/<state>/<city>/index.md).
+# Written in Decap/Netlify-CMS "fields" format so it can be dropped into a collection or
+# translated to any other CMS. No CMS config existed in this repo, so this is a reference schema.
+fields:
+  - { name: title, label: Clinic / City name, widget: string }
+  - { name: state, label: State, widget: string }
+  - { name: address, label: Address (end with 5-digit ZIP), widget: string }
+  - { name: lat, label: Latitude, widget: number, value_type: float, required: false }
+  - { name: lng, label: Longitude, widget: number, value_type: float, required: false }
+  - { name: zip, label: ZIP (overrides ZIP in address), widget: string, required: false }
+  - { name: city, label: City (if different from title), widget: string, required: false }
+  - { name: phone, label: Phone, widget: string }
+  - { name: fax, label: Fax, widget: string, required: false }
+  - { name: email, label: Email, widget: string, required: false }
+  - { name: timezone, label: "Timezone (e.g. America/Chicago)", widget: string, required: false, hint: "Used for the Open Now badge; defaults to America/New_York" }
+  - name: hours
+    label: Office hours
+    widget: list
+    required: false
+    fields:
+      - { name: day, label: Day, widget: select, options: [Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday] }
+      - { name: open, label: Opens (24h, e.g. 08:00), widget: string, required: false }
+      - { name: close, label: Closes (24h, e.g. 17:00), widget: string, required: false }
+      - { name: closed, label: Closed all day, widget: boolean, default: false, required: false }
+  - { name: hours_note, label: Hours note, widget: string, required: false }
+  - { name: parking, label: Parking info, widget: text, required: false }
+  - { name: accessibility, label: Accessibility info, widget: text, required: false }
+  - name: services
+    label: Services
+    widget: list
+    required: false
+    fields:
+      - { name: title, label: Title, widget: string }
+      - { name: description, label: Description, widget: text, required: false }
+      - { name: icon, label: Icon, widget: select, required: false, options: [prosthetic, orthotic, pediatric, diabetic, certified, personalized, technology, people] }
+      - { name: link, label: Link (optional), widget: string, required: false }
+  - { name: description, label: Short description, widget: text, required: false }
+  - { name: image, label: Clinic photo, widget: image, required: false }
+  - { name: image_alt, label: Photo alt text, widget: string, required: false }
+  - { name: gallery, label: Gallery, widget: list, required: false, field: { name: image, label: Image, widget: image } }
+  - name: team
+    label: Clinicians
+    widget: list
+    required: false
+    fields:
+      - { name: clinician, label: Existing clinician slug (e.g. victoria-mendez), widget: string, required: false }
+      - { name: name, label: Name, widget: string, required: false }
+      - { name: title, label: Title, widget: string, required: false }
+      - { name: credentials, label: Credentials, widget: string, required: false }
+      - { name: photo, label: Photo, widget: image, required: false }
+  - name: first_visit
+    label: Your first visit (steps)
+    widget: list
+    required: false
+    fields:
+      - { name: title, label: Step title, widget: string }
+      - { name: text, label: Step text, widget: text, required: false }
+  - { name: insurance, label: Insurance info, widget: text, required: false }
+  - { name: insurance_plans, label: Accepted plans, widget: list, required: false, field: { name: plan, label: Plan, widget: string } }
+  - name: faqs
+    label: FAQs
+    widget: list
+    required: false
+    fields:
+      - { name: question, label: Question, widget: string }
+      - { name: answer, label: Answer, widget: text }
+  - { name: body, label: About text (optional long description), widget: markdown, required: false }

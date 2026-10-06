@@ -1,0 +1,39 @@
+{{- /* MedicalClinic + BreadcrumbList JSON-LD. Everything comes from the clinic's front matter. */ -}}
+{{- $addr := .Params.address | default "" -}}
+{{- $parts := split $addr "," -}}
+{{- $postal := dict "@type" "PostalAddress" "addressCountry" "US" -}}
+{{- with $addr }}{{ $postal = merge $postal (dict "streetAddress" (trim (index $parts 0) " ")) }}{{ end -}}
+{{- with .Params.city | default .Title }}{{ $postal = merge $postal (dict "addressLocality" .) }}{{ end -}}
+{{- $reg := findRE `\b[A-Z]{2}\s+\d{5}\s*$` ($addr | strings.TrimSpace) 1 -}}
+{{- if not $reg }}{{ $reg = findRE `\b[A-Z]{2}\s*$` ($addr | strings.TrimSpace) 1 }}{{ end -}}
+{{- with $reg }}{{ $postal = merge $postal (dict "addressRegion" (substr (index . 0) 0 2)) }}{{ end -}}
+{{- with findRE `\b\d{5}\s*$` ($addr | strings.TrimSpace) 1 }}{{ $postal = merge $postal (dict "postalCode" (strings.TrimSpace (index . 0))) }}{{ end -}}
+{{- with .Params.zip }}{{ $postal = merge $postal (dict "postalCode" (printf "%v" .)) }}{{ end -}}
+{{- $s := dict "@context" "https://schema.org" "@type" (slice "MedicalClinic" "LocalBusiness") "name" (printf "%s — %s" site.Title .Title) "url" .Permalink "address" $postal "parentOrganization" (dict "@type" "Organization" "name" site.Title "url" site.Home.Permalink) -}}
+{{- with .Params.description }}{{ $s = merge $s (dict "description" .) }}{{ end -}}
+{{- with .Params.phone }}{{ $s = merge $s (dict "telephone" .) }}{{ end -}}
+{{- with .Params.fax }}{{ $s = merge $s (dict "faxNumber" .) }}{{ end -}}
+{{- with .Params.email }}{{ $s = merge $s (dict "email" .) }}{{ end -}}
+{{- with .Params.image }}{{ $s = merge $s (dict "image" (. | absURL)) }}{{ end -}}
+{{- if and .Params.lat .Params.lng -}}
+  {{- $s = merge $s (dict "geo" (dict "@type" "GeoCoordinates" "latitude" .Params.lat "longitude" .Params.lng) "hasMap" (printf "https://www.google.com/maps/search/?api=1&query=%s,%s" (string .Params.lat) (string .Params.lng))) -}}
+{{- end -}}
+{{- if reflect.IsSlice .Params.hours -}}
+  {{- $spec := slice -}}
+  {{- range .Params.hours -}}
+    {{- if and .open .close (not .closed) -}}
+      {{- $o := .open -}}{{- $c := .close -}}
+      {{- $full := dict "mon" "Monday" "tue" "Tuesday" "wed" "Wednesday" "thu" "Thursday" "fri" "Friday" "sat" "Saturday" "sun" "Sunday" -}}
+      {{- with index $full (lower (substr .day 0 3)) -}}
+        {{- $spec = $spec | append (dict "@type" "OpeningHoursSpecification" "dayOfWeek" . "opens" $o "closes" $c) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- if $spec }}{{ $s = merge $s (dict "openingHoursSpecification" $spec) }}{{ end -}}
+{{- end -}}
+{{- $crumbs := slice (dict "@type" "ListItem" "position" 1 "name" "Home" "item" site.Home.Permalink) (dict "@type" "ListItem" "position" 2 "name" "Locations" "item" (site.GetPage "/locations").Permalink) (dict "@type" "ListItem" "position" 3 "name" .Parent.Title "item" .Parent.Permalink) (dict "@type" "ListItem" "position" 4 "name" .Title "item" .Permalink) -}}
+<script type="application/ld+json">{{ $s | jsonify | safeJS }}</script>
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs | jsonify | safeJS }}</script>
+{{- $fq := slice -}}
+{{- range .Params.faqs }}{{ if and .question .answer }}{{ $fq = $fq | append (dict "@type" "Question" "name" .question "acceptedAnswer" (dict "@type" "Answer" "text" .answer)) }}{{ end }}{{ end -}}
+{{ if $fq }}<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $fq | jsonify | safeJS }}</script>{{ end }}

@@ -1,7 +1,7 @@
 ---
 title: "Sports & Prosthetics: How Athletes with Limb Loss Break Barriers Every Day"
 date: 2025-11-29
-category: "Health and Wellness"
+categories: ["Health and Wellness"]
 ---
 
 Sports transcend mere physical activity — they represent self-expression, identity, confidence, and freedom. For individuals with limb loss, adaptive sports provide a powerful avenue to reclaim movement and discover new capabilities within their own bodies. Modern advancements in bionic prosthetics and orthotics enable athletes around the world to participate in running, cycling, swimming, climbing, and competitive events of all kinds. Bionic Prosthetics & Orthotics supports athletes of every age and ability level in returning to the sports they love, or discovering new ones.

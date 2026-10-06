@@ -1,29 +1,61 @@
 {{ define "main" }}
-<section class="page-hero">
-  <div class="container page-hero-inner">
-    <span class="eyebrow eyebrow-light">FIND CARE NEAR YOU</span><br>
+{{- $state := . -}}
+{{- $clinics := .RegularPages.ByTitle -}}
+{{- $n := len $clinics -}}
+{{- $pins := slice -}}
+{{- range $clinics -}}
+  {{- if and .Params.lat .Params.lng -}}
+    {{- $pins = $pins | append (dict "name" .Title "address" (.Params.address | default "") "lat" .Params.lat "lng" .Params.lng "url" .RelPermalink) -}}
+  {{- end -}}
+{{- end -}}
+{{- $all := partialCached "locations-data.html" . -}}
+
+<section class="cl-hero">
+  <div class="container">
+    <nav class="cl-crumbs" aria-label="Breadcrumb">
+      <a href="/">Home</a><span aria-hidden="true">›</span>
+      <a href="/locations/">Locations</a><span aria-hidden="true">›</span>
+      <span aria-current="page">{{ .Title }}</span>
+    </nav>
+    <span class="eyebrow eyebrow-light">FIND CARE NEAR YOU</span>
     <h1>Bionic Clinics in {{ .Title }}</h1>
-    {{ with .Params.hero.subhead }}<p class="page-hero-subhead">{{ . }}</p>{{ end }}
+    {{ with .Params.hero.subhead }}<p class="cl-hero-address">{{ . }}</p>{{ end }}
+    <span class="cl-badge is-closed">{{ $n }} {{ cond (eq $n 1) "Location" "Locations" }} in {{ .Title }}</span>
+    <div class="cl-hero-actions">
+      <a href="/contact/" class="btn btn-primary btn-lg">Request a Consultation</a>
+      <a href="/locations/" class="btn btn-outline btn-lg">All Locations</a>
+    </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="container">
-    <a href="/locations/" class="article-back">
-      <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span> Back to All Locations
-    </a>
-    <div class="section-heading reveal" data-reveal="fade">
-      <span class="eyebrow">OUR CLINICS</span>
-      <h2>Clinics in {{ .Title }}</h2>
-    </div>
-    <div class="card-grid clinic-list-grid">
-      {{ range .Pages.ByTitle }}
-      <a href="{{ .RelPermalink }}" class="clinic-card reveal" data-reveal="up">
-        <h3>{{ .Title }}</h3>
-        {{ with .Params.address }}<p>{{ partial "icon.html" "pin" }} {{ . }}</p>{{ end }}
-        {{ with .Params.phone }}<p>{{ partial "icon.html" "phone" }} {{ . }}</p>{{ end }}
-      </a>
+  <div class="container st-layout">
+    <div class="st-list">
+      {{ $k := 0 }}
+      {{ range $c := $clinics }}
+      {{ $pin := "" }}{{ if and $c.Params.lat $c.Params.lng }}{{ $pin = $k }}{{ $k = add $k 1 }}{{ end }}
+      {{ partial "clinic-card.html" (dict "page" $c "pin" $pin) }}
       {{ end }}
+    </div>
+    {{ if $pins }}
+    <div class="st-map-col">
+      <div id="state-map" class="cl-map" role="region" aria-label="Map of {{ .Title }} clinics"></div>
+      <script type="application/json" id="state-pins">{{ $pins | jsonify | safeJS }}</script>
+    </div>
+    {{ end }}
+  </div>
+</section>
+
+<section class="section services-section">
+  <div class="container">
+    <div class="section-heading reveal" data-reveal="fade">
+      <span class="eyebrow">OTHER STATES</span>
+      <h2>Browse Clinics in Other States</h2>
+    </div>
+    <div class="state-chip-grid st-chips">
+      {{ range $all.states }}{{ if ne .name $state.Title }}
+      <a href="{{ .url }}" class="state-chip">{{ .name }} ({{ .count }})</a>
+      {{ end }}{{ end }}
     </div>
   </div>
 </section>
@@ -38,4 +70,10 @@
     </div>
   </div>
 </section>
+
+{{ if $pins }}
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+<script src="/js/state-map.js" defer></script>
+{{ end }}
 {{ end }}

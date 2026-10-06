@@ -3,6 +3,7 @@
 {{ with $hero }}
 <section class="page-hero">
   <div class="container page-hero-inner">
+    {{ if not $.IsHome }}{{ partial "breadcrumbs.html" (dict "page" $ "light" true) }}{{ end }}
     {{ with .eyebrow }}<span class="eyebrow eyebrow-light">{{ . }}</span><br>{{ end }}
     <h1>{{ .title }}</h1>
     {{ with .subhead }}<p class="page-hero-subhead">{{ . }}</p>{{ end }}
@@ -19,11 +20,14 @@
 {{ range $i, $s := .Params.sections }}
 
 {{ if eq $s.type "text-image" }}
+{{ $img := $s.image | default $.Params.image | default site.Params.defaultImage }}
 <section class="section about-section text-image-section">
-  <div class="container about-inner {{ if eq $s.image_position "left" }}reverse{{ end }}">
+  <div class="container about-inner {{ if eq $s.image_position "left" }}reverse{{ end }}{{ if not $img }} no-media{{ end }}">
+    {{ with $img }}
     <div class="about-media reveal" data-reveal="up">
-      <img src="{{ $s.image }}" alt="{{ $s.image_alt }}" width="700" height="500" loading="lazy">
+      {{ partial "img.html" (dict "src" . "alt" ($s.image_alt | default $s.title)) }}
     </div>
+    {{ end }}
     <div class="about-copy reveal" data-reveal="fade">
       {{ with $s.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
       <h2>{{ $s.title }}</h2>
@@ -34,7 +38,7 @@
 </section>
 
 {{ else if eq $s.type "points" }}
-<section class="section credentials-section">
+<section class="section credentials-section"{{ with $s.id }} id="{{ . }}"{{ end }}>
   <div class="container credentials-inner">
     <div class="credentials-copy reveal" data-reveal="fade">
       {{ with $s.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
@@ -51,7 +55,7 @@
     </div>
     {{ with $s.image }}
     <div class="credentials-media reveal" data-reveal="up">
-      <img src="{{ . }}" alt="{{ $s.image_alt }}" width="700" height="500" loading="lazy">
+      {{ partial "img.html" (dict "src" . "alt" ($s.image_alt | default $s.title)) }}
     </div>
     {{ end }}
   </div>
@@ -89,6 +93,26 @@
     {{ end }}
   </div>
 </section>
+
+{{ else if eq $s.type "clinic-finder" }}
+{{ partial "clinic-finder.html" (dict "page" $ "params" $s) }}
+
+{{ else if eq $s.type "leadership" }}
+{{ $exec := site.GetPage "/about/executive-team" }}
+{{ with $exec }}{{ if .Pages }}
+<section class="section leadership-section">
+  <div class="container">
+    {{ partial "section-header.html" (dict "eyebrow" ($s.eyebrow | default "LEADERSHIP") "title" ($s.title | default "Meet Our Leadership") "body" $s.body) }}
+    <div class="leader-strip">
+      {{ range .Pages.ByWeight }}{{ partial "team-card.html" . }}{{ end }}
+    </div>
+    <p class="cl-all-link"><a href="{{ .RelPermalink }}" class="card-link">{{ $s.cta_text | default "See the full Executive Team" }} <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span></a></p>
+  </div>
+</section>
+{{ end }}{{ end }}
+
+{{ else if eq $s.type "children-grid" }}
+{{ partial "children-grid.html" (dict "page" $ "params" $s) }}
 
 {{ else if eq $s.type "chip-list" }}
 <section class="section find-clinic-section chip-list-section">

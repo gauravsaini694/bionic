@@ -2,13 +2,16 @@
 <html lang="en">
 <head>
   {{ partial "head.html" . }}
+  {{ block "head" . }}{{ end }}
 </head>
 <body>
+  <a href="#main" class="skip-link">Skip to main content</a>
   {{ partial "header.html" . }}
-  <main>
+  <main id="main">
     {{ block "main" . }}{{ end }}
   </main>
   {{ partial "footer.html" . }}
+  {{ partial "mobile-bar.html" . }}
   <script src="/js/main.js" defer></script>
 </body>
 </html>

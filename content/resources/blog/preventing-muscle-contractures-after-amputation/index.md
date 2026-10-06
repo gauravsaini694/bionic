@@ -1,7 +1,7 @@
 ---
 title: "Preventing Muscle Contractures After Amputation"
 date: 2025-09-10
-category: "Health and Wellness"
+categories: ["Health and Wellness"]
 image: "/images/blog/preventing-muscle-contractures-after-amputation.jpg"
 ---
 

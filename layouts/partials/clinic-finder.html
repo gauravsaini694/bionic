@@ -1,0 +1,40 @@
+{{- /* Dynamic clinic finder. Context: dict "page" <page> "params" <copy params> */ -}}
+{{- $p := .params -}}
+{{- $d := partialCached "locations-data.html" .page -}}
+<section class="section find-clinic-section" id="find-a-clinic">
+  <div class="container find-clinic-inner">
+    <div class="find-clinic-copy reveal" data-reveal="fade">
+      {{ with $p.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
+      <h2>{{ $p.title }}</h2>
+      <p class="clinic-total"><strong>{{ $d.total }}</strong> clinics across <strong>{{ $d.stateCount }}</strong> states</p>
+      {{ with $p.body }}<p class="lead">{{ . }}</p>{{ end }}
+      <form class="clinic-search-form" role="search" id="clinic-search-form" novalidate>
+        <label for="clinic-search" class="visually-hidden">Search by ZIP, city, or state</label>
+        <input id="clinic-search" type="text" autocomplete="off" placeholder="{{ $p.search_placeholder | default "ZIP, city or state" }}">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+      <button type="button" class="current-location-link" id="clinic-locate">
+        <span class="icon-sm">{{ partial "icon.html" "location" }}</span>
+        {{ $p.location_text | default "Use My Current Location" }}
+      </button>
+      <div class="clinic-results" id="clinic-results" aria-live="polite" hidden></div>
+    </div>
+    <div class="find-clinic-panel reveal" data-reveal="up">
+      <div class="state-chip-grid" role="group" aria-label="Filter map by state">
+        {{ range $d.states }}
+        <button type="button" class="state-card" data-state="{{ .name }}" aria-pressed="false">
+          <span class="state-card-name">{{ .name }}</span>
+          <span class="state-card-count">{{ .count }} {{ cond (eq .count 1) "Location" "Locations" }}</span>
+        </button>
+        {{ end }}
+      </div>
+      <div class="clinic-map-wrap">
+        <div id="clinic-map" class="clinic-map" data-src="{{ "locations/index.json" | relURL }}" role="region" aria-label="Map of Bionic clinic locations"></div>
+        <a href="/locations/" class="clinic-map-state-link" id="clinic-map-state-link" hidden></a>
+      </div>
+    </div>
+  </div>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+  <script src="/js/clinic-map.js" defer></script>
+</section>

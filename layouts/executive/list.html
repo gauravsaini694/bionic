@@ -1,0 +1,12 @@
+{{ define "main" }}
+<section class="page-hero">
+  <div class="container page-hero-inner">
+    {{ partial "breadcrumbs.html" (dict "page" . "light" true) }}
+    <span class="eyebrow eyebrow-light">{{ .Params.eyebrow | default "OUR LEADERSHIP" }}</span><br>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.subhead }}<p class="page-hero-subhead">{{ . }}</p>{{ end }}
+  </div>
+</section>
+{{ partial "children-grid.html" (dict "page" . "params" (dict)) }}
+{{ partial "cta-band.html" (dict "title" "Questions for Our Team?" "body" "We would be glad to hear from you." "primary" "Contact Us" "primary_link" "/contact/" "secondary" "Meet Our Clinical Team" "secondary_link" "/about/clinical-team/") }}
+{{ end }}

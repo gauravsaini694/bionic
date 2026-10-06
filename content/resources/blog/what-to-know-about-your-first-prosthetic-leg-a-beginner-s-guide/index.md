@@ -1,7 +1,7 @@
 ---
 title: "What to Know About Your First Prosthetic Leg: A Beginner's Guide"
 date: 2025-01-16
-category: "Prosthetics and Orthotics"
+categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/what-to-know-about-your-first-prosthetic-leg-a-beginner-s-guide.jpg"
 ---
 

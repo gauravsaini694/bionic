@@ -1,7 +1,7 @@
 ---
 title: "Understanding Cranial Helmets: Supporting Healthy Head Growth in Babies"
 date: 2025-12-02
-category: "Prosthetics and Orthotics"
+categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/understanding-cranial-helmets-supporting-healthy-head-growth-in-babies.jpg"
 ---
 

@@ -27,16 +27,17 @@
     <nav class="main-nav" aria-label="Main navigation">
       <ul >
         {{ range .Site.Menus.main }}
+        {{ $active := and (ne .URL "/") (hasPrefix $.RelPermalink .URL) }}
         {{ if .Children }}
         <li class="has-dropdown">
-          <button type="button" class="nav-link nav-link-toggle" aria-expanded="false">
+          <button type="button" class="nav-link nav-link-toggle{{ if $active }} is-active{{ end }}" aria-expanded="false">
             {{ .Name }}<span class="nav-chevron">{{ partial "icon.html" "chevron" }}</span>
           </button>
           <div class="dropdown-panel">
             <ul class="dropdown-menu">
               {{ range .Children }}
               <li>
-                <a href="{{ .URL }}" class="dropdown-item">
+                <a href="{{ .URL }}" class="dropdown-item"{{ if eq $.RelPermalink .URL }} aria-current="page"{{ end }}>
                   <span class="dropdown-item-icon">{{ partial "icon.html" (.Params.icon | default "check") }}</span>
                   <span class="dropdown-item-text">
                     <span class="dropdown-item-title">{{ .Name }}</span>
@@ -49,17 +50,27 @@
           </div>
         </li>
         {{ else }}
-        <li><a href="{{ .URL }}" class="nav-link">{{ .Name }}</a></li>
+        <li><a href="{{ .URL }}" class="nav-link{{ if $active }} is-active{{ end }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
         {{ end }}
         {{ end }}
+        <li class="has-dropdown nav-find-mobile">
+          <button type="button" class="nav-link nav-link-toggle" aria-expanded="false">
+            Find a Clinic<span class="nav-chevron">{{ partial "icon.html" "chevron" }}</span>
+          </button>
+          {{ partial "locations-menu.html" . }}
+        </li>
       </ul>
     </nav>
 
     <div class="header-cta">
-      <a href="/locations/" class="btn btn-outline-dark">
-        <span class="icon-sm">{{ partial "icon.html" "pin" }}</span>
-        Find a Clinic
-      </a>
+      <div class="has-dropdown header-find{{ if hasPrefix .RelPermalink "/locations/" }} is-active{{ end }}">
+        <button type="button" class="btn btn-outline-dark dropdown-toggle" aria-expanded="false">
+          <span class="icon-sm">{{ partial "icon.html" "pin" }}</span>
+          Find a Clinic
+          <span class="nav-chevron">{{ partial "icon.html" "chevron" }}</span>
+        </button>
+        {{ partial "locations-menu.html" . }}
+      </div>
       <a href="/contact/" class="btn btn-primary">Request Consultation</a>
     </div>
 

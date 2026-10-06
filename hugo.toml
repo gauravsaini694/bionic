@@ -1,11 +1,41 @@
 baseURL = "https://example.com/"
-languageCode = "en-us"
 locale = "en-us"
 title = "Bionic Prosthetics & Orthotics"
+
+[module]
+  [[module.mounts]]
+    source = "archetypes"
+    target = "archetypes"
+  [[module.mounts]]
+    source = "assets"
+    target = "assets"
+  [[module.mounts]]
+    source = "static/images"
+    target = "assets/images"
+  [[module.mounts]]
+    source = "content"
+    target = "content"
+  [[module.mounts]]
+    source = "data"
+    target = "data"
+  [[module.mounts]]
+    source = "i18n"
+    target = "i18n"
+  [[module.mounts]]
+    source = "layouts"
+    target = "layouts"
+  [[module.mounts]]
+    source = "static"
+    target = "static"
+
+[taxonomies]
+  category = "categories"
 
 [params]
   brandColor = "#1D3F96"
   accentColor = "#F2994A"
+  defaultAuthor = "Bionic Clinical Team"
+  legalName = "Bionic Prosthetics & Orthotics Group LLC"
   phone = "1-855-524-6642"
   email = "information@bionicpo.com"
   address = "8695 Connecticut St, Suite E, Merrillville, Indiana 46410"
@@ -29,6 +59,13 @@ title = "Bionic Prosthetics & Orthotics"
   url = "/about/clinical-team/"
   weight = 20
   params = { icon = "people", desc = "Meet our board-certified clinicians" }
+
+[[menu.main]]
+  name = "Executive Team"
+  parent = "our-story"
+  url = "/about/executive-team/"
+  weight = 25
+  params = { icon = "certified", desc = "The leaders guiding Bionic" }
 
 [[menu.main]]
   name = "Success Stories"
@@ -104,11 +141,6 @@ title = "Bionic Prosthetics & Orthotics"
   url = "/orthotics/diabetic-foot-care/"
   weight = 50
   params = { icon = "diabetic", desc = "Protective footwear and foot care" }
-
-[[menu.main]]
-  name = "Locations"
-  url = "/locations/"
-  weight = 40
 
 [[menu.main]]
   name = "Resources"
@@ -192,57 +224,77 @@ title = "Bionic Prosthetics & Orthotics"
   weight = 40
   params = { icon = "people", desc = "Observe our clinical team in action" }
 
-[[menu.footerServices]]
+[[menu.footer_services]]
   name = "Prosthetics"
   url = "/prosthetics/"
   weight = 10
 
-[[menu.footerServices]]
+[[menu.footer_services]]
   name = "Orthotics"
   url = "/orthotics/"
   weight = 20
 
-[[menu.footerServices]]
+[[menu.footer_services]]
   name = "Diabetic Foot Care"
   url = "/orthotics/diabetic-foot-care/"
   weight = 30
 
-[[menu.footerServices]]
+[[menu.footer_services]]
   name = "Find a Clinic"
   url = "/locations/"
   weight = 40
 
-[[menu.footerServices]]
+[[menu.footer_services]]
   name = "Pay My Bill"
   url = "/resources/pay-bill/"
   weight = 50
 
-[[menu.footerQuick]]
+[[menu.footer_links]]
   name = "About Us"
   url = "/about/"
   weight = 10
 
-[[menu.footerQuick]]
+[[menu.footer_links]]
   name = "Book Appointment"
   url = "/resources/pay-bill/"
   weight = 20
 
-[[menu.footerQuick]]
+[[menu.footer_links]]
   name = "Find Nearest Clinic"
   url = "/locations/"
   weight = 30
 
-[[menu.footerQuick]]
+[[menu.footer_links]]
   name = "Clinical Team"
   url = "/about/clinical-team/"
   weight = 40
 
-[[menu.footerQuick]]
+[[menu.footer_links]]
+  name = "Executive Team"
+  url = "/about/executive-team/"
+  weight = 45
+
+[[menu.footer_links]]
   name = "Patient Resources"
   url = "/resources/patient-resources/"
   weight = 50
 
-[[menu.footerQuick]]
+[[menu.footer_links]]
   name = "Blog"
   url = "/resources/blog/"
   weight = 60
+
+[[menu.footer_legal]]
+  name = "Privacy Policy"
+  url = "/privacy-policy/"
+  weight = 10
+
+[[menu.footer_legal]]
+  name = "Terms of Use"
+  url = "/terms-of-use/"
+  weight = 20
+
+[[menu.footer_legal]]
+  name = "Accredited — ABC"
+  url = "/accredited/"
+  weight = 30

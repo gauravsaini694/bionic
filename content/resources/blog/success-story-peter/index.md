@@ -1,7 +1,7 @@
 ---
 title: "The Bionic Difference: Peter Morrison"
 date: 2022-03-15
-category: "Success Stories"
+categories: ["Success Stories"]
 image: "/images/blog/success-story-peter.png"
 ---
 

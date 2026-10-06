@@ -1,7 +1,7 @@
 ---
 title: "Bionic Patients and Team Shine at AOPA 2024: A Journey of Learning and Innovation"
 date: 2024-10-04
-category: "Prosthetics and Orthotics"
+categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/bionic-patients-and-team-shine-at-aopa-2024-a-journey-of-learning-and-innovation.png"
 ---
 

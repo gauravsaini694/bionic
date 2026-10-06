@@ -12,6 +12,7 @@ hero:
 
 sections:
   - type: "points"
+    id: "support-organizations"
     eyebrow: "GENERAL & CHILDREN'S RESOURCES"
     title: "General & Pediatric Support Organizations"
     body: "Organizations offering education, community, and financial support for amputees of all ages."

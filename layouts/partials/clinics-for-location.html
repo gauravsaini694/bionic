@@ -1,0 +1,11 @@
+{{- /* Resolves a "City, ST" string to the matching clinic page (or nothing). Returns a page or nil. */ -}}
+{{- $res := false -}}
+{{- $parts := split (. | default "") "," -}}
+{{- if ge (len $parts) 2 -}}
+  {{- $city := lower (trim (index $parts 0) " ") -}}
+  {{- $st := trim (index $parts 1) " " -}}
+  {{- range where site.RegularPages "Type" "clinic" -}}
+    {{- if and (eq (lower (.Params.city | default .Title)) $city) (in (.Params.address | default "") (printf ", %s" $st)) -}}{{- $res = . -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $res -}}

@@ -1,7 +1,7 @@
 ---
 title: "The Bionic Difference: Alexander Lecher"
 date: 2022-05-13
-category: "Success Stories"
+categories: ["Success Stories"]
 image: "/images/blog/the-bionic-difference-alexander-lecher.png"
 ---
 

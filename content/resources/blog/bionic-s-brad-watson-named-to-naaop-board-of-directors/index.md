@@ -1,7 +1,7 @@
 ---
 title: "Bionic's Brad Watson Named to NAAOP Board of Directors"
 date: 2024-04-18
-category: "Prosthetics and Orthotics"
+categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/bionic-s-brad-watson-named-to-naaop-board-of-directors.jpg"
 ---
 

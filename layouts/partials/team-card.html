@@ -1,0 +1,13 @@
+{{- /* Shared people card (clinical team + executive team). Context: person page */ -}}
+{{- $name := .Params.name | default .Title -}}
+{{- $photo := .Params.photo | default .Params.image -}}
+{{- if and $photo (not (fileExists (path.Join "static" $photo))) }}{{ $photo = "" }}{{ end -}}
+<a href="{{ .RelPermalink }}" class="team-card reveal" data-reveal="up">
+  <div class="team-avatar">
+    {{ if $photo }}<img src="{{ $photo }}" alt="{{ $name }}" loading="lazy">{{ else }}{{ partial "initials.html" $name }}{{ end }}
+  </div>
+  <h3>{{ $name }}</h3>
+  {{ with .Params.credentials }}<div class="team-credentials">{{ . }}</div>{{ end }}
+  {{ with .Params.role }}<div class="team-role">{{ . }}</div>{{ end }}
+  {{ with .Params.location }}<div class="team-location"><span class="icon-sm">{{ partial "icon.html" "pin" }}</span>{{ . }}</div>{{ end }}
+</a>
