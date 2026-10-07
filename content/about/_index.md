@@ -16,15 +16,15 @@ sections:
     title: "Care That Adapts to Your Life"
     body: "Every patient's needs, goals, and daily life are different, and our approach reflects that. We provide advanced, personalized prosthetic and orthotic care that supports comfort, function, and confidence in everyday life — delivered by a fully accredited team of licensed specialists in prosthetics, orthotics, pediatric care, and functional electrical stimulation."
     image: "/images/about-empowering.png"
-    image_alt: "Illustration of a person taking a confident step forward"
+    image_alt: "A Bionic clinician in a white coat talking with a seated patient who wears a prosthetic leg"
     image_position: "right"
 
   - type: "points"
     eyebrow: "WHAT DRIVES US"
     title: "Our Values"
     body: "Our vision is to build a collaborative community of dedicated clinicians and partners as we grow, and our purpose is to create awareness and access to high-quality prosthetic and orthotic care in every community we serve."
-    image: "/images/clinical-team.png"
-    image_alt: "Illustration of a certified clinician reviewing a care plan"
+    image: "/images/blog/bionic-patients-and-team-shine-at-aopa-2024-a-journey-of-learning-and-innovation.png"
+    image_alt: "Bionic team members in matching light-blue shirts posing together at the Bionic booth at the AOPA 2024 conference"
     points:
       - "Compassion — patient-centered listening and empathetic treatment"
       - "Clinical Excellence — the highest standards through expertise and ongoing education"

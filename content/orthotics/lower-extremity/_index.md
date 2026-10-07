@@ -15,8 +15,8 @@ sections:
     eyebrow: "OUR SOLUTIONS"
     title: "Support from Hip to Foot"
     body: "Our lower extremity orthoses cover a wide range of conditions, from wound care off-loading to joint instability and post-surgical recovery."
-    image: "/images/clinical-team.png"
-    image_alt: "Illustration of a certified clinician reviewing a care plan"
+    image: "/images/blog/jada-s-pediatric-afo-success-story.jpg"
+    image_alt: "Jada, a smiling young girl in a light-blue dress, standing outdoors on a wooden deck"
     points:
       - "Neuro-Rehab Solutions — including TENS, WalkAide, and microprocessor bracing (C-Brace) systems"
       - "Off-Loading Solutions — custom-fabricated and off-the-shelf options essential to wound care"

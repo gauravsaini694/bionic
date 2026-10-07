@@ -1,5 +1,9 @@
 {{- $d := partialCached "locations-data.html" . -}}
 <div class="dropdown-panel mega-panel">
+  <div class="clinic-qs">
+    <input type="search" class="clinic-qs-input" placeholder="Search by city, state or ZIP" autocomplete="off" aria-label="Search clinics" role="combobox" aria-autocomplete="list" aria-expanded="false">
+    <ul class="clinic-qs-results" role="listbox" hidden></ul>
+  </div>
   <div class="mega-head">
     <strong>{{ $d.total }} clinics in {{ $d.stateCount }} states</strong>
     <a href="/locations/" class="mega-all">View all locations <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span></a>

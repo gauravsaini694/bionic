@@ -15,8 +15,8 @@ sections:
     eyebrow: "OUR SOLUTIONS"
     title: "Protecting the Insensate Foot"
     body: "Our diabetic foot care solutions are designed to reduce pressure on high-risk areas, minimize discomfort, and help lower the risk of ulcers."
-    image: "/images/clinical-team.png"
-    image_alt: "Illustration of a certified clinician reviewing a care plan"
+    image: "/images/about-empowering.png"
+    image_alt: "A Bionic clinician in a white coat talking with a seated patient who wears a prosthetic leg"
     points:
       - "Diabetic Toe/Partial Foot Filler — restores the functional lever arm of the foot for patients with toe amputation, minimizing discomfort and allowing for more natural walking"
       - "CROW Boot (Charcot Restraint Orthotic Walker) — a custom-fabricated total contact device designed to reduce pressure on the sole of the foot, developed for patients with severe deformity of the foot and ankle due to acute nerve damage"

@@ -11,7 +11,7 @@ hero:
   cta_secondary: "Find Clinic Locations"
   cta_secondary_link: "/locations/"
   image: "/images/hero-care.png"
-  image_alt: "Illustration of a clinician and patient walking forward together"
+  image_alt: "Collage of Bionic patients: people with prosthetic legs and orthotic braces, a smiling baby in a cranial helmet, and a close-up of a wrist brace"
   badge_title: "Board-Certified Clinical Team"
   badge_text: "Personalized care plans for every stage of life"
   quick_links:
@@ -40,7 +40,7 @@ about:
   title: "Empowering Your Next Step"
   body: "At Bionic Prosthetics & Orthotics, we focus on care that fits your life, not just your device. Our team works closely with you to understand your needs, goals, and daily movement. Every solution is customized to support comfort, stability, and long-term confidence."
   image: "/images/about-empowering.png"
-  image_alt: "Illustration of a person taking a confident step forward"
+  image_alt: "A Bionic clinician in a white coat talking with a seated patient who wears a prosthetic leg"
   cta_text: "Meet Our Clinical Team"
   cta_link: "/about/clinical-team/"
 
@@ -48,8 +48,8 @@ credentials:
   eyebrow: "SINCE 2007"
   title: "Compassionate Care from Certified Experts"
   body: "Founded in 2007, Bionic Prosthetics & Orthotics combines board-certified clinicians with personalized care plans, helping thousands regain comfort, mobility, and confidence."
-  image: "/images/clinical-team.png"
-  image_alt: "Illustration of a certified clinician reviewing a care plan"
+  image: "/images/blog/when-do-i-need-a-follow-up-for-my-prosthesis.jpg"
+  image_alt: "Two smiling women in a Bionic clinic striking a balancing pose, one wearing a prosthetic leg"
   points:
     - "Certified & state-licensed prosthetists & orthotists"
     - "Custom solutions for children & adults"
@@ -85,7 +85,7 @@ technology:
   cta_text: "Explore Technology"
   cta_link: "/prosthetics/technology/"
   image: "/images/technology-device.png"
-  image_alt: "Illustration of bionic prosthetic technology"
+  image_alt: "A man leaping in mid-air wearing a prosthetic leg"
 
 find_clinic:
   eyebrow: "FIND CARE NEAR YOU"

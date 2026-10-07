@@ -15,8 +15,8 @@ sections:
     eyebrow: "RESIDENCY BACKGROUND"
     title: "A Nationally Recognized Residency"
     body: "Bionic operates 30+ ABC-accredited, NCOPE-approved residency sites across the country. Our clinicians bring expertise in advanced prosthetic systems — including microprocessor-controlled devices, myoelectric upper-limb prosthetics, and specialized orthotic systems — built over more than a decade of patient care."
-    image: "/images/clinical-team.png"
-    image_alt: "Illustration of a certified clinician reviewing a care plan"
+    image: "/images/blog/preventing-muscle-contractures-after-amputation.jpg"
+    image_alt: "A clinician kneeling to fit a prosthetic leg on a seated patient in a clinic"
     image_position: "left"
 
   - type: "points"

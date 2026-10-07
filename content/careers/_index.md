@@ -15,8 +15,8 @@ sections:
     eyebrow: "A FAMILY BUILT ON PURPOSE"
     title: "A Family Built on Purpose and Progress"
     body: "When you join Bionic, you join a team building something bigger than any one of us. We're recognized by the American Board for Certification, the gold standard in O&P quality and patient care, and we invest heavily in advanced technology, 3D printing, and a state-of-the-art fabrication center — all in service of measuring success in the lives we change, not just the devices we deliver."
-    image: "/images/clinical-team.png"
-    image_alt: "Illustration of a certified clinician reviewing a care plan"
+    image: "/images/blog/what-is-gait-training-and-how-can-it-help-after-amputation.jpg"
+    image_alt: "A Bionic clinician kneeling to adjust a seated patient's prosthetic leg during a gait training session"
     image_position: "right"
 
   - type: "cards"

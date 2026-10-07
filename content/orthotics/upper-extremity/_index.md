@@ -15,8 +15,8 @@ sections:
     eyebrow: "OUR SOLUTIONS"
     title: "Support for the Upper Extremity Joints"
     body: "Whether you're managing a chronic condition or recovering from surgery, we design orthoses that support and stabilize the joints of the upper extremity."
-    image: "/images/clinical-team.png"
-    image_alt: "Illustration of a certified clinician reviewing a care plan"
+    image: "/images/about-empowering.png"
+    image_alt: "A Bionic clinician in a white coat talking with a seated patient who wears a prosthetic leg"
     points:
       - "Contracture Management — orthoses that provide support or immobilization for conditions such as carpal tunnel, contracture management, and post-surgical recovery"
       - "Fracture Bracing — support and immobilization for upper extremity fractures, facilitating bone healing and stabilizing the joint throughout recovery"

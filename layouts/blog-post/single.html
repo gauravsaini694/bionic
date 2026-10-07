@@ -3,6 +3,7 @@
 {{- if not .Date.IsZero }}{{ $s = merge $s (dict "datePublished" (.Date.Format "2006-01-02") "dateModified" ((.Lastmod | default .Date).Format "2006-01-02")) }}{{ end -}}
 {{- with .Params.image }}{{ $s = merge $s (dict "image" (. | absURL)) }}{{ end -}}
 <script type="application/ld+json">{{ $s | jsonify | safeJS }}</script>
+{{ partial "faq-schema.html" . }}
 {{ end }}
 
 {{ define "main" }}

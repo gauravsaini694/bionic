@@ -15,8 +15,8 @@ sections:
     eyebrow: "RESTORING FUNCTION"
     title: "Solutions for Every Level of Upper Limb Loss"
     body: "From the shoulder to the hand, upper limb prosthetics restore function and independence for daily activities. Thanks to advanced technology, we offer solutions that help you regain control and live life on your terms, whether you need a partial hand or a full arm prosthesis."
-    image: "/images/technology-device.png"
-    image_alt: "Illustration of bionic prosthetic technology"
+    image: "/images/clinical-team.png"
+    image_alt: "A person's black bionic hand resting on their lap during a visit in a clinic"
     image_position: "right"
 
   - type: "points"

@@ -17,7 +17,7 @@ sections:
     title: "Advanced Options, Chosen Around Your Goals"
     body: "The best device is the one that fits your body, your activity level and your daily life. Your clinician will walk you through the options, what each one can and cannot do, and what your insurance may cover before anything is decided."
     image: "/images/technology-device.png"
-    image_alt: "Illustration of bionic prosthetic technology"
+    image_alt: "A man leaping in mid-air wearing a prosthetic leg"
     image_position: "right"
 
   - type: "cards"

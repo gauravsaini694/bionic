@@ -1,0 +1,12 @@
+{{- /* Google Ads (gtag.js). Production only; IDs from params.googleAdsIDs (first one loads the library, all are configured). */ -}}
+{{- with site.Params.googleAdsIDs -}}{{- if hugo.IsProduction -}}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ index . 0 }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+{{- range . }}
+  gtag('config', '{{ . }}');
+{{- end }}
+</script>
+{{ end -}}{{- end -}}

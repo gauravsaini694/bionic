@@ -1,0 +1,6 @@
+{{- /* FAQPage JSON-LD from the page's `faq:` front matter list [{question, answer}]. Renders nothing when empty. */ -}}
+{{- $q := slice -}}
+{{- range .Params.faq }}{{ if and .question .answer }}{{ $q = $q | append (dict "@type" "Question" "name" .question "acceptedAnswer" (dict "@type" "Answer" "text" .answer)) }}{{ end }}{{ end -}}
+{{- if $q -}}
+<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $q | jsonify | safeJS }}</script>
+{{ end -}}

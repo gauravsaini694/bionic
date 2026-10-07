@@ -18,8 +18,8 @@ sections:
     eyebrow: "EXPERIENCE YOU CAN TRUST"
     title: "Dozens of Certified Specialists, One Standard of Care"
     body: "Our clinical team includes Certified Prosthetists (CP), Certified Orthotists (CO), and dual-credentialed Certified Prosthetist-Orthotists (CPO), along with certified fitters and pedorthists, working across clinics in Florida, Illinois, Indiana, Kentucky, Michigan, New Jersey, North Carolina, Ohio, Pennsylvania, Tennessee, Texas, and Wisconsin. Wherever you're located, you're cared for by a clinician who holds the same credentials and follows the same standard of care."
-    image: "/images/clinical-team.png"
-    image_alt: "Illustration of a certified clinician reviewing a care plan"
+    image: "/images/blog/bionic-patients-and-team-shine-at-aopa-2024-a-journey-of-learning-and-innovation.png"
+    image_alt: "Bionic team members in matching light-blue shirts posing together at the Bionic booth at the AOPA 2024 conference"
     image_position: "right"
 
   - type: "points"

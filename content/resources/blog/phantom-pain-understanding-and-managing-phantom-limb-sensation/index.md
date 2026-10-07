@@ -2,6 +2,8 @@
 title: "Phantom Pain: Understanding and Managing Phantom Limb Sensation"
 date: 2025-09-14
 categories: ["Health and Wellness"]
+image: "/images/about-empowering.png"
+image_alt: "A Bionic clinician in a white coat talking with a seated patient who wears a prosthetic leg"
 ---
 
 ## What Is Phantom Limb Pain?

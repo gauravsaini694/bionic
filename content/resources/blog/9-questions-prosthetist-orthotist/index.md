@@ -2,6 +2,8 @@
 title: "9 Questions You Need to Ask Your Prosthetist or Orthotist"
 date: 2022-07-05
 categories: ["Prosthetics and Orthotics"]
+image: "/images/blog/when-do-i-need-a-follow-up-for-my-prosthesis.jpg"
+image_alt: "Two smiling women in a Bionic clinic striking a balancing pose, one wearing a prosthetic leg"
 ---
 
 Appointments with your prosthetics or orthotics specialist offer real opportunities to enhance mobility, reduce pain, and improve overall quality of life. Getting the most out of these visits depends on asking informed questions and advocating for yourself. Here are nine essential questions to bring to your next appointment.

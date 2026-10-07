@@ -15,8 +15,8 @@ sections:
     eyebrow: "JUMPSTART YOUR CAREER"
     title: "Hands-On Learning Across Every Discipline"
     body: "Whether you're drawn to patient care, fabrication, or the business side of healthcare, our shadowing and internship program gives you real exposure alongside experienced professionals — with flexible scheduling to fit your academic calendar."
-    image: "/images/about-empowering.png"
-    image_alt: "Illustration of a person taking a confident step forward"
+    image: "/images/blog/bionic-s-brad-watson-named-to-naaop-board-of-directors.jpg"
+    image_alt: "An instructor presenting a Bionic slide to a classroom of students, with anatomical skeleton models in the background"
     image_position: "right"
 
   - type: "points"

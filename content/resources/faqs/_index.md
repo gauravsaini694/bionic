@@ -37,4 +37,5 @@ sections:
     cta_primary_link: "/contact/"
     cta_secondary: "Explore Patient Resources"
     cta_secondary_link: "/resources/patient-resources/"
+faq_schema: true
 ---

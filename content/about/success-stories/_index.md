@@ -13,8 +13,8 @@ sections:
     eyebrow: "IN THEIR WORDS"
     title: "Stories from the People We've Cared For"
     body: "Every patient's path is different, but the goal is always the same — helping people move forward with comfort and confidence. Below are a few of the stories our patients have shared with us."
-    image: "/images/testimonial-fistbump.svg"
-    image_alt: "Illustration of two patients celebrating with a fist bump"
+    image: "/images/blog/jada-s-pediatric-afo-success-story.jpg"
+    image_alt: "Jada, a smiling young girl in a light-blue dress, standing outdoors on a wooden deck"
     image_position: "right"
 
   - type: "richtext"

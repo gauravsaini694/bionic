@@ -1,5 +1,6 @@
-baseURL = "https://example.com/"
+baseURL = "https://www.bionicpo.com/"
 locale = "en-us"
+enableRobotsTXT = true
 title = "Bionic Prosthetics & Orthotics"
 
 [module]
@@ -32,6 +33,10 @@ title = "Bionic Prosthetics & Orthotics"
   category = "categories"
 
 [params]
+  gtmID = "GTM-5WTFB2L2"
+  googleAdsIDs = ["AW-677614629", "AW-849212221"]
+  logo = "/images/Bionic-logo.avif"
+  sameAs = ["https://www.facebook.com/bionicpo", "https://www.instagram.com/bionicpo/", "https://www.linkedin.com/company/bionicpo/"]
   brandColor = "#1D3F96"
   accentColor = "#F2994A"
   defaultAuthor = "Bionic Clinical Team"
@@ -39,6 +44,11 @@ title = "Bionic Prosthetics & Orthotics"
   phone = "1-855-524-6642"
   email = "information@bionicpo.com"
   address = "8695 Connecticut St, Suite E, Merrillville, Indiana 46410"
+
+[params.contactPoint]
+  contactType = "customer service"
+  areaServed = "US"
+  availableLanguage = "English"
 
 [[menu.main]]
   name = "Our Story"

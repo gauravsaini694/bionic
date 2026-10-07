@@ -15,8 +15,8 @@ sections:
     eyebrow: "WHAT ARE PROSTHETICS?"
     title: "Devices Designed Around Your Life"
     body: "Prosthetics are artificial devices designed to replace missing or damaged body parts, helping individuals regain mobility and function. Every prosthetic we provide is selected and fitted based on your individual needs, activity level, and daily life — from sockets and liners to advanced componentry and everyday accessories."
-    image: "/images/technology-device.png"
-    image_alt: "Illustration of bionic prosthetic technology"
+    image: "/images/blog/what-is-gait-training-and-how-can-it-help-after-amputation.jpg"
+    image_alt: "A Bionic clinician kneeling to adjust a seated patient's prosthetic leg during a gait training session"
     image_position: "right"
 
   - type: "cards"

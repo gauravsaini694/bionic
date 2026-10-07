@@ -19,7 +19,7 @@ sections:
     title: "Guidance, Stories, and Support for Every Step"
     body: "Our blog covers the topics that matter most to patients and families navigating limb loss and limb difference — from what to expect after an amputation and how weather affects your prosthesis, to residual limb care, gait training, phantom pain management, and real stories of patients living confidently with a bionic limb. New articles are added regularly as part of our commitment to supporting you beyond the clinic."
     image: "/images/about-empowering.png"
-    image_alt: "Illustration of a person taking a confident step forward"
+    image_alt: "A Bionic clinician in a white coat talking with a seated patient who wears a prosthetic leg"
     image_position: "left"
 
   - type: "children-grid"

@@ -826,3 +826,25 @@ a.article-category-badge:hover { background: rgba(255, 255, 255, 0.28); }
 .leadership-section { background: var(--bg-cream); }
 .leader-strip { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; }
 .leader-strip > * { flex: 1 1 200px; max-width: 220px; }
+
+/* Navbar: Find a Clinic live search */
+.clinic-qs { position: relative; margin-bottom: 14px; }
+.clinic-qs-input {
+  width: 100%; box-sizing: border-box; border: 1.5px solid var(--border); border-radius: var(--radius-sm);
+  padding: 11px 14px 11px 40px; font: 500 14px var(--font-sans); color: var(--ink); background: #fff;
+  -webkit-appearance: none; appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23666' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M20 20l-3.5-3.5'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: 12px 50%; background-size: 18px;
+}
+.clinic-qs-input::placeholder { color: var(--ink-faint); }
+.clinic-qs-input::-webkit-search-cancel-button { cursor: pointer; }
+.clinic-qs-input:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px var(--brand-light); }
+.clinic-qs-results { list-style: none; margin: 8px 0 0; padding: 4px; max-height: 300px; overflow-y: auto; border: 1px solid var(--border); border-radius: var(--radius-sm); background: #fff; }
+.clinic-qs-results[hidden] { display: none; }
+.clinic-qs-results li { border-radius: 8px; }
+.clinic-qs-item { display: flex; flex-direction: column; gap: 2px; padding: 9px 10px; border-radius: 8px; color: var(--ink-strong); }
+.clinic-qs-item strong { font-size: 14px; font-weight: 700; }
+.clinic-qs-item span { font-size: 12.5px; line-height: 1.4; color: var(--ink-muted); }
+.clinic-qs-results li:hover, .clinic-qs-results li.is-active { background: var(--brand-light); }
+.clinic-qs-results li.is-active strong { color: var(--brand); }
+.clinic-qs-empty { padding: 12px 10px; font-size: 13.5px; color: var(--ink-muted); }

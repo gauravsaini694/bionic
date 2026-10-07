@@ -15,8 +15,8 @@ sections:
     eyebrow: "WHY GROW WITH BIONIC"
     title: "Real Growth, Real Benefits"
     body: "We promote from within and invest in your future, with full support from day one."
-    image: "/images/clinical-team.png"
-    image_alt: "Illustration of a certified clinician reviewing a care plan"
+    image: "/images/blog/bionic-patients-and-team-shine-at-aopa-2024-a-journey-of-learning-and-innovation.png"
+    image_alt: "Bionic team members in matching light-blue shirts posing together at the Bionic booth at the AOPA 2024 conference"
     points:
       - "Full-time clinical and leadership roles available in Indiana, Kentucky, Texas, Ohio, Florida, New Jersey, and Wisconsin"
       - "Competitive salary with performance incentives"

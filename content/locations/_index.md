@@ -19,8 +19,8 @@ sections:
     eyebrow: "WHY BIONIC"
     title: "Why Choose Bionic Prosthetics & Orthotics?"
     body: "At Bionic, we combine cutting-edge technology with personalized care to provide the best solutions for our patients, wherever you're located."
-    image: "/images/clinical-team.png"
-    image_alt: "Illustration of a certified clinician reviewing a care plan"
+    image: "/images/about-empowering.png"
+    image_alt: "A Bionic clinician in a white coat talking with a seated patient who wears a prosthetic leg"
     points:
       - "Advanced 3D printing for custom prosthetic and orthotic designs"
       - "Expert, board-certified prosthetists and orthotists dedicated to helping you regain mobility"

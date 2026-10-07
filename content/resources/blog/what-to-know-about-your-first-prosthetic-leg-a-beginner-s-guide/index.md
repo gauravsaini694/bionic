@@ -3,6 +3,17 @@ title: "What to Know About Your First Prosthetic Leg: A Beginner's Guide"
 date: 2025-01-16
 categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/what-to-know-about-your-first-prosthetic-leg-a-beginner-s-guide.jpg"
+faq:
+  - question: "How long does it take to adjust to a prosthetic leg?"
+    answer: "Adjustment varies; many feel physically comfortable within weeks, with confidence developing gradually over months."
+  - question: "Will walking ever feel natural again?"
+    answer: "Most people don't describe initial use as natural, but it often fades into the background of daily life over time."
+  - question: "Is some discomfort normal?"
+    answer: "Some adjustment discomfort is common early on, but ongoing pain warrants professional attention."
+  - question: "Is a prosthetic leg only for active people?"
+    answer: "Prosthetic legs support everyday life, not just high activity levels."
+  - question: "What should I do if something feels wrong?"
+    answer: "Contact your prosthetist anytime something feels off or uncomfortable."
 ---
 
 Getting a first prosthetic leg can feel overwhelming. Most people don't arrive with clear expectations. They arrive with questions, mixed emotions, and a quiet hope that daily life might start feeling easier again.

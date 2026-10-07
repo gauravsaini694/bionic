@@ -16,7 +16,7 @@ sections:
     title: "Save Time at the Clinic"
     body: "Fill out the required forms in preparation for your upcoming appointment, and save time when you arrive. If you're new to Bionic and need help booking your complimentary consultation, call 1-855-524-6642 and press option 1."
     image: "/images/about-empowering.png"
-    image_alt: "Illustration of a person taking a confident step forward"
+    image_alt: "A Bionic clinician in a white coat talking with a seated patient who wears a prosthetic leg"
     image_position: "right"
 
   - type: "points"

@@ -15,8 +15,8 @@ sections:
     eyebrow: "CRANIAL SOLUTIONS"
     title: "Cranial Orthoses"
     body: "Custom-fabricated devices designed for infants and for patients recovering from injury or surgery."
-    image: "/images/clinical-team.png"
-    image_alt: "Illustration of a certified clinician reviewing a care plan"
+    image: "/images/blog/understanding-cranial-helmets-supporting-healthy-head-growth-in-babies.jpg"
+    image_alt: "A baby in a decorated cranial remolding helmet sitting on a blanket outdoors, smiling and reaching out"
     points:
       - "Cranial Remolding Helmet — treats deformational plagiocephaly, brachycephaly, or scaphocephaly in children ages 4 to 12 months, all custom-fabricated"
       - "Protective Helmet — protects the cranium in conditions such as post-surgical states, self-harming conditions, and frequent fall risk (e.g. seizures)"

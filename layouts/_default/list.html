@@ -1,7 +1,7 @@
 {{ define "head" }}
 {{- $q := slice -}}
 {{- range .Params.sections }}{{ if eq .type "faq" }}{{ range .items }}{{ $q = $q | append (dict "@type" "Question" "name" .question "acceptedAnswer" (dict "@type" "Answer" "text" .answer)) }}{{ end }}{{ end }}{{ end -}}
-{{ if $q }}<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $q | jsonify | safeJS }}</script>{{ end }}
+{{ if and $q .Params.faq_schema }}<script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "FAQPage" "mainEntity" $q | jsonify | safeJS }}</script>{{ end }}
 {{ end }}
 
 {{ define "main" }}

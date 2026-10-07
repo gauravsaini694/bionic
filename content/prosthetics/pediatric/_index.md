@@ -22,8 +22,8 @@ sections:
       - "Clinicians experienced in working with children and families"
       - "Help understanding insurance and what to plan for as your child grows"
       - "Support resources for families and young patients"
-    image: "/images/clinical-team.png"
-    image_alt: "Illustration of a certified clinician reviewing a care plan"
+    image: "/images/blog/understanding-cranial-helmets-supporting-healthy-head-growth-in-babies.jpg"
+    image_alt: "A baby in a decorated cranial remolding helmet sitting on a blanket outdoors, smiling and reaching out"
 
   - type: "cards"
     eyebrow: "RELATED CARE"

@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  {{ partial "gtm-head.html" . }}
+  {{ partial "google-ads.html" . }}
   {{ partial "head.html" . }}
   {{ block "head" . }}{{ end }}
 </head>
 <body>
+  {{ partial "gtm-body.html" . }}
   <a href="#main" class="skip-link">Skip to main content</a>
   {{ partial "header.html" . }}
   <main id="main">
@@ -13,5 +16,6 @@
   {{ partial "footer.html" . }}
   {{ partial "mobile-bar.html" . }}
   <script src="/js/main.js" defer></script>
+  <script src="/js/clinic-search.js" defer></script>
 </body>
 </html>

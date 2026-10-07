@@ -15,8 +15,8 @@ sections:
     eyebrow: "RETURNING TO MOTION"
     title: "Built to Get You Walking Again"
     body: "Lower extremity prostheses restore limb function for patients at every level, from amputation through the pelvis or hip joint down to partial foot amputations. The goal is always the same: to restore the limb and return gross motor function so patients can walk again."
-    image: "/images/technology-device.png"
-    image_alt: "Illustration of bionic prosthetic technology"
+    image: "/images/blog/a-day-in-the-life-living-with-a-bionic-limb.jpg"
+    image_alt: "Two men smiling beside a car, one of them wearing a bionic arm"
     image_position: "right"
 
   - type: "points"
