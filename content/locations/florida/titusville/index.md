@@ -6,4 +6,5 @@ lat: 28.612624
 lng: -80.807954
 phone: "(321) 225-8001"
 description: "Personalized prosthetic and orthotic care for patients in the Titusville area."
+entry_type: clinic
 ---

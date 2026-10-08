@@ -62,4 +62,5 @@ faqs:
     answer: "Plan on about an hour for your first visit so we can evaluate your needs and answer your questions."
   - question: "What should I bring?"
     answer: "Bring your photo ID, insurance card, any prescription or physician notes, and a list of current medications."
+entry_type: clinic
 ---

@@ -3,6 +3,7 @@ title: "What Is a Prosthetic Arm? A Complete Introduction for New Amputees"
 date: 2026-03-04
 categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/what-is-a-prosthetic-arm-a-complete-introduction-for-new-amputees.jpg"
+entry_type: blog_post
 ---
 
 Prosthetic arms are artificial devices designed to replace missing upper limbs. Modern technology has advanced significantly from older designs, offering devices that mimic natural hand movements, respond to muscle signals, and even provide sensory feedback.

@@ -6,4 +6,5 @@ lat: 28.330831
 lng: -80.734916
 phone: "(321) 638-0262"
 description: "Personalized prosthetic and orthotic care for patients in the Rockledge area."
+entry_type: clinic
 ---

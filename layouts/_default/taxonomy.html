@@ -7,5 +7,6 @@
   </div>
 </section>
 {{ partial "blog-index.html" (dict "page" . "pages" .Pages.ByDate.Reverse "params" (dict "eyebrow" "CATEGORY" "title" .Title) "active" .Title) }}
-{{ partial "cta-band.html" (dict "title" "Have a Question We Haven't Covered?" "body" "Our clinical team is always happy to help." "primary" "Contact Us" "primary_link" "/contact/" "secondary" "Read Our FAQs" "secondary_link" "/resources/faqs/") }}
+{{ $c := hugo.Data.cta.blog_category }}
+{{ partial "cta-band.html" (dict "title" $c.title "body" $c.body "primary" $c.primary "primary_link" $c.primary_link "secondary" $c.secondary "secondary_link" $c.secondary_link) }}
 {{ end }}

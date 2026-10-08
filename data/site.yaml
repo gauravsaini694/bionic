@@ -1,0 +1,31 @@
+# Global site settings. Edited from the CMS (Settings → Site & Contact).
+phone: 1-855-524-6642
+email: information@bionicpo.com
+address: 8695 Connecticut St, Suite E, Merrillville, Indiana 46410
+legal_name: Bionic Prosthetics & Orthotics Group LLC
+logo: /images/Bionic-logo.avif
+logo_footer: /images/Bionic-logo-footer.avif
+default_author: Bionic Clinical Team
+social:
+  facebook: https://www.facebook.com/bionicpo
+  instagram: https://www.instagram.com/bionicpo/
+  linkedin: https://www.linkedin.com/company/bionicpo/
+header:
+  utility_links:
+  - label: Pay My Bill
+    url: /resources/pay-bill/
+  - label: Patient Resources
+    url: /resources/patient-resources/
+  follow_text: Follow @bionicpo
+  find_clinic_label: Find a Clinic
+  consultation_label: Request Consultation
+  consultation_link: /contact/
+footer:
+  blurb: Personalized prosthetic and orthotic care — close to home, across {states} states.
+  links_heading: Quick Links
+  services_heading: Services
+  newsletter_heading: Stay Updated
+  newsletter_text: Get monthly care tips and clinic news from Bionic Beats.
+  newsletter_placeholder: Email address
+  newsletter_button: Join
+  rights_text: All Rights Reserved.

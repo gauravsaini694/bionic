@@ -6,4 +6,5 @@ lat: 29.260254
 lng: -81.108894
 phone: "(386) 258-0401"
 description: "Personalized prosthetic and orthotic care for patients in the Ormond Beach area."
+entry_type: clinic
 ---

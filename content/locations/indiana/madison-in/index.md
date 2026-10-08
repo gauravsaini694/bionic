@@ -6,4 +6,5 @@ lat: 38.774383
 lng: -85.379468
 phone: "(812) 265-2682"
 description: "Personalized prosthetic and orthotic care for patients in the Madison area."
+entry_type: clinic
 ---

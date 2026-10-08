@@ -6,4 +6,5 @@ lat: 35.920388
 lng: -81.524966
 phone: "(828) 758-0002"
 description: "Serving the Lenoir community for over half a decade with prosthetics, orthotics, pediatric care, diabetic services, and spinal treatment."
+entry_type: clinic
 ---

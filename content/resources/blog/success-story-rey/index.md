@@ -3,6 +3,7 @@ title: "The Bionic Difference: Reynaldo Morales"
 date: 2022-02-24
 categories: ["Success Stories"]
 image: "/images/blog/success-story-rey.png"
+entry_type: blog_post
 ---
 
 Reynaldo Morales loves basketball. Growing up in Gary, Indiana, taught him a love for the court and the community that forms around it that has followed him for his entire life. But on the morning of April 12th, 2007, a car accident threatened to take that away. Now, Reynaldo is back on the courts and still flashing his winning smile.

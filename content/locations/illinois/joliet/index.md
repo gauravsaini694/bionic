@@ -6,4 +6,5 @@ lat: 41.539901
 lng: -88.161788
 phone: "(815) 207-4200"
 description: "Personalized prosthetic and orthotic care for patients in the Joliet area."
+entry_type: clinic
 ---

@@ -6,4 +6,5 @@ lat: 41.571713
 lng: -87.694575
 phone: "(708) 991-7910"
 description: "Personalized prosthetic and orthotic care for patients in the Hazel Crest area."
+entry_type: clinic
 ---

@@ -3,6 +3,7 @@ title: "A Day in the Life: Living With a Bionic Limb"
 date: 2025-12-02
 categories: ["Success Stories"]
 image: "/images/blog/a-day-in-the-life-living-with-a-bionic-limb.jpg"
+entry_type: blog_post
 ---
 
 Individuals who use prosthetic devices carry stories of resilience, humor, adaptation, identity, and quiet victories that no one else sees. This is a look at what it means to live fully with a bionic limb, rather than focusing only on limitation.

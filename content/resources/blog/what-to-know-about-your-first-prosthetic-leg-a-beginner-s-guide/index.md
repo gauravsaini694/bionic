@@ -14,6 +14,7 @@ faq:
     answer: "Prosthetic legs support everyday life, not just high activity levels."
   - question: "What should I do if something feels wrong?"
     answer: "Contact your prosthetist anytime something feels off or uncomfortable."
+entry_type: blog_post
 ---
 
 Getting a first prosthetic leg can feel overwhelming. Most people don't arrive with clear expectations. They arrive with questions, mixed emotions, and a quiet hope that daily life might start feeling easier again.

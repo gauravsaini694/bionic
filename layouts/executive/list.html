@@ -8,5 +8,6 @@
   </div>
 </section>
 {{ partial "children-grid.html" (dict "page" . "params" (dict)) }}
-{{ partial "cta-band.html" (dict "title" "Questions for Our Team?" "body" "We would be glad to hear from you." "primary" "Contact Us" "primary_link" "/contact/" "secondary" "Meet Our Clinical Team" "secondary_link" "/about/clinical-team/") }}
+{{ $c := hugo.Data.cta.executive_list }}
+{{ partial "cta-band.html" (dict "title" $c.title "body" $c.body "primary" $c.primary "primary_link" $c.primary_link "secondary" $c.secondary "secondary_link" $c.secondary_link) }}
 {{ end }}

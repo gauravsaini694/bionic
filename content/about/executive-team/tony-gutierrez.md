@@ -10,6 +10,7 @@ clinical_profile: "/about/clinical-team/anthony-gutierrez/"
 description: "Tony Gutierrez is Bionic's Director of Clinical Advancement and Innovation and National Clinical Specialist for Advanced Prosthetic Solutions."
 aliases:
   - /executive-team/tony-gutierrez/
+entry_type: executive
 ---
 
 Tony Gutierrez is a Certified Prosthetist with 12 years of clinical experience in patient care and is the National Clinical Specialist for Advanced Prosthetic Solutions for Bionic Prosthetics & Orthotics. He is known for building clinical efficiencies and participation research.

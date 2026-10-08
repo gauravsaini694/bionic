@@ -10,6 +10,7 @@ clinical_profile: "/about/clinical-team/lynn-brad-watson/"
 description: "Brad Watson is Bionic's Director of Practice Management, certified in prosthetics and orthotics by BOC and ABC with over 30 years of experience."
 aliases:
   - /executive-team/brad-watson/
+entry_type: executive
 ---
 
 Brad is certified in Prosthetics and Orthotics from both BOC and ABC, and is licensed in Kentucky and Tennessee and has been serving in those communities for over 30 years. Brad is a second generation practitioner, whose father introduced him to the profession early on in his teenage years.

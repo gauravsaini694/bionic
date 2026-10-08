@@ -3,6 +3,7 @@ title: "The Bionic Difference: Peter Morrison"
 date: 2022-03-15
 categories: ["Success Stories"]
 image: "/images/blog/success-story-peter.png"
+entry_type: blog_post
 ---
 
 Peter Morrison's life revolved around horses. Riding horseback, caring for his animals, and competing in events far and wide represented his passion. However, an accident during his early morning commute threatened to permanently alter his highly active lifestyle.

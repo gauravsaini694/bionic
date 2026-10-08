@@ -1,19 +1,19 @@
-{{ $u := .Site.Params }}
+{{ $s := hugo.Data.site }}
 <div class="utility-bar">
   <div class="container utility-inner">
     <div class="utility-left">
-      <a href="tel:{{ $u.phone }}" class="utility-phone">
+      <a href="tel:{{ $s.phone }}" class="utility-phone">
         <span class="icon-sm">{{ partial "icon.html" "phone" }}</span>
-        {{ $u.phone }}
+        {{ $s.phone }}
       </a>
-      <a href="/resources/pay-bill/" class="utility-link">Pay My Bill</a>
-      <a href="/resources/patient-resources/" class="utility-link">Patient Resources</a>
+      {{ range $s.header.utility_links }}<a href="{{ .url }}" class="utility-link">{{ .label }}</a>
+      {{ end }}
     </div>
     <div class="utility-right">
-      <span class="utility-follow">Follow @bionicpo</span>
-      <a href="#" class="utility-social" aria-label="Facebook">{{ partial "icon.html" "facebook" }}</a>
-      <a href="#" class="utility-social" aria-label="Instagram">{{ partial "icon.html" "instagram" }}</a>
-      <a href="#" class="utility-social" aria-label="LinkedIn">{{ partial "icon.html" "linkedin" }}</a>
+      <span class="utility-follow">{{ $s.header.follow_text }}</span>
+      <a href="{{ $s.social.facebook | default "#" }}" class="utility-social" aria-label="Facebook">{{ partial "icon.html" "facebook" }}</a>
+      <a href="{{ $s.social.instagram | default "#" }}" class="utility-social" aria-label="Instagram">{{ partial "icon.html" "instagram" }}</a>
+      <a href="{{ $s.social.linkedin | default "#" }}" class="utility-social" aria-label="LinkedIn">{{ partial "icon.html" "linkedin" }}</a>
     </div>
   </div>
 </div>
@@ -21,27 +21,27 @@
 <header class="site-header">
   <div class="container header-inner">
     <a href="/" class="brand">
-      <img src="/images/Bionic-logo.avif" alt="Bionic Prosthetics &amp; Orthotics" class="brand-logo">
+      <img src="{{ $s.logo }}" alt="{{ site.Title }}" class="brand-logo">
     </a>
 
     <nav class="main-nav" aria-label="Main navigation">
       <ul >
-        {{ range .Site.Menus.main }}
-        {{ $active := and (ne .URL "/") (hasPrefix $.RelPermalink .URL) }}
-        {{ if .Children }}
+        {{ range hugo.Data.navigation.main }}
+        {{ $active := and (ne .url "/") (hasPrefix $.RelPermalink .url) }}
+        {{ if .children }}
         <li class="has-dropdown">
           <button type="button" class="nav-link nav-link-toggle{{ if $active }} is-active{{ end }}" aria-expanded="false">
-            {{ .Name }}<span class="nav-chevron">{{ partial "icon.html" "chevron" }}</span>
+            {{ .name }}<span class="nav-chevron">{{ partial "icon.html" "chevron" }}</span>
           </button>
           <div class="dropdown-panel">
             <ul class="dropdown-menu">
-              {{ range .Children }}
+              {{ range .children }}
               <li>
-                <a href="{{ .URL }}" class="dropdown-item"{{ if eq $.RelPermalink .URL }} aria-current="page"{{ end }}>
-                  <span class="dropdown-item-icon">{{ partial "icon.html" (.Params.icon | default "check") }}</span>
+                <a href="{{ .url }}" class="dropdown-item"{{ if eq $.RelPermalink .url }} aria-current="page"{{ end }}>
+                  <span class="dropdown-item-icon">{{ partial "icon.html" (.icon | default "check") }}</span>
                   <span class="dropdown-item-text">
-                    <span class="dropdown-item-title">{{ .Name }}</span>
-                    {{ with .Params.desc }}<span class="dropdown-item-desc">{{ . }}</span>{{ end }}
+                    <span class="dropdown-item-title">{{ .name }}</span>
+                    {{ with .desc }}<span class="dropdown-item-desc">{{ . }}</span>{{ end }}
                   </span>
                 </a>
               </li>
@@ -50,12 +50,12 @@
           </div>
         </li>
         {{ else }}
-        <li><a href="{{ .URL }}" class="nav-link{{ if $active }} is-active{{ end }}"{{ if $active }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+        <li><a href="{{ .url }}" class="nav-link{{ if $active }} is-active{{ end }}"{{ if $active }} aria-current="page"{{ end }}>{{ .name }}</a></li>
         {{ end }}
         {{ end }}
         <li class="has-dropdown nav-find-mobile">
           <button type="button" class="nav-link nav-link-toggle" aria-expanded="false">
-            Find a Clinic<span class="nav-chevron">{{ partial "icon.html" "chevron" }}</span>
+            {{ $s.header.find_clinic_label }}<span class="nav-chevron">{{ partial "icon.html" "chevron" }}</span>
           </button>
           {{ partial "locations-menu.html" . }}
         </li>
@@ -66,12 +66,12 @@
       <div class="has-dropdown header-find{{ if hasPrefix .RelPermalink "/locations/" }} is-active{{ end }}">
         <button type="button" class="btn btn-outline-dark dropdown-toggle" aria-expanded="false">
           <span class="icon-sm">{{ partial "icon.html" "pin" }}</span>
-          Find a Clinic
+          {{ $s.header.find_clinic_label }}
           <span class="nav-chevron">{{ partial "icon.html" "chevron" }}</span>
         </button>
         {{ partial "locations-menu.html" . }}
       </div>
-      <a href="/contact/" class="btn btn-primary">Request Consultation</a>
+      <a href="{{ $s.header.consultation_link }}" class="btn btn-primary">{{ $s.header.consultation_label }}</a>
     </div>
 
     <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">

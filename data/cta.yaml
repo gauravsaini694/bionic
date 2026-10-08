@@ -1,0 +1,49 @@
+# Call-to-action banners used by blog, team, clinic and state templates. Placeholders: {name} {city} {state}.
+blog_post:
+  title: Have Questions About Your Care?
+  body: Our certified clinical team is here to help guide your next step.
+  primary: Request a Consultation
+  primary_link: /contact/
+  secondary: Read More Articles
+  secondary_link: /resources/blog/
+blog_category:
+  title: Have a Question We Haven't Covered?
+  body: Our clinical team is always happy to help.
+  primary: Contact Us
+  primary_link: /contact/
+  secondary: Read Our FAQs
+  secondary_link: /resources/faqs/
+team_member:
+  title: Ready to Take the Next Step?
+  body: Connect with {name} or another certified clinician near you.
+  primary: Request a Consultation
+  primary_link: /contact/
+  secondary: Find a Location Near You
+  secondary_link: /locations/
+executive_member:
+  title: Ready to Take the Next Step?
+  body: Connect with our team or a certified clinician near you.
+  primary: Request a Consultation
+  primary_link: /contact/
+  secondary: Find a Location Near You
+  secondary_link: /locations/
+executive_list:
+  title: Questions for Our Team?
+  body: We would be glad to hear from you.
+  primary: Contact Us
+  primary_link: /contact/
+  secondary: Meet Our Clinical Team
+  secondary_link: /about/clinical-team/
+clinic:
+  title: Ready to Visit Our {city} Clinic?
+  body: Request a consultation and our team will help you schedule your visit.
+  primary: Request a Consultation
+  primary_link: /contact/
+  call_label: Call
+state:
+  title: Ready to Get Started?
+  body: Our {state} team is ready to help you take the next step in your care.
+  primary: Request a Consultation
+  primary_link: /contact/
+  secondary: See All States
+  secondary_link: /locations/

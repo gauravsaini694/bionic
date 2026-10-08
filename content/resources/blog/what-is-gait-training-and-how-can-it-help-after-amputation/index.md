@@ -3,6 +3,7 @@ title: "What Is Gait Training and How Can It Help After Amputation?"
 date: 2025-09-11
 categories: ["Health and Wellness"]
 image: "/images/blog/what-is-gait-training-and-how-can-it-help-after-amputation.jpg"
+entry_type: blog_post
 ---
 
 Gait training is an important component of a physical therapy program designed to help people walk more efficiently, safely, and confidently, especially after amputation. The therapy strengthens muscles and joints, enhances posture and balance, decreases fall risk, and rebuilds endurance.

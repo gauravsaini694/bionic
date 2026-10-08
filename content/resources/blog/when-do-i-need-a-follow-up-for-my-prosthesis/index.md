@@ -3,6 +3,7 @@ title: "When Do I Need a Follow-Up for My Prosthesis?"
 date: 2025-09-15
 categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/when-do-i-need-a-follow-up-for-my-prosthesis.jpg"
+entry_type: blog_post
 ---
 
 Many patients hesitate to schedule follow-up appointments, assuming they're only necessary when something goes wrong. But follow-ups aren't just for when something goes wrong — think of them like routine maintenance for your car: skipping them doesn't save you trouble in the long run, it just delays the discovery of small issues before they become big ones.

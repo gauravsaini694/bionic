@@ -3,6 +3,7 @@ title: "Preventing Muscle Contractures After Amputation"
 date: 2025-09-10
 categories: ["Health and Wellness"]
 image: "/images/blog/preventing-muscle-contractures-after-amputation.jpg"
+entry_type: blog_post
 ---
 
 ## What Are Contractures, and Why Do They Matter?

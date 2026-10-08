@@ -6,4 +6,5 @@ lat: 39.093895
 lng: -84.282974
 phone: "(513) 743-7044"
 description: "Providing prosthetic and orthotic rehabilitation with customized programs designed to meet individual needs."
+entry_type: clinic
 ---

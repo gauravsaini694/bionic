@@ -6,4 +6,5 @@ lat: 36.088210
 lng: -79.789122
 phone: "(336) 478-9400"
 description: "Providing the very best in prosthetic and orthotic care with individualized patient treatment plans."
+entry_type: clinic
 ---

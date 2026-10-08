@@ -1,56 +1,57 @@
-{{ $p := .Site.Params }}
+{{ $s := hugo.Data.site }}
+{{ $nav := hugo.Data.navigation }}
 <footer class="site-footer">
   <div class="container footer-grid">
     <div class="footer-col footer-brand">
       <a href="/" class="footer-brand-mark">
-        <img src="/images/Bionic-logo-footer.avif" alt="Bionic Prosthetics &amp; Orthotics" class="footer-logo">
+        <img src="{{ $s.logo_footer }}" alt="{{ site.Title }}" class="footer-logo">
       </a>
-      <p>Personalized prosthetic and orthotic care — close to home, across {{ (partialCached "locations-data.html" .).stateCount }} states.</p>
+      <p>{{ replace $s.footer.blurb "{states}" (printf "%v" (partialCached "locations-data.html" .).stateCount) }}</p>
       <div class="footer-contact">
-        {{ $p.phone }}<br>
-        {{ $p.email }}<br>
-        {{ $p.address }}
+        {{ $s.phone }}<br>
+        {{ $s.email }}<br>
+        {{ $s.address }}
       </div>
       <div class="social-links" aria-label="Social media">
-        <a href="#" aria-label="Facebook" class="footer-link">{{ partial "icon.html" "facebook" }}</a>
-        <a href="#" aria-label="Instagram" class="footer-link">{{ partial "icon.html" "instagram" }}</a>
-        <a href="#" aria-label="LinkedIn" class="footer-link">{{ partial "icon.html" "linkedin" }}</a>
+        <a href="{{ $s.social.facebook | default "#" }}" aria-label="Facebook" class="footer-link">{{ partial "icon.html" "facebook" }}</a>
+        <a href="{{ $s.social.instagram | default "#" }}" aria-label="Instagram" class="footer-link">{{ partial "icon.html" "instagram" }}</a>
+        <a href="{{ $s.social.linkedin | default "#" }}" aria-label="LinkedIn" class="footer-link">{{ partial "icon.html" "linkedin" }}</a>
       </div>
     </div>
 
     <div class="footer-col">
-      <h4>Quick Links</h4>
+      <h4>{{ $s.footer.links_heading }}</h4>
       <ul>
-        {{ range index site.Menus "footer_links" }}
-        <li><a href="{{ .URL }}" class="footer-link">{{ .Name }}</a></li>
+        {{ range $nav.footer_links }}
+        <li><a href="{{ .url }}" class="footer-link">{{ .name }}</a></li>
         {{ end }}
       </ul>
     </div>
 
     <div class="footer-col">
-      <h4>Services</h4>
+      <h4>{{ $s.footer.services_heading }}</h4>
       <ul>
-        {{ range index site.Menus "footer_services" }}
-        <li><a href="{{ .URL }}" class="footer-link">{{ .Name }}</a></li>
+        {{ range $nav.footer_services }}
+        <li><a href="{{ .url }}" class="footer-link">{{ .name }}</a></li>
         {{ end }}
       </ul>
     </div>
 
     <div class="footer-col">
-      <h4>Stay Updated</h4>
-      <p>Get monthly care tips and clinic news from Bionic Beats.</p>
+      <h4>{{ $s.footer.newsletter_heading }}</h4>
+      <p>{{ $s.footer.newsletter_text }}</p>
       <form class="footer-newsletter">
         <label for="footer-email" class="visually-hidden">Email address</label>
-        <input id="footer-email" type="email" placeholder="Email address">
-        <button type="submit" class="btn btn-primary">Join</button>
+        <input id="footer-email" type="email" placeholder="{{ $s.footer.newsletter_placeholder }}">
+        <button type="submit" class="btn btn-primary">{{ $s.footer.newsletter_button }}</button>
       </form>
     </div>
   </div>
 
   <div class="container footer-bottom">
-    <p>&copy; {{ now.Year }} {{ site.Params.legalName | default site.Title }}. All Rights Reserved.</p>
+    <p>&copy; {{ now.Year }} {{ $s.legal_name | default site.Title }}. {{ $s.footer.rights_text }}</p>
     <div class="footer-bottom-links">
-      {{ range index site.Menus "footer_legal" }}<a href="{{ .URL }}" class="footer-link">{{ .Name }}</a>{{ end }}
+      {{ range $nav.footer_legal }}<a href="{{ .url }}" class="footer-link">{{ .name }}</a>{{ end }}
     </div>
   </div>
 </footer>

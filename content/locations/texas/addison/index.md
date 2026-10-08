@@ -6,4 +6,5 @@ lat: 32.960796
 lng: -96.824170
 phone: "(972) 980-9660"
 description: "Specializing in cranial remolding helmet treatment and serving patients across Texas, Oklahoma, and Louisiana."
+entry_type: clinic
 ---

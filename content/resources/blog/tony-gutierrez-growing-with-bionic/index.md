@@ -3,6 +3,7 @@ title: "Tony Gutierrez: Growing with Bionic"
 date: 2022-06-24
 categories: ["Success Stories"]
 image: "/images/blog/tony-gutierrez-growing-with-bionic.png"
+entry_type: blog_post
 ---
 
 Tony Gutierrez joined Bionic in 2014 at the Tinley Park, Illinois office after leaving a competitor focused primarily on revenue. He sought an organization that would foster his professional development with clear advancement pathways.

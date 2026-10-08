@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Bionic — Content Manager</title>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+</head>
+<body>
+  <!-- Decap CMS 3.x (pinned). Configuration: /admin/config.yml -->
+  <script src="https://unpkg.com/decap-cms@3.16.3/dist/decap-cms.js" integrity="sha384-A/Gdn928CNLufmnGWGs9RM4Q9o8bSNLeJERqBFrBjwzL7FRpoLT3MPF8Tl0+Wd2p" crossorigin="anonymous"></script>
+  <script>
+    // Preview pane: use the site's own stylesheet and a simple blog-post preview.
+    CMS.registerPreviewStyle("/css/style.css");
+    var h = window.h;
+    CMS.registerPreviewTemplate("blog", function (props) {
+      var e = props.entry;
+      var img = props.getAsset(e.getIn(["data", "image"]));
+      return h("div", { className: "container", style: { maxWidth: "780px", padding: "32px 16px" } },
+        h("h1", {}, e.getIn(["data", "title"])),
+        img ? h("img", { src: img.toString(), style: { maxWidth: "100%", borderRadius: "16px", margin: "16px 0" } }) : null,
+        h("div", { className: "article-body" }, props.widgetFor("body"))
+      );
+    });
+  </script>
+</body>
+</html>

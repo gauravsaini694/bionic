@@ -3,6 +3,7 @@ title: "Spring Cleaning Your Prosthesis: Maintenance Tips"
 date: 2025-05-20
 categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/spring-cleaning-prosthesis-maintenance.png"
+entry_type: blog_post
 ---
 
 As spring arrives, amputees benefit from seasonal maintenance routines for their prosthetics. Beyond typical household cleaning, a consistent prosthesis cleansing routine can prevent inflammation, irritation, and infection as warmer weather approaches.

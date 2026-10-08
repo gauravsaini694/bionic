@@ -6,4 +6,5 @@ lat: 40.417817
 lng: -86.843684
 phone: "(765) 838-8222"
 description: "Personalized prosthetic and orthotic care for patients in the Lafayette area."
+entry_type: clinic
 ---

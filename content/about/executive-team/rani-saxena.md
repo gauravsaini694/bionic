@@ -10,6 +10,7 @@ clinical_profile: ""
 description: "Rani Saxena is the President of Bionic Prosthetics & Orthotics, aligning clinical excellence with strategic growth."
 aliases:
   - /executive-team/rani-kriplani/
+entry_type: executive
 ---
 
 Rani Saxena is the President of Bionic Orthotics & Prosthetics, a forward-focused leader known for her ability to align clinical excellence with strategic growth. With a Doctorate in Physical Therapy and extensive experience in physical rehabilitation and prosthetic management, she brings both clinical depth and business insight to the evolving field of rehabilitative care.

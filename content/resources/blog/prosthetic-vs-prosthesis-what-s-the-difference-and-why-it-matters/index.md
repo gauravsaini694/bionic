@@ -3,6 +3,7 @@ title: "Prosthetic vs Prosthesis: What's the Difference and Why It Matters"
 date: 2025-02-01
 categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/prosthetic-vs-prosthesis-what-s-the-difference-and-why-it-matters.jpg"
+entry_type: blog_post
 ---
 
 Terminology around prosthetic devices often causes confusion, even among patients who have worn one for years. The core distinction is simple: "prosthesis" refers to the physical device itself, while "prosthetic" serves as a descriptive adjective. For example, a patient might say "I wear a prosthetic leg," using the adjective form in casual speech.

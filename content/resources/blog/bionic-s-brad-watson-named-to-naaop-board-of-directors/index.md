@@ -3,6 +3,7 @@ title: "Bionic's Brad Watson Named to NAAOP Board of Directors"
 date: 2024-04-18
 categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/bionic-s-brad-watson-named-to-naaop-board-of-directors.jpg"
+entry_type: blog_post
 ---
 
 L. Bradley Watson, a Regional Manager and Certified Prosthetist & Orthotist at Bionic, has been elected to the board of directors of the National Association for the Advancement of Orthotics and Prosthetics (NAAOP). Watson brings more than 35 years of experience in the field to this new role.

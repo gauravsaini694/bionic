@@ -1,5 +1,5 @@
 {{ define "head" }}
-{{- $s := dict "@context" "https://schema.org" "@type" "BlogPosting" "headline" .Title "url" .Permalink "author" (dict "@type" "Organization" "name" (.Params.author | default site.Params.defaultAuthor | default site.Title)) "publisher" (dict "@type" "Organization" "name" site.Title) "mainEntityOfPage" .Permalink -}}
+{{- $s := dict "@context" "https://schema.org" "@type" "BlogPosting" "headline" .Title "url" .Permalink "author" (dict "@type" "Organization" "name" (.Params.author | default hugo.Data.site.default_author | default site.Title)) "publisher" (dict "@type" "Organization" "name" site.Title) "mainEntityOfPage" .Permalink -}}
 {{- if not .Date.IsZero }}{{ $s = merge $s (dict "datePublished" (.Date.Format "2006-01-02") "dateModified" ((.Lastmod | default .Date).Format "2006-01-02")) }}{{ end -}}
 {{- with .Params.image }}{{ $s = merge $s (dict "image" (. | absURL)) }}{{ end -}}
 <script type="application/ld+json">{{ $s | jsonify | safeJS }}</script>
@@ -7,7 +7,7 @@
 {{ end }}
 
 {{ define "main" }}
-{{- $author := .Params.author | default site.Params.defaultAuthor -}}
+{{- $author := .Params.author | default hugo.Data.site.default_author -}}
 {{- $toc := and (gt .WordCount 700) (gt (len .TableOfContents) 120) -}}
 <section class="page-hero">
   <div class="container page-hero-inner">
@@ -64,5 +64,6 @@
 </section>
 {{ end }}
 
-{{ partial "cta-band.html" (dict "title" "Have Questions About Your Care?" "body" "Our certified clinical team is here to help guide your next step." "primary" "Request a Consultation" "primary_link" "/contact/" "secondary" "Read More Articles" "secondary_link" "/resources/blog/") }}
+{{ $c := hugo.Data.cta.blog_post }}
+{{ partial "cta-band.html" (dict "title" $c.title "body" $c.body "primary" $c.primary "primary_link" $c.primary_link "secondary" $c.secondary "secondary_link" $c.secondary_link) }}
 {{ end }}

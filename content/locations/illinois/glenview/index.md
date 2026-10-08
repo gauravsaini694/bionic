@@ -6,4 +6,5 @@ lat: 42.098648
 lng: -87.811085
 phone: "(847) 410-2751"
 description: "Personalized prosthetic and orthotic care for patients in the Glenview area."
+entry_type: clinic
 ---

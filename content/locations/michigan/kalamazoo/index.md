@@ -6,4 +6,5 @@ lat: 42.231903
 lng: -85.560113
 phone: "(269) 350-5906"
 description: "Personalized prosthetic and orthotic care for patients in the Kalamazoo area."
+entry_type: clinic
 ---

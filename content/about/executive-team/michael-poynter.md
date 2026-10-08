@@ -10,6 +10,7 @@ clinical_profile: ""
 description: "Michael Poynter is Bionic's Director of Business Operations and Corporate Governance."
 aliases:
   - /executive-team/michael-poynter/
+entry_type: executive
 ---
 
 Before coming to Bionic, Mike spent nearly three decades working in the field of education and served in a variety of roles during that time, the last ten years of which were spent in public school administration. Prior to transitioning into administration, he was a successful educator in the area of language arts and coached a number of highly successful athletic programs in NW Indiana.

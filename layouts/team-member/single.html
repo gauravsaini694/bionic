@@ -54,5 +54,6 @@
   </div>
 </section>
 
-{{ partial "cta-band.html" (dict "title" "Ready to Take the Next Step?" "body" (printf "Connect with %s or another certified clinician near you." .Params.name) "primary" "Request a Consultation" "primary_link" "/contact/" "secondary" "Find a Location Near You" "secondary_link" "/locations/") }}
+{{ $c := hugo.Data.cta.team_member }}
+{{ partial "cta-band.html" (dict "title" $c.title "body" (replace $c.body "{name}" .Params.name) "primary" $c.primary "primary_link" $c.primary_link "secondary" $c.secondary "secondary_link" $c.secondary_link) }}
 {{ end }}

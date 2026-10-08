@@ -6,4 +6,5 @@ lat: 44.507500
 lng: -88.006915
 phone: "(920) 435-3002"
 description: "Founded with the vision of creating a prosthetic and orthotic practice that treats every patient with dignity and first-rate care."
+entry_type: clinic
 ---

@@ -6,4 +6,5 @@ lat: 37.972126
 lng: -87.492636
 phone: "(812) 471-1234"
 description: "Personalized prosthetic and orthotic care for patients in the Evansville area."
+entry_type: clinic
 ---

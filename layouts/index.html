@@ -1,9 +1,9 @@
 {{ define "head" }}
-{{- $o := dict "@context" "https://schema.org" "@type" "MedicalOrganization" "name" site.Title "url" site.Home.Permalink "telephone" site.Params.phone "email" site.Params.email -}}
-{{- with site.Params.logo }}{{ $o = merge $o (dict "logo" (. | absURL)) }}{{ end -}}
-{{- with site.Params.sameAs }}{{ $o = merge $o (dict "sameAs" .) }}{{ end -}}
+{{- $o := dict "@context" "https://schema.org" "@type" "MedicalOrganization" "name" site.Title "url" site.Home.Permalink "telephone" hugo.Data.site.phone "email" hugo.Data.site.email -}}
+{{- with hugo.Data.site.logo }}{{ $o = merge $o (dict "logo" (. | absURL)) }}{{ end -}}
+{{- with hugo.Data.site.social }}{{ $o = merge $o (dict "sameAs" (slice .facebook .instagram .linkedin)) }}{{ end -}}
 {{- with site.Params.contactPoint -}}
-  {{- $tel := site.Params.phone -}}
+  {{- $tel := hugo.Data.site.phone -}}
   {{- if not (hasPrefix $tel "+") }}{{ $tel = printf "+%s" $tel }}{{ end -}}
   {{- $o = merge $o (dict "contactPoint" (dict "@type" "ContactPoint" "telephone" $tel "contactType" .contactType "areaServed" .areaServed "availableLanguage" .availableLanguage)) -}}
 {{- end -}}

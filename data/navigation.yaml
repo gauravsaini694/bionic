@@ -1,0 +1,138 @@
+# Site navigation. Edited from the CMS (Settings → Navigation).
+main:
+- name: Our Story
+  url: /about/
+  children:
+  - name: About Us
+    url: /about/
+    icon: certified
+    desc: Who we are and our mission
+  - name: Clinical Team
+    url: /about/clinical-team/
+    icon: people
+    desc: Meet our board-certified clinicians
+  - name: Executive Team
+    url: /about/executive-team/
+    icon: certified
+    desc: The leaders guiding Bionic
+  - name: Success Stories
+    url: /about/success-stories/
+    icon: star
+    desc: Real patient outcomes and stories
+- name: Prosthetics
+  url: /prosthetics/
+  children:
+  - name: All Prosthetics
+    url: /prosthetics/
+    icon: prosthetic
+    desc: Explore all prosthetic care options
+  - name: Upper Limb
+    url: /prosthetics/upper-limb/
+    icon: personalized
+    desc: Arm and hand prosthetic solutions
+  - name: Lower Limb
+    url: /prosthetics/lower-limb/
+    icon: technology
+    desc: Leg and foot prosthetic solutions
+- name: Orthotics
+  url: /orthotics/
+  children:
+  - name: All Orthotics
+    url: /orthotics/
+    icon: orthotic
+    desc: Explore all orthotic care options
+  - name: Cranial & Spinal
+    url: /orthotics/cranial-spinal/
+    icon: pediatric
+    desc: Helmets and spinal bracing support
+  - name: Upper Extremity
+    url: /orthotics/upper-extremity/
+    icon: personalized
+    desc: Arm, wrist and hand bracing
+  - name: Lower Extremity
+    url: /orthotics/lower-extremity/
+    icon: technology
+    desc: Leg, knee and ankle bracing
+  - name: Diabetic Foot Care
+    url: /orthotics/diabetic-foot-care/
+    icon: diabetic
+    desc: Protective footwear and foot care
+- name: Resources
+  url: /resources/
+  children:
+  - name: All Resources
+    url: /resources/
+    icon: insurance
+    desc: Browse all patient resources
+  - name: Pay My Bill
+    url: /resources/pay-bill/
+    icon: card
+    desc: Book an appointment or pay online
+  - name: Patient Resources
+    url: /resources/patient-resources/
+    icon: personalized
+    desc: Forms, insurance info and guides
+  - name: FAQs
+    url: /resources/faqs/
+    icon: check
+    desc: Answers to common questions
+  - name: Blog
+    url: /resources/blog/
+    icon: photo
+    desc: Patient education and real stories
+  - name: Bionic Beats
+    url: /resources/bionic-beats/
+    icon: star
+    desc: Our podcast and video series
+- name: Careers
+  url: /careers/
+  children:
+  - name: All Careers
+    url: /careers/
+    icon: people
+    desc: Explore careers at Bionic
+  - name: Grow With Us
+    url: /careers/grow/
+    icon: personalized
+    desc: Open roles for experienced clinicians
+  - name: Residency Program
+    url: /careers/residency-program/
+    icon: certified
+    desc: Start your clinical career with us
+  - name: Shadowing Opportunities
+    url: /careers/shadowing-opportunities/
+    icon: people
+    desc: Observe our clinical team in action
+footer_links:
+- name: About Us
+  url: /about/
+- name: Book Appointment
+  url: /resources/pay-bill/
+- name: Find Nearest Clinic
+  url: /locations/
+- name: Clinical Team
+  url: /about/clinical-team/
+- name: Executive Team
+  url: /about/executive-team/
+- name: Patient Resources
+  url: /resources/patient-resources/
+- name: Blog
+  url: /resources/blog/
+footer_services:
+- name: Prosthetics
+  url: /prosthetics/
+- name: Orthotics
+  url: /orthotics/
+- name: Diabetic Foot Care
+  url: /orthotics/diabetic-foot-care/
+- name: Find a Clinic
+  url: /locations/
+- name: Pay My Bill
+  url: /resources/pay-bill/
+footer_legal:
+- name: Privacy Policy
+  url: /privacy-policy/
+- name: Terms of Use
+  url: /terms-of-use/
+- name: Accredited — ABC
+  url: /accredited/

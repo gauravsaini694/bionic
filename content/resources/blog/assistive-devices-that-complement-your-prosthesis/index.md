@@ -3,6 +3,7 @@ title: "Assistive Devices That Complement Your Prosthesis"
 date: 2025-12-02
 categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/assistive-devices-that-complement-your-prosthesis.png"
+entry_type: blog_post
 ---
 
 Learning to walk with a prosthesis requires patience, practice, and the right support. For individuals with limb loss, walkers, canes, or crutches serve as temporary tools supporting safe movement during physical adaptation.

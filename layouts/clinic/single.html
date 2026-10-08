@@ -265,13 +265,14 @@
 {{ end }}
 
 <!-- ===== CTA ===== -->
+{{ $c := hugo.Data.cta.clinic }}
 <section class="final-cta reveal" data-reveal="fade">
   <div class="container final-cta-inner">
-    <h2>Ready to Visit Our {{ $city }} Clinic?</h2>
-    <p>Request a consultation and our team will help you schedule your visit.</p>
+    <h2>{{ replace $c.title "{city}" $city }}</h2>
+    <p>{{ $c.body }}</p>
     <div class="final-cta-actions">
-      <a href="/contact/" class="btn btn-primary btn-lg">Request a Consultation</a>
-      {{ with $phone }}<a href="tel:{{ replaceRE `[^\d+]` "" . }}" class="btn btn-outline btn-lg">Call {{ . }}</a>{{ end }}
+      <a href="{{ $c.primary_link }}" class="btn btn-primary btn-lg">{{ $c.primary }}</a>
+      {{ with $phone }}<a href="tel:{{ replaceRE `[^\d+]` "" . }}" class="btn btn-outline btn-lg">{{ $c.call_label }} {{ . }}</a>{{ end }}
     </div>
   </div>
 </section>

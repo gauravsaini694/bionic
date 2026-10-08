@@ -3,6 +3,7 @@ title: "From First Steps to the School Dance: Jada's Pediatric AFO Success Story
 date: 2026-01-28
 categories: ["Success Stories"]
 image: "/images/blog/jada-s-pediatric-afo-success-story.jpg"
+entry_type: blog_post
 ---
 
 ## Small Steps, Big Confidence: How an AFO Helped Jada Find Her Rhythm

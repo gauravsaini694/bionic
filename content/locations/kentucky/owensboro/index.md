@@ -6,4 +6,5 @@ lat: 37.771818
 lng: -87.144876
 phone: "(270) 684-6128"
 description: "Personalized prosthetic and orthotic care for patients in the Owensboro area."
+entry_type: clinic
 ---

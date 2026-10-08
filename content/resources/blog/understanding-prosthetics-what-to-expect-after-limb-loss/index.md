@@ -3,6 +3,7 @@ title: "Understanding Prosthetics: What to Expect After Limb Loss"
 date: 2026-02-03
 categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/understanding-prosthetics-what-to-expect-after-limb-loss.jpg"
+entry_type: blog_post
 ---
 
 Limb loss brings both visible and subtle changes to how a person moves, handles daily tasks, and relates to their own body. Exploring prosthetic options for the first time can feel uncertain, and that uncertainty touches both the physical and emotional sides of recovery. At Bionic Prosthetics & Orthotics, we frame prosthetic care as a journey, not a transaction.

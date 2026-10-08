@@ -6,4 +6,5 @@ lat: 36.967604
 lng: -86.437123
 phone: "(270) 780-0073"
 description: "Personalized prosthetic and orthotic care for patients in the Bowling Green area."
+entry_type: clinic
 ---

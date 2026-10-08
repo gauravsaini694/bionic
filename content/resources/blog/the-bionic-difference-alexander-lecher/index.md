@@ -3,6 +3,7 @@ title: "The Bionic Difference: Alexander Lecher"
 date: 2022-05-13
 categories: ["Success Stories"]
 image: "/images/blog/the-bionic-difference-alexander-lecher.png"
+entry_type: blog_post
 ---
 
 Alexander Lecher is an unstoppable young child who loves playing with stuffed animals, riding his balance bike, exploring outdoors, and visiting playgrounds — despite having a full foot prosthesis.

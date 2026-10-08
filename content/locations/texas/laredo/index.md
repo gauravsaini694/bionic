@@ -6,4 +6,5 @@ lat: 27.507654
 lng: -99.475316
 phone: "(956) 791-1277"
 description: "Providing the very best in prosthetic and orthotic care in orthopedic rehabilitation."
+entry_type: clinic
 ---

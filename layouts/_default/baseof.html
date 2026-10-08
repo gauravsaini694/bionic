@@ -5,6 +5,20 @@
   {{ partial "google-ads.html" . }}
   {{ partial "head.html" . }}
   {{ block "head" . }}{{ end }}
+  <script>
+    // CMS invite / password-recovery links land on the home page with a token in the URL hash:
+    // load Netlify Identity only then (keeps the widget off normal page views) and continue to /admin/ after login.
+    if (/[#&](invite|recovery|confirmation|email_change)_token=/.test(location.hash)) {
+      var ni = document.createElement("script");
+      ni.src = "https://identity.netlify.com/v1/netlify-identity-widget.js";
+      ni.onload = function () {
+        window.netlifyIdentity.on("init", function (user) {
+          if (!user) window.netlifyIdentity.on("login", function () { document.location.href = "/admin/"; });
+        });
+      };
+      document.head.appendChild(ni);
+    }
+  </script>
 </head>
 <body>
   {{ partial "gtm-body.html" . }}
