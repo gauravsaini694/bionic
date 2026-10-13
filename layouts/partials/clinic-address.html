@@ -1,0 +1,6 @@
+{{- /* One-line street address for maps, search data and lookups. Context: clinic page. Joins address + address2 unless address already carries the city. */ -}}
+{{- $a := .Params.address | default "" -}}
+{{- with .Params.address2 -}}
+  {{- if not (in $a (index (split . ",") 0)) }}{{ $a = printf "%s, %s" $a . }}{{ end -}}
+{{- end -}}
+{{- return $a -}}

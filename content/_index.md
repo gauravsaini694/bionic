@@ -58,23 +58,24 @@ credentials:
 
 services:
   eyebrow: "WHAT WE OFFER"
-  title: "Services Built Around Your Movement"
-  body: "Every person's movement is unique, and prosthetic or orthotic solutions should reflect your body, condition, and daily life. We begin with a detailed clinical evaluation to recommend solutions focused on function, comfort, and long-term use."
+  title: "Services We Offer"
+  body: "Every person’s movement is unique, and prosthetic or orthotic solutions should reflect your body, condition, and daily life. At Bionic Prosthetics & Orthotics, we begin with a detailed clinical evaluation to recommend solutions focused on function, comfort, and long-term use."
+  details: "<h3>Prosthetic Care</h3><p>We focus on:</p><ul><li>Restoring balance and natural movement patterns</li><li>Reducing energy loss and fatigue during walking or daily activities</li><li>Supporting work, recreation, and independent living</li></ul><p>Each prosthesis is carefully selected and customized based on your anatomy, mobility goals, and lifestyle, with ongoing adjustments as your needs evolve.</p><h3>Orthotic Care</h3><p>We provide custom orthotic solutions for:</p><ul><li>Foot and ankle instability</li><li>Knee, hip, and spinal conditions</li><li>Post-injury and post-surgical recovery</li><li>Long-term musculoskeletal conditions</li></ul><p>Our goal is to improve comfort, stability, and movement efficiency while helping reduce pain and prevent further complications.</p><h3>Diabetic Foot Care</h3><p>Our diabetic foot care services focus on:</p><ul><li>Reducing pressure on high-risk areas</li><li>Protecting sensitive or vulnerable tissue</li><li>Supporting safe, confident walking</li></ul><p>We design specialized footwear and orthotic solutions to help lower the risk of ulcers and other complications while supporting long-term mobility.</p><h3>Pediatric Prosthetics &amp; Orthotics</h3><p>Our pediatric care emphasizes:</p><ul><li>Comfort and proper fit during growth</li><li>Supporting healthy movement and development</li><li>Encouraging confidence at home, school, and play</li></ul><p>We work closely with families and care teams to ensure each solution adapts over time, supporting both physical development and independence.</p>"
   items:
     - title: "Prosthetic Care"
-      description: "Upper- and lower-limb solutions that restore balance and natural movement, reduce fatigue during daily activities, and support work, recreation, and independent living — customized to your anatomy and goals."
+      description: "Our prosthetic services support individuals with upper- and lower-limb loss or limb difference at every stage of life."
       icon: "prosthetic"
       link: "/prosthetics/"
     - title: "Orthotic Care"
-      description: "Custom bracing for foot and ankle instability, knee, hip and spinal conditions, and post-injury recovery — improving comfort, stability, and movement efficiency while reducing pain."
+      description: "Orthotic care is designed to support the body’s structure, improve alignment, and reduce strain on muscles and joints."
       icon: "orthotic"
       link: "/orthotics/"
     - title: "Diabetic Foot Care"
-      description: "Specialized footwear and orthotic solutions that reduce pressure on high-risk areas, protect sensitive tissue, and support safe, confident walking to help lower the risk of ulcers."
+      description: "Diabetes can significantly affect foot health, circulation, and sensation, making proper support essential."
       icon: "diabetic"
       link: "/diabetic-foot/"
     - title: "Pediatric Prosthetics & Orthotics"
-      description: "Devices that adapt as children grow, supporting comfort, healthy development, and confidence at home, school, and play — built in partnership with families and care teams."
+      description: "Children’s prosthetic and orthotic needs change as they grow, develop, and become more active."
       icon: "pediatric"
       link: "/prosthetics/pediatric/"
 
@@ -100,14 +101,14 @@ testimonials:
   cta_text: "Read More Success Stories"
   cta_link: "/success-stories/"
   items:
-    - quote: "I'm so excited I can't stand it — I can't wait to get back to bowling and playing softball again."
+    - quote: "\"I'm so excited I can't stand it! I can't wait to get back to bowling and playing softball. Just an awesome experience. Bionic did everything I could want and more!\""
       name: "James Wanger"
       role: "Lower Limb Patient"
-    - quote: "I just want to say you are all wonderful and caring people. Thank you for all your love and patience."
+    - quote: "\"I just want to say you are all wonderful and caring people. Thank you for all your love.\""
       name: "Michelle Evans"
       role: "Orthotic Patient"
-    - quote: "My case was very complex, and after trying a couple of other prosthetic providers, I'm glad I found Bionic."
-      name: "Tobey Cunningham"
+    - quote: "\"My case was very complex, and after trying out a couple of other prosthetic providers, I'm glad I found Bionic. They worked with me throughout the entire process and were very accommodating. Shawn did a great job.\""
+      name: "Tobey Cunnigham"
       role: "Prosthetic Patient"
 
 resources:
@@ -131,7 +132,7 @@ resources:
 
 final_cta:
   title: "Take the Next Step with Confidence"
-  body: "Choosing prosthetic or orthotic care is a personal decision, and you don't have to make it alone. Our certified clinicians listen, explain your options, and guide you through a care plan tailored to your needs and daily life."
+  body: "Choosing prosthetic or orthotic care is a personal decision and you don’t have to make it alone. Our certified clinicians listen, explain your options, and guide you through a care plan tailored to your needs and daily life. Whether you’re exploring care or ready to schedule a visit, we’re here to support you at every step."
   cta_primary: "Request a Consultation"
   cta_primary_link: "/contact/"
   cta_secondary: "Find a Location Near You"

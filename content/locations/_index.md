@@ -7,8 +7,8 @@ cascade:
 
 hero:
   eyebrow: "FIND CARE NEAR YOU"
-  title: "A Bionic Clinic Near You"
-  subhead: "Explore our nationwide network of clinics offering advanced prosthetic and orthotic care to help you regain mobility and live your life to the fullest."
+  title: "Bionic Prosthetic & Orthotic Clinic Near You"
+  subhead: "Explore our nationwide network of clinics offering advanced prosthetics and orthotic care to help you regain mobility and live your life to the fullest."
   cta_primary: "Request a Consultation"
   cta_primary_link: "/contact/"
   cta_secondary: "Pay My Bill"
@@ -18,16 +18,21 @@ sections:
   - type: "points"
     eyebrow: "WHY BIONIC"
     title: "Why Choose Bionic Prosthetics & Orthotics?"
-    body: "At Bionic, we combine cutting-edge technology with personalized care to provide the best solutions for our patients, wherever you're located."
+    body: "At Bionic, we combine cutting-edge technology with personalized care to provide the best solutions for our patients:"
     image: "/images/why-choose-bionic.webp"
     image_alt: "A clinician in navy scrubs and a mask fitting a wrist brace on a seated patient in an exam room"
     points:
-      - "Advanced 3D printing for custom prosthetic and orthotic designs"
-      - "Expert, board-certified prosthetists and orthotists dedicated to helping you regain mobility"
-      - "A nationwide network of clinics for nearby, convenient care"
-      - "Post-fitting support including rehabilitation and follow-up care"
+      - "Advanced 3D Printing for custom prosthetic designs."
+      - "Expert Prosthetists and Orthotists dedicated to helping you regain mobility."
+      - "Nationwide Network of Clinics: We’re always nearby to provide the care you need."
+      - "Post-Fitting Support: We offer rehabilitation and follow-up care to ensure your comfort and mobility."
+
+  - type: "testimonial"
+    quote: "What a wonderful office with an amazing staff!! Melissa at the front desk is warm and welcoming and running the office like a well oiled machine. Eric is knowledgeable, caring, and professional. They made the whole experience comfortable and easy from start to finish.10/10 experience."
+    name: "Ashley Musa"
 
   - type: "clinic-finder"
+    states_title: "Browse by State"
     eyebrow: "FIND CARE NEAR YOU"
     title: "Find a Bionic Clinic Near You"
     body: "Search by ZIP, city or state, use your current location, or pick a state below. States, counts and map pins update automatically as clinics are added."

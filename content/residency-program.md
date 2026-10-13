@@ -3,7 +3,7 @@ breadcrumbs: ["/careers"]
 title: "O&P Residency Program"
 
 hero:
-  eyebrow: "POST-GRADUATE PROGRAM"
+  eyebrow: "Residency Program"
   title: "Train Where It Matters. Graduate Ready."
   subhead: "We endeavor to provide a comprehensive educational and mentoring platform to nurture clinical knowledge and technical skills while providing competent, compassionate care to our patients."
   cta_primary: "Apply Through OPRESCAS"
@@ -12,25 +12,46 @@ hero:
   cta_secondary_link: "/careers/"
 
 sections:
+  - type: "richtext"
+    title: "Residency Program Mission Statement"
+    body: "<p>“We endeavor to provide a comprehensive educational and mentoring platform to nurture clinical knowledge and technical skills while providing competent, compassionate care to our patients. Our program is dedicated to instill our company's values and goals which are: to bring like-minded individuals together to inspire, to improve peoples' lives, to create awareness, and to become an integral part of the communities we serve.”</p>"
+
   - type: "text-image"
     eyebrow: "RESIDENCY BACKGROUND"
-    title: "A Nationally Recognized Residency"
-    body: "Bionic operates 30+ ABC-accredited, NCOPE-approved residency sites across the country. Our clinicians bring expertise in advanced prosthetic systems — including microprocessor-controlled devices, myoelectric upper-limb prosthetics, and specialized orthotic systems — built over more than a decade of patient care."
+    title: "Residency Background & Expectations"
+    body: "Bionic Prosthetics and Orthotics is an ABC accredited Prosthetic and Orthotic practice with multiple NCOPE residency sites across the country. Bionic currently operates over 30 clinics and is continuing to grow rapidly. We take immense pride in the competent and compassionate care we have been able to provide to the communities we serve since our inception over a decade ago. The clinicians at Bionic have extensive expertise in the field. This includes advanced microprocessor controlled prosthetic systems, myo-electric upper limb prosthetics with pattern recognition, sub-ischial socket designs, Hi-Fi socket systems, functional electrical stimulation orthotic systems such as the WalkAide, custom carbon fiber AFO’s and KAFO’s for various neuromuscular and orthopedic pathologies, cranial remolding treatment, pediatric bracing, spinal and scoliosis bracing, dynamic upper limb bracing, and many other O&P interventions. We are seeking Prosthetic and Orthotic Residents who are looking for a patient centered residency program. We provide residents with a platform to learn and enhance their skills with a diverse and dedicated clinical team, allowing them to grow to their fullest potential in this ever-changing and demanding field. Our residency program offers a constructive learning path with educational opportunities internally and externally with various O&P manufacturers and exposure to patient care and clinical skills with multiple specialized practitioners within the group. We are an industry leader using advanced imaging and fabrication techniques. This includes scanning, using multiple 3D printers, and our many in-house fabrication labs. There is also a focus on documentation requirements, skills for medical necessity establishment, and outcome measure data analysis for evidenced based care. We offer a competitive salary, health benefits, 401K, sick and vacation time, as well as continued educational opportunities. Responsibilities of a Bionic resident include: · Perform and document detailed clinical evaluations of patients with assessments, plan of care, goals, and use of outcome measures in accordance with physician prescriptions. · Establish, justify, and document pertinent coding & medical necessity of prescribed O&P devices. And, co-ordinate the same from referring physicians and other healthcare professionals. · Learn and perform modifications on plaster models and on CAD software, co-ordinate fabrication, ordering, assembly, and alignment of O&P devices. · Observe, learn, assist, and independently perform; fitting, gait training, dynamic alignment, delivery, and follow up of O&P devices at progressing stages of the residency program. · Assist administrative and compliance staff with information related to claim submissions, audits, denials, appeals, and efficient functioning of the clinic. · Participate in local and healthcare community awareness, marketing efforts, educational in-services, CEU programs, team building and other training events. · Follow company protocols on patient privacy, compliance requirements, timeframes, professional ethics, etc. This is a very dynamic residency position for extremely proactive and scrupulous individuals who are passionate about prosthetics, orthotics, and patient care. Appropriate candidates should be prepared for a demanding and challenging work environment! To apply please submit your application through OPRESCAS. We will contact all applicants as soon as possible. If there are any questions please email the residency director at the address below."
     image: "/images/blog/preventing-muscle-contractures-after-amputation.jpg"
     image_alt: "A clinician kneeling to fit a prosthetic leg on a seated patient in a clinic"
     image_position: "left"
 
-  - type: "points"
+  - type: "cards"
     eyebrow: "WHAT YOU'LL DO"
     title: "Resident Responsibilities"
-    body: "Residents get real-world clinical experience, mentorship, and access to advanced technology — 12-month (single discipline) or 18-month (combined O&P) tracks are available."
-    points:
-      - "Perform detailed clinical evaluations, assessments, and outcome measures"
-      - "Establish and justify coding and medical necessity documentation"
-      - "Learn modifications on plaster models and CAD software, and coordinate fabrication"
-      - "Observe and perform fitting, gait training, alignment, delivery, and follow-up"
-      - "Assist with claim submissions, audits, denials, and appeals"
-      - "Participate in community awareness and educational programs"
+    items:
+      - title: "Patient Evaluations"
+        description: "Conduct and document detailed patient evaluations with increasing independence over the program."
+        icon: "certified"
+      - title: "Device Fitting & Delivery"
+        description: "Fit, align, and deliver prosthetic and orthotic devices, progressively taking the lead under supervision."
+        icon: "certified"
+      - title: "Fabrication"
+        description: "Assist in plaster model modifications, CAD software use, and full device assembly in our fabrication lab."
+        icon: "certified"
+      - title: "Coding & Documentation"
+        description: "Learn justification and coding protocols for prescribed O&P devices and insurance documentation."
+        icon: "certified"
+      - title: "Policy Adherence"
+        description: "Uphold company policies on patient privacy, clinical ethics, and quality of care protocol."
+        icon: "certified"
+      - title: "Educational Participation"
+        description: "Participate in outreach, in services, CEU events, and manufacturer training opportunities."
+        icon: "certified"
+      - title: "Administrative Support"
+        description: "Support administrative staff with insurance claims, prior authorizations, and compliance tasks."
+        icon: "certified"
+      - title: "Community Outreach"
+        description: "Represent Bionic at community events, referral partner meetings, and clinical in-services."
+        icon: "certified"
 
   - type: "stats"
     items:
@@ -53,6 +74,14 @@ sections:
         answer: "Residents gain hands-on exposure to advanced imaging, scanning, and 3D printing training, along with involvement in our in-house fabrication labs."
       - question: "How do I apply?"
         answer: "Residency applications are accepted through the OPRESCAS portal. You can also reach our residency team directly at residency@bionicpo.com."
+
+  - type: "richtext"
+    title: "Jeff Wojtanowicz"
+    body: "<h3>Director Of Residency Program</h3><p>Jeffery Wojtanowicz joined Bionic in 2011 and has grown within the organization. He is a certified prosthetist and orthotist with over a decade of experience in patient care. While he is trained in many facets of the field, his special interests include upper and lower limb prosthetics as well as complex custom orthotic devices.</p><p>He is the regional manager for our clinics in the state of Illinois. He is also the residency director for all Bionic clinics and takes pride in helping new graduates learn and grow in the field.</p><p>He holds a BS in Marketing and Finance from the University of Illinois Chicago. He is a graduate of the Feinberg School of Medicine at Northwestern University. He completed his residency at the Rehabilitation Institute of Chicago which is now known as the Shirley Ryan Ability Lab.</p><p>Jeff lives in Tinley Park, IL with his wife, son, and daughter. In his free time, he enjoys golfing in the summer and going on snowboarding trips in the winter.</p><p>residency@bionicpo.com</p>"
+
+  - type: "richtext"
+    title: "Current Residents"
+    body: "<h3>Andrew Sloan</h3><p>asloan@bionicpo.com</p><p>Tennessee</p><h3>Madelyn Person</h3><p>mperson@bionicpo.com</p><p>Ohio</p><h3>Vinay Verma</h3><p>vverma@bionicpo.com</p><p>Indiana</p><p>Resident Prosthetist and Othotist</p><h3>Kyndall Mayer</h3><p>kmayer@bionicpo.com</p><p>North Carolina</p><h3>Grace Clark</h3><p>gclark@bionicpo.com</p><h3>Liv Nuzzo</h3><p>lnuzzo@bionicpo.com</p><p>Illinois</p><p>Resident Prosthetic &amp; Orthotic</p><h3>Allen Johnson, CPOA</h3><p>ajohnson@bionicpo.com</p><p>Wisconsin</p><h3>N'Jhari Jackson</h3><p>njackson@bionicpo.com</p><p>Florida</p>"
 
   - type: "cta-band"
     title: "Ready to Start Something Meaningful?"

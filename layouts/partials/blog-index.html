@@ -4,6 +4,7 @@
 {{- $blog := site.GetPage "/blog" -}}
 <section class="section resources-section">
   <div class="container">
+    <p class="eyebrow">A BLOG BY BIONIC</p>
     {{ partial "section-header.html" (dict "eyebrow" ($p.eyebrow | default "ALL ARTICLES") "title" ($p.title | default "Latest from the Blog")) }}
     {{ $terms := site.Taxonomies.categories.Alphabetical }}
     {{ if $terms }}

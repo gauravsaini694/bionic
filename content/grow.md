@@ -4,7 +4,7 @@ title: "Now Hiring: Experienced Professionals"
 
 hero:
   eyebrow: "EXPERIENCED PROFESSIONALS"
-  title: "Now Hiring Across Our Clinic Network"
+  title: "Become A Part of the Bionic Family"
   subhead: "We're looking for certified prosthetists, orthotists, and clinic leaders who want to build a career with real growth — and real impact on patients' lives."
   cta_primary: "Contact HR"
   cta_primary_link: "/contact/"
@@ -27,13 +27,33 @@ sections:
 
   - type: "points"
     eyebrow: "OPEN ROLES"
+    title: "Available Opportunities"
+    body: "Now hiring Certified Prosthetists & Orthotists in locations across the United States, but particularly in:"
+    points:
+      - "Charlotte, NC - Certified Prosthetist and/or Orthotist"
+      - "Cincinnati, OH - Certified Prosthetist and/or Orthotist"
+      - "Evansville, IN - Certified Prosthetist and/or Orthotist"
+      - "Fort Myers, FL - Certified Prosthetist or Certified Prosthetist & Orthotist"
+      - "Hamilton, NJ - Certified Prosthetist or Certified Prosthetist & Orthotist *must already have New Jersey licensure"
+      - "Indianapolis, IN - Certified Prosthetist and/or Orthotist"
+      - "Laredo, TX - Certified Prosthetist and/or Orthotist"
+      - "Louisville, KY - Certified Prosthetist and/or Orthotist"
+      - "Madison, WI - Certified Prosthetist or Certified Prosthetist & Orthotist"
+      - "Mishawaka, IN - Certified Prosthetist or Certified Prosthetist & Orthotist"
+      - "Munster, IN - Certified Prosthetist and/or Orthotist"
+
+  - type: "points"
+    eyebrow: "ROLES"
     title: "Who We're Looking For"
-    body: "We're currently hiring across a range of clinical and support roles in cities including Charlotte, NC; Cincinnati, OH; Evansville, IN; Fort Myers, FL; Hamilton, NJ; Indianapolis, IN; Laredo, TX; Louisville, KY; Madison, WI; Mishawaka, IN; and Munster, IN."
     points:
       - "Certified Prosthetist & Orthotist (CPO)"
       - "Regional & Clinic Managers"
       - "Clinic Office Administrators"
       - "O&P Trainees"
+
+  - type: "richtext"
+    title: "Why Bionic?"
+    body: "<p>Do you want to be part of a team where your work makes a meaningful difference in people's lives? At Bionic Prosthetics &amp; Orthotics, we believe great care starts with great people.</p><p>Founded in Merrillville, Indiana, Bionic has expanded from a local clinic into a network of clinics across 12 states. While we've expanded, we've stayed connected to our roots and remain committed to the communities we serve.</p><p>We're looking for people who are passionate about their work, care about the people they serve, and want to develop their careers alongside a team that values collaboration, compassion, and innovation.</p><p>At each of our clinics, our team works together to advance prosthetic and orthotic care while keeping the patient at the center of everything we do.</p><p>At Bionic, you'll have the opportunity to build your career, make a meaningful impact, and be part of a company that helps change lives every day.</p><h3>Available Opportunities</h3><p>View All Open Positions</p><p>Multiple Locations</p><h3>Come Work With Us</h3><p>Thanks for submitting!</p><p>If you have any questions about our hiring process, feel free to reach out!</p>"
 
   - type: "cta-band"
     title: "Ready to Start Something Meaningful?"

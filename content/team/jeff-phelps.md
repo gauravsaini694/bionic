@@ -3,9 +3,17 @@ url: "/team/jeff-phelps,-cpo/"
 title: "Jeff Phelps"
 name: "Jeff Phelps"
 credentials: "CPO"
-role: "Senior Prosthetist-Orthotist"
+role: "Senior Certified Prosthetist & Orthotist"
 location: "Owensboro, KY"
+email: "jphelps@bionicpo.com"
 photo: "/images/team/jeff-phelps.png"
-bio: "<p>Jeff Phelps joined Bionic P&amp;O in 2021. A 1993 graduate of the University of Texas Southwestern Medical School with a Bachelor of Science in orthotics and prosthetics, he became ABC-certified in orthotics in 1995 and in prosthetics in 1996.</p><p>Jeff specializes in lower limb prosthetics and pediatric orthotics, with an emphasis on team-based patient care. He lives in Owensboro with his wife Krystal and their three children, and is actively involved in his community.</p>"
+bio: "<p>Jeff Phelps joined the Bionic family in 2021 and works primarily in the Owensboro, Ky office. A 1993 graduate of the University of Texas Southwestern Medical School in Dallas, Jeff received his Bachelor of Science degree in orthotics and prosthetics. He was ABC-certified in orthotics in 1995, and in prosthetics in 1996. He continues to have a special interest in lower limb prostetics and pediatric orthotics. Over the years, Jeff has served in many clinical settings and believes in a strong, team approach to patient care.Jeff and his wife Krystal reside in Owensboro with their three children. He enjoys spending time with his family and friends, being active in the community and caring for his many animals.</p>"
+clinic_details:
+  - name: "Owensboro"
+    address:
+      - "2819 W. 4th St."
+      - "Owensboro, KY 42301"
+    phone: "(270) 684-6128"
+    email: "owensboro@bionicpo.com"
 entry_type: clinician
 ---

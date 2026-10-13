@@ -20,6 +20,7 @@
       <div class="clinic-results" id="clinic-results" aria-live="polite" hidden></div>
     </div>
     <div class="find-clinic-panel reveal" data-reveal="up">
+      {{ with $p.states_title }}<h3 class="states-title">{{ . }}</h3>{{ end }}
       <div class="state-chip-grid" role="group" aria-label="Filter map by state">
         {{ range $d.states }}
         <button type="button" class="state-card" data-state="{{ .name }}" aria-pressed="false">

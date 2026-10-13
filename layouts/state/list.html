@@ -1,3 +1,5 @@
+{{ define "head" }}{{ partial "faq-schema.html" . }}{{ end }}
+
 {{ define "main" }}
 {{- $state := . -}}
 {{- $clinics := (where (where site.RegularPages "Type" "clinic") "Params.state" .Title).ByTitle -}}
@@ -5,7 +7,7 @@
 {{- $pins := slice -}}
 {{- range $clinics -}}
   {{- if and .Params.lat .Params.lng -}}
-    {{- $pins = $pins | append (dict "name" .Title "address" (.Params.address | default "") "lat" .Params.lat "lng" .Params.lng "url" .RelPermalink) -}}
+    {{- $pins = $pins | append (dict "name" .Title "address" (partial "clinic-address.html" .) "lat" .Params.lat "lng" .Params.lng "url" .RelPermalink) -}}
   {{- end -}}
 {{- end -}}
 {{- $all := partialCached "locations-data.html" . -}}
@@ -18,7 +20,7 @@
       <span aria-current="page">{{ .Title }}</span>
     </nav>
     <span class="eyebrow eyebrow-light">FIND CARE NEAR YOU</span>
-    <h1>Bionic Clinics in {{ .Title }}</h1>
+    <h1>{{ .Params.hero.title | default (printf "Bionic Clinics in %s" .Title) }}</h1>
     {{ with .Params.hero.subhead }}<p class="cl-hero-address">{{ . }}</p>{{ end }}
     <span class="cl-badge is-closed">{{ $n }} {{ cond (eq $n 1) "Location" "Locations" }} in {{ .Title }}</span>
     <div class="cl-hero-actions">
@@ -29,6 +31,7 @@
 </section>
 
 <section class="section">
+  {{ with .Params.locations_title }}<div class="container"><h2 class="st-locations-title">{{ . }}</h2></div>{{ end }}
   <div class="container st-layout">
     <div class="st-list">
       {{ $k := 0 }}
@@ -45,6 +48,30 @@
     {{ end }}
   </div>
 </section>
+
+{{ with .Params.consult }}
+<section class="section">
+  <div class="container">
+    {{ partial "section-header.html" (dict "title" .title "body" .body) }}
+  </div>
+</section>
+{{ end }}
+
+{{ with .Params.faq }}
+<section class="section faq-section">
+  <div class="container">
+    {{ partial "section-header.html" (dict "title" "Frequently Asked Questions") }}
+    <div class="faq-list">
+      {{ range . }}
+      <details class="faq-item">
+        <summary>{{ .question }}</summary>
+        <p>{{ .answer }}</p>
+      </details>
+      {{ end }}
+    </div>
+  </div>
+</section>
+{{ end }}
 
 <section class="section services-section">
   <div class="container">

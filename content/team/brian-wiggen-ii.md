@@ -3,9 +3,17 @@ url: "/team/brian-wiggen-ii,-co,-boco,-bocp/"
 title: "Brian Wiggen II"
 name: "Brian Wiggen II"
 credentials: "CO, BOCO, BOCP"
-role: "Prosthetist-Orthotist"
+role: "Certified Prosthetist & Orthotist"
 location: "East Flat Rock, NC"
+email: "wbrian@bionicpo.com"
 photo: "/images/team/brian-wiggen.jpg"
-bio: "<p>Brian Wiggen II brings 32 years of experience in orthotics and prosthetics, holding a Mechanical Engineering degree from Victoria College and pre-med coursework from the University of Houston. He has spent 24 years practicing in Western North Carolina, building strong patient and physician relationships throughout the region.</p><p>His clinical expertise includes stance control bracing and advanced dynamic AFOs. Outside of work, he enjoys family time along with auto fabrication and motorsports.</p>"
+bio: "<p>Brian Wiggen II is an ABC and BOC Certified Orthotist, as well as being a BOC certified prosthetist, working out of our East Flat Rock clinic. Brian has 32 years of experience in orthotics and prosthetics, including extensive fabrication experience. He holds a degree in Mechanical Engineering from Victoria College and has also completed Pre-Med courses at the University of Houston. Brian has practiced in Western North Carolina for the past 24 years and has established great relationships with patients and physicians alike. He has continued to expand his knowledge in order to offer specialty services such as Stance Control bracing and advanced dynamic AFOs. Brian enjoys the challenge of solving problems to help people improve their lives and function.In his free time, Brian enjoys spending time with his family and auto fabrication/motorsports.</p>"
+clinic_details:
+  - name: "East Flat Rock"
+    address:
+      - "107 E. Walker St."
+      - "East Flat Rock, NC 28726"
+    phone: "(828) 595-9371"
+    email: "eastflatrock@bionicpo.com"
 entry_type: clinician
 ---

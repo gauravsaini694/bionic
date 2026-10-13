@@ -56,7 +56,7 @@ Several medical treatments may help manage phantom limb pain:
 
 In addition to medical treatments, some alternative therapies may be helpful:
 
-- **Acupuncture** — Some amputees find relief through acupuncture, which helps stimulate certain pressure points to ease pain.
+- **Acupuncture:** Some amputees find relief through acupuncture, which helps to stimulate certain pressure points to ease pain.
 - **Massage therapy** — Massaging the residual limb can help alleviate tension and reduce phantom pain.
 - **Physical therapy** — Engaging in physical therapy can help with neuromuscular reeducation and may decrease pain sensations by re-training the brain to ignore phantom limb sensations.
 
@@ -70,6 +70,6 @@ It's important to differentiate between phantom pain and referred pain. Referred
 
 ## Seeking Medical Help for Phantom Pain
 
-If phantom limb pain becomes unbearable or persistent, it's crucial to seek help from healthcare professionals. Your prosthetist can also be a resource to help manage your pain, either by making adjustments to your prosthesis or by connecting you with a local healthcare provider.
+If phantom limb pain becomes unbearable or persistent, it\'s crucial to seek help from healthcare professionals. Your prosthetist can also be a resource to help manage your pain, either by making adjustments to your prosthesis or by connecting you with a local health care provider.
 
 If you are experiencing phantom limb pain or any other post-amputation concerns, don't hesitate to reach out to Bionic for personalized care. Our experts are here to help you navigate this challenging journey with compassion and the best possible solutions.

@@ -7,7 +7,7 @@
 {{- $phone := .Params.phone -}}
 {{- $hasGeo := and .Params.lat .Params.lng -}}
 {{- $dir := "" -}}
-{{- if $addr }}{{ $dir = printf "https://www.google.com/maps/dir/?api=1&destination=%s" ($addr | urlquery) }}
+{{- if $addr }}{{ $dir = printf "https://www.google.com/maps/dir/?api=1&destination=%s" ((partial "clinic-address.html" .) | urlquery) }}
 {{- else if $hasGeo }}{{ $dir = printf "https://www.google.com/maps/dir/?api=1&destination=%v,%v" .Params.lat .Params.lng }}{{ end -}}
 {{- $hours := .Params.hours -}}
 {{- $hoursList := cond (reflect.IsSlice $hours) $hours slice -}}
@@ -139,13 +139,13 @@
 <!-- ===== ABOUT / TEAM ===== -->
 {{- $members := slice -}}
 {{- range .Params.team -}}
-  {{- $name := .name -}}{{- $named := .name -}}{{- $title := .title -}}{{- $photo := .photo -}}{{- $creds := .credentials -}}{{- $link := .link | default "" -}}
+  {{- $name := .name -}}{{- $named := .name -}}{{- $title := .title -}}{{- $photo := .photo -}}{{- $creds := .credentials -}}{{- $link := .link | default "" -}}{{- $loc := .location -}}
   {{- with .clinician -}}
     {{- with site.GetPage (printf "/team/%s" .) -}}
       {{- $name = $name | default .Params.name -}}{{- $title = $title | default .Params.role -}}{{- $photo = $photo | default .Params.photo -}}{{- if not $named }}{{ $creds = $creds | default .Params.credentials }}{{ end -}}{{- $link = $link | default .RelPermalink -}}
     {{- end -}}
   {{- end -}}
-  {{- if $name }}{{ $members = $members | append (dict "name" $name "title" $title "photo" $photo "creds" $creds "link" $link) }}{{ end -}}
+  {{- if $name }}{{ $members = $members | append (dict "name" $name "title" $title "photo" $photo "creds" $creds "link" $link "location" $loc) }}{{ end -}}
 {{- end -}}
 {{- $gallery := slice -}}
 {{- range .Params.gallery -}}{{- if reflect.IsMap . }}{{ with .image }}{{ $gallery = $gallery | append (dict "src" . "alt" ($.Title | printf "%s clinic")) }}{{ end }}{{ else }}{{ $gallery = $gallery | append (dict "src" . "alt" ($.Title | printf "%s clinic")) }}{{ end -}}{{- end -}}
@@ -185,6 +185,7 @@
         <h3>{{ .name }}</h3>
         {{ with .creds }}<div class="team-credentials">{{ . }}</div>{{ end }}
         {{ with .title }}<div class="team-role">{{ . }}</div>{{ end }}
+        {{ with .location }}<div class="team-location"><span class="icon-sm">{{ partial "icon.html" "pin" }}</span>{{ . }}</div>{{ end }}
       {{ if .link }}</a>{{ else }}</div>{{ end }}
       {{ end }}
     </div>

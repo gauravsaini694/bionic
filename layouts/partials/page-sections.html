@@ -151,6 +151,24 @@
   </div>
 </section>
 
+{{ else if eq $s.type "testimonial" }}
+<section class="section testimonials-section">
+  <div class="container">
+    <div class="card-grid testimonial-grid">
+      <div class="testimonial-card reveal" data-reveal="up">
+        <div class="star-row" aria-hidden="true">
+          {{ range seq 5 }}<span class="star-ic">{{ partial "icon.html" "star" }}</span>{{ end }}
+        </div>
+        <p class="testimonial-quote">{{ $s.quote }}</p>
+        <div class="testimonial-person">
+          <span class="testimonial-avatar" aria-hidden="true">{{ partial "initials.html" $s.name }}</span>
+          <div><strong>{{ $s.name }}</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 {{ else if eq $s.type "cta-band" }}
 <section class="final-cta reveal" data-reveal="fade">
   <div class="container final-cta-inner">

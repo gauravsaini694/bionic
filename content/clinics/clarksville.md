@@ -1,10 +1,36 @@
 ---
 title: "Clarksville"
 state: "Tennessee"
-address: "980 Professional Park Dr, Ste. B, Clarksville, TN 37040"
+address: "980 Professional Park Dr, Ste. B"
+address2: "Clarksville, TN 37040"
+zip: "37040"
 lat: 36.575948
 lng: -87.272581
 phone: "(931) 648-2155"
+fax: "(931) 648-9673"
+email: "clarksville@bionicpo.com"
+hours: "M-Th: 9AM-12PM, 1PM-5PM F: 9AM-12PM, 1PM-2PM"
 description: "An organization aimed at providing the very best in prosthetic and orthotic care in orthopedic rehabilitation."
+team:
+  - name: "Andrew Sloan"
+    title: "Resident Prosthetist & Orthotist"
+    location: "Tennessee"
+    clinician: "andrew-sloan"
+  - name: "Jenny Hutchison, CFo, LO"
+    title: "Certified Orthotic Fitter / Licensed Orthotist"
+    location: "Tennessee"
+    clinician: "jenny-hutchison"
+  - name: "Bryce Dahl, CPO"
+    title: "Certified Prosthetist & Orthotist"
+    location: "Tennessee"
+    clinician: "bryce-dahl"
+  - name: "Lynn (Brad) Watson, BOCO, BOCP"
+    title: "Tennessee / Kentucky"
+    location: "Tennessee / Kentucky"
+    clinician: "lynn-brad-watson"
+  - name: "Jacob Watters, CPO"
+    title: "Certified Prosthetist and Orthotist"
+    location: "Tennessee"
+    clinician: "jacob-watters-"
 entry_type: clinic
 ---
