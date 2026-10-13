@@ -15,8 +15,8 @@ sections:
     eyebrow: "WHAT ARE ORTHOTICS?"
     title: "Personalized Support, Not an Off-the-Shelf Fix"
     body: "Our board-certified orthotists conduct thorough evaluations, collaborate with your physicians, and continuously adjust your device as your needs evolve. We combine clinical expertise with the latest materials — carbon fiber, dynamic thermoplastics, and microprocessor-assisted joints — for optimal outcomes, plus ongoing follow-up care to keep your orthosis supporting your goals."
-    image: "/images/blog/jada-s-pediatric-afo-success-story.jpg"
-    image_alt: "Jada, a smiling young girl in a light-blue dress, standing outdoors on a wooden deck"
+    image: "/images/orthotics-overview.webp"
+    image_alt: "Four smiling men in polo shirts standing on a golf course, some wearing a knee brace, elbow brace and ankle brace"
     image_position: "right"
 
   - type: "cards"
