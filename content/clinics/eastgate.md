@@ -1,5 +1,6 @@
 ---
 title: "Eastgate"
+seo_title: "Eastgate"
 state: "Ohio"
 address: "4357 Ferguson Dr, Ste. 110"
 address2: "Cincinnati, OH 45245"

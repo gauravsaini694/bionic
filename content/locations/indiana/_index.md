@@ -1,5 +1,7 @@
 ---
 title: "Indiana"
+seo_title: "Prosthetics & Orthotics in Indiana | Bionic P&O"
+seo_description: "Get expert prosthetic and orthotic care across Indiana. Bionic offers custom prosthetics, bracing, and rehabilitation support. Schedule a free consultation today."
 type: "state"
 cascade:
   type: "clinic"

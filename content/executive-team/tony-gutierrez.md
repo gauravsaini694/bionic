@@ -1,5 +1,6 @@
 ---
 title: "Tony Gutierrez"
+seo_title: "Tony Gutierrez"
 role: "Director of Clinical Advancement and Innovation"
 credentials: "CP"
 weight: 4

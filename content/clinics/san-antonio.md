@@ -1,5 +1,6 @@
 ---
 title: "San Antonio"
+seo_title: "San Antonio"
 state: "Texas"
 address: "6715 San Pedro Ave."
 address2: "San Antonio, TX 78216"

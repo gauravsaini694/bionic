@@ -1,5 +1,7 @@
 ---
 title: "Bionic Patients and Team Shine at AOPA 2024: A Journey of Learning and Innovation"
+seo_title: "'Bionic Patients and Team Shine at American Orthotic & Prosthetic Association Conference 2024'"
+seo_description: "Experience the journey of learning, innovation, and patient empowerment at the American Orthotic & Prosthetic Association Conference 2024."
 date: 2024-10-04
 categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/bionic-patients-and-team-shine-at-aopa-2024-a-journey-of-learning-and-innovation.png"

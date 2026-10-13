@@ -1,5 +1,6 @@
 ---
 title: "What Is Gait Training and How Can It Help After Amputation?"
+seo_title: "WHAT IS GAIT TRAINING AND HOW CAN IT HELP AFTER AMPUTATION?"
 date: 2025-09-11
 categories: ["Health and Wellness"]
 image: "/images/blog/what-is-gait-training-and-how-can-it-help-after-amputation.jpg"

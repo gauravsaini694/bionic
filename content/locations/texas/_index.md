@@ -1,5 +1,7 @@
 ---
 title: "Texas"
+seo_title: "Prosthetics & Orthotics in Texas | Bionic P&O"
+seo_description: "Get expert prosthetic and orthotic care across Texas. Bionic offers custom prosthetics, bracing, and rehabilitation support. Schedule a free consultation today."
 type: "state"
 cascade:
   type: "clinic"

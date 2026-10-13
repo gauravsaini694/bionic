@@ -1,6 +1,7 @@
 ---
 url: "/team/jeffrey-wojtanowicz,-cpo/"
 title: "Jeffrey Wojtanowicz"
+seo_title: "Jeffrey Wojtanowicz, CPO | Bionic P&O"
 name: "Jeffrey Wojtanowicz"
 credentials: "CPO"
 role: "Regional Manager - Certified Prosthetist & Orthotist"

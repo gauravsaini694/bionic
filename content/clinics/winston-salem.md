@@ -1,5 +1,6 @@
 ---
 title: "Winston-Salem"
+seo_title: "Winston-Salem"
 state: "North Carolina"
 address: "1673 Westbrook Plaza Dr, Ste. 230"
 address2: "Winston-Salem, NC 27103"

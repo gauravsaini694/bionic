@@ -1,5 +1,6 @@
 ---
 title: "When Do I Need a Follow-Up for My Prosthesis?"
+seo_title: "WHEN DO I NEED A FOLLOW-UP FOR MY PROSTHESIS?"
 date: 2025-09-25
 date_label: "Updated: Sep 25, 2025"
 categories: ["Prosthetics and Orthotics"]

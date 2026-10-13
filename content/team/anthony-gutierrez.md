@@ -1,6 +1,7 @@
 ---
 url: "/team/anthony-gutierrez,-cp/"
 title: "Anthony Gutierrez"
+seo_title: "Anthony Gutierrez, CP | Bionic P&O"
 name: "Anthony Gutierrez"
 credentials: "CP"
 role: "Director of Clinical Advancement & Innovation - Certified Prosthetist"

@@ -1,5 +1,6 @@
 ---
 title: "Kyndall Mayer"
+seo_title: "Kyndall Mayer | Bionic P&O"
 name: "Kyndall Mayer"
 role: "Resident Prosthetist and Othotist"
 location: "Charlotte, NC"

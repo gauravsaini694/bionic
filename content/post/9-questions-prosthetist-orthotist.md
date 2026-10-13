@@ -1,5 +1,7 @@
 ---
 title: "9 Questions You Need to Ask Your Prosthetist or Orthotist"
+seo_title: "9 Questions You Need to Ask Your Prosthetist or Orthotist"
+seo_description: "Every appointment you make with your prosthetist or orthotist has a chance to increase your mobility, reduce pain and discomfort, and improve your life. But how you spend that time could determine how effective your visit is.  "
 date: 2022-07-05
 categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/when-do-i-need-a-follow-up-for-my-prosthesis.jpg"

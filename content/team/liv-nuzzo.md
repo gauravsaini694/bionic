@@ -1,5 +1,6 @@
 ---
 title: "Liv Nuzzo"
+seo_title: "Liv Nuzzo | Bionic P&O"
 name: "Liv Nuzzo"
 role: "Resident Prosthetist and Orthotist"
 location: "Hazel Crest, IL"

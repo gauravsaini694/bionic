@@ -1,6 +1,7 @@
 ---
 url: "/team/peter-marx,-cpo/"
 title: "Peter Marx"
+seo_title: "Peter Marx, CPO | Bionic P&O"
 name: "Peter Marx"
 credentials: "CPO"
 role: "Certified Prosthetist & Orthotist"

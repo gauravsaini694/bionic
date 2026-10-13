@@ -1,5 +1,6 @@
 ---
 title: "A Day in the Life: Living With a Bionic Limb"
+seo_title: "A DAY IN THE LIFE: LIVING WITH A BIONIC LIMB"
 date: 2025-12-02T12:00:00
 categories: ["Success Stories"]
 image: "/images/blog/a-day-in-the-life-living-with-a-bionic-limb.jpg"

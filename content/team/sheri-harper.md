@@ -1,6 +1,7 @@
 ---
 url: "/team/sheri-harper,-cpo/"
 title: "Sheri Harper"
+seo_title: "Sheri Harper, CPO | Bionic P&O"
 name: "Sheri Harper"
 credentials: "CPO"
 role: "Certified Prosthetist & Orthotist"

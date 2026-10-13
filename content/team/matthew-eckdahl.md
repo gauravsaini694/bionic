@@ -1,5 +1,6 @@
 ---
 title: "Matthew Eckdahl"
+seo_title: "Matthew Eckdahl, BEPO | Bionic P&O"
 name: "Matthew Eckdahl"
 credentials: "BEPO"
 role: "Board Eligible Prosthetist & Orthotist"

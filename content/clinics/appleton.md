@@ -1,5 +1,6 @@
 ---
 title: "Appleton"
+seo_title: "Appleton"
 state: "Wisconsin"
 address: "3315A North Ballard Rd, Appleton, WI 54911"
 address2: "Appleton, WI 54911"

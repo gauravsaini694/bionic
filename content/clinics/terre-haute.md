@@ -1,5 +1,6 @@
 ---
 title: "Terre Haute"
+seo_title: "Terre Haute"
 state: "Indiana"
 address: "4126 S 7th St"
 address2: "Terre Haute, IN 47802"

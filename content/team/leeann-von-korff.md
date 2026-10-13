@@ -1,6 +1,7 @@
 ---
 url: "/team/leeann-von-korff,-cobep/"
 title: "Leeann von Korff"
+seo_title: "Leeann von Korff, CPO | Bionic P&O"
 name: "Leeann von Korff"
 credentials: "CPO"
 role: "Clinical Manager - Certified Prosthetist & Orthotist"

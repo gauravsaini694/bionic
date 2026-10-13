@@ -1,5 +1,6 @@
 ---
 title: "Fort Myers"
+seo_title: "Ft. Myers"
 state: "Florida"
 address: "10060 Amberwood Rd, Unit #4"
 address2: "Fort Myers, FL 33913"

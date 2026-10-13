@@ -1,6 +1,7 @@
 ---
 url: "/team/kendle-nagy,-lofa/"
 title: "Kendle Nagy"
+seo_title: "Kendle Nagy, LOFa | Bionic P&O"
 name: "Kendle Nagy"
 credentials: "LOFa"
 role: "Licensed Orthotic Fitter Assistant"

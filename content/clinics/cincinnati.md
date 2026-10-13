@@ -1,5 +1,6 @@
 ---
 title: "Cincinnati"
+seo_title: "Cincinnati"
 state: "Ohio"
 address: "2729 Short Vine St."
 address2: "Cincinnati, OH 45219"

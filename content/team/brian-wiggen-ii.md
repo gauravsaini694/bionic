@@ -1,6 +1,7 @@
 ---
 url: "/team/brian-wiggen-ii,-co,-boco,-bocp/"
 title: "Brian Wiggen II"
+seo_title: "Brian Wiggen II, CO, BOCO, BOCP | Bionic P&O"
 name: "Brian Wiggen II"
 credentials: "CO, BOCO, BOCP"
 role: "Certified Prosthetist & Orthotist"

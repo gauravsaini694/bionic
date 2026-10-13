@@ -1,5 +1,6 @@
 ---
 title: "Ormond Beach"
+seo_title: "Ormond Beach"
 state: "Florida"
 address: "1414 W. Granada Blvd, Ste. 3"
 address2: "Ormond Beach, FL 32117"

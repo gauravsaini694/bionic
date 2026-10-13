@@ -1,6 +1,7 @@
 ---
 url: "/team/christine-geeding, cp/"
 title: "Christine Geeding"
+seo_title: "Christine Geeding, CP | Bionic P&O"
 name: "Christine Geeding"
 credentials: "CP"
 role: "Regional Manager - Certified Prosthetist"

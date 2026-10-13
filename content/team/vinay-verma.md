@@ -1,5 +1,6 @@
 ---
 title: "Vinay Verma"
+seo_title: "Vinay Verma | Bionic P&O"
 name: "Vinay Verma"
 role: "Resident Prosthetist & Orthotist"
 location: "Merrillville, IN"

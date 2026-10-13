@@ -1,6 +1,7 @@
 ---
 url: "/team/bryce-dahl,-cpo/"
 title: "Bryce Dahl"
+seo_title: "Bryce Dahl, CPO | Bionic P&O"
 name: "Bryce Dahl"
 credentials: "CPO"
 role: "Certified Prosthetist & Orthotist"

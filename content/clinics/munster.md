@@ -1,5 +1,6 @@
 ---
 title: "Munster"
+seo_title: "Munster"
 state: "Indiana"
 address: "759 45th St suite 102, Munster, IN, USA"
 address2: "Munster, IN 46321"

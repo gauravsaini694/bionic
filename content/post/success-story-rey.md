@@ -1,5 +1,7 @@
 ---
 title: "The Bionic Difference: Reynaldo Morales"
+seo_title: "The Bionic Difference: Reynaldo Morales"
+seo_description: "Reynaldo Morales loves basketball. Now that he has a Bionic prosthetic, he's back to shooting hoops."
 date: 2022-04-07
 date_label: "Updated: Apr 7, 2022"
 author: "Jason Warne"

@@ -1,5 +1,7 @@
 ---
 title: "What to Know About Your First Prosthetic Leg: A Beginner’s Guide"
+seo_title: "What to Know About Your First Prosthetic Leg: A Beginner’s Guide"
+seo_description: "New to prosthetic legs? Learn what to expect, how fitting works, and how a first prosthetic leg can support comfort, confidence, and daily movement."
 date: 2026-01-18
 date_label: "Updated: Jan 18"
 categories: ["Prosthetics and Orthotics"]

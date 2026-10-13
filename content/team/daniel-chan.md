@@ -1,6 +1,7 @@
 ---
 url: "/team/daniel-chan,-coa,-cfo,-cfts/"
 title: "Daniel Chan"
+seo_title: "Daniel Chan, COA, CFo, CFts | Bionic P&O"
 name: "Daniel Chan"
 credentials: "COA, CFo, CFts"
 role: "Clinical Manager - Certified Orthotic Assistant, Certified Orthotic Fitter"

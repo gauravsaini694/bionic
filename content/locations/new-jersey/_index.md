@@ -1,5 +1,7 @@
 ---
 title: "New Jersey"
+seo_title: "Bionic Prosthetics & Orthotics in New Jersey | Custom Care"
+seo_description: "Get expert prosthetic and orthotic care across New Jersey. Bionic offers custom prosthetics, bracing, and rehabilitation support. Schedule a free consultation today.\n"
 type: "state"
 cascade:
   type: "clinic"

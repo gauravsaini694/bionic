@@ -1,6 +1,7 @@
 ---
 url: "/team/jeff-phelps,-cpo/"
 title: "Jeff Phelps"
+seo_title: "Jeff Phelps, CPO | Bionic P&O"
 name: "Jeff Phelps"
 credentials: "CPO"
 role: "Senior Certified Prosthetist & Orthotist"

@@ -2,6 +2,8 @@
 breadcrumbs:
 - /orthotics
 title: Cranial & Spinal Orthotics
+seo_title: "Cranial & Spinal Orthotics | Custom Bracing & Helmets | BionicPO"
+seo_description: "Bionic P&O offers expert cranial remolding helmets and custom spinal orthoses. Our ABC-certified clinicians provide personalized care for scoliosis and plagiocephaly."
 hero:
   eyebrow: ORTHOTICS
   title: Cranial and Spinal Orthoses
@@ -39,5 +41,9 @@ sections:
   cta_secondary_link: /locations/
   extra_buttons:
     - text: "CALL TODAY"
-      link: "tel:(219) 791-9200"
+      link: "tel:2197919200"
+    - text: "(219) 400-2201"
+      link: "tel:2194002201"
+      icon: "phone"
+      aria_label: "Call (219) 400-2201"
 ---

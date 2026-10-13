@@ -1,5 +1,6 @@
 ---
 title: "Billy Wilkerson"
+seo_title: "Billy Wilkerson, CP | Bionic P&O"
 name: "Billy Wilkerson"
 credentials: "CP"
 role: "Certified Prosthetist"

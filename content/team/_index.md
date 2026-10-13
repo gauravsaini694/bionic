@@ -1,6 +1,8 @@
 ---
 breadcrumbs: ["/about-us"]
 title: "Clinical Team"
+seo_title: "Certified Prosthetists & Orthotists | Bionic P&O Clinical Team"
+seo_description: "Find a Bionic P&O specialist near you. Our clinical team across the USA specializes in advanced prosthetic limbs and orthotic bracing for all ages. Meet us today!"
 type: "team"
 cascade:
   type: "team-member"

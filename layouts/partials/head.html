@@ -1,10 +1,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-{{- $desc := .Params.seo_description | default .Description -}}
+{{- $seoDesc := .Params.seo_description -}}
+{{- $desc := $seoDesc | default .Description -}}
 {{- if not $desc }}{{ with .Params.hero }}{{ $desc = .subhead }}{{ end }}{{ end -}}
 {{- if not $desc }}{{ if and (not .IsHome) (eq .Kind "page") }}{{ $desc = .Summary | plainify | truncate 160 }}{{ end }}{{ end -}}
 {{- if not $desc }}{{ $desc = printf "Board-certified prosthetic and orthotic care for children and adults, with clinics across %v states." (partialCached "locations-data.html" .).stateCount }}{{ end -}}
-{{- $desc = $desc | plainify | truncate 160 -}}
+{{- if not $seoDesc }}{{ $desc = $desc | plainify | truncate 160 }}{{ end -}}
 {{- $title := .Params.seo_title | default (cond .IsHome (printf "%s | Custom Prosthetic & Orthotic Care" site.Title) (printf "%s | %s" .Title site.Title)) -}}
 {{- $img := .Params.image -}}
 {{- if not $img }}{{ with .Params.hero }}{{ $img = .image }}{{ end }}{{ end -}}

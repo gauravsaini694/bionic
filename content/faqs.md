@@ -1,6 +1,8 @@
 ---
 breadcrumbs: ["/resources"]
 title: "FAQs"
+seo_title: "Prosthetics & Orthotics FAQs | Bionic PO"
+seo_description: "Find answers to common questions about prosthetics, orthotics, appointments, insurance, and care from Bionic Prosthetics & Orthotics trusted patient FAQs."
 
 hero:
   eyebrow: "COMMON QUESTIONS"
@@ -43,6 +45,10 @@ sections:
     cta_secondary_link: "/patient-resources/"
     extra_buttons:
       - text: "Call Us"
-        link: "tel:(219) 791-9200"
+        link: "tel:2197919200"
+      - text: "(219) 400-2201"
+        link: "tel:2194002201"
+        icon: "phone"
+        aria_label: "Call (219) 400-2201"
 faq_schema: true
 ---

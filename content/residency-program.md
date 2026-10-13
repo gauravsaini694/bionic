@@ -1,6 +1,8 @@
 ---
 breadcrumbs: ["/careers"]
 title: "O&P Residency Program"
+seo_title: "Residency Program | Bionic Prosthetics and Orthotics"
+seo_description: "Bionic offers a 12-month single or 18-months combined Orthotic and Prosthetic Residency Program. The primary objective is for residents to graduate ready to practice independently as Board Eligible Clinicians and to pass their ABC exams."
 
 hero:
   eyebrow: "Residency Program"

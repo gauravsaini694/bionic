@@ -1,5 +1,6 @@
 ---
 title: "Addison"
+seo_title: "Addison"
 state: "Texas"
 address: "15301 Spectrum Dr #175, Addison, TX 75001, USA"
 address2: "Addison, TX 75001"

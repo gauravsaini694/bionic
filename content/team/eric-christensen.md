@@ -1,6 +1,7 @@
 ---
 url: "/team/eric-christensen,-cpo/lpo/"
 title: "Eric Christensen"
+seo_title: "Eric Christensen, CPO/LPO | Bionic P&O"
 name: "Eric Christensen"
 credentials: "CPO/LPO"
 role: "Certified/Licensed Prosthetist & Orthotist"

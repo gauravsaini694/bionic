@@ -11657,6 +11657,11 @@ collections:
     widget: string
     hint: Overrides the browser/Google title.
     required: false
+  - label: SEO description
+    name: seo_description
+    widget: text
+    hint: Shown by Google under the title. Overrides the short summary for search.
+    required: false
   - label: FAQ (adds Google FAQ markup)
     name: faq
     widget: list
@@ -11703,6 +11708,16 @@ collections:
     name: title
     widget: string
     required: true
+  - label: SEO title
+    name: seo_title
+    widget: string
+    hint: Overrides the browser/Google title. Leave empty to use the page title.
+    required: false
+  - label: SEO description
+    name: seo_description
+    widget: text
+    hint: Shown by Google under the title (about 150 characters).
+    required: false
   - label: Full name
     name: name
     widget: string

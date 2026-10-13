@@ -1,5 +1,6 @@
 ---
 title: "Palatine"
+seo_title: "Palatine"
 state: "Illinois"
 address: "1290 W. Northwest Hwy."
 address2: "Palatine, IL 60067"

@@ -1,5 +1,6 @@
 ---
 title: "Lenoir"
+seo_title: "Lenoir"
 state: "North Carolina"
 address: "415 Blowing Rock Blvd."
 address2: "Lenoir, NC 28645"

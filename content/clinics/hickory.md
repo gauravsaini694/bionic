@@ -1,5 +1,6 @@
 ---
 title: "Hickory"
+seo_title: "Hickory"
 state: "North Carolina"
 address: "715 Fairgrove Church Rd, Ste. 203"
 address2: "Conover, NC 28613"

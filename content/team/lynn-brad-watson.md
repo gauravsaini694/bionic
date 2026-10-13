@@ -1,6 +1,7 @@
 ---
 url: "/team/lynn-(brad)-watson,-boco,-bocp/"
 title: "Lynn (Brad) Watson"
+seo_title: "Lynn (Brad) Watson, BOCO, BOCP | Bionic P&O"
 name: "Lynn (Brad) Watson"
 credentials: "BOCO, BOCP"
 role: "Certified Prosthetist & Orthotist"

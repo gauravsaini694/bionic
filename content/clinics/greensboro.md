@@ -1,5 +1,6 @@
 ---
 title: "Greensboro"
+seo_title: "Greensboro"
 state: "North Carolina"
 address: "1103 N Elm St., Ste. 201"
 address2: "Greensboro, NC 27401"

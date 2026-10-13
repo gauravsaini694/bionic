@@ -1,6 +1,7 @@
 ---
 url: "/team/kayla-watts,-cpo/"
 title: "Kayla Watts"
+seo_title: "Kayla Watts, CPO | Bionic P&O"
 name: "Kayla Watts"
 credentials: "CPO"
 role: "Clinical Manager - Certified Prosthetist & Orthotist"

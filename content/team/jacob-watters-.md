@@ -1,5 +1,6 @@
 ---
 title: "Jacob Watters"
+seo_title: "Jacob Watters, CPO | Bionic P&O"
 name: "Jacob Watters"
 credentials: "CPO"
 role: "Certified Prosthetist and Orthotist"

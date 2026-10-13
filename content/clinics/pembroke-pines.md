@@ -1,5 +1,6 @@
 ---
 title: "Pembroke Pines"
+seo_title: "Pembroke Pines"
 state: "Florida"
 address: "9921 Pines Blvd."
 address2: "Pembroke Pines, FL 33024"

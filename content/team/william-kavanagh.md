@@ -1,5 +1,6 @@
 ---
 title: "William Kavanagh"
+seo_title: "William Kavanagh, CPOA | Bionic P&O"
 name: "William Kavanagh"
 credentials: "CPOA"
 role: "Certified Prosthetic & Orthotic Assistant"

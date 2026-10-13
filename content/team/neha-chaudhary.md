@@ -1,5 +1,6 @@
 ---
 title: "Neha Chaudhary"
+seo_title: "Neha Chaudhary, CPO | Bionic P&O"
 name: "Neha Chaudhary"
 credentials: "CPO"
 role: "Certified Prosthetist & Orthotist"

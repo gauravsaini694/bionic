@@ -1,5 +1,6 @@
 ---
 title: "Grace Clark"
+seo_title: "Grace Clark | Bionic P&O"
 name: "Grace Clark"
 role: "Resident Prosthetist and Orthotist"
 location: "Merrillville, IN"

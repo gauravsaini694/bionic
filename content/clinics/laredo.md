@@ -1,5 +1,6 @@
 ---
 title: "Laredo"
+seo_title: "Laredo"
 state: "Texas"
 address: "1306 N Malinche Ave."
 address2: "Laredo, TX 78043"

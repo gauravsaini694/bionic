@@ -1,6 +1,7 @@
 ---
 url: "/team/madhu-dash,-bpo,-cfo,-cfts/"
 title: "Madhu Dash"
+seo_title: "Madhu Dash, BPO, CFo, CFts | Bionic P&O"
 name: "Madhu Dash"
 credentials: "BPO, CFo, CFts"
 role: "Prosthetist & Orthotist"

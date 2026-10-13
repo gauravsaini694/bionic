@@ -1,5 +1,7 @@
 ---
 title: "Michigan"
+seo_title: "Bionic Prosthetics & Orthotics in Michigan | Custom Care"
+seo_description: "Get expert prosthetic and orthotic care across Michigan. Bionic offers custom prosthetics, bracing, and rehabilitation support. Schedule a free consultation today."
 type: "state"
 cascade:
   type: "clinic"

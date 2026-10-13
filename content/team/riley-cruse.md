@@ -1,5 +1,6 @@
 ---
 title: "Riley Cruse"
+seo_title: "Riley Cruse, CPO | Bionic P&O"
 name: "Riley Cruse"
 credentials: "CPO"
 role: "Certified Prosthetist & Orthotist"

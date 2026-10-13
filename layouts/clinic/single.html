@@ -28,7 +28,7 @@
     {{ with $addr }}<p class="cl-hero-address"><span class="icon-sm">{{ partial "icon.html" "pin" }}</span> {{ . }}</p>{{ end }}
     {{ if $hoursList }}<span class="cl-badge" id="clinic-open-badge" hidden></span>{{ end }}
     <div class="cl-hero-actions">
-      {{ with $phone }}<a href="tel:{{ replaceRE `[^\d+]` "" . }}" class="btn btn-primary btn-lg"><span class="icon-sm">{{ partial "icon.html" "phone" }}</span> Call {{ . }}</a>{{ end }}
+      {{ with $phone }}<a href="tel:{{ partial "tel.html" . }}" class="btn btn-primary btn-lg"><span class="icon-sm">{{ partial "icon.html" "phone" }}</span> Call {{ . }}</a>{{ end }}
       {{ with $dir }}<a href="{{ . }}" class="btn btn-outline btn-lg" target="_blank" rel="noopener"><span class="icon-sm">{{ partial "icon.html" "pin" }}</span> Get Directions</a>{{ end }}
       <a href="/contact/" class="btn btn-outline btn-lg">Request Consultation</a>
     </div>
@@ -48,7 +48,7 @@
         <h2 class="cl-card-title">Contact</h2>
         <ul class="cl-list">
           {{ with $addr }}<li><span class="icon-sm">{{ partial "icon.html" "pin" }}</span><span>{{ . }}{{ with $.Params.address2 }}<br>{{ . }}{{ end }}</span></li>{{ end }}
-          {{ with $phone }}<li><span class="icon-sm">{{ partial "icon.html" "phone" }}</span><span><strong>Phone</strong> <a href="tel:{{ replaceRE `[^\d+]` "" . }}">{{ . }}</a></span></li>{{ end }}
+          {{ with $phone }}<li><span class="icon-sm">{{ partial "icon.html" "phone" }}</span><span><strong>Phone</strong> <a href="tel:{{ partial "tel.html" . }}">{{ . }}</a></span></li>{{ end }}
           {{ with .Params.fax }}<li><span class="icon-sm">{{ partial "icon.html" "card" }}</span><span><strong>Fax</strong> {{ . }}</span></li>{{ end }}
           {{ with .Params.email }}<li><span class="icon-sm">{{ partial "icon.html" "insurance" }}</span><span><strong>Email</strong> <a href="mailto:{{ . }}">{{ . }}</a></span></li>{{ end }}
         </ul>
@@ -280,7 +280,7 @@
     <p>{{ $c.body }}</p>
     <div class="final-cta-actions">
       <a href="{{ $c.primary_link }}" class="btn btn-primary btn-lg">{{ $c.primary }}</a>
-      {{ with $phone }}<a href="tel:{{ replaceRE `[^\d+]` "" . }}" class="btn btn-outline btn-lg">{{ $c.call_label }} {{ . }}</a>{{ end }}
+      {{ with $phone }}<a href="tel:{{ partial "tel.html" . }}" class="btn btn-outline btn-lg">{{ $c.call_label }} {{ . }}</a>{{ end }}
     </div>
   </div>
 </section>

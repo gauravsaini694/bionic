@@ -1,6 +1,7 @@
 ---
 url: "/team/felix-martinez,-cpoa,-cfo/"
 title: "Felix Martinez"
+seo_title: "Felix Martinez, CPOA, CFo | Bionic P&O"
 name: "Felix Martinez"
 credentials: "CPOA, CFo"
 role: "Clinical Manager, Certified Prosthetic & Orthotic Assistant/Orthotic Fitter"

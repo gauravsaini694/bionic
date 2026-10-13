@@ -1,5 +1,6 @@
 ---
 title: "Montgomery"
+seo_title: "Montgomery"
 state: "Ohio"
 address: "10547 Montgomery Rd, Ste. 600"
 address2: "Cincinnati, OH 45242"

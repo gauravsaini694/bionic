@@ -1,5 +1,7 @@
 ---
 title: "Tennessee"
+seo_title: "Bionic Prosthetics & Orthotics in Tennessee | Clarksville Clinic"
+seo_description: "Looking for prosthetics in Tennessee? Visit Bionic’s Clarksville clinic for custom prosthetics, orthotics, and personalized care. Schedule a free consultation."
 type: "state"
 cascade:
   type: "clinic"

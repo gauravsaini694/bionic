@@ -2,6 +2,8 @@
 breadcrumbs:
 - /orthotics
 title: Upper Extremity Orthotics
+seo_title: "Upper Extremity | Bionic Prosthetics and Orthotics | USA"
+seo_description: "Discover innovative upper extremity prosthetics and orthotics solutions at Bionic. Explore advanced technology and personalized care to restore functionality and improve quality of life."
 hero:
   eyebrow: ORTHOTICS
   title: Upper Extremity Orthoses
@@ -30,5 +32,9 @@ sections:
   cta_secondary_link: /locations/
   extra_buttons:
     - text: "CALL TODAY"
-      link: "tel:(219) 791-9200"
+      link: "tel:2197919200"
+    - text: "(219) 400-2201"
+      link: "tel:2194002201"
+      icon: "phone"
+      aria_label: "Call (219) 400-2201"
 ---

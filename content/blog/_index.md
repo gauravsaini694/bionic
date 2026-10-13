@@ -1,6 +1,8 @@
 ---
 breadcrumbs: ["/resources"]
 title: "Blog"
+seo_title: "Prosthetics & Orthotics Blog | Tips, Guides, Success Stories"
+seo_description: "Explore expert prosthetics and orthotics insights, tips, care guides, and patient success stories to support mobility, recovery, and healthy living."
 type: "blog"
 
 hero:

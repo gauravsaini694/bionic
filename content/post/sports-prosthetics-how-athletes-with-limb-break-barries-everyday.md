@@ -1,5 +1,6 @@
 ---
 title: "SPORTS & PROSTHETICS - HOW ATHLETES WITH LIMB BREAK BARRIES EVERYDAY."
+seo_title: "SPORTS & PROSTHETICS - HOW ATHLETES WITH LIMB BREAK BARRIES EVERYDAY."
 date: 2025-11-29
 categories: ["Health and Wellness"]
 image: "/images/blog/what-to-know-about-your-first-prosthetic-leg-a-beginner-s-guide.jpg"

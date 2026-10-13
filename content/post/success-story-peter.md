@@ -1,5 +1,7 @@
 ---
 title: "The Bionic Difference: Peter Morrison"
+seo_title: "The Bionic Difference: Peter Morrison"
+seo_description: "Peter Morrison’s life revolved around horses, but an accident one morning threatened to take that away. "
 date: 2022-04-07
 date_label: "Updated: Apr 7, 2022"
 author: "Cooper Proudfoot"
@@ -29,4 +31,4 @@ Peter still returns to our Bionic locations for everything from repairs to adjus
 
 Nowadays you can find Peter on horseback, taking care of his animals, and traveling all across the United States. He looks forward to competing in shows when the season starts, and his horses are performing better than ever. Peter is thriving with his prosthesis, and we can’t wait to see what the future will look like for him with Bionic by his side.
 
-Check back at our blog often to find patient success stories like this one, and more! If you or someone you know would benefit from a free consultation, reach out to one of our offices and we will help you schedule a time that works for you.
+Check back at our blog often to find patient success stories like this one, and more! If you or someone you know would benefit from a [free consultation](/book-appointment-pay-bill/#_blank), reach out to one of our offices and we will help you schedule a time that works for you.

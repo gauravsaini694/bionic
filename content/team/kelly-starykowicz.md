@@ -1,6 +1,7 @@
 ---
 url: "/team/kelly-starykowicz,-cpo/"
 title: "Kelly Starykowicz"
+seo_title: "Kelly Starykowicz, CPO | Bionic P&O"
 name: "Kelly Starykowicz"
 credentials: "CPO"
 role: "Certified Prosthetist & Orthotist"

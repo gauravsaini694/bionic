@@ -2,6 +2,8 @@
 breadcrumbs:
 - /prosthetics
 title: Upper Limb Prosthetics
+seo_title: "Upper Limb | Bionic Prosthetics and Orthotics"
+seo_description: "Advanced upper limb prosthetic solutions, including myoelectric and bionic hands. Bionic P&O offers custom fittings across states to restore function."
 hero:
   eyebrow: PROSTHETICS
   title: Upper Limb Prostheses
@@ -37,5 +39,9 @@ sections:
   cta_secondary_link: /locations/
   extra_buttons:
     - text: "CALL TODAY"
-      link: "tel:(219) 791-9200"
+      link: "tel:2197919200"
+    - text: "(219) 400-2201"
+      link: "tel:2194002201"
+      icon: "phone"
+      aria_label: "Call (219) 400-2201"
 ---

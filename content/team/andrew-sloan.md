@@ -1,5 +1,6 @@
 ---
 title: "Andrew Sloan"
+seo_title: "Andrew Sloan | Bionic P&O"
 name: "Andrew Sloan"
 role: "Resident Prosthetist & Orthotist"
 location: "Clarksville, TN"

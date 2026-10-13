@@ -1,5 +1,6 @@
 ---
 title: "Melbourne"
+seo_title: "Melbourne"
 state: "Florida"
 address: "3040 N Wickham Rd Ste 7, Melbourne, FL 32935, USA"
 lat: 28.156715

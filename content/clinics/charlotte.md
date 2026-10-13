@@ -1,5 +1,6 @@
 ---
 title: "Charlotte"
+seo_title: "Charlotte"
 state: "North Carolina"
 address: "1901 Brunswick Ave, Ste. 240"
 address2: "Charlotte, NC 28207"

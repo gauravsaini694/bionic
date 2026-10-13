@@ -1,5 +1,7 @@
 ---
 title: "Home"
+seo_title: "Bionic Prosthetics & Orthotics | Advanced Care & Services"
+seo_description: "Discover advanced orthotics and prosthetics services at Bionic Prosthetics and Orthotics. Our expert solutions ensure comfort, mobility, and personalized care tailored to your needs."
 
 hero:
   eyebrow: "TRUSTED CARE SINCE 2007"

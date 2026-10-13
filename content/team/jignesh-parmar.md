@@ -1,6 +1,7 @@
 ---
 url: "/team/jignesh-parmar,-cpo/"
 title: "Jignesh Parmar"
+seo_title: "Jignesh Parmar, CPO | Bionic P&O"
 name: "Jignesh Parmar"
 credentials: "CPO"
 role: "Clinical Manager - Certified Prosthetist & Orthotist"

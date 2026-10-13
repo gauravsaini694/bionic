@@ -1,5 +1,6 @@
 ---
 title: "Austin Dinkins"
+seo_title: "Austin Dinkins, CPO | Bionic P&O"
 name: "Austin Dinkins"
 credentials: "CPO"
 role: "Certified Prosthetist and Orthotist"

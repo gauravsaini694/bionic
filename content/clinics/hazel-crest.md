@@ -1,5 +1,6 @@
 ---
 title: "Hazel Crest"
+seo_title: "Hazel Crest"
 state: "Illinois"
 address: "17530 S. Kedzie Ave."
 address2: "Hazel Crest, IL 60429"

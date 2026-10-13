@@ -1,5 +1,6 @@
 ---
 title: "Owensboro"
+seo_title: "Owensboro"
 state: "Kentucky"
 address: "2819 W. 4th St."
 address2: "Owensboro, KY 42301"

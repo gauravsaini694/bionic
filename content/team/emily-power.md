@@ -1,6 +1,7 @@
 ---
 url: "/team/emily-power,-cpo/"
 title: "Emily Power"
+seo_title: "Emily Power, CPO | Bionic P&O"
 name: "Emily Power"
 credentials: "CPO"
 role: "Clinical Manager - Certified Prosthetist & Orthotist"

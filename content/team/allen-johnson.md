@@ -1,6 +1,7 @@
 ---
 url: "/team/allen-johnson,-cpoa/"
 title: "Allen Johnson"
+seo_title: "Allen Johnson, CPOA | Bionic P&O"
 name: "Allen Johnson"
 credentials: "CPOA"
 role: "Resident Prosthetic & Orthotic"

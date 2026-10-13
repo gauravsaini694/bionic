@@ -1,5 +1,6 @@
 ---
 title: "Joliet"
+seo_title: "Joliet"
 state: "Illinois"
 address: "3230 Executive Dr, Ste. 2"
 address2: "Joliet, IL 60431"

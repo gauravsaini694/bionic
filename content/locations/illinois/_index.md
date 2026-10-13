@@ -1,5 +1,7 @@
 ---
 title: "Illinois"
+seo_title: "Prosthetics & Orthotics in Illinois | Bionic P&O"
+seo_description: "Get expert prosthetic and orthotic care across Illinois. Bionic offers custom prosthetics, bracing, and rehabilitation support. Schedule a free consultation today."
 type: "state"
 cascade:
   type: "clinic"

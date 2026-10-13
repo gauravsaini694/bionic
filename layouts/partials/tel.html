@@ -1,0 +1,4 @@
+{{- /* Clean tel: number: digits only, no leading US country code. Context: phone string. */ -}}
+{{- $d := replaceRE `[^\d]` "" (. | string) -}}
+{{- if and (eq (len $d) 11) (hasPrefix $d "1") }}{{ $d = strings.TrimPrefix "1" $d }}{{ end -}}
+{{- return $d -}}

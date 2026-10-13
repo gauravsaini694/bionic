@@ -1,5 +1,6 @@
 ---
 title: "Green Bay"
+seo_title: "Green Bay"
 state: "Wisconsin"
 address: "342 S. Webster Ave."
 address2: "Green Bay, WI 54301"

@@ -1,6 +1,8 @@
 ---
 breadcrumbs: ["/about-us"]
 title: "Success Stories"
+seo_title: "Patient Success Stories | Bionic Prosthetics and Orthotics"
+seo_description: "See the Bionic difference in action. Our success stories showcase how expert fitting and advanced P&O technology help patients return to the activities they love."
 
 hero:
   eyebrow: "PATIENT STORIES"

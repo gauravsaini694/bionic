@@ -1,5 +1,7 @@
 ---
 title: "Spring Cleaning Your Prosthesis: Maintenance Tips"
+seo_title: "Spring Cleaning Your Prosthesis: Maintenance Tips"
+seo_description: "Discover essential Prosthesis Maintenance tips for spring! Keep your prosthesis clean and your residual limb healthy with our expert advice."
 date: 2025-05-20
 categories: ["Prosthetics and Orthotics", "Health and Wellness"]
 image: "/images/blog/spring-cleaning-prosthesis-maintenance.png"

@@ -1,5 +1,6 @@
 ---
 title: "Phantom Pain: Understanding and Managing Phantom Limb Sensation"
+seo_title: "PHANTOM PAIN: UNDERSTANDING AND MANAGING PHANTOM LIMB SENSATION"
 date: 2025-09-14
 categories: ["Health and Wellness"]
 image: "/images/about-empowering.png"

@@ -1,5 +1,6 @@
 ---
 title: "Lafayette"
+seo_title: "Lafayette"
 state: "Indiana"
 address: "5 Executive Dr, Ste. D2"
 address2: "Lafayette, IN 47905"

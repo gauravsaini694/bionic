@@ -1,5 +1,6 @@
 ---
 title: "Cassie Morton"
+seo_title: "Cassie Morton, CP, BEPO | Bionic P&O"
 name: "Cassie Morton"
 credentials: "CP, BEPO"
 role: "Certified Prosthetist and Board Eligible Orthotist"

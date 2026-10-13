@@ -1,5 +1,6 @@
 ---
 title: "Rebecca L. Nitsche"
+seo_title: "Rebecca L. Nitsche, CPO | Bionic P&O"
 name: "Rebecca L. Nitsche"
 credentials: "CPO"
 role: "Clinical Manager - Certified Prosthetist & Orthotist"

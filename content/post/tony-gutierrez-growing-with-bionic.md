@@ -1,5 +1,6 @@
 ---
 title: "Tony Gutierrez: Growing with Bionic"
+seo_title: "Tony Gutierrez: Growing with Bionic"
 date: 2022-12-28
 date_label: "Updated: Dec 28, 2022"
 author: "Tony Gutierrez, the National Clinical Specialist for Bionic Prosthetics & Orthotics. Ready to take the next steps? Find out how you could jumpstart your O&P career with Bionic."

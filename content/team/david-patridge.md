@@ -1,6 +1,7 @@
 ---
 url: "/team/david-patridge,-cp,-boco,-bocp/"
 title: "David Patridge"
+seo_title: "David Patridge, CP, BOCO, BOCP | Bionic P&O"
 name: "David Patridge"
 credentials: "CP, BOCO, BOCP"
 role: "Certified Prosthetist and Orthotist"

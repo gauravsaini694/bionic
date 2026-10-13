@@ -1,6 +1,8 @@
 ---
 breadcrumbs: ["/resources"]
 title: "Patient Resources"
+seo_title: "Patient Resources and Support | Bionic Prosthetics and Orthotics"
+seo_description: "Find prosthetic and orthotic patient resources, support guides, forms, and links to helpful organizations. Trusted tools for amputees and caregivers."
 
 hero:
   eyebrow: "SUPPORT BEYOND THE CLINIC"

@@ -1,5 +1,6 @@
 ---
 title: "Limb Loss and Limb Difference Awareness Month"
+seo_title: "Limb Loss and Limb Difference Awareness Month"
 date: 2023-04-03
 categories: ["Health and Wellness"]
 image: "/images/blog/bionic-patients-and-team-shine-at-aopa-2024-a-journey-of-learning-and-innovation.png"

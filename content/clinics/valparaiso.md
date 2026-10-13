@@ -1,5 +1,6 @@
 ---
 title: "Valparaiso"
+seo_title: "Valparaiso"
 state: "Indiana"
 address: "1101 E Glendale Blvd Unit 105-A"
 address2: "Valparaiso, IN 46383"

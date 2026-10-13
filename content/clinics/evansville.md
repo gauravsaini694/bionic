@@ -1,5 +1,6 @@
 ---
 title: "Evansville"
+seo_title: "Evansville"
 state: "Indiana"
 address: "2616 S. Green River Rd."
 address2: "Evansville, IN 47715"

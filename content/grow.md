@@ -1,6 +1,8 @@
 ---
 breadcrumbs: ["/careers"]
 title: "Now Hiring: Experienced Professionals"
+seo_title: "Careers & Job Openings at Bionic Prosthetics and Orthotics"
+seo_description: "Explore career opportunities with Bionic Prosthetics & Orthotics, including prosthetist, orthotic, admin, and trainee roles. Grow with a leading P&O team nationwide."
 
 hero:
   eyebrow: "EXPERIENCED PROFESSIONALS"
@@ -58,6 +60,13 @@ sections:
       - text: "Learn More"
         link: "https://www.indeed.com/cmp/Prosthetics-and-Orthotics-Company/jobs"
         new_tab: true
+
+  - type: "job-form"
+    eyebrow: "APPLY NOW"
+    title: "Apply"
+    submit: "Apply"
+    positions: ["CPO", "CP", "CO", "Other"]
+    locations: ["Nashville, TN", "Merrillville, IN", "South Bend, IN", "Southern Michigan", "Northeast US", "Fort Myers, FL", "Laredo, TX", "Anywhere in the US"]
 
   - type: "cta-band"
     title: "Ready to Start Something Meaningful?"

@@ -1,6 +1,7 @@
 ---
 url: "/team/michael-mcdonald,-co/"
 title: "Michael McDonald"
+seo_title: "Michael McDonald, CO | Bionic P&O"
 name: "Michael McDonald"
 credentials: "CO"
 role: "Clinical Manager - Certified Orthotist"

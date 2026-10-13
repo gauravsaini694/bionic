@@ -1,6 +1,7 @@
 ---
 url: "/team/victoria-mendez,-cpo/lpo/"
 title: "Victoria Mendez"
+seo_title: "Victoria Mendez, CP | Bionic P&O"
 name: "Victoria Mendez"
 credentials: "CP"
 role: "Certified Prosthetist"

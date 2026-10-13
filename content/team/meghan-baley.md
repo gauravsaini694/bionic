@@ -1,6 +1,7 @@
 ---
 url: "/team/meghan-baley,-cpo/"
 title: "Meghan Baley"
+seo_title: "Meghan Baley, CPO | Bionic P&O"
 name: "Meghan Baley"
 credentials: "CPO"
 role: "Clinical Manager - Certified Prosthetist & Orthotist"

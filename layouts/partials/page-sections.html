@@ -172,6 +172,39 @@
   </div>
 </section>
 
+{{ else if eq $s.type "job-form" }}
+<section class="section apply-section"{{ with $s.id }} id="{{ . }}"{{ end }}>
+  <div class="container apply-inner">
+    <div class="section-heading reveal" data-reveal="fade">
+      {{ with $s.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
+      <h2>{{ $s.title | default "Apply" }}</h2>
+      {{ with $s.body }}<p class="lead">{{ partial "rt.html" . }}</p>{{ end }}
+    </div>
+    <form class="apply-form reveal" data-reveal="up" name="job-application" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data">
+      <input type="hidden" name="form-name" value="job-application">
+      <p class="visually-hidden" aria-hidden="true"><label>Do not fill this out if you are human: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+      <div class="apply-grid">
+        <div class="form-field"><label for="apply-first">First name</label><input id="apply-first" type="text" name="first-name" autocomplete="given-name" required></div>
+        <div class="form-field"><label for="apply-last">Last name</label><input id="apply-last" type="text" name="last-name" autocomplete="family-name" required></div>
+        <div class="form-field"><label for="apply-email">Email</label><input id="apply-email" type="email" name="email" autocomplete="email" required></div>
+        <div class="form-field"><label for="apply-phone">Phone</label><input id="apply-phone" type="tel" name="phone" autocomplete="tel"></div>
+        <div class="form-field"><label for="apply-position">Position</label>
+          <select id="apply-position" name="position" required>
+            <option value="" selected disabled>Select a position</option>
+            {{ range $s.positions }}<option value="{{ . }}">{{ . }}</option>{{ end }}
+          </select></div>
+        <div class="form-field"><label for="apply-location">Location</label>
+          <select id="apply-location" name="location" required>
+            <option value="" selected disabled>Select a location</option>
+            {{ range $s.locations }}<option value="{{ . }}">{{ . }}</option>{{ end }}
+          </select></div>
+        <div class="form-field form-field-wide"><label for="apply-resume">Upload Resume</label><input id="apply-resume" type="file" name="resume" accept=".pdf,.doc,.docx,.rtf,.txt"></div>
+      </div>
+      <button type="submit" class="btn btn-primary btn-lg">{{ $s.submit | default "Apply" }}</button>
+    </form>
+  </div>
+</section>
+
 {{ else if eq $s.type "cta-band" }}
 <section class="final-cta reveal" data-reveal="fade">
   <div class="container final-cta-inner">
@@ -180,7 +213,7 @@
     <div class="final-cta-actions">
       {{ with $s.cta_primary }}<a href="{{ $s.cta_primary_link }}" class="btn btn-primary btn-lg"{{ if $s.cta_primary_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ . }}</a>{{ end }}
       {{ with $s.cta_secondary }}<a href="{{ $s.cta_secondary_link }}" class="btn btn-outline btn-lg"{{ if $s.cta_secondary_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ . }}</a>{{ end }}
-      {{ range $s.extra_buttons }}<a href="{{ .link | safeURL }}" class="btn btn-primary btn-lg"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a>{{ end }}
+      {{ range $s.extra_buttons }}<a href="{{ .link | safeURL }}" class="btn btn-primary btn-lg"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}{{ with .aria_label }} aria-label="{{ . }}"{{ end }}>{{ with .icon }}<span class="icon-sm">{{ partial "icon.html" . }}</span> {{ end }}{{ .text }}</a>{{ end }}
     </div>
   </div>
 </section>

@@ -1,5 +1,6 @@
 ---
 title: "East Flat Rock"
+seo_title: "East Flat Rock"
 state: "North Carolina"
 address: "107 E. Walker St."
 address2: "East Flat Rock, NC 28726"

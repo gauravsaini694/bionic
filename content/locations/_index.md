@@ -1,5 +1,7 @@
 ---
 title: "Locations"
+seo_title: "Find a Prosthetics & Orthotics Clinic Near You | Bionic PO"
+seo_description: "Find Bionic Prosthetics & Orthotics clinic locations across the USA. Get expert prosthetic and orthotic care near you with easy contact and map directions."
 type: "locations"
 outputs: ["html", "json"]
 cascade:
@@ -15,7 +17,7 @@ hero:
   cta_secondary_link: "/book-appointment-pay-bill/"
   extra_buttons:
     - text: "Talk to an expert"
-      link: "tel:18555246642"
+      link: "tel:8555246642"
 
 sections:
   - type: "points"

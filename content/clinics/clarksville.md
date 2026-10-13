@@ -1,5 +1,6 @@
 ---
 title: "Clarksville"
+seo_title: "Clarksville"
 state: "Tennessee"
 address: "980 Professional Park Dr, Ste. B"
 address2: "Clarksville, TN 37040"

@@ -1,5 +1,6 @@
 ---
 title: "Inquiry Services"
+seo_title: "Inquiry Services Page | Bionic P&O"
 hero:
   title: "Explore our services and get in touch"
 

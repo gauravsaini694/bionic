@@ -1,5 +1,6 @@
 ---
 title: "Brad Watson"
+seo_title: "Brad Watson"
 role: "Director of Practice Management"
 credentials: "BOCO, BOCP"
 weight: 2

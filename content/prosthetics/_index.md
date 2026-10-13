@@ -1,5 +1,7 @@
 ---
 title: Prosthetics
+seo_title: "Prosthetics | Bionic Prosthetics and Orthotics"
+seo_description: "Find personalized prosthetic limb solutions at Bionic Prosthetics & Orthotics. From upper to lower limb prostheses, get expert fitting, advanced technology, and restored function."
 hero:
   eyebrow: YOUR PROSTHETIC JOURNEY STARTS HERE
   title: Prosthetic Care Built Around You
@@ -76,5 +78,5 @@ sections:
   cta_secondary_link: /locations/
   extra_buttons:
     - text: "Book a Free Consultation"
-      link: "tel:(219) 791-9200"
+      link: "tel:2197919200"
 ---

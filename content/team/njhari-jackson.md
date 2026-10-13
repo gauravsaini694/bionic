@@ -1,6 +1,7 @@
 ---
 url: "/team/n'jhari-jackson/"
 title: "N'Jhari Jackson"
+seo_title: "N'Jhari Jackson | Bionic P&O"
 name: "N'Jhari Jackson"
 role: "Resident Prosthetist and Orthotist"
 location: "Melbourne, FL"

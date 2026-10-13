@@ -1,6 +1,7 @@
 ---
 url: "/clinics/madison,-in/"
 title: "Madison"
+seo_title: "Madison, IN"
 state: "Indiana"
 address: "110 Miles Ridge"
 address2: "Madison, IN 47250"

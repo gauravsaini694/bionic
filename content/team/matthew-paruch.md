@@ -1,6 +1,7 @@
 ---
 url: "/team/matthew-paruch,-cpo/"
 title: "Matthew Paruch"
+seo_title: "Matthew Paruch, CPO | Bionic P&O"
 name: "Matthew Paruch"
 credentials: "CPO"
 role: "Clinical Manager - Certified Prosthetist Orthotist"

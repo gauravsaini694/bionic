@@ -1,6 +1,7 @@
 ---
 url: "/team/tim-kading,-cp/"
 title: "Tim Kading"
+seo_title: "Tim Kading, CP | Bionic P&O"
 name: "Tim Kading"
 credentials: "CP"
 role: "Certified Prosthetist"

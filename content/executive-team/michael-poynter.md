@@ -1,5 +1,6 @@
 ---
 title: "Michael Poynter"
+seo_title: "Michael Poynter"
 role: "Director of Business Operations and Corporate Governance"
 credentials: ""
 weight: 5

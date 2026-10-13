@@ -1,5 +1,7 @@
 ---
 title: "Understanding Prosthetics: What to Expect After Limb Loss"
+seo_title: "Understanding Prosthetics: What to Expect After Limb Loss"
+seo_description: "Discover how modern prosthetics help reduce fatigue, improve mobility, and restore independence after limb loss. Learn what to expect from the prosthetic fitting process and beyond."
 date: 2026-02-03
 categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/understanding-prosthetics-what-to-expect-after-limb-loss.jpg"

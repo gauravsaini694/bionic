@@ -1,5 +1,6 @@
 ---
 title: "Philadelphia"
+seo_title: "Philadelphia"
 state: "Pennsylvania"
 address: "3751 Island Ave, Ste. 101"
 address2: "Philadelphia, PA 19153"

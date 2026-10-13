@@ -96,3 +96,6 @@ h2 { font-size: 24px; }
 body { padding-bottom: 72px; }
 
 .section-note { font-size: 15px; }
+
+.apply-form { padding: 20px 16px; }
+.apply-grid { grid-template-columns: 1fr; }

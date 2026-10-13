@@ -1,6 +1,7 @@
 ---
 url: "/team/pedro-bernal,-cpoa/"
 title: "Pedro Bernal"
+seo_title: "Pedro Bernal, CPOA | Bionic P&O"
 name: "Pedro Bernal"
 credentials: "CPOA"
 role: "Certified Orthotic and Prosthetic Assistant"

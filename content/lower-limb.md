@@ -2,6 +2,8 @@
 breadcrumbs:
 - /prosthetics
 title: Lower Limb Prosthetics
+seo_title: "Lower Limb | Bionic Prosthetics and Orthotics"
+seo_description: "Restore mobility with advanced lower limb prosthetics. Bionic P&O provides custom above-knee, below-knee, and hip solutions across the states. Visit us today."
 hero:
   eyebrow: PROSTHETICS
   title: Lower Limb Prostheses
@@ -37,5 +39,9 @@ sections:
   cta_secondary_link: /locations/
   extra_buttons:
     - text: "CALL TODAY"
-      link: "tel:(219) 791-9200"
+      link: "tel:2197919200"
+    - text: "(219) 400-2201"
+      link: "tel:2194002201"
+      icon: "phone"
+      aria_label: "Call (219) 400-2201"
 ---

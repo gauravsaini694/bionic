@@ -1,5 +1,6 @@
 ---
 title: "Mohit Srivastava"
+seo_title: "Mohit Srivastava, BEPO | Bionic P&O"
 name: "Mohit Srivastava"
 credentials: "BEPO"
 role: "Board Eligible Prosthetist & Orthotist"

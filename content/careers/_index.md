@@ -1,5 +1,7 @@
 ---
 title: "Careers"
+seo_title: "Careers at Bionic Prosthetics & Orthotics | Join Our Team"
+seo_description: "Explore careers and job openings at Bionic Prosthetics & Orthotics. Join a compassionate P&O team with opportunities for clinicians, support staff, and growth."
 
 hero:
   eyebrow: "JOIN OUR TEAM"

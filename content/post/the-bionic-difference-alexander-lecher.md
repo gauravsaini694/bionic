@@ -1,5 +1,6 @@
 ---
 title: "The Bionic Difference: Alexander Lecher"
+seo_title: "The Bionic Difference: Alexander Lecher"
 date: 2022-05-13
 categories: ["Success Stories"]
 image: "/images/blog/the-bionic-difference-alexander-lecher.png"
@@ -51,4 +52,4 @@ Bionic, Sheri Harper, and James Bitter are thrilled to have been able to play a 
 
 Alexander has many adventures to go on as he grows, and he knows exactly what he wants to do next. “He really wants to ride a horse,” his mom says. “At four years old, his aspirations aren’t too far in the future but what I do know is that nothing will stop him from doing anything he sets his mind on.”
 
-Would you like to read more success stories like this one? Check out the Stay a Step Ahead blog for more! If you or someone you know is looking for a better fit for their prosthetic or orthotic services, contact us to schedule a free consultation at a clinic near you.
+Would you like to read more success stories like this one? Check out the Stay a Step Ahead blog for more! If you or someone you know is looking for a better fit for their prosthetic or orthotic services, contact us to [schedule a free consultation](/book-appointment-pay-bill/#_blank) at a clinic near you.

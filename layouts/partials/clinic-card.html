@@ -6,7 +6,7 @@
     {{ with .dist }}<span class="clinic-result-dist">{{ printf "%.1f" . }} mi</span>{{ end }}
   </div>
   {{ with partial "clinic-address.html" $c }}<p class="clinic-card-line"><span class="icon-sm">{{ partial "icon.html" "pin" }}</span><span>{{ . }}</span></p>{{ end }}
-  {{ with $c.Params.phone }}<p class="clinic-card-line"><span class="icon-sm">{{ partial "icon.html" "phone" }}</span><a href="tel:{{ replaceRE `[^\d+]` "" . }}">{{ . }}</a></p>{{ end }}
+  {{ with $c.Params.phone }}<p class="clinic-card-line"><span class="icon-sm">{{ partial "icon.html" "phone" }}</span><a href="tel:{{ partial "tel.html" . }}">{{ . }}</a></p>{{ end }}
   <div class="clinic-card-actions">
     <a href="{{ $c.RelPermalink }}" class="btn btn-primary">View Clinic</a>
     {{ with partial "clinic-address.html" $c }}<a href="https://www.google.com/maps/dir/?api=1&destination={{ . | urlquery }}" class="btn btn-outline-dark" target="_blank" rel="noopener">Get Directions</a>{{ end }}

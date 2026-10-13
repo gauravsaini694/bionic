@@ -1,5 +1,7 @@
 ---
 title: Orthotics
+seo_title: "Orthotics | Bionic Prosthetics and Orthotics"
+seo_description: "Discover custom orthotics and support solutions at Bionic Prosthetics. Personalized braces and inserts designed for comfort, alignment, and improved mobility."
 hero:
   eyebrow: YOUR PATH TO BETTER MOVEMENT
   title: Orthotic Solutions for Every Stage of Life
@@ -83,5 +85,5 @@ sections:
   cta_secondary_link: /locations/
   extra_buttons:
     - text: "Schedule Your Free Evaluation"
-      link: "tel:(219) 791-9200"
+      link: "tel:2197919200"
 ---

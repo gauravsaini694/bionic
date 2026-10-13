@@ -1,6 +1,7 @@
 ---
 url: "/team/beti-golriz,-mpo,-res./"
 title: "Beti Golriz"
+seo_title: "Beti Golriz, CPO | Bionic P&O"
 name: "Beti Golriz"
 credentials: "CPO"
 role: "Certified Prosthetist and Orthotist"

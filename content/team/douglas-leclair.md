@@ -1,6 +1,7 @@
 ---
 url: "/team/douglas-leclair,-co/"
 title: "Douglas LeClair"
+seo_title: "Douglas LeClair, CO | Bionic P&O"
 name: "Douglas LeClair"
 credentials: "CO"
 role: "Certified Orthotist"

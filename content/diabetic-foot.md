@@ -2,6 +2,8 @@
 breadcrumbs:
 - /orthotics
 title: Diabetic Foot Care
+seo_title: "Diabetic Foot Care Solutions | Bionic Prosthetics and Orthotics"
+seo_description: "Explore expert diabetic foot care solutions at Bionic Prosthetics & Orthotics. Learn about custom orthotics, preventive treatments, and how our prosthetics help manage foot complications."
 hero:
   eyebrow: ORTHOTICS
   title: Diabetic Foot Care
@@ -30,5 +32,9 @@ sections:
   cta_secondary_link: /locations/
   extra_buttons:
     - text: "CALL TODAY"
-      link: "tel:(219) 791-9200"
+      link: "tel:2197919200"
+    - text: "(219) 400-2201"
+      link: "tel:2194002201"
+      icon: "phone"
+      aria_label: "Call (219) 400-2201"
 ---

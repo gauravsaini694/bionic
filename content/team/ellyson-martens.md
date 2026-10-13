@@ -1,6 +1,7 @@
 ---
 url: "/team/ellyson-martens,-cpoa,-bepo,-msop,-bse/"
 title: "Ellyson Martens"
+seo_title: "Ellyson Martens, CPOA, BEPO, MSOP, BSE | Bionic P&O"
 name: "Ellyson Martens"
 credentials: "CPOA, BEPO, MSOP, BSE"
 role: "Certified Prosthetic/ Orthotic Assistant"

@@ -1,6 +1,7 @@
 ---
 url: "/clinics/madison,-wi/"
 title: "Madison"
+seo_title: "Madison, WI"
 state: "Wisconsin"
 address: "8025 Excelsior Dr Ste 108, Madison, WI 53717, USA"
 lat: 43.076850

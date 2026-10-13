@@ -1,6 +1,7 @@
 ---
 url: "/team/michael-k-keene,-boco/"
 title: "Michael K. Keene"
+seo_title: "Michael K Keene, BOCO | Bionic P&O"
 name: "Michael K Keene"
 credentials: "BOCO"
 role: "Certified/Licensed Orthotist"

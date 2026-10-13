@@ -1,5 +1,6 @@
 ---
 title: "Titusville"
+seo_title: "Titusville"
 state: "Florida"
 address: "2223 S Washington Ave, Ste. A"
 address2: "Titusville, FL 32780"

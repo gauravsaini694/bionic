@@ -2,6 +2,8 @@
 breadcrumbs:
 - /orthotics
 title: Lower Extremity Orthotics
+seo_title: "Lower Extremity | Bionic Prosthetics and Orthotics | USA"
+seo_description: "Expert lower extremity care specializing in custom leg bracing, AFOs, and advanced prosthetic legs. Our ABC-certified clinicians restore mobility and function."
 hero:
   eyebrow: ORTHOTICS
   title: Lower Extremity Orthoses
@@ -32,5 +34,9 @@ sections:
   cta_secondary_link: /locations/
   extra_buttons:
     - text: "CALL TODAY"
-      link: "tel:(219) 791-9200"
+      link: "tel:2197919200"
+    - text: "(219) 400-2201"
+      link: "tel:2194002201"
+      icon: "phone"
+      aria_label: "Call (219) 400-2201"
 ---

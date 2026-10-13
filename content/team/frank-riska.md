@@ -1,6 +1,7 @@
 ---
 url: "/team/frank-riska,-boco/"
 title: "Frank Riska"
+seo_title: "Frank Riska, BOCO | Bionic P&O"
 name: "Frank Riska"
 credentials: "BOCO"
 role: "Clinical Manager - Certified Orthotist"

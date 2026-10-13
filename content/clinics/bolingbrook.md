@@ -1,5 +1,6 @@
 ---
 title: "Bolingbrook"
+seo_title: "Bolingbrook"
 state: "Illinois"
 address: "303 Quadrangle Dr, Bolingbrook, IL 60440, USA"
 address2: "Bolingbrook, IL 60440"

@@ -1,6 +1,7 @@
 ---
 url: "/team/kasey-turner,-cof/"
 title: "Kasey Turner"
+seo_title: "Kasey Turner, CFo | Bionic P&O"
 name: "Kasey Turner"
 credentials: "CFo"
 role: "Certified Orthotic Fitter"

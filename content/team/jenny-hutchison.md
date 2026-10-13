@@ -1,6 +1,7 @@
 ---
 url: "/team/jenny-hutchison,-cfo,-lo/"
 title: "Jenny Hutchison"
+seo_title: "Jenny Hutchison, CFo, LO | Bionic P&O"
 name: "Jenny Hutchison"
 credentials: "CFo, LO"
 role: "Certified Orthotic Fitter / Licensed Orthotist"

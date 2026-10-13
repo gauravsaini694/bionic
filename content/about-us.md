@@ -1,5 +1,7 @@
 ---
 title: "About Us"
+seo_title: "About Bionic Prosthetics & Orthotics | Mission & Values"
+seo_description: "Learn about Bionic Prosthetics & Orthotics, leading provider of customised prosthetic and orthotic solutions. Experience compassionate care nationwide."
 
 hero:
   eyebrow: "TRUSTED CARE SINCE 2007"
@@ -93,5 +95,9 @@ sections:
     cta_secondary_link: "/locations/"
     extra_buttons:
       - text: "CALL TODAY"
-        link: "tel:1-855-524-6642"
+        link: "tel:8555246642"
+      - text: "(219) 400-2201"
+        link: "tel:2194002201"
+        icon: "phone"
+        aria_label: "Call (219) 400-2201"
 ---

@@ -1,5 +1,6 @@
 ---
 title: "Madelyn Person"
+seo_title: "Madelyn Person | Bionic P&O"
 name: "Madelyn Person"
 role: "Resident Prosthetist and Orthotist"
 email: "mperson@bionicpo.com"

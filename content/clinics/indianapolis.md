@@ -1,5 +1,6 @@
 ---
 title: "Indianapolis"
+seo_title: "Indianapolis"
 state: "Indiana"
 address: "3935 Eagle Creek Parkway suite a, Indianapolis, IN, USA"
 address2: "Indianapolis, IN 46254"

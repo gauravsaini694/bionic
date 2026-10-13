@@ -1,5 +1,6 @@
 ---
 title: "Mishawaka"
+seo_title: "Mishawaka"
 state: "Indiana"
 address: "221 Red Coach Dr, Ste. D"
 address2: "Mishawaka, IN 46545"

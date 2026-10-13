@@ -1,6 +1,7 @@
 ---
 url: "/team/chris-welch,-cpo/"
 title: "Chris Welch"
+seo_title: "Chris Welch, CPO | Bionic P&O"
 name: "Chris Welch"
 credentials: "CPO"
 role: "Regional Manager - Certified Prosthetist & Orthotist"

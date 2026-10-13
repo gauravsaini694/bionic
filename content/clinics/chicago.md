@@ -1,5 +1,6 @@
 ---
 title: "Chicago"
+seo_title: "Chicago"
 state: "Illinois"
 address: "3000 N Halsted St #601, Chicago, IL, USA"
 address2: "Chicago, IL 60657"

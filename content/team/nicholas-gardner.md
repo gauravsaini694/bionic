@@ -1,5 +1,6 @@
 ---
 title: "Nicholas Gardner"
+seo_title: "Nicholas Gardner, CO, BEP | Bionic P&O"
 name: "Nicholas Gardner"
 credentials: "CO, BEP"
 role: "Certified Orthotist and Board Eligible Prosthetist"

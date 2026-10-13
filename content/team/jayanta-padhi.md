@@ -1,6 +1,7 @@
 ---
 url: "/team/jayanta-padhi,-mspo/"
 title: "Jayanta Padhi"
+seo_title: "Jayanta Padhi, MSPO | Bionic P&O"
 name: "Jayanta Padhi"
 credentials: "MSPO"
 role: "Prosthetist & Orthotist"

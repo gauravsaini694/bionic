@@ -2,7 +2,7 @@
 <div class="utility-bar">
   <div class="container utility-inner">
     <div class="utility-left">
-      <a href="tel:{{ $s.phone }}" class="utility-phone">
+      <a href="tel:{{ partial "tel.html" $s.phone }}" class="utility-phone">
         <span class="icon-sm">{{ partial "icon.html" "phone" }}</span>
         {{ $s.phone }}
       </a>

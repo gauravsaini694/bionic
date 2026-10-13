@@ -38,7 +38,7 @@
         <ul class="tm-list">
           {{ range . }}
           {{ $c := site.GetPage (printf "/clinics/%s" (.clinic | default (.name | urlize))) }}
-          <li><span class="icon-sm">{{ partial "icon.html" "pin" }}</span><span>{{ if $c }}<a href="{{ $c.RelPermalink }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}{{ range .address }}<br>{{ . }}{{ end }}{{ with .phone }}<br><a href="tel:{{ replaceRE `[^\d+]` "" . }}">{{ . }}</a>{{ end }}{{ with .email }}<br><a href="mailto:{{ . }}">{{ . }}</a>{{ end }}</span></li>
+          <li><span class="icon-sm">{{ partial "icon.html" "pin" }}</span><span>{{ if $c }}<a href="{{ $c.RelPermalink }}">{{ .name }}</a>{{ else }}{{ .name }}{{ end }}{{ range .address }}<br>{{ . }}{{ end }}{{ with .phone }}<br><a href="tel:{{ partial "tel.html" . }}">{{ . }}</a>{{ end }}{{ with .email }}<br><a href="mailto:{{ . }}">{{ . }}</a>{{ end }}</span></li>
           {{ end }}
         </ul>
         {{ else }}

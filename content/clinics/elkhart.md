@@ -1,5 +1,6 @@
 ---
 title: "Elkhart"
+seo_title: "Elkhart"
 state: "Indiana"
 address: "3130A Windsor Ct."
 address2: "Elkhart, IN 46514"

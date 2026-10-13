@@ -1,5 +1,6 @@
 ---
 title: "Louisville"
+seo_title: "Louisville"
 state: "Kentucky"
 address: "1169 Eastern Parkway, Ste 4423"
 address2: "Louisville, KY 40217"

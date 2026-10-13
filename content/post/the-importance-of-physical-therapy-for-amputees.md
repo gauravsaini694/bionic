@@ -1,5 +1,6 @@
 ---
 title: "The Importance of Physical Therapy for Amputees"
+seo_title: "THE IMPORTANCE OF PHYSICAL THERAPY FOR AMPUTEES"
 date: 2025-09-13
 categories: ["Health and Wellness"]
 image: "/images/blog/the-importance-of-physical-therapy-for-amputees.png"
