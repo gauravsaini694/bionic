@@ -1,4 +1,5 @@
 ---
+url: "/clinics/appleton/"
 title: "Appleton"
 state: "Wisconsin"
 address: "3315A North Ballard Rd, Appleton, WI 54911"

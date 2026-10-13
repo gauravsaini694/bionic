@@ -1,4 +1,5 @@
 ---
+url: "/team/frank-riska,-boco/"
 title: "Frank Riska"
 name: "Frank Riska"
 credentials: "BOCO"

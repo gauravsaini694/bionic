@@ -1,4 +1,5 @@
 ---
+url: "/patient-resources/"
 title: "Patient Resources"
 
 hero:
@@ -8,7 +9,7 @@ hero:
   cta_primary: "Request a Consultation"
   cta_primary_link: "/contact/"
   cta_secondary: "Read Our FAQs"
-  cta_secondary_link: "/resources/faqs/"
+  cta_secondary_link: "/faqs/"
 
 sections:
   - type: "points"
@@ -40,7 +41,7 @@ sections:
 
   - type: "richtext"
     title: "Patient Forms"
-    body: "<p>Save time before your visit by completing your paperwork ahead of time, including the Diabetic Shoes and Inserts Packet and the Patient Intake Form, available through our <a href=\"/resources/pay-bill/\">online registration</a>.</p><p><em>This list is not a complete directory of all resources available, and inclusion here is not an official endorsement by Bionic Prosthetics &amp; Orthotics.</em></p>"
+    body: "<p>Save time before your visit by completing your paperwork ahead of time, including the Diabetic Shoes and Inserts Packet and the Patient Intake Form, available through our <a href=\"/book-appointment-pay-bill/\">online registration</a>.</p><p><em>This list is not a complete directory of all resources available, and inclusion here is not an official endorsement by Bionic Prosthetics &amp; Orthotics.</em></p>"
 
   - type: "cta-band"
     title: "Need Help Finding the Right Resource?"
@@ -48,5 +49,5 @@ sections:
     cta_primary: "Contact Us"
     cta_primary_link: "/contact/"
     cta_secondary: "Read Our FAQs"
-    cta_secondary_link: "/resources/faqs/"
+    cta_secondary_link: "/faqs/"
 ---

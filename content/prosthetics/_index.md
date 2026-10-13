@@ -27,11 +27,11 @@ sections:
       - title: "Lower Limb Prosthetics"
         description: "The most common prosthetic category in the U.S. — solutions built around your body, your gait, and your goals, from hip to partial foot."
         icon: "prosthetic"
-        link: "/prosthetics/lower-limb/"
+        link: "/lower-limb/"
       - title: "Upper Limb Prosthetics"
         description: "Restoring function for shoulder, elbow, wrist, and hand amputations so you can engage in daily activities with ease."
         icon: "prosthetic"
-        link: "/prosthetics/upper-limb/"
+        link: "/upper-limb/"
 
   - type: "points"
     eyebrow: "HOW IT WORKS"

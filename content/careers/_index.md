@@ -6,9 +6,9 @@ hero:
   title: "Build a Career That Moves People"
   subhead: "We started in Merrillville, Indiana with a simple belief: prosthetic and orthotic care should be personal, innovative, and accessible. Today we're a growing family across 12 states."
   cta_primary: "View Open Positions"
-  cta_primary_link: "/careers/grow/"
+  cta_primary_link: "/grow/"
   cta_secondary: "Explore the Residency Program"
-  cta_secondary_link: "/careers/residency-program/"
+  cta_secondary_link: "/residency-program/"
 
 sections:
   - type: "text-image"
@@ -27,15 +27,15 @@ sections:
       - title: "Experienced Professionals"
         description: "Now hiring certified prosthetists, orthotists, and clinic leaders across our growing network of states — full benefits, CEU support, and relocation assistance available."
         icon: "certified"
-        link: "/careers/grow/"
+        link: "/grow/"
       - title: "O&P Residency Program"
         description: "Our nationally recognized post-graduate residency gives you real-world clinical experience, mentorship, and access to advanced technology to become a confident, capable clinician."
         icon: "award"
-        link: "/careers/residency-program/"
+        link: "/residency-program/"
       - title: "Students & Early Explorers"
         description: "Hands-on unpaid internships and job shadowing opportunities across clinical, fabrication, and business disciplines — your first step into the world of O&P."
         icon: "people"
-        link: "/careers/shadowing-opportunities/"
+        link: "/shadowingopportunities/"
 
   - type: "stats"
     items:
@@ -52,7 +52,7 @@ sections:
     title: "Ready to Start Something Meaningful?"
     body: "Whatever stage of your career you're in, we'd love to hear from you. Reach out to our Human Resources team to learn more about opportunities near you."
     cta_primary: "View Open Positions"
-    cta_primary_link: "/careers/grow/"
+    cta_primary_link: "/grow/"
     cta_secondary: "Contact Us"
     cta_secondary_link: "/contact/"
 ---

@@ -1,4 +1,5 @@
 ---
+url: "/clinics/mishawaka/"
 title: "Mishawaka"
 state: "Indiana"
 address: "221 Red Coach Dr, Ste. D, Mishawaka, IN"

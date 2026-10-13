@@ -1,4 +1,5 @@
 ---
+url: "/team/lynn-(brad)-watson,-boco,-bocp/"
 title: "Lynn (Brad) Watson"
 name: "Lynn (Brad) Watson"
 credentials: "BOCO, BOCP"

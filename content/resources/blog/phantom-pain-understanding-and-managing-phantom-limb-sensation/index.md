@@ -1,4 +1,5 @@
 ---
+url: "/post/phantom-pain-understanding-and-managing-phantom-limb-sensation/"
 title: "Phantom Pain: Understanding and Managing Phantom Limb Sensation"
 date: 2025-09-14
 categories: ["Health and Wellness"]

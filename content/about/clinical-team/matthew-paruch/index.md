@@ -1,4 +1,5 @@
 ---
+url: "/team/matthew-paruch,-cpo/"
 title: "Matthew Paruch"
 name: "Matthew Paruch"
 credentials: "CPO"

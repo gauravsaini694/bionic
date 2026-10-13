@@ -1,4 +1,5 @@
 ---
+url: "/team/william-kavanagh/"
 title: "William Kavanagh"
 name: "William Kavanagh"
 credentials: "CPOA"

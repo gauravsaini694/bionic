@@ -1,4 +1,5 @@
 ---
+url: "/clinics/eastgate/"
 title: "Eastgate"
 state: "Ohio"
 address: "4357 Ferguson Dr, Ste. 110, Cincinnati, OH 45245"

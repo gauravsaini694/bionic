@@ -1,4 +1,5 @@
 ---
+url: "/executive-team/dheeraj-bhambani/"
 title: "Dheeraj Bhambhani"
 role: "Director of Strategic Initiatives and Progress Management"
 credentials: "BOCO, BOCP"
@@ -8,9 +9,6 @@ image_alt: "Dheeraj Bhambhani, Director of Strategic Initiatives and Progress Ma
 email: "dheeraj@bionicpo.com"
 clinical_profile: "/about/clinical-team/dheeraj-bhambhani/"
 description: "Dheeraj Bhambhani is Bionic's Director of Strategic Initiatives and Progress Management, with 20 years of clinical experience."
-aliases:
-  - /executive-team/dheeraj-bhambani/
-  - /about/executive-team/dheeraj-bhambani/
 entry_type: executive
 ---
 

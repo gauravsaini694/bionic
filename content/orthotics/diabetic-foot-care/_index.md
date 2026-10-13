@@ -1,4 +1,5 @@
 ---
+url: "/diabetic-foot/"
 title: "Diabetic Foot Care"
 
 hero:

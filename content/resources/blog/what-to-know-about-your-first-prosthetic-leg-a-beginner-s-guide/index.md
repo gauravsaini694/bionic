@@ -1,4 +1,5 @@
 ---
+url: "/post/what-to-know-about-your-first-prosthetic-leg-a-beginner-s-guide/"
 title: "What to Know About Your First Prosthetic Leg: A Beginner's Guide"
 date: 2025-01-16
 categories: ["Prosthetics and Orthotics"]

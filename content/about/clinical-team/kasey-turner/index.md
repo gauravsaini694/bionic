@@ -1,4 +1,5 @@
 ---
+url: "/team/kasey-turner,-cof/"
 title: "Kasey Turner"
 name: "Kasey Turner"
 credentials: "CFO"

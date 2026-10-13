@@ -1,4 +1,5 @@
 ---
+url: "/team/bryce-dahl,-cpo/"
 title: "Bryce Dahl"
 name: "Bryce Dahl"
 credentials: "CPO"

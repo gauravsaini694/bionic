@@ -1,4 +1,5 @@
 ---
+url: "/clinics/hazel-crest/"
 title: "Hazel Crest"
 state: "Illinois"
 address: "17530 S. Kedzie Ave, Hazel Crest, IL 60429"

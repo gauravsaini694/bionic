@@ -1,4 +1,5 @@
 ---
+url: "/blog/"
 title: "Blog"
 type: "blog"
 cascade:
@@ -11,7 +12,7 @@ hero:
   cta_primary: "Request a Consultation"
   cta_primary_link: "/contact/"
   cta_secondary: "Explore Patient Resources"
-  cta_secondary_link: "/resources/patient-resources/"
+  cta_secondary_link: "/patient-resources/"
 
 sections:
   - type: "text-image"
@@ -32,5 +33,5 @@ sections:
     cta_primary: "Contact Us"
     cta_primary_link: "/contact/"
     cta_secondary: "Read Our FAQs"
-    cta_secondary_link: "/resources/faqs/"
+    cta_secondary_link: "/faqs/"
 ---

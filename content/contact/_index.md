@@ -23,7 +23,7 @@ sections:
 
   - type: "richtext"
     title: "What to Expect"
-    body: "<p>When you reach out, our team will help you understand your options, answer questions about insurance, and connect you with a board-certified prosthetist or orthotist near you. If you'd like to reschedule or cancel an existing appointment, please contact your clinic directly. Need to pay a bill or complete new-patient paperwork ahead of your visit? Visit our <a href=\"/resources/pay-bill/\">appointments and billing page</a>.</p>"
+    body: "<p>When you reach out, our team will help you understand your options, answer questions about insurance, and connect you with a board-certified prosthetist or orthotist near you. If you'd like to reschedule or cancel an existing appointment, please contact your clinic directly. Need to pay a bill or complete new-patient paperwork ahead of your visit? Visit our <a href=\"/book-appointment-pay-bill/\">appointments and billing page</a>.</p>"
 
   - type: "cta-band"
     title: "Take the Next Step with Confidence"

@@ -1,4 +1,5 @@
 ---
+url: "/team/brian-wiggen-ii,-co,-boco,-bocp/"
 title: "Brian Wiggen II"
 name: "Brian Wiggen II"
 credentials: "CO, BOCO, BOCP"

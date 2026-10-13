@@ -1,4 +1,5 @@
 ---
+url: "/team/austin-dinkins/"
 title: "Austin Dinkins"
 name: "Austin Dinkins"
 credentials: "CPO"

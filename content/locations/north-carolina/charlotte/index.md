@@ -1,4 +1,5 @@
 ---
+url: "/clinics/charlotte/"
 title: "Charlotte"
 state: "North Carolina"
 address: "1901 Brunswick Ave, Ste. 240, Charlotte, NC 28207"

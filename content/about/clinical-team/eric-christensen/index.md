@@ -1,4 +1,5 @@
 ---
+url: "/team/eric-christensen,-cpo/lpo/"
 title: "Eric Christensen"
 name: "Eric Christensen"
 credentials: "CPO, LPO"

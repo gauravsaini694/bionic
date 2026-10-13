@@ -1,4 +1,5 @@
 ---
+url: "/team/billy-wilkerson/"
 title: "Billy Wilkerson"
 name: "Billy Wilkerson"
 credentials: "CP"

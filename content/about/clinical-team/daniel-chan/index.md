@@ -1,4 +1,5 @@
 ---
+url: "/team/daniel-chan,-coa,-cfo,-cfts/"
 title: "Daniel Chan"
 name: "Daniel Chan"
 credentials: "COA, CFO, CFts"

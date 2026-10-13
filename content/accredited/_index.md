@@ -6,7 +6,7 @@ hero:
   title: "Certified Clinicians. Accredited Training."
   subhead: "Our clinicians hold national certification, and our residency sites are accredited by the American Board for Certification in Orthotics, Prosthetics & Pedorthics (ABC)."
   cta_primary: "Meet Our Clinical Team"
-  cta_primary_link: "/about/clinical-team/"
+  cta_primary_link: "/team/"
   cta_secondary: "Find a Clinic Near You"
   cta_secondary_link: "/locations/"
 sections:

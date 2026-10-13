@@ -1,4 +1,5 @@
 ---
+url: "/clinics/evansville/"
 title: "Evansville"
 state: "Indiana"
 address: "2616 S. Green River Rd, Evansville, IN 47715"

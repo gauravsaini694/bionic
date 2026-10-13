@@ -12,7 +12,7 @@ hero:
   cta_primary: "Request a Consultation"
   cta_primary_link: "/contact/"
   cta_secondary: "Pay My Bill"
-  cta_secondary_link: "/resources/pay-bill/"
+  cta_secondary_link: "/book-appointment-pay-bill/"
 
 sections:
   - type: "points"
@@ -40,5 +40,5 @@ sections:
     cta_primary: "Contact Us"
     cta_primary_link: "/contact/"
     cta_secondary: "Pay My Bill"
-    cta_secondary_link: "/resources/pay-bill/"
+    cta_secondary_link: "/book-appointment-pay-bill/"
 ---

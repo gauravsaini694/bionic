@@ -1,4 +1,5 @@
 ---
+url: "/post/prosthetic-vs-prosthesis-what-s-the-difference-and-why-it-matters/"
 title: "Prosthetic vs Prosthesis: What's the Difference and Why It Matters"
 date: 2025-02-01
 categories: ["Prosthetics and Orthotics"]

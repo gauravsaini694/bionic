@@ -1,4 +1,5 @@
 ---
+url: "/team/emily-power,-cpo/"
 title: "Emily Power"
 name: "Emily Power"
 credentials: "CPO"

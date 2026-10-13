@@ -1,4 +1,5 @@
 ---
+url: "/post/when-do-i-need-a-follow-up-for-my-prosthesis/"
 title: "When Do I Need a Follow-Up for My Prosthesis?"
 date: 2025-09-15
 categories: ["Prosthetics and Orthotics"]

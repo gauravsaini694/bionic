@@ -1,4 +1,5 @@
 ---
+url: "/team/chris-welch,-cpo/"
 title: "Chris Welch"
 name: "Chris Welch"
 credentials: "CPO"

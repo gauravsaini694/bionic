@@ -1,4 +1,5 @@
 ---
+url: "/team/kayla-watts,-cpo/"
 title: "Kayla Watts"
 name: "Kayla Watts"
 credentials: "CPO"

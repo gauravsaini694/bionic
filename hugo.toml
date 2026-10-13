@@ -42,3 +42,9 @@ title = "Bionic Prosthetics & Orthotics"
   contactType = "customer service"
   areaServed = "US"
   availableLanguage = "English"
+
+[permalinks]
+  [permalinks.taxonomy]
+    categories = "/blog/categories/"
+  [permalinks.term]
+    categories = "/blog/categories/:slug/"

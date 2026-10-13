@@ -1,4 +1,5 @@
 ---
+url: "/team/allen-johnson,-cpoa/"
 title: "Allen Johnson"
 name: "Allen Johnson"
 credentials: "CPOA"

@@ -1,4 +1,5 @@
 ---
+url: "/success-stories/"
 title: "Success Stories"
 
 hero:

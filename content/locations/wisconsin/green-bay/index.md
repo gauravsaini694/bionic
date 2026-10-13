@@ -1,4 +1,5 @@
 ---
+url: "/clinics/green-bay/"
 title: "Green Bay"
 state: "Wisconsin"
 address: "342 S. Webster Ave., Green Bay, WI 54301"

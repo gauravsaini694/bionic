@@ -1,4 +1,5 @@
 ---
+url: "/clinics/louisville/"
 title: "Louisville"
 state: "Kentucky"
 address: "1169 Eastern Parkway, Ste 4423, Louisville, KY"

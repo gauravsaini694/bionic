@@ -1,4 +1,5 @@
 ---
+url: "/team/michael-mcdonald,-co/"
 title: "Michael McDonald"
 name: "Michael McDonald"
 credentials: "CO"

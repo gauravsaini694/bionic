@@ -1,4 +1,5 @@
 ---
+url: "/team/pedro-bernal,-cpoa/"
 title: "Pedro Bernal"
 name: "Pedro Bernal"
 credentials: "CPOA"

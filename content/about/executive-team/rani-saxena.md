@@ -1,4 +1,5 @@
 ---
+url: "/executive-team/rani-kriplani/"
 title: "Rani Saxena"
 role: "President"
 credentials: "DPT"
@@ -8,8 +9,6 @@ image_alt: "Rani Saxena, President of Bionic Prosthetics & Orthotics"
 email: "rani@bionicpo.com"
 clinical_profile: ""
 description: "Rani Saxena is the President of Bionic Prosthetics & Orthotics, aligning clinical excellence with strategic growth."
-aliases:
-  - /executive-team/rani-kriplani/
 entry_type: executive
 ---
 

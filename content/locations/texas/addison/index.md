@@ -1,4 +1,5 @@
 ---
+url: "/clinics/addison/"
 title: "Addison"
 state: "Texas"
 address: "15301 Spectrum Dr #175, Addison, TX 75001"

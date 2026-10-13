@@ -1,4 +1,5 @@
 ---
+url: "/post/a-day-in-the-life-living-with-a-bionic-limb/"
 title: "A Day in the Life: Living With a Bionic Limb"
 date: 2025-12-02
 categories: ["Success Stories"]

@@ -1,4 +1,5 @@
 ---
+url: "/team/vinay-verma/"
 title: "Vinay Verma"
 name: "Vinay Verma"
 role: "Resident Prosthetist & Orthotist"

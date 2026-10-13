@@ -1,4 +1,5 @@
 ---
+url: "/book-appointment-pay-bill/"
 title: "Book an Appointment & Pay Your Bill"
 
 hero:
@@ -42,5 +43,5 @@ sections:
     cta_primary: "Contact Us"
     cta_primary_link: "/contact/"
     cta_secondary: "View Patient Resources"
-    cta_secondary_link: "/resources/patient-resources/"
+    cta_secondary_link: "/patient-resources/"
 ---

@@ -1,4 +1,5 @@
 ---
+url: "/grow/"
 title: "Now Hiring: Experienced Professionals"
 
 hero:
@@ -8,7 +9,7 @@ hero:
   cta_primary: "Contact HR"
   cta_primary_link: "/contact/"
   cta_secondary: "Explore the Residency Program"
-  cta_secondary_link: "/careers/residency-program/"
+  cta_secondary_link: "/residency-program/"
 
 sections:
   - type: "points"
@@ -40,5 +41,5 @@ sections:
     cta_primary: "Contact Us"
     cta_primary_link: "/contact/"
     cta_secondary: "Learn About Our Residency Program"
-    cta_secondary_link: "/careers/residency-program/"
+    cta_secondary_link: "/residency-program/"
 ---

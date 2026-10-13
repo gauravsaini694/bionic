@@ -1,4 +1,5 @@
 ---
+url: "/post/spring-cleaning-prosthesis-maintenance/"
 title: "Spring Cleaning Your Prosthesis: Maintenance Tips"
 date: 2025-05-20
 categories: ["Prosthetics and Orthotics"]

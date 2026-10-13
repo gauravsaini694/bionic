@@ -1,4 +1,5 @@
 ---
+url: "/team/jeffrey-wojtanowicz,-cpo/"
 title: "Jeffrey Wojtanowicz"
 name: "Jeffrey Wojtanowicz"
 credentials: "CPO"

@@ -1,4 +1,5 @@
 ---
+url: "/upper-limb/"
 title: "Upper Limb Prosthetics"
 
 hero:
@@ -8,7 +9,7 @@ hero:
   cta_primary: "Request a Consultation"
   cta_primary_link: "/contact/"
   cta_secondary: "Explore Lower Limb Prosthetics"
-  cta_secondary_link: "/prosthetics/lower-limb/"
+  cta_secondary_link: "/lower-limb/"
 
 sections:
   - type: "text-image"

@@ -1,4 +1,5 @@
 ---
+url: "/team/matthew-eckdahl/"
 title: "Matthew Eckdahl"
 name: "Matthew Eckdahl"
 credentials: "BEPO"

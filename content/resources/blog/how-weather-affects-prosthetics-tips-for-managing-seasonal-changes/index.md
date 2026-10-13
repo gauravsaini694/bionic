@@ -1,4 +1,5 @@
 ---
+url: "/post/how-weather-affects-prosthetics-tips-for-managing-seasonal-changes/"
 title: "How Weather Affects Prosthetics: Tips for Managing Seasonal Changes"
 date: 2026-02-06
 categories: ["Health and Wellness"]

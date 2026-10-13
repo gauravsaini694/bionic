@@ -1,4 +1,5 @@
 ---
+url: "/clinics/montgomery/"
 title: "Montgomery"
 state: "Ohio"
 address: "10547 Montgomery Rd, Ste. 600, Cincinnati, OH 45242"

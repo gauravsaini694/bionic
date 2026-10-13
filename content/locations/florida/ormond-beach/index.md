@@ -1,4 +1,5 @@
 ---
+url: "/clinics/ormond-beach/"
 title: "Ormond Beach"
 state: "Florida"
 address: "1414 W. Granada Blvd, Ste. 3, Ormond Beach, FL"

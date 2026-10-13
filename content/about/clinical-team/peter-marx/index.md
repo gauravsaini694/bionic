@@ -1,4 +1,5 @@
 ---
+url: "/team/peter-marx,-cpo/"
 title: "Peter Marx"
 name: "Peter Marx"
 credentials: "CPO"

@@ -1,4 +1,5 @@
 ---
+url: "/team/jayanta-padhi,-mspo/"
 title: "Jayanta Padhi"
 name: "Jayanta Padhi"
 credentials: "MSPO"

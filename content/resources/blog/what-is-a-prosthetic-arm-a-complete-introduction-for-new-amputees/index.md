@@ -1,4 +1,5 @@
 ---
+url: "/post/what-is-a-prosthetic-arm-a-complete-introduction-for-new-amputees/"
 title: "What Is a Prosthetic Arm? A Complete Introduction for New Amputees"
 date: 2026-03-04
 categories: ["Prosthetics and Orthotics"]

@@ -1,4 +1,5 @@
 ---
+url: "/clinics/greensboro/"
 title: "Greensboro"
 state: "North Carolina"
 address: "1103 N Elm St., Ste. 201, Greensboro, NC 27401"

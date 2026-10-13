@@ -1,4 +1,5 @@
 ---
+url: "/team/jenny-hutchison,-cfo,-lo/"
 title: "Jenny Hutchison"
 name: "Jenny Hutchison"
 credentials: "CFO, LO"

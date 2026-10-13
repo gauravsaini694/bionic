@@ -13,9 +13,9 @@ social:
 header:
   utility_links:
   - label: Pay My Bill
-    url: /resources/pay-bill/
+    url: /book-appointment-pay-bill/
   - label: Patient Resources
-    url: /resources/patient-resources/
+    url: /patient-resources/
   follow_text: Follow @bionicpo
   find_clinic_label: Find a Clinic
   consultation_label: Request Consultation

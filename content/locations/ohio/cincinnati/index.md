@@ -1,4 +1,5 @@
 ---
+url: "/clinics/cincinnati/"
 title: "Cincinnati"
 state: "Ohio"
 address: "2729 Short Vine St., Cincinnati, OH 45219"

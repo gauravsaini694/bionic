@@ -1,4 +1,5 @@
 ---
+url: "/team/kelly-starykowicz,-cpo/"
 title: "Kelly Starykowicz"
 name: "Kelly Starykowicz"
 credentials: "CPO"

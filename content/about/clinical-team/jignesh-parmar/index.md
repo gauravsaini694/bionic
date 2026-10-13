@@ -1,4 +1,5 @@
 ---
+url: "/team/jignesh-parmar,-cpo/"
 title: "Jignesh Parmar"
 name: "Jignesh Parmar"
 credentials: "CPO"

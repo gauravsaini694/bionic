@@ -1,4 +1,5 @@
 ---
+url: "/clinics/valparaiso/"
 title: "Valparaiso"
 state: "Indiana"
 address: "1101 E Glendale Blvd, Unit 105-A, Valparaiso, IN 46383"

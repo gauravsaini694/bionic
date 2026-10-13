@@ -19,10 +19,10 @@ hero:
       link: "/locations/"
       icon: "pin"
     - label: "Pay My Bill"
-      link: "/resources/pay-bill/"
+      link: "/book-appointment-pay-bill/"
       icon: "card"
     - label: "Find Support Group"
-      link: "/resources/patient-resources/#support-organizations"
+      link: "/patient-resources/#support-organizations"
       icon: "people"
 
 stats:
@@ -42,7 +42,7 @@ about:
   image: "/images/about-empowering.png"
   image_alt: "A Bionic clinician in a white coat talking with a seated patient who wears a prosthetic leg"
   cta_text: "Meet Our Clinical Team"
-  cta_link: "/about/clinical-team/"
+  cta_link: "/team/"
 
 credentials:
   eyebrow: "SINCE 2007"
@@ -72,7 +72,7 @@ services:
     - title: "Diabetic Foot Care"
       description: "Specialized footwear and orthotic solutions that reduce pressure on high-risk areas, protect sensitive tissue, and support safe, confident walking to help lower the risk of ulcers."
       icon: "diabetic"
-      link: "/orthotics/diabetic-foot-care/"
+      link: "/diabetic-foot/"
     - title: "Pediatric Prosthetics & Orthotics"
       description: "Devices that adapt as children grow, supporting comfort, healthy development, and confidence at home, school, and play — built in partnership with families and care teams."
       icon: "pediatric"
@@ -98,7 +98,7 @@ testimonials:
   eyebrow: "PATIENT STORIES"
   title: "What Our Patients Say"
   cta_text: "Read More Success Stories"
-  cta_link: "/about/success-stories/"
+  cta_link: "/success-stories/"
   items:
     - quote: "I'm so excited I can't stand it — I can't wait to get back to bowling and playing softball again."
       name: "James Wanger"
@@ -119,15 +119,15 @@ resources:
     - category: "BILLING"
       icon: "card"
       title: "Book an Appointment & Pay Your Bill Online"
-      link: "/resources/pay-bill/"
+      link: "/book-appointment-pay-bill/"
     - category: "PATIENT RESOURCES"
       icon: "insurance"
       title: "Forms, Insurance Info & Getting Started Guides"
-      link: "/resources/patient-resources/"
+      link: "/patient-resources/"
     - category: "FAQS"
       icon: "check"
       title: "Answers to Common Prosthetic & Orthotic Questions"
-      link: "/resources/faqs/"
+      link: "/faqs/"
 
 final_cta:
   title: "Take the Next Step with Confidence"
@@ -137,5 +137,5 @@ final_cta:
   cta_secondary: "Find a Location Near You"
   cta_secondary_link: "/locations/"
   cta_tertiary: "Explore Patient Resources"
-  cta_tertiary_link: "/resources/patient-resources/"
+  cta_tertiary_link: "/patient-resources/"
 ---

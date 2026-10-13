@@ -1,4 +1,5 @@
 ---
+url: "/clinics/winston-salem/"
 title: "Winston-Salem"
 state: "North Carolina"
 address: "1673 Westbrook Plaza Dr, Ste. 230, Winston-Salem, NC 27103"

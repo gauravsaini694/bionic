@@ -1,4 +1,5 @@
 ---
+url: "/team/nicholas-gardner/"
 title: "Nicholas Gardner"
 name: "Nicholas Gardner"
 credentials: "CO, BEP"

@@ -1,4 +1,5 @@
 ---
+url: "/clinics/rockledge/"
 title: "Rockledge"
 state: "Florida"
 address: "966 US Hwy 1, Rockledge, FL 32955"

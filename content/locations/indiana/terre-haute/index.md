@@ -1,4 +1,5 @@
 ---
+url: "/clinics/terre-haute/"
 title: "Terre Haute"
 state: "Indiana"
 address: "4126 S 7th St, Terre Haute, IN 47802"

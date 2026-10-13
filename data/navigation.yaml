@@ -1,22 +1,22 @@
 # Site navigation. Edited from the CMS (Settings → Navigation).
 main:
 - name: Our Story
-  url: /about/
+  url: /about-us/
   children:
   - name: About Us
-    url: /about/
+    url: /about-us/
     icon: certified
     desc: Who we are and our mission
   - name: Clinical Team
-    url: /about/clinical-team/
+    url: /team/
     icon: people
     desc: Meet our board-certified clinicians
   - name: Executive Team
-    url: /about/executive-team/
+    url: /executive-team/
     icon: certified
     desc: The leaders guiding Bionic
   - name: Success Stories
-    url: /about/success-stories/
+    url: /success-stories/
     icon: star
     desc: Real patient outcomes and stories
 - name: Prosthetics
@@ -27,11 +27,11 @@ main:
     icon: prosthetic
     desc: Explore all prosthetic care options
   - name: Upper Limb
-    url: /prosthetics/upper-limb/
+    url: /upper-limb/
     icon: personalized
     desc: Arm and hand prosthetic solutions
   - name: Lower Limb
-    url: /prosthetics/lower-limb/
+    url: /lower-limb/
     icon: technology
     desc: Leg and foot prosthetic solutions
 - name: Orthotics
@@ -42,19 +42,19 @@ main:
     icon: orthotic
     desc: Explore all orthotic care options
   - name: Cranial & Spinal
-    url: /orthotics/cranial-spinal/
+    url: /cranial-spinal/
     icon: pediatric
     desc: Helmets and spinal bracing support
   - name: Upper Extremity
-    url: /orthotics/upper-extremity/
+    url: /upper-extremity/
     icon: personalized
     desc: Arm, wrist and hand bracing
   - name: Lower Extremity
-    url: /orthotics/lower-extremity/
+    url: /lower-extremity/
     icon: technology
     desc: Leg, knee and ankle bracing
   - name: Diabetic Foot Care
-    url: /orthotics/diabetic-foot-care/
+    url: /diabetic-foot/
     icon: diabetic
     desc: Protective footwear and foot care
 - name: Resources
@@ -65,23 +65,23 @@ main:
     icon: insurance
     desc: Browse all patient resources
   - name: Pay My Bill
-    url: /resources/pay-bill/
+    url: /book-appointment-pay-bill/
     icon: card
     desc: Book an appointment or pay online
   - name: Patient Resources
-    url: /resources/patient-resources/
+    url: /patient-resources/
     icon: personalized
     desc: Forms, insurance info and guides
   - name: FAQs
-    url: /resources/faqs/
+    url: /faqs/
     icon: check
     desc: Answers to common questions
   - name: Blog
-    url: /resources/blog/
+    url: /blog/
     icon: photo
     desc: Patient education and real stories
   - name: Bionic Beats
-    url: /resources/bionic-beats/
+    url: /bionic-beats/
     icon: star
     desc: Our podcast and video series
 - name: Careers
@@ -92,43 +92,43 @@ main:
     icon: people
     desc: Explore careers at Bionic
   - name: Grow With Us
-    url: /careers/grow/
+    url: /grow/
     icon: personalized
     desc: Open roles for experienced clinicians
   - name: Residency Program
-    url: /careers/residency-program/
+    url: /residency-program/
     icon: certified
     desc: Start your clinical career with us
   - name: Shadowing Opportunities
-    url: /careers/shadowing-opportunities/
+    url: /shadowingopportunities/
     icon: people
     desc: Observe our clinical team in action
 footer_links:
 - name: About Us
-  url: /about/
+  url: /about-us/
 - name: Book Appointment
-  url: /resources/pay-bill/
+  url: /book-appointment-pay-bill/
 - name: Find Nearest Clinic
   url: /locations/
 - name: Clinical Team
-  url: /about/clinical-team/
+  url: /team/
 - name: Executive Team
-  url: /about/executive-team/
+  url: /executive-team/
 - name: Patient Resources
-  url: /resources/patient-resources/
+  url: /patient-resources/
 - name: Blog
-  url: /resources/blog/
+  url: /blog/
 footer_services:
 - name: Prosthetics
   url: /prosthetics/
 - name: Orthotics
   url: /orthotics/
 - name: Diabetic Foot Care
-  url: /orthotics/diabetic-foot-care/
+  url: /diabetic-foot/
 - name: Find a Clinic
   url: /locations/
 - name: Pay My Bill
-  url: /resources/pay-bill/
+  url: /book-appointment-pay-bill/
 footer_legal:
 - name: Privacy Policy
   url: /privacy-policy/

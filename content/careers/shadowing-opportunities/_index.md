@@ -1,4 +1,5 @@
 ---
+url: "/shadowingopportunities/"
 title: "Shadowing & Internship Opportunities"
 
 hero:
@@ -8,7 +9,7 @@ hero:
   cta_primary: "Contact Our HR Team"
   cta_primary_link: "/contact/"
   cta_secondary: "Explore the Residency Program"
-  cta_secondary_link: "/careers/residency-program/"
+  cta_secondary_link: "/residency-program/"
 
 sections:
   - type: "text-image"
@@ -39,5 +40,5 @@ sections:
     cta_primary: "Contact Us"
     cta_primary_link: "/contact/"
     cta_secondary: "View Open Positions"
-    cta_secondary_link: "/careers/grow/"
+    cta_secondary_link: "/grow/"
 ---

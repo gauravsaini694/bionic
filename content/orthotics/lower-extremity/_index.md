@@ -1,4 +1,5 @@
 ---
+url: "/lower-extremity/"
 title: "Lower Extremity Orthotics"
 
 hero:

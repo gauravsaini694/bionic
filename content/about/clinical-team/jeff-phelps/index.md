@@ -1,4 +1,5 @@
 ---
+url: "/team/jeff-phelps,-cpo/"
 title: "Jeff Phelps"
 name: "Jeff Phelps"
 credentials: "CPO"

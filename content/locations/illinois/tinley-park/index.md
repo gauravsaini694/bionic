@@ -1,4 +1,5 @@
 ---
+url: "/clinics/tinley-park/"
 title: "Tinley Park"
 state: "Illinois"
 address: "8505 183rd St, Suite B, Tinley Park, IL 60487"

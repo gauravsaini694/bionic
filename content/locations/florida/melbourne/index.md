@@ -1,4 +1,5 @@
 ---
+url: "/clinics/melbourne/"
 title: "Melbourne"
 state: "Florida"
 address: "3040 N Wickham Rd Ste 7, Melbourne, FL 32935"

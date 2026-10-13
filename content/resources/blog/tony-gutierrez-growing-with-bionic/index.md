@@ -1,4 +1,5 @@
 ---
+url: "/post/tony-gutierrez-growing-with-bionic/"
 title: "Tony Gutierrez: Growing with Bionic"
 date: 2022-06-24
 categories: ["Success Stories"]

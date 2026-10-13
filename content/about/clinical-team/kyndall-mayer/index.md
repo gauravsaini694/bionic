@@ -1,4 +1,5 @@
 ---
+url: "/team/kyndall-mayer/"
 title: "Kyndall Mayer"
 name: "Kyndall Mayer"
 role: "Resident Prosthetist and Orthotist"

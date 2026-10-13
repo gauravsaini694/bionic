@@ -1,4 +1,5 @@
 ---
+url: "/clinics/lenoir/"
 title: "Lenoir"
 state: "North Carolina"
 address: "415 Blowing Rock Blvd., Lenoir, NC 28645"

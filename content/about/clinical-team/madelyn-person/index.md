@@ -1,4 +1,5 @@
 ---
+url: "/team/madelyn-person/"
 title: "Madelyn Person"
 name: "Madelyn Person"
 role: "Resident Prosthetist and Orthotist"

@@ -1,4 +1,5 @@
 ---
+url: "/team/kendle-nagy,-lofa/"
 title: "Kendle Nagy"
 name: "Kendle Nagy"
 credentials: "LOFa"

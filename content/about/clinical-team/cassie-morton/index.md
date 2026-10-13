@@ -1,4 +1,5 @@
 ---
+url: "/team/cassie-morton/"
 title: "Cassie Morton"
 name: "Cassie Morton"
 credentials: "CP, BEPO"

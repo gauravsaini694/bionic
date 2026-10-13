@@ -1,4 +1,5 @@
 ---
+url: "/team/christine-geeding, cp/"
 title: "Christine Geeding"
 name: "Christine Geeding"
 credentials: "CP"

@@ -1,4 +1,5 @@
 ---
+url: "/team/douglas-leclair,-co/"
 title: "Douglas LeClair"
 name: "Douglas LeClair"
 credentials: "CO"

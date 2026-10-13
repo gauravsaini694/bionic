@@ -1,4 +1,5 @@
 ---
+url: "/clinics/san-antonio/"
 title: "San Antonio"
 state: "Texas"
 address: "6715 San Pedro Ave., San Antonio, TX 78216"

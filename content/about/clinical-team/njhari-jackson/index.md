@@ -1,4 +1,5 @@
 ---
+url: "/team/n'jhari-jackson/"
 title: "N'Jhari Jackson"
 name: "N'Jhari Jackson"
 role: "Resident Prosthetist and Orthotist"

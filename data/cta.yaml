@@ -5,14 +5,14 @@ blog_post:
   primary: Request a Consultation
   primary_link: /contact/
   secondary: Read More Articles
-  secondary_link: /resources/blog/
+  secondary_link: /blog/
 blog_category:
   title: Have a Question We Haven't Covered?
   body: Our clinical team is always happy to help.
   primary: Contact Us
   primary_link: /contact/
   secondary: Read Our FAQs
-  secondary_link: /resources/faqs/
+  secondary_link: /faqs/
 team_member:
   title: Ready to Take the Next Step?
   body: Connect with {name} or another certified clinician near you.
@@ -33,7 +33,7 @@ executive_list:
   primary: Contact Us
   primary_link: /contact/
   secondary: Meet Our Clinical Team
-  secondary_link: /about/clinical-team/
+  secondary_link: /team/
 clinic:
   title: Ready to Visit Our {city} Clinic?
   body: Request a consultation and our team will help you schedule your visit.

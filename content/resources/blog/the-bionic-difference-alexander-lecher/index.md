@@ -1,4 +1,5 @@
 ---
+url: "/post/the-bionic-difference-alexander-lecher/"
 title: "The Bionic Difference: Alexander Lecher"
 date: 2022-05-13
 categories: ["Success Stories"]

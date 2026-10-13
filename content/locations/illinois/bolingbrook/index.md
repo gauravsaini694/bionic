@@ -1,4 +1,5 @@
 ---
+url: "/clinics/bolingbrook/"
 title: "Bolingbrook"
 state: "Illinois"
 address: "303 Quadrangle Dr, Bolingbrook, IL 60440"

@@ -1,4 +1,5 @@
 ---
+url: "/clinics/titusville/"
 title: "Titusville"
 state: "Florida"
 address: "2223 S Washington Ave, Ste. A, Titusville, FL 32780"

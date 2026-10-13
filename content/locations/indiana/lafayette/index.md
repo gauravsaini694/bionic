@@ -1,4 +1,5 @@
 ---
+url: "/clinics/lafayette/"
 title: "Lafayette"
 state: "Indiana"
 address: "5 Executive Dr, Ste. D2, Lafayette, IN 47905"

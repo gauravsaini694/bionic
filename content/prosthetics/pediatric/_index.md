@@ -32,11 +32,11 @@ sections:
       - title: "Cranial & Spinal Orthotics"
         description: "Cranial helmets and bracing for infants and children."
         icon: "pediatric"
-        link: "/orthotics/cranial-spinal/"
+        link: "/cranial-spinal/"
       - title: "Patient Resources"
         description: "Support organizations and guides for families."
         icon: "personalized"
-        link: "/resources/patient-resources/"
+        link: "/patient-resources/"
 
   - type: "cta-band"
     title: "Talk With a Pediatric Care Specialist"

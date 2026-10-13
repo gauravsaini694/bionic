@@ -1,4 +1,5 @@
 ---
+url: "/team/"
 title: "Clinical Team"
 type: "team"
 cascade:

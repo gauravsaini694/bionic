@@ -1,4 +1,5 @@
 ---
+url: "/post/success-story-peter/"
 title: "The Bionic Difference: Peter Morrison"
 date: 2022-03-15
 categories: ["Success Stories"]

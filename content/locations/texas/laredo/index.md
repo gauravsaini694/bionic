@@ -1,4 +1,5 @@
 ---
+url: "/clinics/laredo/"
 title: "Laredo"
 state: "Texas"
 address: "1306 N Malinche Ave., Laredo, TX 78043"

@@ -1,4 +1,5 @@
 ---
+url: "/post/9-questions-prosthetist-orthotist/"
 title: "9 Questions You Need to Ask Your Prosthetist or Orthotist"
 date: 2022-07-05
 categories: ["Prosthetics and Orthotics"]

@@ -1,4 +1,5 @@
 ---
+url: "/team/david-patridge,-cp,-boco,-bocp/"
 title: "David Patridge"
 name: "David Patridge"
 credentials: "CP, BOCO, BOCP"

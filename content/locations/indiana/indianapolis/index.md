@@ -1,4 +1,5 @@
 ---
+url: "/clinics/indianapolis/"
 title: "Indianapolis"
 state: "Indiana"
 address: "3935 Eagle Creek Parkway, Suite A, Indianapolis, IN"

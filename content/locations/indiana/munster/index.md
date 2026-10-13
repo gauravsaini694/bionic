@@ -1,4 +1,5 @@
 ---
+url: "/clinics/munster/"
 title: "Munster"
 state: "Indiana"
 address: "759 45th St, Suite 102, Munster, IN 46321"

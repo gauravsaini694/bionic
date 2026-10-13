@@ -1,4 +1,5 @@
 ---
+url: "/upper-extremity/"
 title: "Upper Extremity Orthotics"
 
 hero:

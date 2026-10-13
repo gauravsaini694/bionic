@@ -1,4 +1,5 @@
 ---
+url: "/clinics/merrillville/"
 title: "Merrillville"
 state: "Indiana"
 address: "8695 Connecticut St, Ste. E, Merrillville, IN 46410"

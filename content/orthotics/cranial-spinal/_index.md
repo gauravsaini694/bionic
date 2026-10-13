@@ -1,4 +1,5 @@
 ---
+url: "/cranial-spinal/"
 title: "Cranial & Spinal Orthotics"
 
 hero:

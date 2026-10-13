@@ -1,4 +1,5 @@
 ---
+url: "/executive-team/michael-poynter/"
 title: "Michael Poynter"
 role: "Director of Business Operations and Corporate Governance"
 credentials: ""
@@ -8,8 +9,6 @@ image_alt: "Michael Poynter, Director of Business Operations and Corporate Gover
 email: "mpoynter@bionicpo.com"
 clinical_profile: ""
 description: "Michael Poynter is Bionic's Director of Business Operations and Corporate Governance."
-aliases:
-  - /executive-team/michael-poynter/
 entry_type: executive
 ---
 

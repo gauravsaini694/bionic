@@ -1,4 +1,5 @@
 ---
+url: "/residency-program/"
 title: "O&P Residency Program"
 
 hero:
@@ -59,5 +60,5 @@ sections:
     cta_primary: "Contact Our Residency Team"
     cta_primary_link: "/contact/"
     cta_secondary: "View Open Positions"
-    cta_secondary_link: "/careers/grow/"
+    cta_secondary_link: "/grow/"
 ---

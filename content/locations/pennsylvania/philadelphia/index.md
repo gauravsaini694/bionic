@@ -1,4 +1,5 @@
 ---
+url: "/clinics/philadelphia/"
 title: "Philadelphia"
 state: "Pennsylvania"
 address: "3751 Island Ave, Ste. 101, Philadelphia, PA 19153"

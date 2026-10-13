@@ -1,4 +1,5 @@
 ---
+url: "/clinics/hamilton/"
 title: "Hamilton"
 state: "New Jersey"
 address: "3575 Quakerbridge Rd, Ste. 204, Hamilton, NJ 08619"

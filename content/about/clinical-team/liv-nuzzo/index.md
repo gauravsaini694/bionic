@@ -1,4 +1,5 @@
 ---
+url: "/team/liv-nuzzo/"
 title: "Liv Nuzzo"
 name: "Liv Nuzzo"
 role: "Resident Prosthetist and Orthotist"

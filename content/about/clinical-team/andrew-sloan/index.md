@@ -1,4 +1,5 @@
 ---
+url: "/team/andrew-sloan/"
 title: "Andrew Sloan"
 name: "Andrew Sloan"
 role: "Resident Prosthetist & Orthotist"

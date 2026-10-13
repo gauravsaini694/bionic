@@ -1,4 +1,5 @@
 ---
+url: "/clinics/glenview/"
 title: "Glenview"
 state: "Illinois"
 address: "2401 Ravine Way #301, Glenview, IL"

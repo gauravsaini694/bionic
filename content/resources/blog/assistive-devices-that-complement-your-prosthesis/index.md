@@ -1,4 +1,5 @@
 ---
+url: "/post/assistive-devices-that-complement-your-prosthesis/"
 title: "Assistive Devices That Complement Your Prosthesis"
 date: 2025-12-02
 categories: ["Prosthetics and Orthotics"]

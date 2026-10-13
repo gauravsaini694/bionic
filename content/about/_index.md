@@ -1,4 +1,5 @@
 ---
+url: "/about-us/"
 title: "About Us"
 
 hero:
@@ -8,7 +9,7 @@ hero:
   cta_primary: "Request a Consultation"
   cta_primary_link: "/contact/"
   cta_secondary: "Meet Our Clinical Team"
-  cta_secondary_link: "/about/clinical-team/"
+  cta_secondary_link: "/team/"
 
 sections:
   - type: "text-image"
@@ -45,11 +46,11 @@ sections:
       - title: "Meet Our Clinical Team"
         description: "Board-certified prosthetists and orthotists across 12 states, dedicated to personalized, ongoing care."
         icon: "certified"
-        link: "/about/clinical-team/"
+        link: "/team/"
       - title: "Patient Success Stories"
         description: "Real stories from patients who regained mobility, confidence, and independence with our team."
         icon: "star"
-        link: "/about/success-stories/"
+        link: "/success-stories/"
       - title: "Prosthetic Care"
         description: "Upper- and lower-limb prosthetic solutions built around your body and your goals."
         icon: "prosthetic"

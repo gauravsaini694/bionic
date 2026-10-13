@@ -1,4 +1,5 @@
 ---
+url: "/post/sports-prosthetics-how-athletes-with-limb-break-barries-everyday/"
 title: "Sports & Prosthetics: How Athletes with Limb Loss Break Barriers Every Day"
 date: 2025-11-29
 categories: ["Health and Wellness"]

@@ -1,4 +1,5 @@
 ---
+url: "/team/tim-kading,-cp/"
 title: "Tim Kading"
 name: "Tim Kading"
 credentials: "CP"

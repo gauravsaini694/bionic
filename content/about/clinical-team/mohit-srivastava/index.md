@@ -1,4 +1,5 @@
 ---
+url: "/team/mohit-srivastava/"
 title: "Mohit Srivastava"
 name: "Mohit Srivastava"
 credentials: "BEPO"

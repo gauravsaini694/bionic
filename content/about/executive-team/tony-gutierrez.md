@@ -1,4 +1,5 @@
 ---
+url: "/executive-team/tony-gutierrez/"
 title: "Tony Gutierrez"
 role: "Director of Clinical Advancement and Innovation"
 credentials: "CP"
@@ -8,8 +9,6 @@ image_alt: "Tony Gutierrez, Director of Clinical Advancement and Innovation"
 email: "tony@bionicpo.com"
 clinical_profile: "/about/clinical-team/anthony-gutierrez/"
 description: "Tony Gutierrez is Bionic's Director of Clinical Advancement and Innovation and National Clinical Specialist for Advanced Prosthetic Solutions."
-aliases:
-  - /executive-team/tony-gutierrez/
 entry_type: executive
 ---
 

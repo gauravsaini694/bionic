@@ -1,4 +1,5 @@
 ---
+url: "/clinics/owensboro/"
 title: "Owensboro"
 state: "Kentucky"
 address: "2819 W. 4th St, Owensboro, KY 42301"

@@ -1,4 +1,5 @@
 ---
+url: "/clinics/clarksville/"
 title: "Clarksville"
 state: "Tennessee"
 address: "980 Professional Park Dr, Ste. B, Clarksville, TN 37040"

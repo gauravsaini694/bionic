@@ -1,4 +1,5 @@
 ---
+url: "/team/sheri-harper,-cpo/"
 title: "Sheri Harper"
 name: "Sheri Harper"
 credentials: "CPO"

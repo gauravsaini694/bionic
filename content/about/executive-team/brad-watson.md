@@ -1,4 +1,5 @@
 ---
+url: "/executive-team/brad-watson/"
 title: "Brad Watson"
 role: "Director of Practice Management"
 credentials: "BOCO, BOCP"
@@ -8,8 +9,6 @@ image_alt: "Brad Watson, Director of Practice Management"
 email: "bwatson@bionicpo.com"
 clinical_profile: "/about/clinical-team/lynn-brad-watson/"
 description: "Brad Watson is Bionic's Director of Practice Management, certified in prosthetics and orthotics by BOC and ABC with over 30 years of experience."
-aliases:
-  - /executive-team/brad-watson/
 entry_type: executive
 ---
 

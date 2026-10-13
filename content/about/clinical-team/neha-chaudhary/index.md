@@ -1,4 +1,5 @@
 ---
+url: "/team/neha-chaudhary/"
 title: "Neha Chaudhary"
 name: "Neha Chaudhary"
 credentials: "CPO"

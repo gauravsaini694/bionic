@@ -1,4 +1,5 @@
 ---
+url: "/clinics/east-flat-rock/"
 title: "East Flat Rock"
 state: "North Carolina"
 address: "107 E. Walker St., East Flat Rock, NC 28726"

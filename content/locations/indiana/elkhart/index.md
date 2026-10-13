@@ -1,4 +1,5 @@
 ---
+url: "/clinics/elkhart/"
 title: "Elkhart"
 state: "Indiana"
 address: "3130A Windsor Ct, Elkhart, IN 46514"

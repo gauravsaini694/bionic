@@ -1,4 +1,5 @@
 ---
+url: "/team/beti-golriz,-mpo,-res./"
 title: "Beti Golriz"
 name: "Beti Golriz"
 credentials: "MPO"

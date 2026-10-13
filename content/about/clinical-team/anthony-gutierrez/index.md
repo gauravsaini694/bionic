@@ -1,4 +1,5 @@
 ---
+url: "/team/anthony-gutierrez,-cp/"
 title: "Anthony Gutierrez"
 name: "Anthony Gutierrez"
 credentials: "CP"

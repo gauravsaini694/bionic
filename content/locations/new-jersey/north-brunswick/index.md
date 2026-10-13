@@ -1,4 +1,5 @@
 ---
+url: "/clinics/north-brunswick/"
 title: "North Brunswick"
 state: "New Jersey"
 address: "1950 Rt. 27, Suite G, North Brunswick, NJ 08902"

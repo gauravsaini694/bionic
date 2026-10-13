@@ -1,4 +1,5 @@
 ---
+url: "/clinics/palatine/"
 title: "Palatine"
 state: "Illinois"
 address: "1290 W. Northwest Hwy, Palatine, IL 60067"

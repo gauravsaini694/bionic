@@ -1,4 +1,5 @@
 ---
+url: "/team/meghan-baley,-cpo/"
 title: "Meghan Baley"
 name: "Meghan Baley"
 credentials: "CPO"
