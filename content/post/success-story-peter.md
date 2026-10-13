@@ -1,23 +1,31 @@
 ---
 title: "The Bionic Difference: Peter Morrison"
-date: 2022-03-15
+date: 2022-04-07
+date_label: "Updated: Apr 7, 2022"
+author: "Cooper Proudfoot"
 categories: ["Success Stories"]
 image: "/images/blog/success-story-peter.png"
 entry_type: blog_post
 ---
 
-Peter Morrison's life revolved around horses. Riding horseback, caring for his animals, and competing in events far and wide represented his passion. However, an accident during his early morning commute threatened to permanently alter his highly active lifestyle.
+Peter Morrison’s life revolved around horses. Riding horseback, caring for his animals, and competing in events far and wide were his passion. However, one morning an accident threatened to take those things - and his highly active lifestyle - away forever.
 
-Peter's truck hit a tree and overturned, becoming severely crushed. His left leg sustained multiple fractures. After doctors spent over a week attempting to save the limb, they determined amputation was necessary to preserve his life and performed a below-knee amputation.
+Peter’s truck hit a tree during his early morning commute and overturned, becoming severely crushed in the process. His left leg was heavily injured in the accident and broken in multiple places. Doctors at the hospital worked tirelessly for over a week to save the limb, but in the end, it was a losing battle and they decided to perform a below-knee amputation to save Peter’s life.
 
-The loss required over two months of rehabilitation, extended by additional injuries requiring prolonged physical therapy. Peter struggled with the adjustment for more than a year as he worked toward recovery.
+The loss of his leg took a heavy toll on Peter and threatened to both completely change his life and keep him from pursuing his passion. Peter was in rehabilitation for his injury for over two months. Even that was a challenge, as Peter had to undergo physical therapy longer because of further injuries. The prospect of getting back on horseback was looking less and less likely, but Peter was not about to settle for anything less.
 
 ## Getting Back in the Saddle with a Bionic Prosthesis
 
-Recognizing his need for specialized devices, Peter searched for solutions to regain mobility. He discovered a nearby Bionic location, stating: "We came to Bionic for my prosthesis and never looked back. Tony has been so kind, supportive, and helpful."
+With the outstanding demands of his line of work and his decreased mobility, Peter would need very specialized devices to gain back even a semblance of what his life was like before. Peter faced a difficult adjustment for over a year, and he struggled to adapt to his new way of life. But Peter was highly motivated to improve his situation so while he was in recovery from his traumatic accident, he began looking for options to return to his old way of getting around as pain-free as possible.
 
-Bionic fitted Peter with a transtibial prosthesis (below-knee device) using a Fillauer AllPro component. Working with prosthetist Anthony Gutierrez at the Merrillville clinic, the team utilized advanced 3D printing technology to create a perfectly fitted socket. Peter remarked: "Today, I can do everything I did before the accident and then some."
+That is when he found a nearby Bionic location. “We came to Bionic for my prosthesis and never looked back,” he says, “Tony has been so kind, supportive, and helpful in meeting my needs.” Bionic’s state-of-the-art 3D printing process made creating and fitting the perfect prosthetic socket for Peter a reality. The very same day that Peter was cleared for a prosthesis by his surgeon, he was in the Merrillville clinic working with Anthony Gutierrez to create the socket that fit his active lifestyle.
+
+Bionic was able to fit Peter with a transtibial prosthesis, which refers to a device below the knee - in this case, a Fillauer AllPro. “Today, I can do everything I did before the accident and then some. With Tony and Bionic, there’s not much I can’t do if I put my mind to it!”
+
+Peter still returns to our Bionic locations for everything from repairs to adjustments, and we are always happy to see him back on his feet and doing well.
 
 ## The Bionic Equestrian
 
-Peter now rides horseback regularly, maintains his animals, and travels throughout the United States. He anticipates competing in shows and continues returning to Bionic locations for maintenance and adjustments.
+Nowadays you can find Peter on horseback, taking care of his animals, and traveling all across the United States. He looks forward to competing in shows when the season starts, and his horses are performing better than ever. Peter is thriving with his prosthesis, and we can’t wait to see what the future will look like for him with Bionic by his side.
+
+Check back at our blog often to find patient success stories like this one, and more! If you or someone you know would benefit from a free consultation, reach out to one of our offices and we will help you schedule a time that works for you.

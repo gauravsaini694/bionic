@@ -15,7 +15,7 @@
     <h1>{{ .Title }}</h1>
     <div class="article-meta">
       {{ with .GetTerms "categories" }}{{ with index . 0 }}<a href="{{ .Page.RelPermalink }}" class="article-category-badge">{{ .Page.Title }}</a>{{ end }}{{ end }}
-      {{ if not .Date.IsZero }}<time class="article-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>{{ end }}
+      {{ if not .Date.IsZero }}<time class="article-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Params.date_label | default (.Date.Format "January 2, 2006") }}</time>{{ end }}
       <span class="article-date">{{ .ReadingTime }} min read</span>
       {{ with $author }}<span class="article-date">By {{ . }}</span>{{ end }}
     </div>

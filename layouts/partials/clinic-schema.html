@@ -5,7 +5,8 @@
 {{- $postal := dict "@type" "PostalAddress" "addressCountry" "US" -}}
 {{- with $addr }}{{ $postal = merge $postal (dict "streetAddress" (trim (index $parts 0) " ")) }}{{ end -}}
 {{- with .Params.city | default .Title }}{{ $postal = merge $postal (dict "addressLocality" .) }}{{ end -}}
-{{- $reg := findRE `\b[A-Z]{2}\s+\d{5}\s*$` ($addr | strings.TrimSpace) 1 -}}
+{{- $fullAddr := printf "%s %s" $addr (.Params.address2 | default "") | strings.TrimSpace -}}
+{{- $reg := findRE `\b[A-Z]{2}\s+\d{5}\s*$` $fullAddr 1 -}}
 {{- if not $reg }}{{ $reg = findRE `\b[A-Z]{2}\s*$` ($addr | strings.TrimSpace) 1 }}{{ end -}}
 {{- with $reg }}{{ $postal = merge $postal (dict "addressRegion" (substr (index . 0) 0 2)) }}{{ end -}}
 {{- with findRE `\b\d{5}\s*$` ($addr | strings.TrimSpace) 1 }}{{ $postal = merge $postal (dict "postalCode" (strings.TrimSpace (index . 0))) }}{{ end -}}

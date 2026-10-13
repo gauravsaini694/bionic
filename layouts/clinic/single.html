@@ -47,7 +47,7 @@
       <div class="cl-card">
         <h2 class="cl-card-title">Contact</h2>
         <ul class="cl-list">
-          {{ with $addr }}<li><span class="icon-sm">{{ partial "icon.html" "pin" }}</span><span>{{ . }}</span></li>{{ end }}
+          {{ with $addr }}<li><span class="icon-sm">{{ partial "icon.html" "pin" }}</span><span>{{ . }}{{ with $.Params.address2 }}<br>{{ . }}{{ end }}</span></li>{{ end }}
           {{ with $phone }}<li><span class="icon-sm">{{ partial "icon.html" "phone" }}</span><span><strong>Phone</strong> <a href="tel:{{ replaceRE `[^\d+]` "" . }}">{{ . }}</a></span></li>{{ end }}
           {{ with .Params.fax }}<li><span class="icon-sm">{{ partial "icon.html" "card" }}</span><span><strong>Fax</strong> {{ . }}</span></li>{{ end }}
           {{ with .Params.email }}<li><span class="icon-sm">{{ partial "icon.html" "insurance" }}</span><span><strong>Email</strong> <a href="mailto:{{ . }}">{{ . }}</a></span></li>{{ end }}
@@ -139,10 +139,10 @@
 <!-- ===== ABOUT / TEAM ===== -->
 {{- $members := slice -}}
 {{- range .Params.team -}}
-  {{- $name := .name -}}{{- $title := .title -}}{{- $photo := .photo -}}{{- $creds := .credentials -}}{{- $link := .link | default "" -}}
+  {{- $name := .name -}}{{- $named := .name -}}{{- $title := .title -}}{{- $photo := .photo -}}{{- $creds := .credentials -}}{{- $link := .link | default "" -}}
   {{- with .clinician -}}
     {{- with site.GetPage (printf "/team/%s" .) -}}
-      {{- $name = $name | default .Params.name -}}{{- $title = $title | default .Params.role -}}{{- $photo = $photo | default .Params.photo -}}{{- $creds = $creds | default .Params.credentials -}}{{- $link = $link | default .RelPermalink -}}
+      {{- $name = $name | default .Params.name -}}{{- $title = $title | default .Params.role -}}{{- $photo = $photo | default .Params.photo -}}{{- if not $named }}{{ $creds = $creds | default .Params.credentials }}{{ end -}}{{- $link = $link | default .RelPermalink -}}
     {{- end -}}
   {{- end -}}
   {{- if $name }}{{ $members = $members | append (dict "name" $name "title" $title "photo" $photo "creds" $creds "link" $link) }}{{ end -}}
