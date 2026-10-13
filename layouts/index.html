@@ -115,17 +115,20 @@
       <h2>{{ $services.title }}</h2>
       <p class="lead">{{ $services.body }}</p>
     </div>
-    <div class="card-grid services-grid">
+    {{ $detailed := false }}{{ range $services.items }}{{ if .bullets }}{{ $detailed = true }}{{ end }}{{ end }}
+    <div class="card-grid services-grid{{ if $detailed }} is-detailed{{ end }}">
       {{ range $i, $item := $services.items }}
       <a href="{{ .link }}" class="service-card reveal" data-reveal="up" style="--delay: {{ mul $i 0.1 }}s">
         <div class="service-icon service-icon-{{ .icon }}">{{ partial "icon.html" .icon }}</div>
         <h3>{{ .title }}</h3>
         <p>{{ .description }}</p>
+        {{ with .lead }}<p class="service-lead">{{ . }}</p>{{ end }}
+        {{ with .bullets }}<ul class="check-list">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+        {{ with .closing }}<p class="service-note">{{ . }}</p>{{ end }}
         <span class="card-link">Learn more <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span></span>
       </a>
       {{ end }}
     </div>
-    {{ with $services.details }}<div class="services-details reveal" data-reveal="fade" style="max-width: 780px; margin: 2.5rem auto 0;">{{ . | safeHTML }}</div>{{ end }}
   </div>
 </section>
 

@@ -1,0 +1,104 @@
+{{- /* Reusable designed content section (CMS: "richtext" sections). Context: dict "s" <section params> "bg" ("white"|"cream").
+       Same pattern everywhere: eyebrow label -> heading -> intro, then the body in one of these layouts:
+       prose (default) | cards | features | quote | blocks | programs | chips | split (needs image).
+       The body is plain editable HTML; the design is applied here, so CMS edits keep the look. */ -}}
+{{- $s := .s -}}
+{{- $bg := .bg -}}
+{{- $layout := $s.layout | default "prose" -}}
+{{- $body := $s.body | default "" -}}
+{{- if eq $layout "blocks" }}
+  {{- $chunks := split $body "<h2>" -}}
+  {{- with index $chunks 0 }}{{ if . }}
+  <section class="section cs-section cs-{{ $bg }}"><div class="container cs-container"><div class="cs-prose">{{ partial "cs-rich.html" . }}</div></div></section>
+  {{- end }}{{ end }}
+  {{- range $i, $c := after 1 $chunks }}
+  {{- $ct := split $c "</h2>" -}}
+  {{- $title := index $ct 0 -}}
+  {{- $rest := index $ct 1 -}}
+  {{- $bgi := cond (eq (mod $i 2) 0) $bg (cond (eq $bg "white") "cream" "white") -}}
+  {{- with $.scratch }}{{ .Set "lastbg" $bgi }}{{ end -}}
+  {{- $lead := index (findRE `^<p>.*?</p>` $rest 1) 0 | default "" -}}
+  {{- $after := strings.TrimPrefix $lead $rest -}}
+  <section class="section cs-section cs-{{ $bgi }}">
+    <div class="container cs-container">
+      <div class="section-heading cs-heading">
+        <h2>{{ $title | safeHTML }}</h2>
+        {{ with $lead }}<div class="cs-lead">{{ . | safeHTML }}</div>{{ end }}
+      </div>
+      {{ partial "cs-cards.html" (dict "html" $after "cols" ($s.cols | default "3") "variant" "") }}
+      {{- with index ($s.block_ctas | default slice) $i }}{{ if .text }}<p class="cs-cta"><a href="{{ .link | safeURL }}" class="btn btn-primary"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a></p>{{ end }}{{ end }}
+    </div>
+  </section>
+  {{- end }}
+{{- else if eq $layout "programs" }}
+  {{- $chunks := split $body "<h2>" -}}
+  <section class="section cs-section cs-{{ $bg }}">
+    <div class="container cs-container">
+      {{- with $s.title }}<div class="section-heading cs-heading">{{ with $s.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}<h2>{{ partial "rt.html" . }}</h2></div>{{ end }}
+      <div class="program-stack">
+      {{- range $i, $c := after 1 $chunks }}
+        {{- $ct := split $c "</h2>" -}}
+        {{- $title := index $ct 0 -}}
+        {{- $rest := index $ct 1 -}}
+        {{- $list := index (findRE `<ul>.*?</ul>` $rest 1) 0 | default "" -}}
+        {{- $intro := strings.TrimSuffix $list $rest -}}
+        <article class="program-card">
+          <div class="program-copy">
+            <span class="program-num" aria-hidden="true">{{ printf "%02d" (add $i 1) }}</span>
+            <h2>{{ $title | safeHTML }}</h2>
+            <div class="cs-prose">{{ partial "cs-rich.html" $intro }}</div>
+            {{- with index ($s.block_ctas | default slice) $i }}{{ if .text }}<p class="cs-cta"><a href="{{ .link | safeURL }}" class="btn btn-primary"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a></p>{{ end }}{{ end }}
+          </div>
+          <div class="program-list">{{ partial "cs-rich.html" $list }}</div>
+        </article>
+      {{- end }}
+      </div>
+    </div>
+  </section>
+{{- else }}
+  <section class="section cs-section cs-{{ $bg }}"{{ with $s.id }} id="{{ . }}"{{ end }}>
+    <div class="container cs-container">
+      {{- if or $s.eyebrow $s.title }}
+      <div class="section-heading cs-heading">
+        {{ with $s.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
+        {{ with $s.title }}<h2>{{ partial "rt.html" . }}</h2>{{ end }}
+      </div>
+      {{- end }}
+      {{- if eq $layout "cards" }}
+        {{ partial "cs-cards.html" (dict "html" $body "cols" ($s.cols | default "3") "icons" $s.icons "variant" "") }}
+      {{- else if eq $layout "features" }}
+        {{ partial "cs-cards.html" (dict "html" $body "cols" "2" "icons" ($s.icons | default (slice "certified" "technology" "personalized" "star")) "variant" "cs-features") }}
+      {{- else if eq $layout "feature-list" }}
+        {{- $h3 := index (findRE `<h3>.*?</h3>` $body 1) 0 | default "" -}}
+        {{- $rest := strings.TrimPrefix $h3 $body -}}
+        {{- $ul := index (findRE `<ul>.*?</ul>` $rest 1) 0 | default "" -}}
+        {{- $pre := replace $rest $ul "" -}}
+        {{- $icons := $s.icons | default (slice "technology" "certified" "personalized" "star") -}}
+        {{- with $h3 }}<h3 class="cs-subhead cs-subhead-top">{{ . | replaceRE `</?h3>` "" | safeHTML }}</h3>{{ end }}
+        {{- with $pre }}<div class="cs-prose cs-center">{{ partial "cs-rich.html" . }}</div>{{ end }}
+        <div class="cs-grid cols-2 cs-features">
+          {{- range $i, $li := findRE `<li>.*?</li>` $ul }}
+          <article class="cs-card">
+            <span class="cs-icon">{{ partial "icon.html" (index $icons (mod $i (len $icons))) }}</span>
+            <p>{{ $li | replaceRE `^<li>(.*)</li>$` `${1}` | replaceRE `^([^:<]{2,60}:)(.*)$` `<strong>${1}</strong>${2}` | safeHTML }}</p>
+          </article>
+          {{- end }}
+        </div>
+      {{- else if eq $layout "quote" }}
+        <div class="cs-quote-wrap">{{ partial "cs-rich.html" ($body | replaceRE `^<p>([^<]*)</p>$` `<blockquote><p>${1}</p></blockquote>`) }}</div>
+      {{- else if eq $layout "chips" }}
+        <div class="cs-prose cs-chips">{{ partial "cs-rich.html" ($body | replaceRE `<ul>` `<ul class="chip-list">`) }}</div>
+      {{- else if and (eq $layout "split") $s.image }}
+        <div class="about-inner cs-split{{ if eq $s.image_position "left" }} reverse{{ end }}">
+          <div class="about-media reveal" data-reveal="up">{{ partial "img.html" (dict "src" $s.image "alt" ($s.image_alt | default $s.title)) }}</div>
+          <div class="about-copy cs-prose reveal" data-reveal="fade">{{ partial "cs-rich.html" $body }}</div>
+        </div>
+      {{- else if and (not $s.layout) (not (findRE `<ul|<h[23]|<blockquote` $body)) (lt (len $body) 420) }}
+        <div class="cs-callout">{{ partial "cs-rich.html" $body }}</div>
+      {{- else }}
+        <div class="cs-prose">{{ partial "cs-rich.html" $body }}</div>
+      {{- end }}
+      {{- range $s.buttons }}<p class="cs-cta"><a href="{{ .link | safeURL }}" class="btn btn-primary"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a></p>{{ end }}
+    </div>
+  </section>
+{{- end -}}

@@ -119,3 +119,11 @@ h2 { font-size: 28px; }
 .post-toc { position: static; order: -1; max-height: none; }
 .clinic-qs { margin: 6px 0 12px -14px; }
 .clinic-qs-input { font-size: 16px; }
+
+.cs-grid.cols-3, .cs-grid.cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.program-card { grid-template-columns: 1fr; gap: 24px; padding: 32px 30px; }
+.services-grid.is-detailed { grid-template-columns: 1fr; }
+
+.apply-layout.has-side { grid-template-columns: 1fr; }
+
+.cl-glance { grid-template-columns: repeat(2, minmax(0, 1fr)); }

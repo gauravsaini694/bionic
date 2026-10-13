@@ -1,0 +1,19 @@
+{{- /* Splits authored HTML at <h3> and renders each group as a card. Context: dict html, cols ("2"|"3"|"4"), icons (list of icon names), variant.
+       Text before the first <h3> is rendered as prose above the grid. An <h3> with no content after it becomes a full-width sub-heading. */ -}}
+{{- $parts := split .html "<h3>" -}}
+{{- $icons := .icons | default slice -}}
+{{- with index $parts 0 }}{{ if . }}<div class="cs-prose">{{ partial "cs-rich.html" . }}</div>{{ end }}{{ end }}
+{{- if gt (len $parts) 1 }}
+<div class="cs-grid cols-{{ .cols | default "3" }} {{ .variant }}">
+  {{- range $i, $c := after 1 $parts }}
+  {{- if findRE `<p|<ul` $c }}
+  <article class="cs-card">
+    {{- with index $icons $i }}<span class="cs-icon">{{ partial "icon.html" . }}</span>{{ end }}
+    <h3 class="cs-h3">{{ partial "cs-rich.html" $c }}
+  </article>
+  {{- else }}
+  <h3 class="cs-subhead">{{ $c | safeHTML }}
+  {{- end }}
+  {{- end }}
+</div>
+{{- end -}}

@@ -869,3 +869,169 @@ a.article-category-badge:hover { background: rgba(255, 255, 255, 0.28); }
 }
 .form-field input[type="file"] { padding: 10px 12px; }
 .form-field input:focus, .form-field select:focus { outline: 2px solid var(--brand); outline-offset: 1px; border-color: var(--brand); }
+
+/* ==========================================================================
+   Content sections (partials/content-section.html) — designed richtext
+   Pattern: eyebrow -> heading -> intro, then check-lists, cards, quotes.
+   ========================================================================== */
+.cs-section.cs-white { background: #fff; }
+.cs-section.cs-cream { background: var(--bg-cream); }
+.cs-container { max-width: 1180px; }
+.cs-heading { max-width: 760px; margin-bottom: 44px; }
+.cs-heading h2 { margin-bottom: 14px; }
+.cs-lead { font-size: 17px; line-height: 1.7; color: var(--ink-muted); }
+.cs-lead p { margin: 0; }
+.cs-prose { max-width: 70ch; margin-inline: auto; font-size: 17px; line-height: 1.8; color: var(--ink-muted); }
+.cs-prose > p { margin: 0 0 1.1em; }
+.cs-prose > h2 { font-size: clamp(26px, 3vw, 34px); margin: 1.4em 0 .5em; }
+.cs-prose a, .cs-lead a, .cs-card a:not(.btn) { color: var(--brand); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.cs-split .cs-prose { max-width: none; margin: 0; }
+.cs-cta { margin: 34px 0 0; text-align: center; }
+.cs-prose + .cs-cta, .cs-card + .cs-cta { margin-top: 28px; }
+
+/* sub-headings */
+.cs-h3 { font-size: 20px; line-height: 1.3; margin: 0 0 .55em; color: var(--ink-strong); }
+.cs-prose > .cs-h3 { margin-top: 1.6em; position: relative; padding-bottom: 12px; }
+.cs-prose > .cs-h3::after { content: ""; position: absolute; left: 0; bottom: 0; width: 38px; height: 3px; border-radius: 3px; background: var(--accent); }
+.cs-subhead { grid-column: 1 / -1; text-align: center; font-size: 24px; margin: 26px 0 0; }
+
+/* check lists (replaces default bullets) */
+.check-list { list-style: none; margin: 18px 0; padding: 0; display: grid; gap: 14px 32px; }
+.check-list.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.check-list li { position: relative; padding-left: 36px; font-size: 15.5px; line-height: 1.55; color: var(--ink); }
+.check-list li::before {
+  content: ""; position: absolute; left: 0; top: 0; width: 24px; height: 24px; border-radius: 50%;
+  background: var(--accent-light) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23467b17' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M5 12.5l4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / 13px no-repeat;
+}
+
+/* cards */
+.cs-grid { display: grid; gap: 24px; margin-top: 0; }
+.cs-grid.cols-2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.cs-grid.cols-3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.cs-grid.cols-4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.cs-card {
+  background: #fff; border: 1px solid var(--border-soft); border-radius: var(--radius-lg);
+  padding: 30px 28px; box-shadow: var(--shadow-card);
+  transition: box-shadow .2s ease, transform .2s ease; display: flex; flex-direction: column;
+}
+.cs-card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-4px); }
+.cs-card p { font-size: 15px; line-height: 1.65; color: var(--ink-muted); margin: 0 0 1em; }
+.cs-card p:last-child { margin-bottom: 0; }
+.cs-card .check-list { margin: 8px 0 18px; }
+.cs-card .check-list.cols-2 { grid-template-columns: 1fr; }
+.cs-card .check-list li { font-size: 14.5px; }
+.cs-card ul ~ p {
+  background: var(--accent-light); border-left: 4px solid var(--accent); border-radius: 10px;
+  padding: 14px 18px; color: var(--ink); font-weight: 500; margin-top: auto;
+}
+.cs-icon { width: 52px; height: 52px; border-radius: 14px; background: var(--brand-light); color: var(--brand); display: grid; place-items: center; margin-bottom: 18px; flex: none; }
+.cs-icon svg { width: 26px; height: 26px; }
+.cs-features .cs-card { border-top: 4px solid var(--accent); }
+.cs-features .cs-h3 { font-size: 19px; }
+
+/* testimonial */
+.cs-quote-wrap { max-width: 820px; margin-inline: auto; }
+.cs-quote {
+  position: relative; margin: 0; background: #fff; border: 1px solid var(--border-soft); border-radius: var(--radius-lg);
+  padding: 46px 44px 34px; box-shadow: var(--shadow-card);
+}
+figure.cs-quote { display: block; }
+.cs-quote::before {
+  content: ""; position: absolute; top: -22px; left: 38px; width: 46px; height: 46px; border-radius: 50%;
+  background: var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23fff'%3E%3Cpath d='M7.2 6C4.9 6 3 7.9 3 10.2V18h6.6v-6.6H6.3c0-1.5 1.2-2.7 2.7-2.7V6H7.2zm9.6 0c-2.3 0-4.2 1.9-4.2 4.2V18h6.6v-6.6h-3.3c0-1.5 1.2-2.7 2.7-2.7V6h-1.8z'/%3E%3C/svg%3E") center / 22px no-repeat;
+}
+.cs-quote blockquote, blockquote.cs-quote { margin: 0; }
+.cs-quote blockquote p, blockquote.cs-quote { font-family: var(--font-serif); font-style: italic; font-size: 20px; line-height: 1.65; color: var(--ink); }
+.cs-quote blockquote p { margin: 0; }
+.cs-quote figcaption { margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--border-soft); font-weight: 700; font-size: 14.5px; color: var(--brand); }
+.cs-prose .cs-quote, .cs-card .cs-quote { margin: 40px 0 28px; }
+
+/* chips (locations etc.) */
+.chip-list { list-style: none; padding: 0; margin: 18px 0; display: flex; flex-wrap: wrap; gap: 10px; }
+.chip-list li { padding: 9px 18px; border-radius: var(--radius-pill); background: #fff; border: 1px solid var(--border); font-weight: 600; font-size: 14.5px; color: var(--ink); box-shadow: 0 1px 2px rgba(20,33,61,.05); }
+.cs-chips { max-width: 860px; }
+.cs-chips .chip-list { justify-content: center; }
+
+/* programs (careers) */
+.program-stack { display: grid; gap: 26px; }
+.program-card {
+  display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 44px; align-items: start;
+  background: #fff; border: 1px solid var(--border-soft); border-radius: var(--radius-lg); padding: 40px 44px; box-shadow: var(--shadow-card);
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+.program-card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-3px); }
+.program-num { display: inline-block; font-weight: 800; font-size: 13px; letter-spacing: 1.4px; color: var(--accent-hover); margin-bottom: 10px; }
+.program-copy h2 { font-size: 30px; margin-bottom: 14px; }
+.program-copy .cs-prose { margin: 0; font-size: 15.5px; }
+.program-copy .cs-cta { text-align: left; margin-top: 22px; }
+.program-list .check-list { margin: 4px 0 0; }
+.program-list .check-list.cols-2 { grid-template-columns: 1fr; }
+
+/* service cards with details (home) */
+.services-grid.is-detailed { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 26px; }
+.services-grid.is-detailed > * { max-width: none; flex: none; }
+.services-grid.is-detailed .service-card { padding: 34px 32px; display: flex; flex-direction: column; }
+.services-grid.is-detailed .service-card > p { font-size: 15px; }
+.service-lead { font-weight: 700; color: var(--ink) !important; margin-bottom: 4px !important; }
+.service-card .check-list { margin: 6px 0 16px; gap: 10px; }
+.service-card .check-list li { font-size: 14.5px; padding-left: 32px; }
+.service-card .check-list li::before { width: 22px; height: 22px; background-size: 12px; }
+.service-note { margin-top: auto; background: var(--accent-light); border-left: 4px solid var(--accent); border-radius: 10px; padding: 14px 18px; font-size: 14.5px !important; line-height: 1.6; color: var(--ink) !important; font-weight: 500; }
+.service-note + .card-link { margin-top: 18px; }
+
+.cs-grid.cols-1 { grid-template-columns: minmax(0, 860px); justify-content: center; }
+.cs-subhead-top { margin: 0 0 14px; }
+.cs-center { text-align: center; }
+.cs-features .cs-card p strong { display: block; font-family: var(--font-serif); font-size: 18px; color: var(--ink-strong); margin-bottom: 6px; }
+.cs-features .cs-card p { color: var(--ink-muted); }
+.cs-split .about-media { height: 420px; }
+
+.apply-inner.apply-wide { max-width: 1180px; }
+.apply-layout.has-side { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 32px; align-items: start; }
+.apply-side { background: #fff; border: 1px solid var(--border-soft); border-radius: var(--radius-lg); padding: 30px 28px; box-shadow: var(--shadow-card); }
+.apply-side h3 { font-size: 22px; margin-bottom: 10px; }
+.apply-side > p { font-size: 15px; line-height: 1.65; color: var(--ink-muted); }
+.apply-side .check-list { gap: 12px; margin-bottom: 0; }
+.apply-side .check-list li { font-size: 14.5px; }
+.apply-section .section-heading { max-width: 700px; }
+
+.cs-card:has(.cs-quote) { grid-column: 1 / -1; }
+.cs-card .cs-quote { box-shadow: none; background: var(--bg-cream); }
+.cs-prose + .cs-grid, .cs-center + .cs-grid { margin-top: 32px; }
+.cs-center { margin-bottom: 0; }
+
+.cs-btn-row { display: flex; flex-wrap: wrap; gap: 12px; margin: 22px 0 0; }
+.cs-prose .check-list.cols-2 { grid-template-columns: 1fr; }
+
+.cl-glance-wrap { margin-top: 44px; }
+.cl-glance { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 20px; }
+.cl-glance-card { background: #fff; border: 1px solid var(--border-soft); border-radius: var(--radius-lg); padding: 24px 22px; box-shadow: var(--shadow-card); transition: box-shadow .2s ease, transform .2s ease; }
+.cl-glance-card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-3px); }
+.cl-glance-card .cs-icon { width: 44px; height: 44px; margin-bottom: 14px; }
+.cl-glance-card .cs-icon svg { width: 22px; height: 22px; }
+.cl-glance-card strong { display: block; font-family: var(--font-serif); font-size: 17px; margin-bottom: 6px; color: var(--ink-strong); }
+.cl-glance-card p { margin: 0; font-size: 14.5px; line-height: 1.6; color: var(--ink-muted); overflow-wrap: anywhere; }
+.cl-glance-card a { color: var(--brand); font-weight: 600; }
+.cl-team-all { margin-top: 32px; }
+.cl-team-panel { display: flex; flex-direction: column; align-items: center; gap: 14px; background: #fff; border: 1px dashed var(--border); border-radius: var(--radius-lg); padding: 28px; max-width: 640px; margin: 0 auto; }
+.cl-team-panel .cs-icon { margin: 0; }
+
+.chip-list li { transition: background .15s ease, border-color .15s ease, transform .15s ease; }
+.chip-list li:has(a) { padding: 0; }
+.chip-list li a { display: block; padding: 9px 18px; color: var(--ink); text-decoration: none !important; font-weight: 600; }
+.chip-list li:has(a):hover { background: var(--brand-light); border-color: var(--brand); transform: translateY(-2px); }
+.chip-list li:has(a):hover a { color: var(--brand); }
+.cs-chips > p { text-align: center; font-weight: 600; color: var(--ink); margin-bottom: 0; }
+
+/* points sections: card rows with green check badges */
+.about-points { gap: 14px 20px; }
+.about-point { background: #fff; border: 1px solid var(--border-soft); border-radius: 12px; padding: 14px 16px; box-shadow: 0 1px 2px rgba(20,33,61,.04); line-height: 1.55; transition: box-shadow .2s ease, transform .2s ease; align-items: flex-start; }
+.about-point:hover { box-shadow: var(--shadow-card); transform: translateY(-2px); }
+.point-check { width: 24px; height: 24px; border-radius: 50%; background: var(--accent-light); color: #467b17; display: grid; place-items: center; margin-top: 0; }
+.point-check svg { width: 13px; height: 13px; stroke-width: 3; }
+.about-point a { color: var(--brand); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+
+.cs-callout { max-width: 820px; margin: 0 auto; background: #fff; border: 1px solid var(--border-soft); border-left: 5px solid var(--accent); border-radius: var(--radius-lg); padding: 26px 30px; box-shadow: var(--shadow-card); font-size: 17px; line-height: 1.75; color: var(--ink); }
+.cs-callout p { margin: 0 0 .8em; }
+.cs-callout p:last-child { margin-bottom: 0; }
+.cs-callout a { color: var(--brand); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }

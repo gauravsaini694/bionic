@@ -18,7 +18,11 @@
 </section>
 {{ end }}
 
+{{ $bgOf := dict "text-image" "white" "points" "cream" "cards" "cream" "faq" "white" "stats" "dark" "cta-band" "dark" "testimonial" "cream" "job-form" "cream" "children-grid" "white" "clinic-finder" "white" "leadership" "white" "chip-list" "white" }}
 {{ range $i, $s := .Params.sections }}
+{{ $last := $.Scratch.Get "lastbg" | default "cream" }}
+{{ $mine := cond (eq $s.type "richtext") (cond (eq $last "cream") "white" "cream") (index $bgOf $s.type | default "white") }}
+{{ $.Scratch.Set "lastbg" $mine }}
 
 {{ if eq $s.type "text-image" }}
 {{ $img := $s.image | default $.Params.image | default site.Params.defaultImage }}
@@ -34,7 +38,7 @@
       <h2>{{ $s.title }}</h2>
       {{ if $s.body_html }}<p class="lead">{{ $s.body_html | safeHTML }}</p>{{ else }}<p class="lead">{{ partial "rt.html" $s.body }}</p>{{ end }}
       {{ with $s.cta_text }}<a href="{{ $s.cta_link }}" class="btn {{ if $s.cta_primary }}btn-primary btn-stacked{{ else }}btn-outline-dark{{ end }}"{{ if $s.cta_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ . }}</a>{{ end }}
-      {{ range $s.buttons }}<a href="{{ .link | safeURL }}" class="btn btn-primary btn-stacked"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a>{{ end }}
+      {{ with $s.buttons }}<div class="cs-btn-row">{{ range . }}<a href="{{ .link | safeURL }}" class="btn btn-primary"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a>{{ end }}</div>{{ end }}
       {{ with $s.note_html }}<p class="section-note">{{ . | safeHTML }}</p>{{ end }}
     </div>
   </div>
@@ -174,12 +178,21 @@
 
 {{ else if eq $s.type "job-form" }}
 <section class="section apply-section"{{ with $s.id }} id="{{ . }}"{{ end }}>
-  <div class="container apply-inner">
+  <div class="container apply-inner{{ if $s.side_points }} apply-wide{{ end }}">
     <div class="section-heading reveal" data-reveal="fade">
       {{ with $s.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
       <h2>{{ $s.title | default "Apply" }}</h2>
       {{ with $s.body }}<p class="lead">{{ partial "rt.html" . }}</p>{{ end }}
     </div>
+    <div class="apply-layout{{ if $s.side_points }} has-side{{ end }}">
+    {{ with $s.side_points }}
+    <aside class="apply-side">
+      {{ with $s.side_eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
+      <h3>{{ $s.side_title }}</h3>
+      {{ with $s.side_body }}<p>{{ partial "rt.html" . }}</p>{{ end }}
+      <ul class="check-list">{{ range . }}<li>{{ partial "rt.html" . }}</li>{{ end }}</ul>
+    </aside>
+    {{ end }}
     <form class="apply-form reveal" data-reveal="up" name="job-application" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data">
       <input type="hidden" name="form-name" value="job-application">
       <p class="visually-hidden" aria-hidden="true"><label>Do not fill this out if you are human: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
@@ -202,6 +215,7 @@
       </div>
       <button type="submit" class="btn btn-primary btn-lg">{{ $s.submit | default "Apply" }}</button>
     </form>
+    </div>
   </div>
 </section>
 
@@ -219,13 +233,7 @@
 </section>
 
 {{ else if eq $s.type "richtext" }}
-<section class="section">
-  <div class="container" style="max-width: 780px;">
-    {{ with $s.title }}<h2>{{ . }}</h2>{{ end }}
-    <div class="lead">{{ $s.body | safeHTML }}</div>
-    {{ range $s.buttons }}<a href="{{ .link | safeURL }}" class="btn btn-primary btn-stacked"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a>{{ end }}
-  </div>
-</section>
+{{ partial "content-section.html" (dict "s" $s "bg" $mine "scratch" $.Scratch) }}
 
 {{ end }}
 {{ end }}

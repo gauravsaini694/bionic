@@ -14,7 +14,7 @@ Every appointment you make with your prosthetist or orthotist has a chance to in
 
 Each visit with a clinician only lasts so long, so you want to ensure that you are doing everything that you can to advocate for yourself and ensure you live up to your potential. That is why asking the right questions can make a world of difference.
 
-Some clinicians, like our highly trained team at Bionic, will give you answers to many or all of these questions without needing to be asked. However, you should know what needs to be discussed no matter where you receive your O&P care. Choosing the right practice and clinician will go a long way, but it pays to be informed.
+Some clinicians, like our highly trained [team](/team/) at Bionic, will give you answers to many or all of these questions without needing to be asked. However, you should know what needs to be discussed no matter where you receive your O&P care. Choosing the right practice and clinician will go a long way, but it pays to be informed.
 
 But what are the right questions? Everyone from recent amputees to experienced prosthesis/orthosis users can feel confused about how to approach tough topics or how to get the most out of their visit.
 
@@ -50,7 +50,7 @@ Bionic is proud to have strong connections with physical therapists who have exp
 
 Everyone\'s individual needs are different. This extends from the level of performance or mobility that you need to differences in design or style.
 
-Earlier this year, our team from Cincinnati rose to the challenge of working with a new technique to create a style of device in-house that better fit a patient\'s needs, and the idea started with a question from the patient\'s mom. Clinicians aren\'t psychic - no matter how much they know about their field they may need your input to arrive at the best outcome.
+[Earlier this year, our team from Cincinnati rose to the challenge](/post/the-bionic-difference-alexander-lecher/) of working with a new technique to create a style of device in-house that better fit a patient\'s needs, and the idea started with a question from the patient\'s mom. Clinicians aren\'t psychic - no matter how much they know about their field they may need your input to arrive at the best outcome.
 
 This advice can apply just as much to the aesthetic or design of your device as to its function, and it shows the value of starting a conversation about your needs and wants with your clinician early.
 
@@ -80,7 +80,7 @@ Your clinician is here to help you, but there are also things that you can do to
 
 With the right questions in mind, you will be ready to set your course toward a happier and healthier future. These questions can also help you discern the right clinician or clinic to meet your needs and help you to advocate for yourself and your needs. In order to make a wise decision, you need all the information you can gather.
 
-If you would like to take some of the guesswork out of your visit, try booking a free consultation with one of Bionic Prosthetics & Orthotics’ many clinics across the US! Our clinicians take the initiative to make space for you and to answer any and all your questions.
+If you would like to take some of the guesswork out of your visit, try booking a free consultation with one of Bionic Prosthetics & Orthotics’ [many clinics across the US](/locations/)! Our clinicians take the initiative to make space for you and to answer any and all your questions.
 
 When it comes to your mobility and comfort, the only remaining question is:
 

@@ -774,6 +774,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -1143,6 +1188,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -1512,6 +1602,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -1889,6 +2024,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -2264,6 +2444,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -2633,6 +2858,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -3002,6 +3272,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -3371,6 +3686,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -3740,6 +4100,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -4115,6 +4520,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -4484,6 +4934,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -4853,6 +5348,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -5222,6 +5762,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -5591,6 +6176,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -5966,6 +6596,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -6335,6 +7010,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -6704,6 +7424,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -7073,6 +7838,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -7442,6 +8252,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -7811,6 +8666,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -8186,6 +9086,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -8555,6 +9500,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -8924,6 +9914,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -9293,6 +10328,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -9668,6 +10748,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -10037,6 +11162,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -10406,6 +11576,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -10775,6 +11990,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -11150,6 +12410,51 @@ collections:
           widget: text
           hint: HTML is allowed (e.g. <p>, <a href>).
           required: false
+        - label: Layout
+          name: layout
+          widget: select
+          required: false
+          hint: How the text is designed. The text itself is never changed. "prose" = readable text with check-lists; "cards" = each sub-heading becomes a card; "features" = icon cards from the list; "blocks" = each main heading becomes its own section; "programs" = heading + text on the left, check-list on the right; "chips" = list shown as chips; "quote" = testimonial card; "split" = image next to text.
+          options: [prose, cards, features, feature-list, blocks, programs, chips, quote, split]
+        - label: Cards per row
+          name: cols
+          widget: string
+          required: false
+          hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Image (split layout)
+          name: image
+          widget: image
+          required: false
+        - label: Image description
+          name: image_alt
+          widget: string
+          required: false
+        - label: Image position
+          name: image_position
+          widget: select
+          options: [right, left]
+          required: false
+        - label: Buttons
+          name: buttons
+          widget: list
+          required: false
+          summary: '{{fields.text}}'
+          fields:
+          - label: Button text
+            name: text
+            widget: string
+          - label: Link
+            name: link
+            widget: string
+          - label: Open in new tab
+            name: new_tab
+            widget: boolean
+            default: false
+            required: false
       - label: Clinic finder (map + search)
         name: clinic-finder
         widget: object
@@ -12130,6 +13435,11 @@ collections:
     - label: Default blog author
       name: default_author
       widget: string
+      required: false
+    - label: Google site verification
+      name: google_site_verification
+      widget: string
+      hint: Token from Google Search Console (the content value of the verification meta tag). Leave empty to omit the tag.
       required: false
     - label: Social media links
       name: social

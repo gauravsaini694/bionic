@@ -1,7 +1,7 @@
 ---
 title: Orthotics
-seo_title: "Orthotics | Bionic Prosthetics and Orthotics"
-seo_description: "Discover custom orthotics and support solutions at Bionic Prosthetics. Personalized braces and inserts designed for comfort, alignment, and improved mobility."
+seo_title: Orthotics | Bionic Prosthetics and Orthotics
+seo_description: Discover custom orthotics and support solutions at Bionic Prosthetics. Personalized braces and inserts designed for comfort, alignment, and improved mobility.
 hero:
   eyebrow: YOUR PATH TO BETTER MOVEMENT
   title: Orthotic Solutions for Every Stage of Life
@@ -20,6 +20,13 @@ sections:
   image_position: right
 - type: richtext
   body: <p>A conversation can help clarify your options.</p><h3>Precision-Customized</h3><p>Every orthosis is fabricated from a cast or 3D scan of your body, providing a customized solution rather than an off-the-shelf device. The fit is exact, the function is intentional.</p><h3>Clinician-Directed Care</h3><p>Our board-certified orthotists conduct thorough evaluations, collaborate with your physicians, and continuously adjust your device as your needs evolve.</p><h3>Evidence-Based Technology</h3><p>We combine clinical expertise with the latest materials, carbon fiber, dynamic thermoplastics, and microprocessor-assisted joints for optimal outcomes.</p><h3>Ongoing Support</h3><p>Our team remains available for follow-up care, adjustments, and guidance to help ensure your orthosis continues to support your comfort, mobility, and everyday goals.</p>
+  layout: cards
+  cols: '2'
+  icons:
+  - personalized
+  - certified
+  - technology
+  - people
 - type: cards
   eyebrow: ORTHOTIC SOLUTIONS WE PROVIDE
   title: Explore Our Orthotic Care
@@ -53,17 +60,38 @@ sections:
 - type: richtext
   title: How Orthotics Can Help You
   body: <p>Whether you're managing a medical condition, recovering from injury, or seeking to optimize your performance in sports, orthotics can play a critical role in improving functionality and mobility.</p><h3>Relieve Pain and Improve Comfort</h3><p>Orthotics are an effective solution for pain management. Custom devices can help alleviate the discomfort caused by flat feet, arthritis, sports injuries, or post-surgery rehabilitation. By providing targeted support and alignment, orthotics reduce strain on affected areas, allowing you to move more comfortably.</p><h3>Enhance Performance and Mobility</h3><p>Whether you're a professional athlete or simply someone who enjoys staying active, orthotics can help you perform at your best. Our custom solutions are designed to optimize movement, improve foot alignment, and prevent injuries, helping you reach your full potential.</p><h3>Improve Quality of Life</h3><p>Orthotics are designed to enhance your ability to perform daily tasks and engage in the activities you love. By providing support and stability, orthotic devices help you regain independence and live a pain-free life.</p><h3>Regain Independence and Quality of Life</h3><p>By improving comfort, stability, and mobility, orthotics allow you to regain independence and engage in the activities you love, whether it’s walking, exercising, or performing daily tasks, leading to a pain-free and active lifestyle.</p>
+  layout: cards
+  cols: '2'
+  icons:
+  - orthotic
+  - star
+  - personalized
+  - check
 - type: richtext
   title: The Role of a Certified Orthotist
   body: <p>A Certified Orthotist (CO) is a licensed healthcare professional who designs, fits, and manages orthotic devices to improve mobility and comfort. At Bionic P&amp;O, our orthotists provide:</p><ul><li>Personalized care tailored to your unique needs</li><li>Expert guidance in selecting the right orthotic device</li><li>Collaborative care with your healthcare team</li><li>Ongoing adjustments and follow-up support</li></ul><p>Their expertise ensures that your orthotic device is both functional and comfortable, helping you achieve the best possible outcomes.</p>
+  layout: split
+  image: /images/lower-extremity-orthotics.webp
+  image_alt: A person walking with a hinged knee brace
+  image_position: left
 - type: richtext
   title: Orthotic Care Near You
   body: <p>At Bionic P&amp;O, we ensure that expert orthotic care is accessible. Whether you're seeking an initial consultation, orthotic fitting, or follow-up care, our clinics are located across the country to serve you. Our Board-Certified Orthotists (CPOs) are ready to provide personalized care that meets your unique needs.</p>
+  layout: split
+  image: /images/clinical-team.png
+  image_alt: A Bionic clinical team member with a patient
 - type: richtext
   title: Why Choose Bionic P&O Orthotics?
   body: '<h3>Proven Excellence in Orthotic Care</h3><ul><li>Cutting-Edge Technology: We use 3D scanning and custom fabrication to ensure precise fit and support.</li><li>Experienced Orthotists: Our team of Board-Certified Orthotists (CPOs) has years of experience providing personalized care for various conditions.</li><li>Patient-Centered Care: We focus on your comfort, needs, and goals, creating a solution that aligns with your lifestyle.</li><li>Clinical Outcomes: Trusted by clinics, hospitals, and rehabilitation centers nationwide for positive patient outcomes.</li></ul>'
+  layout: feature-list
+  icons:
+  - technology
+  - certified
+  - personalized
+  - star
 - type: richtext
   body: <p>“Meghan is superb. She evaluated me on-site at my PT appt. It was evident immediately she is VERY skilled in her field. She is knowledgeable, thorough, knows and exercises the parameters from orthotics to insurance. She explained exactly what I needed and the process steps to get what I needed. In 2 weeks was at the Joliet facility for a fitting that turned out positive. Meghan is kind, patient, and caring. She's a gem. I walked away happy and pleased and also assured that if something changed, she is there to consult with me. Wish I had known about Bionic when I was initially introduced 4 years ago to the world of orthotics. 5+ stars”</p><p>-Soyna Jackson</p>
+  layout: quote
 - type: faq
   eyebrow: FREQUENTLY ASKED QUESTIONS
   title: Orthotic Care Questions, Answered
@@ -84,6 +112,6 @@ sections:
   cta_secondary: Find a Clinic Near You
   cta_secondary_link: /locations/
   extra_buttons:
-    - text: "Schedule Your Free Evaluation"
-      link: "tel:2197919200"
+  - text: Schedule Your Free Evaluation
+    link: tel:2197919200
 ---

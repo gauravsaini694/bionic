@@ -1,7 +1,7 @@
 ---
 title: Prosthetics
-seo_title: "Prosthetics | Bionic Prosthetics and Orthotics"
-seo_description: "Find personalized prosthetic limb solutions at Bionic Prosthetics & Orthotics. From upper to lower limb prostheses, get expert fitting, advanced technology, and restored function."
+seo_title: Prosthetics | Bionic Prosthetics and Orthotics
+seo_description: Find personalized prosthetic limb solutions at Bionic Prosthetics & Orthotics. From upper to lower limb prostheses, get expert fitting, advanced technology, and restored function.
 hero:
   eyebrow: YOUR PROSTHETIC JOURNEY STARTS HERE
   title: Prosthetic Care Built Around You
@@ -35,6 +35,12 @@ sections:
     link: /upper-limb/
 - type: richtext
   body: <h3>Prosthetic Sockets</h3><p>Prosthetic sockets are the critical interface between the residual limb and the prosthesis. Custom-fitted for comfort and stability, they ensure a secure and comfortable fit, allowing for natural movement and enhanced performance. At Bionic P&amp;O, we use advanced materials and 3D scanning technology to create sockets that provide the best possible fit and support for your unique needs.</p><h3>Prosthetic Liners</h3><p>Prosthetic liners provide a soft, cushioning layer between the residual limb and the prosthetic socket. Designed for comfort, they help reduce friction, absorb shock, and enhance the overall fit of the prosthesis. At Bionic P&amp;O, we offer customizable liners that ensure a secure, comfortable fit, improving both performance and daily comfort.</p><h3>Prosthetic Accessories</h3><p>Prosthetic accessories enhance the functionality, comfort, and durability of your prosthesis. From socks and suspension sleeves to cosmetic covers and maintenance tools, we offer a range of accessories designed to personalize and optimize your prosthetic experience. These accessories ensure a secure fit, long-term performance, and added convenience for daily use.</p>
+  layout: cards
+  cols: '3'
+  icons:
+  - prosthetic
+  - technology
+  - personalized
 - type: points
   eyebrow: HOW IT WORKS
   title: Prosthetic Care Is a Process, Not a One-Time Event
@@ -47,14 +53,28 @@ sections:
 - type: richtext
   title: Prosthetic Care Near You
   body: <p>At Bionic P&amp;O, we understand the importance of receiving local, accessible care that is both professional and compassionate. Whether you're in need of an initial consultation, a prosthetic fitting, or ongoing support, our dedicated team is here to assist you every step of the way.</p><p>With locations across the country, we bring expert prosthetic care right to your doorstep, ensuring you get the highest level of service, no matter where you are. Our clinics are equipped with the latest prosthetic technology, and our team of Board-Certified Prosthetists (CPOs) is committed to providing care that is tailored to your specific needs.</p>
+  layout: split
+  image: /images/clinical-team.png
+  image_alt: A Bionic clinical team member with a patient
 - type: richtext
   title: The Role of a Certified Prosthetist
   body: <p>A Certified Prosthetist (CP) is a licensed healthcare professional trained to design, fit, and manage prosthetic devices.</p><p>At Bionic P&amp;O, our prosthetists:</p><ul><li>Take time to understand your daily challenges and goals</li><li>Guide component selection based on function, not trends</li><li>Coordinate with physical therapists and care teams</li><li>Provide ongoing adjustments and follow-up care</li></ul>
+  layout: split
+  image: /images/lower-limb-prosthetics.webp
+  image_alt: A man seated on a park bench wearing a prosthetic leg
+  image_position: left
 - type: richtext
   title: Why Choose Bionic P&O Prosthetics?
   body: '<h3>Proven Excellence in Prosthetics &amp; Patient Care</h3><p>As a leader in prosthetic care, Bionic P&amp;O combines innovative technology, expert craftsmanship, and personalized care to create life-changing prosthetics for our patients. Here''s why we''re trusted by individuals and healthcare professionals alike:</p><ul><li>Cutting-Edge Technology: We use advanced microprocessor-controlled limbs (MPKs) that adapt to your walking pattern for smoother, more natural movement.</li><li>Experienced Prosthetists: Our team consists of Board-Certified Prosthetists (CPOs) with decades of experience working with diverse patient needs and mobility levels.</li><li>Patient-Centered Care: Your goals and well-being drive every decision, ensuring a prosthetic solution that aligns with your unique needs and lifestyle.</li><li>Clinical Outcomes: Trusted by clinics, hospitals, and rehabilitation centers nationwide for our consistent, positive patient outcomes.</li></ul>'
+  layout: feature-list
+  icons:
+  - technology
+  - certified
+  - personalized
+  - star
 - type: richtext
   body: <p>“I have been a patient of Bionic Prosthetics &amp; Orthotics for 10 years and have always been treated with the utmost respect and care. The staff is knowledgeable, patient, and always willing to go the extra mile to ensure my comfort and satisfaction. I highly recommend them!”</p><p>-Emily Power</p>
+  layout: quote
 - type: faq
   eyebrow: FREQUENTLY ASKED QUESTIONS
   title: Prosthetic Care Questions, Answered
@@ -77,6 +97,6 @@ sections:
   cta_secondary: Find a Clinic Near You
   cta_secondary_link: /locations/
   extra_buttons:
-    - text: "Book a Free Consultation"
-      link: "tel:2197919200"
+  - text: Book a Free Consultation
+    link: tel:2197919200
 ---

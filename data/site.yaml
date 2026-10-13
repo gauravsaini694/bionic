@@ -6,6 +6,8 @@ legal_name: Bionic Prosthetics & Orthotics Group LLC
 logo: /images/Bionic-logo.avif
 logo_footer: /images/Bionic-logo-footer.avif
 default_author: Bionic Clinical Team
+# Google Search Console verification token (the "content" value of the meta tag). Leave empty until provided.
+google_site_verification: ""
 social:
   facebook: https://www.facebook.com/bionicpo
   instagram: https://www.instagram.com/bionicpo/

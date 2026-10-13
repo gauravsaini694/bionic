@@ -163,6 +163,17 @@
     <div class="about-media reveal" data-reveal="up">{{ partial "img.html" (dict "src" . "alt" ($.Params.image_alt | default (printf "%s clinic" $.Title))) }}</div>
     {{ end }}
   </div>
+  {{- $hoursStr := cond (reflect.IsSlice $hours) "" (printf "%v" ($hours | default "")) }}
+  {{- if or $addr $phone .Params.email $hoursStr }}
+  <div class="container cl-glance-wrap">
+    <div class="cl-glance">
+      {{ if $addr }}<div class="cl-glance-card"><span class="cs-icon">{{ partial "icon.html" "pin" }}</span><strong>Address</strong><p>{{ $addr }}{{ with .Params.address2 }}<br>{{ . }}{{ end }}</p></div>{{ end }}
+      {{ if $phone }}<div class="cl-glance-card"><span class="cs-icon">{{ partial "icon.html" "phone" }}</span><strong>Phone</strong><p><a href="tel:{{ partial "tel.html" $phone }}">{{ $phone }}</a></p></div>{{ end }}
+      {{ with $hoursStr }}<div class="cl-glance-card"><span class="cs-icon">{{ partial "icon.html" "star" }}</span><strong>Hours</strong><p>{{ . }}</p></div>{{ end }}
+      {{ with .Params.email }}<div class="cl-glance-card"><span class="cs-icon">{{ partial "icon.html" "mail" }}</span><strong>Email</strong><p><a href="mailto:{{ . }}">{{ . }}</a></p></div>{{ end }}
+    </div>
+  </div>
+  {{- end }}
   {{ if $gallery }}
   <div class="container cl-gallery">
     {{ range $gallery }}<img src="{{ .src }}" alt="{{ .alt }}" loading="lazy">{{ end }}
@@ -189,13 +200,13 @@
       {{ if .link }}</a>{{ else }}</div>{{ end }}
       {{ end }}
     </div>
-    <p class="cl-team-all"><a href="/team/">Click here to view the full list of clinicians</a></p>
+    <p class="cl-team-all"><a href="/team/" class="btn btn-outline-dark">Click here to view the full list of clinicians</a></p>
   </div>
 </section>
 {{ else }}
 <section class="section">
   <div class="container">
-    <p class="cl-team-all"><a href="/team/">Click here to view the full list of clinicians</a></p>
+    <div class="cl-team-panel"><span class="cs-icon">{{ partial "icon.html" "people" }}</span><a href="/team/" class="btn btn-outline-dark">Click here to view the full list of clinicians</a></div>
   </div>
 </section>
 {{ end }}
