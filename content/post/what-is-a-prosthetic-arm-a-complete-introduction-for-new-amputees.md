@@ -17,9 +17,9 @@ If you or a family member is beginning this journey, this guide will walk you th
 
 ## How Common Is Upper-Limb Loss in the United States?
 
-You are not alone. According to a 2024 study published in the Archives of Rehabilitation Research and Clinical Translation, an estimated 2.3 million Americans are currently living with limb loss. While the majority of amputations involve the lower extremities, approximately 9% involve the upper limbs, including fingers, hands, forearms, and full arms. (link)
+You are not alone. According to a 2024 study published in the Archives of Rehabilitation Research and Clinical Translation, an estimated 2.3 million Americans are currently living with limb loss. While the majority of amputations involve the lower extremities, approximately 9% involve the upper limbs, including fingers, hands, forearms, and full arms. ([link](https://www.sciencedirect.com/science/article/pii/S2590109524000892#_blank))
 
-Upper-limb amputations are most commonly caused by traumatic injuries such as workplace accidents, motor vehicle collisions, and machinery-related incidents. Other causes include vascular disease, cancer, and congenital limb differences present at birth.
+[Upper-limb amputations](/upper-limb/#_blank) are most commonly caused by traumatic injuries such as workplace accidents, motor vehicle collisions, and machinery-related incidents. Other causes include vascular disease, cancer, and congenital limb differences present at birth.
 
 No matter the cause, early consultation with a board-certified prosthetist is one of the most important steps toward regaining mobility and confidence.
 
@@ -93,7 +93,7 @@ Ready to learn more?
 
 Contact Bionic Prosthetics & Orthotics to schedule a complimentary consultation, or use our clinic finder to connect with a certified prosthetist near you.
 
-Book a free consultation call
+[Book a free consultation call](/book-appointment-pay-bill/#_blank)
 
 Tags:
 

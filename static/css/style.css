@@ -138,6 +138,9 @@ button { font-family: inherit; cursor: pointer; }
 .btn-primary:hover { background: var(--accent-hover); transform: translateY(-1px); }
 .btn-outline-dark { border-color: rgba(0, 0, 0, 0.18); color: #000; background: transparent; }
 .btn-outline-dark:hover { background: var(--brand-dark); border-color: var(--brand-dark); color: #fff; }
+.btn-stacked { margin-top: 8px; margin-bottom: 23px; }
+.lead:has(+ .btn-stacked) { margin-bottom: 0; }
+.section-note { margin: 0; color: rgba(0, 0, 0, 0.74); font-size: 16px; line-height: 1.7; }
 .btn-outline { border-color: rgba(255, 255, 255, 0.4); color: #fff; background: transparent; }
 .btn-outline:hover { background: #fff; color: var(--brand-dark); }
 
@@ -848,3 +851,8 @@ a.article-category-badge:hover { background: rgba(255, 255, 255, 0.28); }
 .clinic-qs-results li:hover, .clinic-qs-results li.is-active { background: var(--brand-light); }
 .clinic-qs-results li.is-active strong { color: var(--brand); }
 .clinic-qs-empty { padding: 12px 10px; font-size: 13.5px; color: var(--ink-muted); }
+
+.cl-team-all { text-align: center; margin: 24px 0 0; font-weight: 600; }
+.section-actions { text-align: center; margin-top: 8px; }
+.state-links { list-style: none; display: flex; flex-wrap: wrap; gap: 6px 16px; margin: 12px 0 0; padding: 0; }
+.state-links a { font-size: 13.5px; font-weight: 600; color: var(--brand); }

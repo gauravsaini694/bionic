@@ -13,6 +13,9 @@ hero:
   cta_primary_link: "/contact/"
   cta_secondary: "Pay My Bill"
   cta_secondary_link: "/book-appointment-pay-bill/"
+  extra_buttons:
+    - text: "Talk to an expert"
+      link: "tel:18555246642"
 
 sections:
   - type: "points"
@@ -33,6 +36,7 @@ sections:
 
   - type: "clinic-finder"
     states_title: "Browse by State"
+    state_links: "view"
     eyebrow: "FIND CARE NEAR YOU"
     title: "Find a Bionic Clinic Near You"
     body: "Search by ZIP, city or state, use your current location, or pick a state below. States, counts and map pins update automatically as clinics are added."

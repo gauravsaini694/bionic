@@ -53,6 +53,7 @@
 <section class="section">
   <div class="container">
     {{ partial "section-header.html" (dict "title" .title "body" .body) }}
+    {{ with .cta_text }}<div class="section-actions"><a href="{{ $.Params.consult.cta_link }}" class="btn btn-primary">{{ . }}</a></div>{{ end }}
   </div>
 </section>
 {{ end }}

@@ -19,7 +19,8 @@ hero:
       link: "/locations/"
       icon: "pin"
     - label: "Pay My Bill"
-      link: "/book-appointment-pay-bill/"
+      link: "https://www.patientnotebook.com/BionicPO/payment"
+      new_tab: true
       icon: "card"
     - label: "Find Support Group"
       link: "/patient-resources/#support-organizations"
@@ -89,6 +90,7 @@ technology:
   image_alt: "A man leaping in mid-air wearing a prosthetic leg"
 
 find_clinic:
+  state_links: "names"
   eyebrow: "FIND CARE NEAR YOU"
   title: "Locate a Certified Prosthetics & Orthotics Clinic"
   body: "Our board-certified prosthetists and orthotists provide personalized care focused on comfort, function, and long-term support. With clinics across multiple locations, expert care is always within reach — use our location finder to connect with a clinician near you."

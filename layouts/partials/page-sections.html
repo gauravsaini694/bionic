@@ -6,11 +6,12 @@
     {{ if not $.IsHome }}{{ partial "breadcrumbs.html" (dict "page" $ "light" true) }}{{ end }}
     {{ with .eyebrow }}<span class="eyebrow eyebrow-light">{{ . }}</span><br>{{ end }}
     <h1>{{ .title }}</h1>
-    {{ with .subhead }}<p class="page-hero-subhead">{{ . }}</p>{{ end }}
+    {{ with .subhead }}<p class="page-hero-subhead">{{ partial "rt.html" . }}</p>{{ end }}
     {{ if or .cta_primary .cta_secondary }}
     <div class="page-hero-actions">
-      {{ with .cta_primary }}<a href="{{ $hero.cta_primary_link }}" class="btn btn-primary btn-lg">{{ . }}</a>{{ end }}
-      {{ with .cta_secondary }}<a href="{{ $hero.cta_secondary_link }}" class="btn btn-outline btn-lg">{{ . }}</a>{{ end }}
+      {{ with .cta_primary }}<a href="{{ $hero.cta_primary_link }}" class="btn btn-primary btn-lg"{{ if $hero.cta_primary_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ . }}</a>{{ end }}
+      {{ with .cta_secondary }}<a href="{{ $hero.cta_secondary_link }}" class="btn btn-outline btn-lg"{{ if $hero.cta_secondary_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ . }}</a>{{ end }}
+      {{ range .extra_buttons }}<a href="{{ .link | safeURL }}" class="btn btn-primary btn-lg"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a>{{ end }}
     </div>
     {{ end }}
   </div>
@@ -31,8 +32,10 @@
     <div class="about-copy reveal" data-reveal="fade">
       {{ with $s.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
       <h2>{{ $s.title }}</h2>
-      <p class="lead">{{ $s.body }}</p>
-      {{ with $s.cta_text }}<a href="{{ $s.cta_link }}" class="btn btn-outline-dark">{{ . }}</a>{{ end }}
+      {{ if $s.body_html }}<p class="lead">{{ $s.body_html | safeHTML }}</p>{{ else }}<p class="lead">{{ partial "rt.html" $s.body }}</p>{{ end }}
+      {{ with $s.cta_text }}<a href="{{ $s.cta_link }}" class="btn {{ if $s.cta_primary }}btn-primary btn-stacked{{ else }}btn-outline-dark{{ end }}"{{ if $s.cta_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ . }}</a>{{ end }}
+      {{ range $s.buttons }}<a href="{{ .link | safeURL }}" class="btn btn-primary btn-stacked"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a>{{ end }}
+      {{ with $s.note_html }}<p class="section-note">{{ . | safeHTML }}</p>{{ end }}
     </div>
   </div>
 </section>
@@ -43,12 +46,12 @@
     <div class="credentials-copy reveal" data-reveal="fade">
       {{ with $s.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
       <h2>{{ $s.title }}</h2>
-      {{ with $s.body }}<p class="lead">{{ . }}</p>{{ end }}
+      {{ with $s.body }}<p class="lead">{{ partial "rt.html" . }}</p>{{ end }}
       <div class="about-points">
         {{ range $s.points }}
         <div class="about-point">
           <span class="point-check">{{ partial "icon.html" "check" }}</span>
-          <span>{{ . }}</span>
+          <span>{{ partial "rt.html" . }}</span>
         </div>
         {{ end }}
       </div>
@@ -67,14 +70,14 @@
     <div class="section-heading reveal" data-reveal="fade">
       {{ with $s.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
       <h2>{{ $s.title }}</h2>
-      {{ with $s.body }}<p class="lead">{{ . }}</p>{{ end }}
+      {{ with $s.body }}<p class="lead">{{ partial "rt.html" . }}</p>{{ end }}
     </div>
     <div class="card-grid services-grid">
       {{ range $j, $item := $s.items }}
       <a href="{{ .link }}" class="service-card reveal" data-reveal="up" style="--delay: {{ mul $j 0.1 }}s">
         <div class="service-icon service-icon-{{ .icon }}">{{ partial "icon.html" .icon }}</div>
         <h3>{{ .title }}</h3>
-        <p>{{ .description }}</p>
+        <p>{{ partial "rt.html" .description }}</p>
         <span class="card-link">Learn more <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span></span>
       </a>
       {{ end }}
@@ -120,7 +123,7 @@
     <div class="find-clinic-copy reveal" data-reveal="fade">
       {{ with $s.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
       <h2>{{ $s.title }}</h2>
-      {{ with $s.body }}<p class="lead">{{ . }}</p>{{ end }}
+      {{ with $s.body }}<p class="lead">{{ partial "rt.html" . }}</p>{{ end }}
     </div>
     <div class="find-clinic-panel reveal" data-reveal="up">
       <div class="state-chip-grid">
@@ -138,13 +141,13 @@
     <div class="section-heading reveal" data-reveal="fade">
       {{ with $s.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
       <h2>{{ $s.title }}</h2>
-      {{ with $s.body }}<p class="lead">{{ . }}</p>{{ end }}
+      {{ with $s.body }}<p class="lead">{{ partial "rt.html" . }}</p>{{ end }}
     </div>
     <div class="faq-list">
       {{ range $s.items }}
       <details class="faq-item">
         <summary>{{ .question }}</summary>
-        <p>{{ .answer }}</p>
+        <p>{{ partial "rt.html" .answer }}</p>
       </details>
       {{ end }}
     </div>
@@ -173,10 +176,11 @@
 <section class="final-cta reveal" data-reveal="fade">
   <div class="container final-cta-inner">
     <h2>{{ $s.title }}</h2>
-    <p>{{ $s.body }}</p>
+    <p>{{ partial "rt.html" $s.body }}</p>
     <div class="final-cta-actions">
-      {{ with $s.cta_primary }}<a href="{{ $s.cta_primary_link }}" class="btn btn-primary btn-lg">{{ . }}</a>{{ end }}
-      {{ with $s.cta_secondary }}<a href="{{ $s.cta_secondary_link }}" class="btn btn-outline btn-lg">{{ . }}</a>{{ end }}
+      {{ with $s.cta_primary }}<a href="{{ $s.cta_primary_link }}" class="btn btn-primary btn-lg"{{ if $s.cta_primary_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ . }}</a>{{ end }}
+      {{ with $s.cta_secondary }}<a href="{{ $s.cta_secondary_link }}" class="btn btn-outline btn-lg"{{ if $s.cta_secondary_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ . }}</a>{{ end }}
+      {{ range $s.extra_buttons }}<a href="{{ .link | safeURL }}" class="btn btn-primary btn-lg"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a>{{ end }}
     </div>
   </div>
 </section>
@@ -186,6 +190,7 @@
   <div class="container" style="max-width: 780px;">
     {{ with $s.title }}<h2>{{ . }}</h2>{{ end }}
     <div class="lead">{{ $s.body | safeHTML }}</div>
+    {{ range $s.buttons }}<a href="{{ .link | safeURL }}" class="btn btn-primary btn-stacked"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a>{{ end }}
   </div>
 </section>
 

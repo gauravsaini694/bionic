@@ -1,0 +1,5 @@
+{{- /* Escaped text with inline links. Syntax: [[label|/path/]] or [[label|https://x|_blank]] (_blank => new tab). Context: string. */ -}}
+{{- $s := . | string | htmlEscape -}}
+{{- $s = replaceRE `\[\[([^\[\]|]+)\|([^\[\]|]+)\|_blank\]\]` `<a href="${2}" target="_blank" rel="noopener">${1}</a>` $s -}}
+{{- $s = replaceRE `\[\[([^\[\]|]+)\|([^\[\]|]+)\]\]` `<a href="${2}">${1}</a>` $s -}}
+{{- return ($s | safeHTML) -}}

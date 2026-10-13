@@ -30,4 +30,7 @@ sections:
   cta_primary_link: /contact/
   cta_secondary: Find a Clinic Near You
   cta_secondary_link: /locations/
+  extra_buttons:
+    - text: "CALL TODAY"
+      link: "tel:(219) 791-9200"
 ---

@@ -17,13 +17,17 @@
       {{ with .GetTerms "categories" }}{{ with index . 0 }}<a href="{{ .Page.RelPermalink }}" class="article-category-badge">{{ .Page.Title }}</a>{{ end }}{{ end }}
       {{ if not .Date.IsZero }}<time class="article-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Params.date_label | default (.Date.Format "January 2, 2006") }}</time>{{ end }}
       <span class="article-date">{{ .ReadingTime }} min read</span>
-      {{ with $author }}<span class="article-date">By {{ . }}</span>{{ end }}
+      {{ with ($.Params.byline | default $author) }}<span class="article-date">By {{ partial "rt.html" . }}</span>{{ end }}
     </div>
   </div>
 </section>
 
 <section class="section">
   <div class="container">
+    <div class="filter-chips" role="navigation" aria-label="Blog categories">
+      <a href="/blog/" class="filter-chip">All Posts</a>
+      {{ range site.Taxonomies.categories.Alphabetical }}<a href="{{ .Page.RelPermalink }}" class="filter-chip">{{ lower .Page.Title }}</a>{{ end }}
+    </div>
     {{ partial "breadcrumbs.html" (dict "page" .) }}
     <div class="post-layout{{ if $toc }} has-toc{{ end }}">
       <article class="post-main">
@@ -55,6 +59,15 @@
   {{- $same := where (where site.RegularPages "Type" "blog-post") "Params.categories" "intersect" (slice $cat) -}}
   {{- $related = first 3 (where $same "RelPermalink" "ne" $.RelPermalink) -}}
 {{- end -}}
+{{ with .Params.recent_posts }}
+<section class="section services-section">
+  <div class="container">
+    {{ partial "section-header.html" (dict "title" "Recent Posts") }}
+    <div class="card-grid resources-grid">{{ range . }}{{ with site.GetPage (printf "/post/%s" .) }}{{ partial "post-card.html" . }}{{ end }}{{ end }}</div>
+  </div>
+</section>
+{{ end }}
+
 {{ if $related }}
 <section class="section services-section">
   <div class="container">

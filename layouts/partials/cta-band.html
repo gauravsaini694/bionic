@@ -2,10 +2,11 @@
 <section class="final-cta reveal" data-reveal="fade">
   <div class="container final-cta-inner">
     <h2>{{ .title }}</h2>
-    {{ with .body }}<p>{{ . }}</p>{{ end }}
+    {{ with .body }}<p>{{ partial "rt.html" . }}</p>{{ end }}
     <div class="final-cta-actions">
       {{ with .primary }}<a href="{{ $.primary_link }}" class="btn btn-primary btn-lg">{{ . }}</a>{{ end }}
       {{ with .secondary }}<a href="{{ $.secondary_link }}" class="btn btn-outline btn-lg">{{ . }}</a>{{ end }}
+      {{ range .extra_buttons }}<a href="{{ .link | safeURL }}" class="btn btn-primary btn-lg"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a>{{ end }}
     </div>
   </div>
 </section>

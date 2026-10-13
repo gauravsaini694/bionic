@@ -10,6 +10,8 @@ locations_title: "Our Kentucky Locations"
 consult:
   title: "Schedule Your Consultation Today!"
   body: "If you're ready to regain your mobility, contact your nearest Kentucky clinic to schedule a free consultation or get more information about our services."
+  cta_text: "Schedule a Free Consultation"
+  cta_link: "/book-appointment-pay-bill/"
 faq:
   - question: "Q: What services are offered at your Kentucky clinics?"
     answer: "We offer a full range of prosthetic and orthotic services, including:Custom prosthetics (Above-knee, below-knee) . Pediatric prosthetics . Sports prosthetics . Custom orthotics and braces"

@@ -38,7 +38,7 @@
       </div>
       <div class="quick-pills">
         {{ range $hero.quick_links }}
-        <a href="{{ .link }}" class="quick-pill">
+        <a href="{{ .link }}" class="quick-pill"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}>
           <span class="pill-ic">{{ partial "icon.html" .icon }}</span>
           {{ .label }}
         </a>

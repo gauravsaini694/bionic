@@ -10,6 +10,8 @@ locations_title: "Our Wisconsin Locations"
 consult:
   title: "Schedule Your Consultation Today!"
   body: "Ready to regain your mobility and improve your quality of life? Contact your nearest Wisconsin clinic to schedule a free consultation or learn more about our prosthetics and orthotics services."
+  cta_text: "Schedule a Free Consultation"
+  cta_link: "/book-appointment-pay-bill/"
 faq:
   - question: "Q: Do I need a referral to visit a Bionic clinic in Wisconsin?"
     answer: "No, you do not need a referral. You can schedule a consultation directly by calling or emailing the clinic of your choice."

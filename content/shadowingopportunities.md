@@ -39,7 +39,7 @@ sections:
 
   - type: "cta-band"
     title: "Curious About a Career in O&P?"
-    body: "If you are a student or are even just curious about our work, feel free to reach out to our Human Resources team! If emailing, please include your location and your specific area of interest. Email hr@bionicpo.com or call (219) 791-9200 ext. 5."
+    body: "If you are a student or are even just curious about our work, feel free to reach out to our Human Resources team! If emailing, please include your location and your specific area of interest. Email [[hr@bionicpo.com|mailto:hr@bionicpo.com]] or call (219) 791-9200 ext. 5."
     cta_primary: "Contact Us"
     cta_primary_link: "/contact/"
     cta_secondary: "View Open Positions"

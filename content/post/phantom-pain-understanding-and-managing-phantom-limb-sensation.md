@@ -5,6 +5,7 @@ categories: ["Health and Wellness"]
 image: "/images/about-empowering.png"
 image_alt: "A Bionic clinician in a white coat talking with a seated patient who wears a prosthetic leg"
 entry_type: blog_post
+recent_posts: ["what-is-a-prosthetic-arm-a-complete-introduction-for-new-amputees", "understanding-prosthetics-what-to-expect-after-limb-loss"]
 ---
 
 ## What Is Phantom Limb Pain?

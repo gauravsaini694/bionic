@@ -29,6 +29,12 @@
         </button>
         {{ end }}
       </div>
+      {{ with $p.state_links }}
+      <ul class="state-links">
+        {{ range $d.states }}<li><a href="{{ .url }}"{{ if eq $p.state_links "view" }} aria-label="{{ .name }}"{{ end }}>{{ if eq $p.state_links "view" }}View Locations{{ else }}{{ .name }}{{ end }}</a></li>
+        {{ end }}
+      </ul>
+      {{ end }}
       <div class="clinic-map-wrap">
         <div id="clinic-map" class="clinic-map" data-src="{{ "locations/index.json" | relURL }}" role="region" aria-label="Map of Bionic clinic locations"></div>
         <a href="/locations/" class="clinic-map-state-link" id="clinic-map-state-link" hidden></a>

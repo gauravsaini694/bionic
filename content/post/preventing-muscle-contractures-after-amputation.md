@@ -4,11 +4,12 @@ date: 2025-09-10
 categories: ["Health and Wellness"]
 image: "/images/blog/preventing-muscle-contractures-after-amputation.jpg"
 entry_type: blog_post
+recent_posts: ["what-is-a-prosthetic-arm-a-complete-introduction-for-new-amputees", "understanding-prosthetics-what-to-expect-after-limb-loss"]
 ---
 
 Living with a limb difference or recovering from an amputation comes with its unique challenges. One of the significant concerns during the healing process is the risk of developing muscle contractures, a condition where muscles, tendons, or joints become stiff and lose flexibility. But don\'t worry! By following the right recovery practices, you can significantly reduce the risk of developing contractures and improve mobility in the long term.
 
-What are Contractures, and Why Do They Matter? Contractures occur when muscles and tissues around the amputation site tighten, limiting the movement of the remaining limb. This can be both painful and impact your ability to use a lower limb prosthesis effectively. Maintaining the range of motion in your residual limb and remaining joints is crucial for a more natural gait and reducing energy expenditure when performing basic tasks.
+What are Contractures, and Why Do They Matter? Contractures occur when muscles and tissues around the amputation site tighten, limiting the movement of the remaining limb. This can be both painful and impact your ability to use a [lower limb prosthesis](/lower-limb/#_blank) effectively. Maintaining the range of motion in your residual limb and remaining joints is crucial for a more natural gait and reducing energy expenditure when performing basic tasks.
 
 ## Positioning: The Right Posture Can Make a Difference
 

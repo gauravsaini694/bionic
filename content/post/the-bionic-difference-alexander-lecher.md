@@ -4,13 +4,14 @@ date: 2022-05-13
 categories: ["Success Stories"]
 image: "/images/blog/the-bionic-difference-alexander-lecher.png"
 entry_type: blog_post
+recent_posts: ["success-story-peter", "success-story-rey"]
 ---
 
 Alexander Lecher is not an ordinary boy. Why? Because Alexander is unstoppable.
 
 “He loves to play with his stuffed horse Neigh Neigh,” his mom says. “And he loves to ride his balance bike, play outside in the dirt, pick dandelions, and play at playgrounds. His personality is insanely sweet. He is a people person and loves to show his sweetness to everyone he meets and swoon them with his personality.”
 
-There is seemingly no slide too steep and no playground tower too high to slow him down - but it would surprise many who see him run and climb to learn that Alexander has a full foot prosthesis.
+There is seemingly no slide too steep and no playground tower too high to slow him down - but it would surprise many who see him run and climb to learn that Alexander has a full [foot prosthesis](/lower-limb/#_blank).
 
 ## Macrodactyly & Syme’s Amputation
 
@@ -22,7 +23,7 @@ Once he had recovered from the procedure, it was time for Alexander to begin the
 
 ## Alexander Receives His First Prosthesis
 
-By July of that year, Alex and his family came to Bionic Prosthetics & Orthotics in order to explore their options for Alexander’s future mobility. That is where they met Sheri Harper, CPO. ”Sheri came alongside us as our prosthetist and told us the process and what to expect,” his mother says.
+By July of that year, Alex and his family came to Bionic Prosthetics & Orthotics in order to explore their options for Alexander’s future mobility. That is where they met [Sheri Harper, CPO](/team/sheri-harper,-cpo/#_blank). ”Sheri came alongside us as our prosthetist and told us the process and what to expect,” his mother says.
 
 However, the process of finding the right fit for each person always has complications.
 
@@ -46,7 +47,7 @@ As children with amputations grow, they need to be frequently fitted with new pr
 
 Alexander has never been more ready to explore the world around him and bring smiles to the faces of everyone he meets.
 
-Bionic, Sheri Harper, and James Bitter are thrilled to have been able to play a role in Alexander’s progress, and Katie Lecher is enthusiastic about the care her son has received. “I just want to say how thankful I am for Sheri and the whole team at the Cincinnati Bionic office.”
+Bionic, Sheri Harper, and James Bitter are thrilled to have been able to play a role in Alexander’s progress, and Katie Lecher is enthusiastic about the care her son has received. “I just want to say how thankful I am for Sheri and the whole team at the [Cincinnati Bionic office](/locations/ohio/#_blank).”
 
 Alexander has many adventures to go on as he grows, and he knows exactly what he wants to do next. “He really wants to ride a horse,” his mom says. “At four years old, his aspirations aren’t too far in the future but what I do know is that nothing will stop him from doing anything he sets his mind on.”
 

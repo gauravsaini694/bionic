@@ -16,6 +16,7 @@ faq:
   - question: "When should I contact my prosthetist?"
     answer: "Anytime something feels off, uncomfortable, or harder than it should. Early adjustments often prevent bigger issues later."
 entry_type: blog_post
+recent_posts: ["prosthetic-vs-prosthesis-what-s-the-difference-and-why-it-matters"]
 ---
 
 Getting your first prosthetic leg can feel overwhelming, even if you\'ve spent months preparing for it. Most people don\'t arrive with clear expectations. They arrive with questions, mixed emotions, and a quiet hope that daily life might start feeling easier again.
@@ -24,7 +25,7 @@ That\'s normal.
 
 At Bionic Prosthetics & Orthotics, we see this moment not as a finish line, but as the beginning of a learning process, one that works best when you understand what’s ahead and feel supported along the way.
 
-This guide is written for people who are new to prosthetic care. It focuses on what actually matters early on, using clear language, real-world context, and honest expectations.
+This guide is written for people who are new to [prosthetic care](/prosthetics/#_blank). It focuses on what actually matters early on, using clear language, real-world context, and honest expectations.
 
 ## First, It’s Okay If You Don’t Know What to Expect
 
@@ -160,7 +161,7 @@ If you\'re preparing for your first prosthetic leg and want clear guidance witho
 
 Schedule a consultation with a Bionic Prosthetics & Orthotics clinic near you to talk through what your first prosthetic leg could look like, at your pace.
 
-CONTACT US
+[CONTACT US](/book-appointment-pay-bill/#_blank)
 
 ## Frequently Asked Questions
 

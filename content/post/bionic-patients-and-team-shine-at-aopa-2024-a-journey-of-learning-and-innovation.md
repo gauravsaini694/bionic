@@ -4,6 +4,7 @@ date: 2024-10-04
 categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/bionic-patients-and-team-shine-at-aopa-2024-a-journey-of-learning-and-innovation.png"
 entry_type: blog_post
+recent_posts: ["9-questions-prosthetist-orthotist", "success-story-rey"]
 ---
 
 This past September, several members of the Bionic team had the privilege of attending the annual American Orthotic & Prosthetic Association (AOPA) Conference in Charlotte, NC. The event offered a fantastic opportunity for our clinical team to expand their knowledge, enhance their skills, and stay updated on the latest advancements in the O&P field. With several days filled with educational courses, product demonstrations, and invaluable relationship building, the team is now better equipped to continue delivering top-notch patient care.

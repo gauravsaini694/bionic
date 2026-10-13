@@ -6,6 +6,7 @@ author: "Jason Warne"
 categories: ["Success Stories"]
 image: "/images/blog/success-story-rey.png"
 entry_type: blog_post
+recent_posts: ["the-bionic-difference-alexander-lecher", "success-story-peter"]
 ---
 
 Updated: Apr 7, 2022
@@ -28,7 +29,7 @@ Reynaldo was not about to be slowed down by his accident - but before finding Bi
 
 “It was a good starter leg, but I quickly outgrew it,” Rey says. “It’s been 15 years now that I’ve been walking with a prosthetic leg, and I have noticed that the most important factor is the socket fit. I have some horror stories about how some prosthetists made my socket so big that I could put my whole arm inside.”
 
-With Bionic’s industry-leading technology, clinicians at the Merrillville, Indiana, location were able to use 3D-scanning and design software to create a detailed model for Rey’s prosthetic socket and employed 3D printing technology to test it until it was just right. The socket design he is currently utilizing is a subishcial BioDesigns High Fidelity (HiFi) socket. The (HiFi) socket is focused on lowering the proximal trimlines of the socket and maintaining control of the limb by strategically compressing tissue around the femur. This, coupled with the adjustability of the ClickMedical Revo socket, has enabled Rey to have less restriction at the hip and improved comfort. Overall, this has allowed him to continue to increase his activity without compromising his limb comfort. This allowed the Bionic team to build a durable socket that fits perfectly for Reynaldo, and in less time than it would have taken with traditional methods.
+With Bionic’s industry-leading technology, clinicians at the Merrillville, Indiana, location were able to use 3D-scanning and design software to create a detailed model for Rey’s prosthetic socket and employed 3D printing technology to test it until it was just right. The socket design he is currently utilizing is a subishcial [BioDesigns High Fidelity (HiFi) socket](https://biodesigns.com/hifi-socket/#_blank). The (HiFi) socket is focused on lowering the proximal trimlines of the socket and maintaining control of the limb by strategically compressing tissue around the femur. This, coupled with the adjustability of the [ClickMedical](https://clickmedical.co/#_blank) Revo socket, has enabled Rey to have less restriction at the hip and improved comfort. Overall, this has allowed him to continue to increase his activity without compromising his limb comfort. This allowed the Bionic team to build a durable socket that fits perfectly for Reynaldo, and in less time than it would have taken with traditional methods.
 
 For Rey, the difference is pronounced: “I must say, Bionic is by far the best experience I’ve had thus far. Tony, Shawn, Jignesh, and Emily have always gone above and beyond!”
 
@@ -40,7 +41,7 @@ Now Reynaldo is looking forward to taking the next big step in his life, as he s
 
 At every turn, Rey seems thrilled by the Bionic difference. “I’ve got an extreme, wide experience with different builders—and let me tell you, they are the best one. And that’s not just sugar coating.”
 
-Are you curious about the difference that Bionic could make for you? Take a look at our locations nationwide to find one near you and call for a free consultation!
+Are you curious about the difference that Bionic could make for you? Take a look at [our locations](/locations/#_blank) nationwide to find one near you and call for a [free consultation](/about-us/#_blank)!
 
 Tags:
 

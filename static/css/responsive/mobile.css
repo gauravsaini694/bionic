@@ -94,3 +94,5 @@ h2 { font-size: 24px; }
 .mobile-bar { display: flex; gap: 10px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); background: #fff; border-top: 1px solid var(--border); box-shadow: 0 -6px 18px rgba(20, 30, 60, 0.08); }
 .mobile-bar .btn { flex: 1; padding: 12px 10px; }
 body { padding-bottom: 72px; }
+
+.section-note { font-size: 15px; }

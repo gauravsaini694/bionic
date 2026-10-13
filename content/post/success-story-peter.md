@@ -6,6 +6,7 @@ author: "Cooper Proudfoot"
 categories: ["Success Stories"]
 image: "/images/blog/success-story-peter.png"
 entry_type: blog_post
+recent_posts: ["the-bionic-difference-alexander-lecher", "success-story-rey"]
 ---
 
 Peter Morrison’s life revolved around horses. Riding horseback, caring for his animals, and competing in events far and wide were his passion. However, one morning an accident threatened to take those things - and his highly active lifestyle - away forever.
@@ -18,9 +19,9 @@ The loss of his leg took a heavy toll on Peter and threatened to both completely
 
 With the outstanding demands of his line of work and his decreased mobility, Peter would need very specialized devices to gain back even a semblance of what his life was like before. Peter faced a difficult adjustment for over a year, and he struggled to adapt to his new way of life. But Peter was highly motivated to improve his situation so while he was in recovery from his traumatic accident, he began looking for options to return to his old way of getting around as pain-free as possible.
 
-That is when he found a nearby Bionic location. “We came to Bionic for my prosthesis and never looked back,” he says, “Tony has been so kind, supportive, and helpful in meeting my needs.” Bionic’s state-of-the-art 3D printing process made creating and fitting the perfect prosthetic socket for Peter a reality. The very same day that Peter was cleared for a prosthesis by his surgeon, he was in the Merrillville clinic working with Anthony Gutierrez to create the socket that fit his active lifestyle.
+That is when he [found a nearby Bionic location](/locations/#_blank). “We came to Bionic for my prosthesis and never looked back,” he says, “Tony has been so kind, supportive, and helpful in meeting my needs.” Bionic’s state-of-the-art 3D printing process made creating and fitting the perfect prosthetic socket for Peter a reality. The very same day that Peter was cleared for a prosthesis by his surgeon, he was in the Merrillville clinic working with [Anthony Gutierrez](/team/anthony-gutierrez,-cp/#_blank) to create the socket that fit his active lifestyle.
 
-Bionic was able to fit Peter with a transtibial prosthesis, which refers to a device below the knee - in this case, a Fillauer AllPro. “Today, I can do everything I did before the accident and then some. With Tony and Bionic, there’s not much I can’t do if I put my mind to it!”
+Bionic was able to fit Peter with a [transtibial prosthesis](/lower-limb/#_blank), which refers to a device below the knee - in this case, a [Fillauer AllPro](https://fillauer.com/allpro/#_blank). “Today, I can do everything I did before the accident and then some. With Tony and Bionic, there’s not much I can’t do if I put my mind to it!”
 
 Peter still returns to our Bionic locations for everything from repairs to adjustments, and we are always happy to see him back on his feet and doing well.
 

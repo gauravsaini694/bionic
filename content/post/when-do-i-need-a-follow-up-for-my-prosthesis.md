@@ -61,4 +61,4 @@ Your peace of mind is part of your care.
 
 Don’t wait for pain, discomfort, or problems.Follow-ups are like your health’s pit stop: quick, essential, and the best way to keep you moving forward.
 
-Book your next visit today because your best days are ahead, and we’ll help you get there.
+[Book your next visit today](/locations/#_blank) because your best days are ahead, and we’ll help you get there.

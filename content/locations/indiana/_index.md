@@ -10,6 +10,8 @@ locations_title: "Our Indiana Locations"
 consult:
   title: "Schedule Your Consultation Today!"
   body: "Ready to regain your mobility? Contact your nearest Indiana clinic to schedule a free consultation or learn more about our services."
+  cta_text: "Schedule a Free Consultation"
+  cta_link: "/book-appointment-pay-bill/"
 faq:
   - question: "Q: What should I expect during my first visit to Bionic Prosthetics & Orthotics?"
     answer: "During your first visit, you’ll meet with one of our experienced clinicians who will:Assess your needs and goals. . Take measurements for a custom prosthetic or orthotic device. . Discuss your treatment options and help you understand the fitting process."

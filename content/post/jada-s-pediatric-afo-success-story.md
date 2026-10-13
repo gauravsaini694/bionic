@@ -4,6 +4,7 @@ date: 2026-01-28
 categories: ["Success Stories", "Prosthetics and Orthotics"]
 image: "/images/blog/jada-s-pediatric-afo-success-story.jpg"
 entry_type: blog_post
+recent_posts: ["how-weather-affects-prosthetics-tips-for-managing-seasonal-changes", "understanding-prosthetics-what-to-expect-after-limb-loss", "prosthetic-vs-prosthesis-what-s-the-difference-and-why-it-matters"]
 ---
 
 ## Small Steps, Big Confidence: How an AFO Helped Jada Find Her Rhythm
@@ -24,7 +25,7 @@ That was Jada’s reality.
 
 The goal wasn’t to change who she was. It was to support how she moved.
 
-After careful evaluation and a lot of listening, our care team recommended a custom AFO (Ankle-Foot Orthosis). Not as a restriction, but as a guide. Something designed to support alignment, improve stability, and reduce the effort her body was putting into every step. An AFO doesn’t replace movement. It supports it, quietly, consistently, and patiently.
+After careful evaluation and a lot of listening, our care team recommended a custom [AFO (Ankle-Foot Orthosis)](/lower-extremity/#_blank). Not as a restriction, but as a guide. Something designed to support alignment, improve stability, and reduce the effort her body was putting into every step. An AFO doesn’t replace movement. It supports it, quietly, consistently, and patiently.
 
 ## More Than a Brace, A Foundation
 
@@ -73,7 +74,7 @@ Dana’s support, Jada’s determination, and a care team focused on listening m
 
 At Bionic P&O, our ABC-certified orthotists don\'t just deliver a device; we provide ongoing adjustments to keep up with growth spurts and changing activity levels.
 
-TALK WITH EXPERTS
+[TALK WITH EXPERTS](/book-appointment-pay-bill/#_blank)
 
 ## A Community That Believes in Small Wins
 
@@ -97,7 +98,7 @@ Sometimes all it takes is the right support, at the right time, and a community 
 
 If your child is struggling with balance, walking, or fatigue, early orthotic care can make a meaningful difference.
 
-Connect with the Bionic Prosthetics & Orthotics team to learn how a custom AFO can support your child’s movement, confidence, and growth, one small step at a time.
+[Connect with the Bionic Prosthetics & Orthotics](/locations/#_blank) team to learn how a custom AFO can support your child’s movement, confidence, and growth, one small step at a time.
 
 ## FAQs
 

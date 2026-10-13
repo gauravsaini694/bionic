@@ -6,7 +6,8 @@ hero:
   title: "Build a Career That Moves People"
   subhead: "We started in Merrillville, Indiana. We grew to clinics across the USA. We haven't once lost sight of why we do this; restoring movement, independence, and dignity to the people we serve. Come build something bigger than yourself."
   cta_primary: "View Open Positions"
-  cta_primary_link: "/grow/"
+  cta_primary_link: "https://bionicprostheticsandorthotics.applytojob.com/apply/"
+  cta_primary_new_tab: true
   cta_secondary: "Explore the Residency Program"
   cta_secondary_link: "/residency-program/"
 
@@ -64,7 +65,7 @@ sections:
     title: "Ready to Start Something Meaningful?"
     body: "Whether you're a seasoned CPO, a post-graduate resident, or a student taking your first step there's a place for you at Bionic."
     cta_primary: "View Open Positions"
-    cta_primary_link: "/grow/"
+    cta_primary_link: "/locations/"
     cta_secondary: "Contact Us"
     cta_secondary_link: "/contact/"
 ---

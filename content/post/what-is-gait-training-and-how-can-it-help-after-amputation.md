@@ -4,6 +4,7 @@ date: 2025-09-11
 categories: ["Health and Wellness"]
 image: "/images/blog/what-is-gait-training-and-how-can-it-help-after-amputation.jpg"
 entry_type: blog_post
+recent_posts: ["what-is-a-prosthetic-arm-a-complete-introduction-for-new-amputees", "understanding-prosthetics-what-to-expect-after-limb-loss"]
 ---
 
 ## So, What Exactly Is Gait Training?
@@ -21,4 +22,4 @@ Simple exercises may also make a big impact. Your physical therapist will be abl
 
 Let’s Walk This Journey Together At Bionic Prosthetics & Orthotics, we understand that every step counts, because we’ve helped thousands of people take them. Whether you are a new amputee or has lived with an amputation for several years, we are here with expert guidance and personalized care to help you move better, feel stronger, and live fuller.
 
-Ready to take the next step in your recovery? Contact us today to book a consultation with our gait training specialists.
+Ready to take the next step in your recovery? [Contact us today](/book-appointment-pay-bill/#_blank) to book a consultation with our gait training specialists.

@@ -41,5 +41,8 @@ sections:
     cta_primary_link: "/contact/"
     cta_secondary: "Explore Patient Resources"
     cta_secondary_link: "/patient-resources/"
+    extra_buttons:
+      - text: "Call Us"
+        link: "tel:(219) 791-9200"
 faq_schema: true
 ---

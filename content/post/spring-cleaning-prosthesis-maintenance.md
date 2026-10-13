@@ -4,6 +4,7 @@ date: 2025-05-20
 categories: ["Prosthetics and Orthotics", "Health and Wellness"]
 image: "/images/blog/spring-cleaning-prosthesis-maintenance.png"
 entry_type: blog_post
+recent_posts: ["prosthetic-vs-prosthesis-what-s-the-difference-and-why-it-matters"]
 ---
 
 As we venture through spring, the change in weather gives us the motivation to clean up the parts of the house that were seemingly neglected all winter long. You may be tending to the garden, mowing the lawn, power washing the patio, or cleaning the gutters. But, spring cleaning for an amputee is more than just cleaning out the garage.
@@ -34,7 +35,7 @@ An increase in heat can cause blood vessels to dilate, causing a swollen residua
 
 While spring weather may not be detrimental to your device and its fit, it is important to check your liner, device, and residual limb daily and make note of any swelling, inflammation or irritation.
 
-Never hesitate to reach out to your prosthetist to schedule an appointment if you have concerns. Early intervention is key. We have multiple Bionic Clinic locations around the nation with a knowledgeable clinical team ready to help with prosthesis maintenance when you have questions.
+Never hesitate to reach out to your prosthetist to [schedule an appointment](/book-appointment-pay-bill/#_blank) if you have concerns. Early intervention is key. We have multiple [Bionic Clinic locations](/locations/#_blank) around the nation with a knowledgeable [clinical team ready to help with prosthesis maintenance](/team/#_blank) when you have questions.
 
 ## Schedule Regular Check-ups For Prosthesis Maintenance
 

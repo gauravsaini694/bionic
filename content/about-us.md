@@ -91,4 +91,7 @@ sections:
     cta_primary_link: "/contact/"
     cta_secondary: "Find a Location Near You"
     cta_secondary_link: "/locations/"
+    extra_buttons:
+      - text: "CALL TODAY"
+        link: "tel:1-855-524-6642"
 ---

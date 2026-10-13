@@ -6,15 +6,17 @@ author: "Tony Gutierrez, the National Clinical Specialist for Bionic Prosthetics
 categories: ["Success Stories"]
 image: "/images/blog/tony-gutierrez-growing-with-bionic.png"
 entry_type: blog_post
+recent_posts: ["success-story-peter", "success-story-rey"]
+byline: "[[Tony Gutierrez|/team/anthony-gutierrez,-cp/|_blank]], the National Clinical Specialist for Bionic Prosthetics & Orthotics. Ready to take the next steps? Find out how you could [[jumpstart your O&P career with Bionic|/grow/|_blank]]."
 ---
 
 ## Career Growth & Personal Development
 
-I joined Bionic in 2014 and started in the office in Tinley Park, Illinois. I came to Bionic from a local competitor that only focused on revenue at the expense of the patient and a growth path full of empty promises. I wanted to join a team that could help me develop my ideal practice. I was hopeful that I would find that in Bionic.
+I joined Bionic in 2014 and started in the office in [Tinley Park, Illinois](/clinics/tinley-park/#_blank). I came to Bionic from a local competitor that only focused on revenue at the expense of the patient and a growth path full of empty promises. I wanted to join a team that could help me develop my ideal practice. I was hopeful that I would find that in Bionic.
 
 I was given a yearly revenue goal with a plan to reach salary bonuses and an open path to reach it, but it was up to me to develop my referral sources. I had room to succeed, if I was willing to rise to the challenge.
 
-At the beginning I struggled with marketing myself. It didn\'t take me long to realize that marketing was simply being an advocate for my patients\' best interests in their clinical care and discussing this openly with as many members of their clinical team as possible. This understanding opened the door to so many opportunities and relationships with multiple members of the care team, which have improved my life and the lives of so many others.
+At the beginning I struggled with marketing myself. It didn\'t take me long to realize that marketing was simply being an advocate for my patients\' best interests in their clinical care and discussing this openly with as many members of their clinical team as possible. This understanding opened the door to so many opportunities and relationships with multiple members of the [care team](/team/#_blank), which have improved my life and the lives of so many others.
 
 I embraced the challenge and worked tirelessly with other clinicians in the Chicago area to grow and expand our practice (Initially 1 practice, now 5). I then took the challenge one step further and was the first to open a practice in a remote, or non-connected, area. This was quite a challenge as entering a new small community with established care providers was difficult, but we have managed to create a thriving practice in the Lafayette area that has now expanded to Terre Haute and Indianapolis.
 

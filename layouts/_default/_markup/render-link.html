@@ -1,0 +1,5 @@
+{{- /* Markdown links. A trailing "#_blank" on the destination opens the link in a new tab. */ -}}
+{{- $dest := .Destination -}}
+{{- $newTab := strings.HasSuffix $dest "#_blank" -}}
+{{- if $newTab }}{{ $dest = strings.TrimSuffix "#_blank" $dest }}{{ end -}}
+<a href="{{ $dest | safeURL }}"{{ with .Title }} title="{{ . }}"{{ end }}{{ if $newTab }} target="_blank" rel="noopener"{{ end }}>{{ .Text | safeHTML }}</a>

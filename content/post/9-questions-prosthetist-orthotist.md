@@ -5,6 +5,7 @@ categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/when-do-i-need-a-follow-up-for-my-prosthesis.jpg"
 image_alt: "Two smiling women in a Bionic clinic striking a balancing pose, one wearing a prosthetic leg"
 entry_type: blog_post
+recent_posts: ["prosthetic-vs-prosthesis-what-s-the-difference-and-why-it-matters"]
 ---
 
 Every appointment you make with your prosthetist or orthotist has a chance to increase your mobility, reduce pain and discomfort, and improve your life. But how you spend that time could determine how effective your visit is.
@@ -25,7 +26,7 @@ This question will help you gauge how ready your clinician might be to take on y
 
 ## 2\. Do you utilize the most up-to-date and advanced technology available for my needs?
 
-The O&P industry has seen a wealth of technological progress in the last decade, with devices like 3D printers and myoelectric limbs leading the charge into what would have once been called science fiction.
+The O&P industry has seen a wealth of technological progress in the last decade, with devices like [3D printers](https://www.tiktok.com/@bionicp_o/video/7114304501980613934?is_copy_url=1&is_from_webapp=v1#_blank) and [myoelectric limbs](https://www.tiktok.com/@bionicp_o/video/7113956089632181546?is_copy_url=1&is_from_webapp=v1#_blank) leading the charge into what would have once been called science fiction.
 
 Bionic is focused on using evidence-based practices to drive our clinical care. We embrace the best tech available for your unique needs. Don\'t settle, and don\'t be afraid to ask what might be possible in restoring your mobility and capabilities.
 

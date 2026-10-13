@@ -1,9 +1,10 @@
 ---
 title: "A Day in the Life: Living With a Bionic Limb"
-date: 2025-12-02
+date: 2025-12-02T12:00:00
 categories: ["Success Stories"]
 image: "/images/blog/a-day-in-the-life-living-with-a-bionic-limb.jpg"
 entry_type: blog_post
+recent_posts: ["what-is-a-prosthetic-arm-a-complete-introduction-for-new-amputees", "how-weather-affects-prosthetics-tips-for-managing-seasonal-changes", "understanding-prosthetics-what-to-expect-after-limb-loss"]
 ---
 
 ## Real Stories. Real Wins. Real Strength.

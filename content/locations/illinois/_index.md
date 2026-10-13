@@ -10,6 +10,8 @@ locations_title: "Our Illinois Locations"
 consult:
   title: "Schedule Your Consultation Today!"
   body: "Are you ready to regain your mobility? Contact your nearest Illinois clinic to schedule a free consultation or learn more about our prosthetic and orthotic services."
+  cta_text: "Schedule a Free Consultation"
+  cta_link: "/book-appointment-pay-bill/"
 faq:
   - question: "Q: What should I bring to my first appointment?"
     answer: "Please bring your insurance information, ID, and any medical records you have related to your prosthetic or orthotic needs."

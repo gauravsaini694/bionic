@@ -4,6 +4,7 @@ date: 2026-02-03
 categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/understanding-prosthetics-what-to-expect-after-limb-loss.jpg"
 entry_type: blog_post
+recent_posts: ["jada-s-pediatric-afo-success-story"]
 ---
 
 Limb loss changes many things at once.
@@ -16,7 +17,7 @@ If you’re beginning to explore prosthetics, it’s common to feel uncertain.
 
 Not just about the device itself, but about what the process will ask of you physically and emotionally.
 
-At Bionic Prosthetics & Orthotics, prosthetic care is treated as a journey, not a transaction. Understanding what comes next can make that journey feel more manageable.
+At [Bionic Prosthetics & Orthotics](/#_blank), prosthetic care is treated as a journey, not a transaction. Understanding what comes next can make that journey feel more manageable.
 
 This blog is written to answer the questions people often carry but don’t always know how to ask.
 
@@ -183,7 +184,7 @@ If you’re navigating life after limb loss and want clear, patient-centered gui
 
 Schedule a consultation with a Bionic Prosthetics & Orthotics clinic near you to talk through your options, at your pace.
 
-Book a free Consultation
+[Book a free Consultation](/book-appointment-pay-bill/#_blank)
 
 ## Frequently Asked Questions
 

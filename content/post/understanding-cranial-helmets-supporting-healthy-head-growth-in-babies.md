@@ -10,7 +10,7 @@ Every baby grows at their own pace learning to roll, sit, smile, and interact wi
 
 Sometimes, this flexibility can lead to flat spots or uneven shaping of the head. This is known as plagiocephaly, and it’s more common than many parents realize. The good news? With the right guidance and gentle treatment, the head shape can often be corrected.
 
-One of the most effective treatments is a cranial remolding helmet, also known as a cranial orthosis, a safe, lightweight device that gently encourages the baby’s skull to grow into a more symmetrical shape.
+One of the most effective treatments is a cranial remolding helmet, also known as a [cranial orthosis,](/cranial-spinal/#_blank) a safe, lightweight device that gently encourages the baby’s skull to grow into a more symmetrical shape.
 
 At Bionic Prosthetics & Orthotics, we work closely with families to support this process with care, clarity, and compassion.
 
