@@ -3,7 +3,7 @@
 <nav class="crumbs{{ if .light }} crumbs-light{{ end }}" aria-label="Breadcrumb">
   <ol>
     <li><a href="/">Home</a></li>
-    {{ range $pg.Ancestors.Reverse }}{{ if not .IsHome }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}{{ end }}
+    {{ with $pg.Params.breadcrumbs }}{{ range . }}{{ with site.GetPage . }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}{{ end }}{{ else }}{{ range $pg.Ancestors.Reverse }}{{ if not .IsHome }}<li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>{{ end }}{{ end }}{{ end }}
     <li><span aria-current="page">{{ $pg.Params.name | default $pg.Title }}</span></li>
   </ol>
 </nav>

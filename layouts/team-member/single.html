@@ -29,9 +29,9 @@
         <h2 class="tm-name">{{ .Params.name }}</h2>
         {{ with .Params.credentials }}<div class="team-credentials">{{ . }}</div>{{ end }}
         {{ with .Params.role }}<div class="team-role">{{ . }}</div>{{ end }}
-        {{ range first 1 (where (where site.RegularPages "Type" "executive-member") "Params.clinical_profile" $.RelPermalink) }}
-        <p class="tm-also"><a href="{{ .RelPermalink }}">Also on our Executive Team <span aria-hidden="true">→</span></a></p>
-        {{ end }}
+        {{ $self := . }}{{ range where site.RegularPages "Type" "executive-member" }}{{ $ex := . }}{{ with .Params.clinical_profile }}{{ with site.GetPage . }}{{ if eq .RelPermalink $self.RelPermalink }}
+        <p class="tm-also"><a href="{{ $ex.RelPermalink }}">Also on our Executive Team <span aria-hidden="true">→</span></a></p>
+        {{ end }}{{ end }}{{ end }}{{ end }}
         {{ if $locs }}
         <h3 class="tm-label">Clinic{{ if gt (len $locs) 1 }}s{{ end }}</h3>
         <ul class="tm-list">

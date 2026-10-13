@@ -1,7 +1,7 @@
 {{ define "head" }}{{ partial "clinic-schema.html" . }}{{ end }}
 
 {{ define "main" }}
-{{- $state := .Parent -}}
+{{- $state := site.GetPage (printf "/locations/%s" (.Params.state | urlize)) -}}
 {{- $city := .Params.city | default .Title -}}
 {{- $addr := .Params.address -}}
 {{- $phone := .Params.phone -}}
@@ -141,7 +141,7 @@
 {{- range .Params.team -}}
   {{- $name := .name -}}{{- $title := .title -}}{{- $photo := .photo -}}{{- $creds := .credentials -}}{{- $link := .link | default "" -}}
   {{- with .clinician -}}
-    {{- with site.GetPage (printf "/about/clinical-team/%s" .) -}}
+    {{- with site.GetPage (printf "/team/%s" .) -}}
       {{- $name = $name | default .Params.name -}}{{- $title = $title | default .Params.role -}}{{- $photo = $photo | default .Params.photo -}}{{- $creds = $creds | default .Params.credentials -}}{{- $link = $link | default .RelPermalink -}}
     {{- end -}}
   {{- end -}}
@@ -235,7 +235,7 @@
 <!-- ===== NEARBY CLINICS ===== -->
 {{- $self := . -}}
 {{- $near := slice -}}
-{{- range where $state.RegularPages "RelPermalink" "ne" .RelPermalink -}}
+{{- range where (where (where site.RegularPages "Type" "clinic") "Params.state" $state.Title) "RelPermalink" "ne" .RelPermalink -}}
   {{- $c := dict "page" . "name" .Title -}}
   {{- if and $hasGeo .Params.lat .Params.lng -}}
     {{- $r := div math.Pi 180 -}}

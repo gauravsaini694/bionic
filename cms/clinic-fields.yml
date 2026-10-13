@@ -1,4 +1,4 @@
-# Field definitions for a clinic page (content/locations/<state>/<city>/index.md).
+# Field definitions for a clinic page (content/clinics/<city>.md).
 # Written in Decap/Netlify-CMS "fields" format so it can be dropped into a collection or
 # translated to any other CMS. No CMS config existed in this repo, so this is a reference schema.
 fields:

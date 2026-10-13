@@ -98,7 +98,7 @@
 {{ partial "clinic-finder.html" (dict "page" $ "params" $s) }}
 
 {{ else if eq $s.type "leadership" }}
-{{ $exec := site.GetPage "/about/executive-team" }}
+{{ $exec := site.GetPage "/executive-team" }}
 {{ with $exec }}{{ if .Pages }}
 <section class="section leadership-section">
   <div class="container">

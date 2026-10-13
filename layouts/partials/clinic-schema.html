@@ -1,4 +1,5 @@
 {{- /* MedicalClinic + BreadcrumbList JSON-LD. Everything comes from the clinic's front matter. */ -}}
+{{- $state := site.GetPage (printf "/locations/%s" (.Params.state | urlize)) -}}
 {{- $addr := .Params.address | default "" -}}
 {{- $parts := split $addr "," -}}
 {{- $postal := dict "@type" "PostalAddress" "addressCountry" "US" -}}
@@ -31,6 +32,6 @@
   {{- end -}}
   {{- if $spec }}{{ $s = merge $s (dict "openingHoursSpecification" $spec) }}{{ end -}}
 {{- end -}}
-{{- $crumbs := slice (dict "@type" "ListItem" "position" 1 "name" "Home" "item" site.Home.Permalink) (dict "@type" "ListItem" "position" 2 "name" "Locations" "item" (site.GetPage "/locations").Permalink) (dict "@type" "ListItem" "position" 3 "name" .Parent.Title "item" .Parent.Permalink) (dict "@type" "ListItem" "position" 4 "name" .Title "item" .Permalink) -}}
+{{- $crumbs := slice (dict "@type" "ListItem" "position" 1 "name" "Home" "item" site.Home.Permalink) (dict "@type" "ListItem" "position" 2 "name" "Locations" "item" (site.GetPage "/locations").Permalink) (dict "@type" "ListItem" "position" 3 "name" $state.Title "item" $state.Permalink) (dict "@type" "ListItem" "position" 4 "name" .Title "item" .Permalink) -}}
 <script type="application/ld+json">{{ $s | jsonify | safeJS }}</script>
 <script type="application/ld+json">{{ dict "@context" "https://schema.org" "@type" "BreadcrumbList" "itemListElement" $crumbs | jsonify | safeJS }}</script>

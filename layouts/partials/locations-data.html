@@ -1,11 +1,11 @@
-{{- /* Single source of truth: builds states + clinics from content/locations/. Returns a dict. */ -}}
+{{- /* Single source of truth: builds states + clinics from content/locations/ (states) and content/clinics/ (clinics). Returns a dict. */ -}}
 {{- $loc := site.GetPage "/locations" -}}
 {{- $states := slice -}}
 {{- $clinics := slice -}}
 {{- range $loc.Sections.ByTitle -}}
   {{- $st := . -}}
   {{- $n := 0 -}}
-  {{- range .RegularPages.ByTitle -}}
+  {{- range (where site.RegularPages "Type" "clinic").ByTitle -}}{{- if eq .Params.state $st.Title -}}
     {{- $zip := .Params.zip -}}
     {{- if not $zip -}}
       {{- with findRE `\b\d{5}\s*$` (.Params.address | default "" | strings.TrimSpace) 1 -}}{{- $zip = strings.TrimSpace (index . 0) -}}{{- end -}}
@@ -15,6 +15,7 @@
     {{- with .Params.lng }}{{ $c = merge $c (dict "lng" .) }}{{ end -}}
     {{- $clinics = $clinics | append $c -}}
     {{- $n = add $n 1 -}}
+  {{- end -}}
   {{- end -}}
   {{- if $n -}}
     {{- $states = $states | append (dict "name" $st.Title "url" $st.RelPermalink "count" $n) -}}

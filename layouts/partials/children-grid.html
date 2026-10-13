@@ -22,5 +22,5 @@
   </div>
 </section>
 {{- else if eq $pg.Type "blog" -}}
-{{ partial "blog-index.html" (dict "page" $pg "pages" $pg.Pages.ByDate.Reverse "params" $p) }}
+{{ partial "blog-index.html" (dict "page" $pg "pages" (where site.RegularPages "Type" "blog-post").ByDate.Reverse "params" $p) }}
 {{- end -}}

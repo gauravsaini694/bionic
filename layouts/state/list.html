@@ -1,6 +1,6 @@
 {{ define "main" }}
 {{- $state := . -}}
-{{- $clinics := .RegularPages.ByTitle -}}
+{{- $clinics := (where (where site.RegularPages "Type" "clinic") "Params.state" .Title).ByTitle -}}
 {{- $n := len $clinics -}}
 {{- $pins := slice -}}
 {{- range $clinics -}}
