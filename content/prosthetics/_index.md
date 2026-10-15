@@ -6,9 +6,9 @@ hero:
   eyebrow: YOUR PROSTHETIC JOURNEY STARTS HERE
   title: Prosthetic Care Built Around You
   subhead: Over 2 million Americans live with limb loss. Getting the right prosthetics--one that fits your body, your job, your life, makes all the difference. At Bionic PO, we build that device with you, not just for you.
-  cta_primary: Request a Consultation
-  cta_primary_link: /contact/
-  cta_secondary: Find a Clinic Near You
+  cta_primary: Book a Consultation
+  cta_primary_link: tel:2197919200
+  cta_secondary: Find Nearest Clinic
   cta_secondary_link: /locations/
 sections:
 - type: text-image
@@ -29,12 +29,14 @@ sections:
     description: The most common prosthetic category in the USA and the area where our clinicians have the deepest expertise. Whether you’ve just had an amputation or you’re replacing an outdated device, we build lower limb prosthetics around your body, your gait, and your goals.
     icon: prosthetic
     link: /lower-limb/
+    link_text: Explore Lower Limb Solutions
     image: /images/lower-limb-prosthetics.webp
     image_alt: A man seated on a park bench wearing a prosthetic leg
   - title: Upper Limb Prosthetics
     description: Upper Limb Prosthetics restore function for upper limb amputations, allowing you to engage in daily activities with ease. Thanks to advanced technology, we offer prosthetic solutions that help you regain independence and live life on your terms, whether it's a partial hand or full arm prosthesis.
     icon: prosthetic
     link: /upper-limb/
+    link_text: Explore Upper Limb Solutions
     image: /images/prosthetics-upper-limb.webp
     image_alt: A smiling man lifting a dumbbell with a prosthetic arm in a gym
 - type: richtext
@@ -62,6 +64,9 @@ sections:
   layout: split
   image: /images/clinical-team.png
   image_alt: A Bionic clinical team member with a patient
+  buttons:
+  - text: Find A Prosthetist Near You
+    link: /locations/
 - type: richtext
   title: The Role of a Certified Prosthetist
   body: <p>A Certified Prosthetist (CP) is a licensed healthcare professional trained to design, fit, and manage prosthetic devices.</p><p>At Bionic P&amp;O, our prosthetists:</p><ul><li>Take time to understand your daily challenges and goals</li><li>Guide component selection based on function, not trends</li><li>Coordinate with physical therapists and care teams</li><li>Provide ongoing adjustments and follow-up care</li></ul>
@@ -100,11 +105,11 @@ sections:
 - type: cta-band
   title: Take the Next Step Toward Regaining Your Independence
   body: Prosthetic success depends as much on the clinician as it does on the device. At Bionic P&O, we are dedicated to helping you live life without limits. Whether you're looking to regain mobility with advanced lower limb prosthetics, restore function with upper limb solutions, or receive personalized care, our team is here to guide you every step of the way. Don’t wait to experience the freedom that comes with customized prosthetic care. Start your journey today with a consultation that’s tailored to your unique needs.
-  cta_primary: Request a Consultation
-  cta_primary_link: /contact/
-  cta_secondary: Find a Clinic Near You
-  cta_secondary_link: /locations/
+  cta_primary: Schedule Your Free Consultation
+  cta_primary_link: tel:2197919200
+  cta_secondary: Contact Us for Your Consultation
+  cta_secondary_link: tel:2197919200
   extra_buttons:
-  - text: Book a Free Consultation
+  - text: CALL TODAY
     link: tel:2197919200
 ---

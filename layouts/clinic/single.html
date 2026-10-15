@@ -31,6 +31,7 @@
       {{ with $phone }}<a href="tel:{{ partial "tel.html" . }}" class="btn btn-primary btn-lg"><span class="icon-sm">{{ partial "icon.html" "phone" }}</span> Call {{ . }}</a>{{ end }}
       {{ with $dir }}<a href="{{ . }}" class="btn btn-outline btn-lg" target="_blank" rel="noopener"><span class="icon-sm">{{ partial "icon.html" "pin" }}</span> Get Directions</a>{{ end }}
       <a href="/contact/" class="btn btn-outline btn-lg">Request Consultation</a>
+      <a href="{{ $state.RelPermalink }}" class="btn btn-outline btn-lg">Back to State</a>
     </div>
   </div>
 </section>
@@ -149,15 +150,21 @@
 {{- end -}}
 {{- $gallery := slice -}}
 {{- range .Params.gallery -}}{{- if reflect.IsMap . }}{{ with .image }}{{ $gallery = $gallery | append (dict "src" . "alt" ($.Title | printf "%s clinic")) }}{{ end }}{{ else }}{{ $gallery = $gallery | append (dict "src" . "alt" ($.Title | printf "%s clinic")) }}{{ end -}}{{- end -}}
-{{- $about := or .Params.description (strings.TrimSpace .Content) -}}
-{{ if or $about .Params.image $gallery }}
+{{- $customAbout := strings.TrimSpace .Content -}}
+{{- $defAbout := hugo.Data.site.clinic_about -}}
+{{ if or $customAbout $defAbout.text .Params.image $gallery }}
 <section class="section">
   <div class="container about-inner {{ if not .Params.image }}cl-about-text{{ end }}">
     <div class="about-copy reveal" data-reveal="fade">
       <span class="eyebrow">ABOUT THE CLINIC</span>
+      {{ if $customAbout }}
       <h2>About Our {{ $city }} Clinic</h2>
       {{ with .Params.description }}<p class="lead">{{ . }}</p>{{ end }}
-      {{ with .Content }}<div class="cl-prose">{{ . }}</div>{{ end }}
+      <div class="cl-prose">{{ .Content }}</div>
+      {{ else }}
+      <h2>{{ $defAbout.title | default "About Us" }}</h2>
+      <div class="cl-prose"><p>{{ $defAbout.text }}</p></div>
+      {{ end }}
     </div>
     {{ with .Params.image }}
     <div class="about-media reveal" data-reveal="up">{{ partial "img.html" (dict "src" . "alt" ($.Params.image_alt | default (printf "%s clinic" $.Title))) }}</div>
@@ -187,7 +194,7 @@
   <div class="container">
     <div class="section-heading reveal" data-reveal="fade">
       <span class="eyebrow">YOUR CARE TEAM</span>
-      <h2>Meet the {{ $city }} Clinicians</h2>
+      <h2>Clinical Team</h2>
     </div>
     <div class="card-grid team-grid">
       {{ range $members }}
@@ -197,6 +204,7 @@
         {{ with .creds }}<div class="team-credentials">{{ . }}</div>{{ end }}
         {{ with .title }}<div class="team-role">{{ . }}</div>{{ end }}
         {{ with .location }}<div class="team-location"><span class="icon-sm">{{ partial "icon.html" "pin" }}</span>{{ . }}</div>{{ end }}
+        {{ if .link }}<span class="team-readmore">Read More <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span></span>{{ end }}
       {{ if .link }}</a>{{ else }}</div>{{ end }}
       {{ end }}
     </div>

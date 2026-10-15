@@ -7,6 +7,7 @@ date_label: "Updated: Mar 6"
 categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/what-is-a-prosthetic-arm-a-complete-introduction-for-new-amputees.jpg"
 entry_type: blog_post
+recent_posts: ["understanding-prosthetics-what-to-expect-after-limb-loss", "how-weather-affects-prosthetics-tips-for-managing-seasonal-changes"]
 ---
 
 Updated: Mar 6
@@ -33,17 +34,25 @@ Every prosthetic arm, whether simple or highly advanced, is built around the sam
 
 The socket is the foundation of the entire prosthetic. It is a custom-molded shell that fits snugly over your residual limb (the remaining portion of your arm after amputation). A poor-fitting socket can cause discomfort, skin irritation, and reduced function, your prosthetist will take precise measurements and create a personalized mold. Socket materials typically include lightweight plastics, carbon fiber composites, or medical-grade silicone.
 
+![What Is a Prosthetic Arm? A Complete Introduction for New Amputees image 1](/images/blog/inline/what-is-a-prosthetic-arm-a-complete-introduction-for-new-amputees/1.png)
+
 ### Suspension System
 
 The suspension system is what keeps the prosthetic arm securely attached to your body. Depending on your amputation level and lifestyle, suspension can be achieved through a harness and strap system, suction, anatomical locking, or a roll-on silicone liner that grips the residual limb. Your clinician will recommend the best option based on your limb shape, activity level, and comfort preferences.
+
+![What Is a Prosthetic Arm? A Complete Introduction for New Amputees image 2](/images/blog/inline/what-is-a-prosthetic-arm-a-complete-introduction-for-new-amputees/2.png)
 
 ### Wrist Unit
 
 The wrist unit connects the terminal device (your prosthetic hand or hook) to the rest of the arm. It allows for positioning, rotation, and, in more advanced systems, powered wrist movement. Some wrist units feature quick-disconnect mechanisms, which let you swap between different terminal devices, for example, switching from a prosthetic hand to a sport-specific attachment.
 
+![What Is a Prosthetic Arm? A Complete Introduction for New Amputees image 3](/images/blog/inline/what-is-a-prosthetic-arm-a-complete-introduction-for-new-amputees/3.png)
+
 ### Terminal Device (Hand or Hook)
 
 The terminal device is the functional end of your prosthetic arm, the part that interacts with the world. Terminal devices come in several forms. A prosthetic hand is designed for cosmetic appearance and fine motor tasks like gripping small objects. A hook or split-hook device offers a wider opening and stronger pinch grip, which many users prefer for work or outdoor activities. Advanced multi-articulating hands, such as myoelectric models, feature individually powered fingers that can perform multiple grip patterns.
+
+![What Is a Prosthetic Arm? A Complete Introduction for New Amputees image 4](/images/blog/inline/what-is-a-prosthetic-arm-a-complete-introduction-for-new-amputees/4.png)
 
 ## How Do You Control a Prosthetic Arm?
 

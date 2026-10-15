@@ -17,4 +17,7 @@ clinic_details:
     phone: "(386) 258-0401"
     email: "daytona@bionicpo.com"
 entry_type: clinician
+noindex: true
+sitemap:
+  disable: true
 ---

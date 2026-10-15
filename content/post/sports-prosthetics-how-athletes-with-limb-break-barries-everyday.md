@@ -27,6 +27,8 @@ Examples include:
 
 Modern sports prosthetics are engineered for performance lighter, more flexible, more responsive. These devices aren’t meant to simply replace a limb; they are designed to enhance motion, energy return, power transfer, and stability.
 
+![SPORTS & PROSTHETICS - HOW ATHLETES WITH LIMB BREAK BARRIES EVERYDAY. image 1](/images/blog/inline/sports-prosthetics-how-athletes-with-limb-break-barries-everyday/1.png)
+
 With the right fit and support system, athletes can move with confidence, power, and natural rhythm.
 
 ## Popular Sports And The Prosthetics That Make Them Possible.
@@ -58,6 +60,8 @@ Climbers often use:
 - Rubberized distal grips
 - Lower limb “climbing feet” with traction
 - Extra-strong socket suspension
+
+![SPORTS & PROSTHETICS - HOW ATHLETES WITH LIMB BREAK BARRIES EVERYDAY. image 2](/images/blog/inline/sports-prosthetics-how-athletes-with-limb-break-barries-everyday/2.jpg)
 
 ## Training Tips For Athletes with Prosthetics
 

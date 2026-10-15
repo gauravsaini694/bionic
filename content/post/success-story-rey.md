@@ -35,6 +35,8 @@ With Bionic’s industry-leading technology, clinicians at the Merrillville, Ind
 
 For Rey, the difference is pronounced: “I must say, Bionic is by far the best experience I’ve had thus far. Tony, Shawn, Jignesh, and Emily have always gone above and beyond!”
 
+![The Bionic Difference: Reynaldo Morales image 1](/images/blog/inline/success-story-rey/1.png)
+
 ## Courtside to Poolside
 
 Reynaldo is thrilled to be back on the court at his local YMCA. Bionic’s prosthetic leg and socket fit Rey’s athletic needs and allow for greater comfort and mobility in both layups and laps around the pool.

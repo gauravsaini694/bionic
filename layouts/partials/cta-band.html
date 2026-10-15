@@ -4,8 +4,8 @@
     <h2>{{ .title }}</h2>
     {{ with .body }}<p>{{ partial "rt.html" . }}</p>{{ end }}
     <div class="final-cta-actions">
-      {{ with .primary }}<a href="{{ $.primary_link }}" class="btn btn-primary btn-lg">{{ . }}</a>{{ end }}
-      {{ with .secondary }}<a href="{{ $.secondary_link }}" class="btn btn-outline btn-lg">{{ . }}</a>{{ end }}
+      {{ with .primary }}<a href="{{ $.primary_link | safeURL }}" class="btn btn-primary btn-lg">{{ . }}</a>{{ end }}
+      {{ with .secondary }}<a href="{{ $.secondary_link | safeURL }}" class="btn btn-outline btn-lg">{{ . }}</a>{{ end }}
       {{ range .extra_buttons }}<a href="{{ .link | safeURL }}" class="btn {{ if .outline }}btn-outline btn-cta-outline{{ else }}btn-primary{{ end }} btn-lg"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}{{ with .aria_label }} aria-label="{{ . }}"{{ end }}>{{ with .icon }}<span class="icon-sm">{{ partial "icon.html" . }}</span> {{ end }}{{ .text }}</a>{{ end }}
     </div>
   </div>

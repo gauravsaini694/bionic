@@ -118,6 +118,10 @@ footer_links:
   url: /patient-resources/
 - name: Blog
   url: /blog/
+- name: Newsletter
+  url: /bionic-beats/
+- name: Contact
+  url: /book-appointment-pay-bill/
 footer_services:
 - name: Prosthetics
   url: /prosthetics/
@@ -129,6 +133,48 @@ footer_services:
   url: /locations/
 - name: Pay My Bill
   url: /book-appointment-pay-bill/
+- name: Upper Limb
+  url: /upper-limb/
+- name: Lower Limb
+  url: /lower-limb/
+- name: Spinal & Cranial
+  url: /cranial-spinal/
+- name: Upper Extremity
+  url: /upper-extremity/
+- name: Lower Extremity
+  url: /lower-extremity/
+footer_locations:
+- name: Florida
+  url: /locations/florida/
+- name: Illinois
+  url: /locations/illinois/
+- name: Indiana
+  url: /locations/indiana/
+- name: Kentucky
+  url: /locations/kentucky/
+- name: Michigan
+  url: /locations/michigan/
+- name: New Jersey
+  url: /locations/new-jersey/
+- name: North Carolina
+  url: /locations/north-carolina/
+- name: Ohio
+  url: /locations/ohio/
+- name: Pennsylvania
+  url: /locations/pennsylvania/
+- name: Tennessee
+  url: /locations/tennessee/
+- name: Texas
+  url: /locations/texas/
+- name: Wisconsin
+  url: /locations/wisconsin/
+footer_career:
+- name: Hiring
+  url: /grow/
+- name: Residency program
+  url: /residency-program/
+- name: Internship
+  url: /shadowingopportunities/
 footer_legal:
 - name: Privacy Policy
   url: /privacy-policy/

@@ -9,8 +9,8 @@
     {{ with .subhead }}<p class="page-hero-subhead">{{ partial "rt.html" . }}</p>{{ end }}
     {{ if or .cta_primary .cta_secondary }}
     <div class="page-hero-actions">
-      {{ with .cta_primary }}<a href="{{ $hero.cta_primary_link }}" class="btn btn-primary btn-lg"{{ if $hero.cta_primary_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ . }}</a>{{ end }}
-      {{ with .cta_secondary }}<a href="{{ $hero.cta_secondary_link }}" class="btn btn-outline btn-lg"{{ if $hero.cta_secondary_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ . }}</a>{{ end }}
+      {{ with .cta_primary }}<a href="{{ $hero.cta_primary_link | safeURL }}" class="btn btn-primary btn-lg"{{ if $hero.cta_primary_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ . }}</a>{{ end }}
+      {{ with .cta_secondary }}<a href="{{ $hero.cta_secondary_link | safeURL }}" class="btn btn-outline btn-lg"{{ if $hero.cta_secondary_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ . }}</a>{{ end }}
       {{ range .extra_buttons }}<a href="{{ .link | safeURL }}" class="btn btn-primary btn-lg"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a>{{ end }}
     </div>
     {{ end }}
@@ -126,7 +126,7 @@
         <div class="service-icon service-icon-{{ .icon }}">{{ partial "icon.html" .icon }}</div>
         <h3>{{ .title }}</h3>
         <p>{{ partial "rt.html" .description }}</p>
-        <span class="card-link">Learn more <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span></span>
+        <span class="card-link">{{ .link_text | default "Learn more" }} <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span></span>
       </a>
       {{ end }}
     </div>
@@ -289,8 +289,8 @@
     <h2>{{ $s.title }}</h2>
     <p>{{ partial "rt.html" $s.body }}</p>
     <div class="final-cta-actions">
-      {{ with $s.cta_primary }}<a href="{{ $s.cta_primary_link }}" class="btn btn-primary btn-lg"{{ if $s.cta_primary_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ . }}</a>{{ end }}
-      {{ with $s.cta_secondary }}<a href="{{ $s.cta_secondary_link }}" class="btn btn-outline btn-lg"{{ if $s.cta_secondary_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ . }}</a>{{ end }}
+      {{ with $s.cta_primary }}<a href="{{ $s.cta_primary_link | safeURL }}" class="btn btn-primary btn-lg"{{ if $s.cta_primary_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ . }}</a>{{ end }}
+      {{ with $s.cta_secondary }}<a href="{{ $s.cta_secondary_link | safeURL }}" class="btn btn-outline btn-lg"{{ if $s.cta_secondary_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ . }}</a>{{ end }}
       {{ range $s.extra_buttons }}<a href="{{ .link | safeURL }}" class="btn btn-primary btn-lg"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}{{ with .aria_label }} aria-label="{{ . }}"{{ end }}>{{ with .icon }}<span class="icon-sm">{{ partial "icon.html" . }}</span> {{ end }}{{ .text }}</a>{{ end }}
       {{ with $s.call }}<a href="{{ .link | safeURL }}" class="btn btn-primary btn-lg"><span class="icon-sm">{{ partial "icon.html" "phone" }}</span> {{ .text }}</a>{{ end }}
     </div>

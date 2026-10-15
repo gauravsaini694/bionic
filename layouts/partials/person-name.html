@@ -1,0 +1,4 @@
+{{- /* "<name>, <credentials>" for clinicians. Context: team member page. Name only when credentials are empty or already part of the name. */ -}}
+{{- $name := .Params.name | default .Title -}}
+{{- with .Params.credentials }}{{ if not (strings.Contains $name ",") }}{{ $name = printf "%s, %s" $name . }}{{ end }}{{ end -}}
+{{- return $name -}}

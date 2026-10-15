@@ -27,6 +27,13 @@ The growth of our clinical teams was due to our focus on quality patient-driven 
 
 I am very proud of these accomplishments, and it was not done alone. There was a lot of hard work, rejection, determination, rejection, and more determination before ultimately reaching success and gaining the trust required to become a preferred provider of care for these medical communities.
 
+{{< gallery cols="2" >}}
+![Tony Gutierrez: Growing with Bionic image 1](/images/blog/inline/tony-gutierrez-growing-with-bionic/1.png)
+![Tony Gutierrez: Growing with Bionic image 2](/images/blog/inline/tony-gutierrez-growing-with-bionic/2.png)
+![Tony Gutierrez: Growing with Bionic image 3](/images/blog/inline/tony-gutierrez-growing-with-bionic/3.png)
+![Tony Gutierrez: Growing with Bionic image 4](/images/blog/inline/tony-gutierrez-growing-with-bionic/4.jpg)
+{{< /gallery >}}
+
 ## Opportunities to Grow as A Certified Prosthetist & Orthotist
 
 ## Community Education & Empowerment
@@ -34,6 +41,8 @@ I am very proud of these accomplishments, and it was not done alone. There was a
 Prior to joining the field of Prosthetics and Orthotics, I was an educator. This has been a central part of my clinical care and my involvement in the medical community. Bionic has continually encouraged me to expand my efforts within the community and to focus on education.
 
 We currently work with a local medical magnet high school in in Indiana to provide a day-long seminar on entrance into the field of prosthetics and orthotics. This is a truly rewarding experience and we have already had some of these students trickle into our clinics as interns.
+
+![Tony Gutierrez: Growing with Bionic image 5](/images/blog/inline/tony-gutierrez-growing-with-bionic/5.png)
 
 ## Commitment to Research
 
@@ -55,6 +64,13 @@ We were able to design and deliver several prostheses for these patients and giv
 
 I am still friends with these dedicated clinicians on social media and often share ideas and solutions amongst ourselves to improve our clinical care on a global network.
 
+{{< gallery cols="2" >}}
+![Tony Gutierrez: Growing with Bionic image 6](/images/blog/inline/tony-gutierrez-growing-with-bionic/6.png)
+![Tony Gutierrez: Growing with Bionic image 7](/images/blog/inline/tony-gutierrez-growing-with-bionic/7.png)
+![Tony Gutierrez: Growing with Bionic image 8](/images/blog/inline/tony-gutierrez-growing-with-bionic/8.png)
+![Tony Gutierrez: Growing with Bionic image 9](/images/blog/inline/tony-gutierrez-growing-with-bionic/9.png)
+{{< /gallery >}}
+
 ## Unlimited Opportunity, Key Support
 
 Bionic has given me an open path to grow into a role that best suits my strengths. This freedom means the world to me and the opportunity I have been given to choose my own path is the best thing about being with Bionic.
@@ -64,3 +80,9 @@ In 2022, I began my transition to a new role as a National Clinical Specialist f
 Bionic has supported me in all of these efforts as they are my passions, and they are all focused on integrating Bionic into its surrounding medical communities.
 
 Bionic has presented itself to me as an open canvas where I can set my own course and change it along the way. I have been able to design my practice and my role to best utilize my strengths and this is the best opportunity anyone can give you!
+
+{{< gallery cols="3" >}}
+![Tony Gutierrez: Growing with Bionic image 10](/images/blog/inline/tony-gutierrez-growing-with-bionic/10.jpg)
+![Tony Gutierrez: Growing with Bionic image 11](/images/blog/inline/tony-gutierrez-growing-with-bionic/11.jpg)
+![Tony Gutierrez: Growing with Bionic image 12](/images/blog/inline/tony-gutierrez-growing-with-bionic/12.jpg)
+{{< /gallery >}}

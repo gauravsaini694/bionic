@@ -37,6 +37,7 @@
     <div class="container cs-overlay-inner reveal" data-reveal="fade">
       {{ with $s.title }}<h2>{{ partial "rt.html" . }}</h2>{{ end }}
       <div class="cs-prose">{{ partial "cs-rich.html" $body }}</div>
+      {{- range $s.buttons }}<p class="cs-cta"><a href="{{ .link | safeURL }}" class="btn btn-primary"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a></p>{{ end }}
     </div>
   </section>
 {{- else if eq $layout "programs" }}

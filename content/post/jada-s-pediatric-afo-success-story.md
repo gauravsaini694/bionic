@@ -59,6 +59,8 @@ Not cautiously. Not on the sidelines. But fully present, wearing her molded inne
 
 That’s the quiet power of an AFO when it’s prescribed early, designed thoughtfully, and supported by people who believe in a child’s potential.
 
+![From First Steps to the School Dance: Jada’s Pediatric AFO Success Story image 1](/images/blog/inline/jada-s-pediatric-afo-success-story/1.jpg)
+
 ## Why Early Orthotic Support Matters
 
 An AFO isn’t about limiting childhood. It’s about protecting it.

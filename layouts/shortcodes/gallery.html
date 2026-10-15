@@ -1,0 +1,2 @@
+{{- /* Image grid. Usage: {{< gallery cols="2" >}} one markdown image per line {{< /gallery >}} (cols 2 or 3) */ -}}
+<div class="post-gallery cols-{{ .Get "cols" | default "2" }}">{{ .Inner | .Page.RenderString }}</div>

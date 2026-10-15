@@ -6,10 +6,9 @@ hero:
   eyebrow: JOIN OUR TEAM
   title: Build a Career That Moves People
   subhead: We started in Merrillville, Indiana. We grew to clinics across the USA. We haven't once lost sight of why we do this; restoring movement, independence, and dignity to the people we serve. Come build something bigger than yourself.
-  cta_primary: View Open Positions
-  cta_primary_link: https://bionicprostheticsandorthotics.applytojob.com/apply/
-  cta_primary_new_tab: true
-  cta_secondary: Explore the Residency Program
+  cta_primary: View All Open Positions →
+  cta_primary_link: /grow/
+  cta_secondary: Learn About Residency →
   cta_secondary_link: /residency-program/
 sections:
 - type: text-image
@@ -45,14 +44,14 @@ sections:
     icon: people
     link: /shadowingopportunities/
 - type: richtext
-  body: '<h2>Now Hiring</h2><p>We''re actively seeking ABC/BOC Certified Prosthetists, Orthotists, CPOs, Regional Managers, Clinic Administrators, and O&amp;P Trainees at clinics across the United States.</p><ul><li>Positions available in IN, KY, TX, OH, FL, NJ, WI, and more</li><li>Full time clinical and leadership roles</li><li>Competitive salary with performance incentives</li><li>Full benefits from day one (health, dental, vision, 401k)</li><li>Relocation assistance available for qualifying roles</li><li>CEU support and ongoing professional development</li></ul><h2>O&amp;P Residency Program</h2><p>Bionic offers a structured 12 month single discipline or 18 month combined O&amp;P residency. Apply through OPRESCAS and earn your hours under ABC certified supervisors.</p><ul><li>12 month (single) or 18 month (combined O&amp;P) program</li><li>Exposure to diverse patient populations and clinical settings</li><li>Advanced imaging, scanning, and 3D printing training</li><li>Documentation, coding, and outcome based care guidance</li><li>In house fabrication lab involvement</li><li>Competitive salary, health insurance, 401k, and PTO</li></ul><h2>Internship Program</h2><p>Bionic welcomes students from clinical, fabrication, and business disciplines. Gain real world exposure at one of our clinics or inside our 5,000 sq. ft. fabrication facility in Merrillville, IN.</p><ul><li>Clinical, fabrication (lab tech), and business tracks available</li><li>Job shadowing and practicum placements across clinic network</li><li>Hands on prosthetic and orthotic fabrication experience</li><li>Business roles: admin, billing, HR, marketing, and more</li><li>Flexible scheduling to accommodate academic calendars</li><li>Direct mentorship from certified, experienced clinicians</li></ul>'
+  body: '<h2>Now Hiring</h2><p>We''re actively seeking ABC/BOC Certified Prosthetists, Orthotists, CPOs, Regional Managers, Clinic Administrators, and O&amp;P Trainees at clinics across the United States.</p><ul><li>Positions available in IN, KY, TX, OH, FL, NJ, WI, and more</li><li>Full time clinical and leadership roles</li><li>Competitive salary with performance incentives</li><li>Full benefits from day one (health, dental, vision, 401k)</li><li>Relocation assistance available for qualifying roles</li><li>CEU support and ongoing professional development</li></ul><h2>O&amp;P Residency Program</h2><h3>Post-Graduate Program</h3><p>Bionic offers a structured 12 month single discipline or 18 month combined O&amp;P residency. Apply through OPRESCAS and earn your hours under ABC certified supervisors.</p><ul><li>12 month (single) or 18 month (combined O&amp;P) program</li><li>Exposure to diverse patient populations and clinical settings</li><li>Advanced imaging, scanning, and 3D printing training</li><li>Documentation, coding, and outcome based care guidance</li><li>In house fabrication lab involvement</li><li>Competitive salary, health insurance, 401k, and PTO</li></ul><h2>Internship Program</h2><p>Bionic welcomes students from clinical, fabrication, and business disciplines. Gain real world exposure at one of our clinics or inside our 5,000 sq. ft. fabrication facility in Merrillville, IN.</p><ul><li>Clinical, fabrication (lab tech), and business tracks available</li><li>Job shadowing and practicum placements across clinic network</li><li>Hands on prosthetic and orthotic fabrication experience</li><li>Business roles: admin, billing, HR, marketing, and more</li><li>Flexible scheduling to accommodate academic calendars</li><li>Direct mentorship from certified, experienced clinicians</li></ul>'
   layout: programs
   block_ctas:
   - text: Apply
     link: /grow/
-  - text: View the Residency Program
+  - text: Apply for Residency
     link: /residency-program/
-  - text: Explore Internships
+  - text: Internship Inquiry
     link: /shadowingopportunities/
 - type: stats
   items:

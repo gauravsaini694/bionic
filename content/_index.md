@@ -41,7 +41,7 @@ about:
   body: At Bionic Prosthetics & Orthotics, we focus on care that fits your life, not just your device. Our team works closely with you to understand your needs, goals, and daily movement. Every solution is customized to support comfort, stability, and long-term confidence.
   image: /images/about-empowering.png
   image_alt: A Bionic clinician in a white coat talking with a seated patient who wears a prosthetic leg
-  cta_text: Meet Our Clinical Team
+  cta_text: Meet Our Team
   cta_link: /team/
 credentials:
   eyebrow: SINCE 2007

@@ -12,8 +12,8 @@ hero:
   eyebrow: FIND CARE NEAR YOU
   title: Bionic Prosthetic & Orthotic Clinic Near You
   subhead: Explore our nationwide network of clinics offering advanced prosthetics and orthotic care to help you regain mobility and live your life to the fullest.
-  cta_primary: Request a Consultation
-  cta_primary_link: /contact/
+  cta_primary: Schedule a Free Consultation
+  cta_primary_link: /book-appointment-pay-bill/
   cta_secondary: Pay My Bill
   cta_secondary_link: /book-appointment-pay-bill/
   extra_buttons:
@@ -48,8 +48,8 @@ sections:
 - type: cta-band
   title: Don't See Your State Listed?
   body: Our network of clinics continues to grow. Reach out and our team will help connect you with the closest available care.
-  cta_primary: Contact Us
-  cta_primary_link: /contact/
+  cta_primary: Book a free consultation
+  cta_primary_link: /book-appointment-pay-bill/
   cta_secondary: Pay My Bill
   cta_secondary_link: /book-appointment-pay-bill/
 ---

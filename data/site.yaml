@@ -26,8 +26,13 @@ footer:
   blurb: Personalized prosthetic and orthotic care, close to home, across {states} states.
   links_heading: Quick Links
   services_heading: Services
+  locations_heading: Locations
+  career_heading: Career
   newsletter_heading: Stay Updated
   newsletter_text: Get monthly care tips and clinic news from Bionic Beats.
   newsletter_placeholder: Email address
   newsletter_button: Join
   rights_text: All Rights Reserved.
+clinic_about:
+  title: About Us
+  text: Bionic Prosthetics and Orthotics is an organization aimed at providing the very best in prosthetic and orthotic care in orthopedic rehabilitation. Bionic Prosthetics and Orthotics was founded with the vision of creating a Prosthetic and Orthotic practice that treats every patient with dignity and first-rate care. We evaluate every patient in detail and design a prosthetic / orthotic rehabilitation program to specifically cater to their needs and demands.

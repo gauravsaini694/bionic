@@ -18,9 +18,13 @@ This is not a story about limitations.
 
 This is a story about living.
 
+![A Day in the Life: Living With a Bionic Limb image 1](/images/blog/inline/a-day-in-the-life-living-with-a-bionic-limb/1.jpg)
+
 ## Meet Jeff Steinberg
 
 Jeff has spent the last 12+ years helping patients build strength, trust, and connection with their prostheses. We sat down with him to understand the real day-to-day experience of living with a bionic limb.
+
+![A Day in the Life: Living With a Bionic Limb image 2](/images/blog/inline/a-day-in-the-life-living-with-a-bionic-limb/2.jpg)
 
 For many amputees, the day begins with residual limb care:
 

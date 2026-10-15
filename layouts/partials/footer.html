@@ -38,6 +38,24 @@
     </div>
 
     <div class="footer-col">
+      <h4>{{ $s.footer.locations_heading | default "Locations" }}</h4>
+      <ul>
+        {{ range $nav.footer_locations }}
+        <li><a href="{{ .url }}" class="footer-link">{{ .name }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>{{ $s.footer.career_heading | default "Career" }}</h4>
+      <ul>
+        {{ range $nav.footer_career }}
+        <li><a href="{{ .url }}" class="footer-link">{{ .name }}</a></li>
+        {{ end }}
+      </ul>
+    </div>
+
+    <div class="footer-col footer-news">
       <h4>{{ $s.footer.newsletter_heading }}</h4>
       <p>{{ $s.footer.newsletter_text }}</p>
       <form class="footer-newsletter" name="newsletter" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">

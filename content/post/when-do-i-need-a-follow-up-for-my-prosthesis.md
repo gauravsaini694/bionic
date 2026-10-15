@@ -6,6 +6,7 @@ date_label: "Updated: Sep 25, 2025"
 categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/when-do-i-need-a-follow-up-for-my-prosthesis.jpg"
 entry_type: blog_post
+recent_posts: ["what-is-a-prosthetic-arm-a-complete-introduction-for-new-amputees", "understanding-prosthetics-what-to-expect-after-limb-loss"]
 ---
 
 “Do I really need to go back?” We get it, after your first visit you might feel great and think, “Everything’s fine, why go back?”

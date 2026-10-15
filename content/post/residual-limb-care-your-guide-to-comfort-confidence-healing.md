@@ -25,6 +25,8 @@ Quick fact: 60–70% of prosthetic users report at least one episode of skin irr
 
 Inspect your residual limb daily especially after long prosthesis wear.
 
+![Residual Limb Care: Your Guide to Comfort, Confidence & Healing image 1](/images/blog/inline/residual-limb-care-your-guide-to-comfort-confidence-healing/1.jpg)
+
 Look out for:
 
 - Redness that lasts more than 15–20 minutes
@@ -45,6 +47,8 @@ A healthy limb starts with a clean limb.Follow this simple daily routine to redu
 - Air out your socket: Wipe it clean weekly with a damp cloth and let it dry naturally.
 
 Pro Tip by [Bionic Prosthetic & Orthotics Experts](/team/#_blank): Never apply heavy lotions or oils just before putting on your prosthesis it can cause the liner to slip or loosen.
+
+![Residual Limb Care: Your Guide to Comfort, Confidence & Healing image 2](/images/blog/inline/residual-limb-care-your-guide-to-comfort-confidence-healing/2.png)
 
 ## Desensitization: Training Your Limb for Comfort
 
@@ -90,5 +94,7 @@ Remember:Healthy skin + Proper fit = Comfortable movement + Longer prosthesis li
 With consistent care and regular support from your Bionic care team, you’ll enjoy smoother motion, fewer irritations, and greater independence.
 
 ## Real Stories: Healing Beyond the Socket
+
+![Residual Limb Care: Your Guide to Comfort, Confidence & Healing image 3](/images/blog/inline/residual-limb-care-your-guide-to-comfort-confidence-healing/3.jpg)
 
 At Bionic Po, we’ve seen hundreds of patients transform their recovery through daily care.From learning to desensitize their limb to mastering new sports with bionic prosthetics, the common thread is consistency, awareness, and teamwork with clinicians.

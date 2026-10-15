@@ -37,24 +37,28 @@ sections:
     description: Our cranial orthotics are designed for infants to treat cranial deformities, such as flat head syndrome (plagiocephaly). For adults, our spinal orthotics provide essential support for posture and back pain relief, improving overall spinal alignment and comfort.
     icon: orthotic
     link: /cranial-spinal/
+    link_text: Explore Cranial & Spinal Solutions
     image: /images/orthotics-cranial-spinal.webp
     image_alt: Two children wearing cranial remolding helmets
   - title: Upper Extremity Orthotics
     description: Upper extremity orthotics help provide support and stability for conditions affecting the arm, wrist, or hand. Whether you need a brace for carpal tunnel, fractures, or rehabilitation post-surgery, our solutions help restore functionality and reduce pain, so you can regain the freedom to move.
     icon: orthotic
     link: /upper-extremity/
+    link_text: Explore Upper Extremity Solutions
     image: /images/orthotics-upper-extremity.webp
     image_alt: A person wearing a black forearm and wrist brace
   - title: Lower Extremity Orthotics
     description: For those dealing with foot pain, ankle instability, or knee conditions, our lower extremity orthotics are designed to improve alignment, reduce discomfort, and enhance mobility. From custom foot insoles to knee braces, we ensure a perfect fit for your lifestyle needs.
     icon: orthotic
     link: /lower-extremity/
+    link_text: Explore Lower Extremity Solutions
     image: /images/orthotics-lower-extremity.webp
     image_alt: A person walking in a hinged knee brace and sneakers
   - title: Diabetic Foot Care
     description: Our diabetic foot care solutions offer additional support, absorb more shock, and provides a greater degree of cushioning than standard footwear. This support and protection reduce the amount of pressure and stress placed on the foot, and the level of wear and rubbing on the skin.
     icon: diabetic
     link: /diabetic-foot/
+    link_text: Explore Diabetic foot care Solutions
     image: /images/orthotics-diabetic-foot-care.webp
     image_alt: A person in jeans wearing a protective black walking boot
 - type: points
@@ -89,6 +93,9 @@ sections:
   layout: overlay
   image: /images/orthotics-orthotic-care.webp
   image_alt: A therapist helping a patient with a prosthetic leg stretch on a mat in a bright studio
+  buttons:
+  - text: Find an Orthotist Near Me
+    link: /locations/
 - type: richtext
   title: Why Choose Bionic P&O Orthotics?
   body: '<h3>Proven Excellence in Orthotic Care</h3><ul><li>Cutting-Edge Technology: We use 3D scanning and custom fabrication to ensure precise fit and support.</li><li>Experienced Orthotists: Our team of Board-Certified Orthotists (CPOs) has years of experience providing personalized care for various conditions.</li><li>Patient-Centered Care: We focus on your comfort, needs, and goals, creating a solution that aligns with your lifestyle.</li><li>Clinical Outcomes: Trusted by clinics, hospitals, and rehabilitation centers nationwide for positive patient outcomes.</li></ul>'
@@ -118,8 +125,8 @@ sections:
 - type: cta-band
   title: Take the Next Step Toward Better Mobility and Comfort
   body: At Bionic P&O, we’re committed to helping you live without limitations. Whether you need pain relief, improved mobility, or post-surgery support, we offer customized orthotic care designed to enhance your comfort and independence. Contact us today to schedule your consultation and start your journey toward better mobility, pain relief, and improved quality of life.
-  cta_primary: Request a Consultation
-  cta_primary_link: /contact/
+  cta_primary: Contact Us For Your Consultation
+  cta_primary_link: tel:2197919200
   cta_secondary: Find a Clinic Near You
   cta_secondary_link: /locations/
   extra_buttons:

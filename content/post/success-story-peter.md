@@ -15,6 +15,8 @@ Peter Morrison’s life revolved around horses. Riding horseback, caring for his
 
 Peter’s truck hit a tree during his early morning commute and overturned, becoming severely crushed in the process. His left leg was heavily injured in the accident and broken in multiple places. Doctors at the hospital worked tirelessly for over a week to save the limb, but in the end, it was a losing battle and they decided to perform a below-knee amputation to save Peter’s life.
 
+![The Bionic Difference: Peter Morrison image 1](/images/blog/inline/success-story-peter/1.jpg)
+
 The loss of his leg took a heavy toll on Peter and threatened to both completely change his life and keep him from pursuing his passion. Peter was in rehabilitation for his injury for over two months. Even that was a challenge, as Peter had to undergo physical therapy longer because of further injuries. The prospect of getting back on horseback was looking less and less likely, but Peter was not about to settle for anything less.
 
 ## Getting Back in the Saddle with a Bionic Prosthesis
@@ -26,6 +28,8 @@ That is when he [found a nearby Bionic location](/locations/#_blank). “We came
 Bionic was able to fit Peter with a [transtibial prosthesis](/lower-limb/#_blank), which refers to a device below the knee - in this case, a [Fillauer AllPro](https://fillauer.com/allpro/#_blank). “Today, I can do everything I did before the accident and then some. With Tony and Bionic, there’s not much I can’t do if I put my mind to it!”
 
 Peter still returns to our Bionic locations for everything from repairs to adjustments, and we are always happy to see him back on his feet and doing well.
+
+![The Bionic Difference: Peter Morrison image 2](/images/blog/inline/success-story-peter/2.png)
 
 ## The Bionic Equestrian
 

@@ -71,6 +71,8 @@ Regular check-ins and adjustments are part of good prosthetic care, not a sign o
 
 ## Learning to Walk Again Is a Process, Not a Switch
 
+![What to Know About Your First Prosthetic Leg: A Beginner’s Guide image 1](/images/blog/inline/what-to-know-about-your-first-prosthetic-leg-a-beginner-s-guide/1.jpg)
+
 Many people expect walking with a prosthetic leg to feel familiar quickly. In reality, walking often becomes a thinking task at first.
 
 You may find yourself:
@@ -112,6 +114,8 @@ If something feels off, even if it isn\'t painful, it\'s worth addressing. Small
 Open communication with your prosthetist makes a difference.
 
 ## Your Relationship With Your Prosthetist Matters
+
+![What to Know About Your First Prosthetic Leg: A Beginner’s Guide image 2](/images/blog/inline/what-to-know-about-your-first-prosthetic-leg-a-beginner-s-guide/2.jpg)
 
 A prosthetist is more than someone who fits a device. They are a long-term partner in your care.
 

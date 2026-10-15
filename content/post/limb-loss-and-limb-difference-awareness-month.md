@@ -29,6 +29,8 @@ Every single person\'s contribution is essential to the success of the event. Ou
 
 ## Here are three ways that you can help support.
 
+![Limb Loss and Limb Difference Awareness Month image 1](/images/blog/inline/limb-loss-and-limb-difference-awareness-month/1.png)
+
 ### 1\. Show your support on social media!
 
 An easy way to show your support is by changing your profile to have a LLLDAM ribbon and information somewhere. This can be your profile photo, cover photo, story or regular posts. Check out Amputee Coalition\'s [communications tool kit](https://www.amputee-coalition.org/events-programs/limb-loss-awareness-month/llldam-communications-toolkit/#_blank) for resources!

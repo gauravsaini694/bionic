@@ -34,4 +34,7 @@ clinic_details:
     phone: "(321) 225-8001"
     email: "titusville@bionicpo.com"
 entry_type: clinician
+noindex: true
+sitemap:
+  disable: true
 ---

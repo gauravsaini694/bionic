@@ -5,6 +5,7 @@ date: 2025-12-03
 categories: ["Prosthetics and Orthotics"]
 image: "/images/blog/assistive-devices-that-complement-your-prosthesis.png"
 entry_type: blog_post
+recent_posts: ["what-is-a-prosthetic-arm-a-complete-introduction-for-new-amputees", "understanding-prosthetics-what-to-expect-after-limb-loss"]
 ---
 
 Learning to walk with a prosthesis is a journey, one built on patience, practice, and the right support.For many individuals with limb loss, assistive devices like walkers, canes, or crutches play an important role in building balance, strength, and confidence in daily movement.

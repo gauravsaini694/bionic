@@ -166,6 +166,8 @@ Schedule a consultation with a Bionic P&O clinic near you to talk through your o
 
 [Book a Free consultation call](/book-appointment-pay-bill/#_blank)
 
+## Frequently Asked Questions
+
 ### Is “prosthetic” the same as “prosthesis”?
 
 Not exactly. Prosthesis is the medical term for the device itself. Prosthetic is an adjective used to describe anything related to that device, such as a prosthetic leg or prosthetic care.
