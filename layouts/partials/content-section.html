@@ -30,6 +30,15 @@
     </div>
   </section>
   {{- end }}
+{{- else if and (eq $layout "overlay") $s.image }}
+  <section class="image-banner cs-overlay">
+    {{ partial "img.html" (dict "src" $s.image "alt" ($s.image_alt | default $s.title) "class" "image-banner-img" "sizes" "100vw") }}
+    <div class="image-banner-overlay" aria-hidden="true"></div>
+    <div class="container cs-overlay-inner reveal" data-reveal="fade">
+      {{ with $s.title }}<h2>{{ partial "rt.html" . }}</h2>{{ end }}
+      <div class="cs-prose">{{ partial "cs-rich.html" $body }}</div>
+    </div>
+  </section>
 {{- else if eq $layout "programs" }}
   {{- $chunks := split $body "<h2>" -}}
   <section class="section cs-section cs-{{ $bg }}">
@@ -60,6 +69,7 @@
     <div class="container cs-container">
       {{- if or $s.eyebrow $s.title }}
       <div class="section-heading cs-heading">
+        {{ with $s.avatar }}<span class="cs-avatar">{{ partial "img.html" (dict "src" . "alt" ($s.avatar_alt | default "") "width" 120 "height" 120) }}</span>{{ end }}
         {{ with $s.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
         {{ with $s.title }}<h2>{{ partial "rt.html" . }}</h2>{{ end }}
       </div>
@@ -74,8 +84,34 @@
         {{- $ul := index (findRE `<ul>.*?</ul>` $rest 1) 0 | default "" -}}
         {{- $pre := replace $rest $ul "" -}}
         {{- $icons := $s.icons | default (slice "technology" "certified" "personalized" "star") -}}
+        {{- if and $s.image (not $pre) }}
+        <div class="cs-feature-split">
+          <div class="cs-feature-media reveal" data-reveal="up">{{ partial "img.html" (dict "src" $s.image "alt" ($s.image_alt | default $s.title)) }}</div>
+          <div>
+            {{- with $h3 }}<h3 class="cs-subhead cs-subhead-top">{{ . | replaceRE `</?h3>` "" | safeHTML }}</h3>{{ end }}
+            <div class="cs-grid cols-1 cs-features cs-features-stack">
+              {{- range $i, $li := findRE `<li>.*?</li>` $ul }}
+              <article class="cs-card">
+                <span class="cs-icon">{{ partial "icon.html" (index $icons (mod $i (len $icons))) }}</span>
+                <p>{{ $li | replaceRE `^<li>(.*)</li>$` `${1}` | replaceRE `^([^:<]{2,60}:)(.*)$` `<strong>${1}</strong>${2}` | safeHTML }}</p>
+              </article>
+              {{- end }}
+            </div>
+          </div>
+        </div>
+        {{- else if $s.image }}
+        <div class="cs-feature-lead">
+          <div class="cs-feature-media reveal" data-reveal="up">{{ partial "img.html" (dict "src" $s.image "alt" ($s.image_alt | default $s.title)) }}</div>
+          <div>
+            {{- with $h3 }}<h3 class="cs-subhead cs-subhead-top">{{ . | replaceRE `</?h3>` "" | safeHTML }}</h3>{{ end }}
+            {{- with $pre }}<div class="cs-prose">{{ partial "cs-rich.html" . }}</div>{{ end }}
+          </div>
+        </div>
+        {{- else }}
         {{- with $h3 }}<h3 class="cs-subhead cs-subhead-top">{{ . | replaceRE `</?h3>` "" | safeHTML }}</h3>{{ end }}
         {{- with $pre }}<div class="cs-prose cs-center">{{ partial "cs-rich.html" . }}</div>{{ end }}
+        {{- end }}
+        {{- if not (and $s.image (not $pre)) }}
         <div class="cs-grid cols-2 cs-features">
           {{- range $i, $li := findRE `<li>.*?</li>` $ul }}
           <article class="cs-card">
@@ -84,6 +120,32 @@
           </article>
           {{- end }}
         </div>
+        {{- end }}
+      {{- else if eq $layout "rows" }}
+        {{- $parts := split $body "<h3>" -}}
+        {{- $images := $s.images | default slice -}}
+        {{- with index $parts 0 }}{{ if . }}<div class="cs-prose">{{ partial "cs-rich.html" . }}</div>{{ end }}{{ end }}
+        <div class="cs-rows">
+          {{- range $i, $c := after 1 $parts }}
+          {{- $img := index $images $i }}
+          <article class="cs-row{{ if eq (mod $i 2) 1 }} is-reversed{{ end }}">
+            {{- with $img }}<div class="cs-row-media reveal" data-reveal="up">{{ partial "img.html" (dict "src" .src "alt" .alt "sizes" "(max-width: 900px) 100vw, 580px") }}</div>{{ end }}
+            <div class="cs-row-body reveal" data-reveal="fade"><h3 class="cs-h3">{{ partial "cs-rich.html" $c }}</div>
+          </article>
+          {{- end }}
+        </div>
+      {{- else if eq $layout "testimonials" }}
+        {{- $bqs := findRE `<blockquote>.*?</blockquote>` $body -}}
+        {{- $rest := $body -}}
+        {{- range $bqs }}{{ $rest = replace $rest . "" }}{{ end -}}
+        <div class="cs-testimonials">
+          {{- range $bqs }}
+          {{- $inner := . | replaceRE `^<blockquote>(.*)</blockquote>$` `${1}` -}}
+          {{- $parts := split $inner "<br>" -}}
+          <figure class="cs-quote reveal" data-reveal="up"><blockquote><p>{{ index $parts 0 | safeHTML }}</p></blockquote><figcaption>{{ index $parts 1 | replaceRE `</?strong>` "" | safeHTML }}</figcaption></figure>
+          {{- end }}
+        </div>
+        {{- with $rest }}<div class="cs-prose cs-center cs-after">{{ partial "cs-rich.html" . }}</div>{{ end }}
       {{- else if eq $layout "quote" }}
         <div class="cs-quote-wrap">{{ partial "cs-rich.html" ($body | replaceRE `^<p>([^<]*)</p>$` `<blockquote><p>${1}</p></blockquote>`) }}</div>
       {{- else if eq $layout "chips" }}

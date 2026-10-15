@@ -4,7 +4,7 @@ description: "How we handle your information."
 hero:
   eyebrow: "LEGAL"
   title: "Privacy Policy"
-  subhead: "PLACEHOLDER — this text must be replaced with your legal team's approved Privacy Policy before launch."
+  subhead: "PLACEHOLDER: this text must be replaced with your legal team's approved Privacy Policy before launch."
 sections:
   - type: "richtext"
     title: "Placeholder"

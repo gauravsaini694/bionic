@@ -1,0 +1,80 @@
+/* ==========================================================================
+   Component CSS (written here in assets/css, bundled after style.css by
+   partials/head.html into ONE minified + fingerprinted stylesheet).
+   ========================================================================== */
+
+/* ---- product cards: photo is centered at its own size, never stretched ---- */
+.product-media img {
+  position: absolute; inset: 0; margin: auto;
+  width: auto; height: auto;
+  max-width: calc(100% - 36px); max-height: calc(100% - 36px);
+  object-fit: contain;
+}
+.product-media.tone-photo img, .product-media.tone-dark img { max-width: 100%; max-height: 100%; }
+
+/* ---- locations: state cards that are clickable AND carry their own link ---- */
+.state-card-wrap {
+  display: flex; flex-direction: column; border: 1.5px solid var(--border); border-radius: 10px; background: #fff;
+  overflow: hidden; transition: border-color .15s ease, background .15s ease, box-shadow .15s ease;
+}
+.state-card-wrap:hover { border-color: var(--brand); background: var(--brand-light); }
+.state-card-wrap:has(.state-card.is-active) { border-color: var(--brand); background: var(--brand-light); box-shadow: 0 0 0 2px var(--brand); }
+.state-card-wrap .state-card { border: 0; background: transparent; box-shadow: none; border-radius: 0; flex: 1; padding: 14px 10px 8px; }
+.state-card-wrap .state-card:hover, .state-card-wrap .state-card.is-active { background: transparent; box-shadow: none; }
+.state-card-link {
+  display: block; padding: 8px 10px 12px; text-align: center; font-size: 12.5px; font-weight: 700; color: var(--brand);
+}
+.state-card-link:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+/* ---- a single testimonial: one wide card instead of a thin column ---- */
+.testimonial-single { display: block; max-width: 980px; margin: 0 auto; }
+.testimonial-single .testimonial-card { max-width: none; width: 100%; flex: none; padding: 36px 40px; }
+.testimonial-single .testimonial-quote { font-size: 19px; line-height: 1.7; }
+@media (max-width: 640px) { .testimonial-single .testimonial-card { padding: 26px 20px; } }
+
+/* state grid always uses the full width of its column */
+.find-clinic-panel { min-width: 0; }
+.state-chip-grid { width: 100%; }
+@media (max-width: 1024px) { .find-clinic-panel { width: 100%; } }
+
+/* orthotics "Why Choose": stack photo above cards on phones, one column, no sideways scroll */
+@media (max-width: 767px) {
+  .cs-feature-split { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .cs-feature-split .cs-feature-media { position: static; min-height: 0; height: auto; aspect-ratio: 3 / 2; }
+  .cs-features-stack, .cs-features-stack .cs-card { min-width: 0; }
+  .cs-features-stack .cs-card p { overflow-wrap: anywhere; }
+}
+
+/* Bionic Beats edition cover grid */
+.edition-section { background: var(--cream, #f7f5f0); }
+.edition-intro { margin: 0; font-weight: 600; }
+.edition-grid { list-style: none; margin: 32px 0 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px; }
+.edition-card { margin: 0; min-width: 0; background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 14px rgba(20, 30, 60, .1); transition: transform .25s ease, box-shadow .25s ease; }
+.edition-card a { display: block; text-decoration: none; color: inherit; }
+.edition-cover { display: block; aspect-ratio: 16 / 9; overflow: hidden; }
+.edition-cover img { display: block; width: 100%; height: 100%; object-fit: cover; transition: transform .35s ease; }
+.edition-label { display: block; padding: 14px 16px; text-align: center; font-weight: 600; }
+.edition-card:hover, .edition-card:focus-within { transform: translateY(-4px); box-shadow: 0 14px 30px rgba(20, 30, 60, .18); }
+.edition-card:hover .edition-cover img, .edition-card:focus-within .edition-cover img { transform: scale(1.03); }
+@media (max-width: 1024px) { .edition-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .edition-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } .edition-label { padding: 12px 10px; } }
+@media (prefers-reduced-motion: reduce) { .edition-card, .edition-cover img { transition: none; } }
+
+/* photo pair (2-up gallery) */
+.photo-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; }
+.photo-pair-item { margin: 0; border-radius: 16px; overflow: hidden; box-shadow: 0 6px 18px rgba(20, 30, 60, .12); aspect-ratio: 4 / 3; background: #eef0f4; }
+.photo-pair-item img { display: block; width: 100%; height: 100%; object-fit: cover; }
+@media (max-width: 767px) { .photo-pair { grid-template-columns: minmax(0, 1fr); gap: 16px; } }
+
+/* round headshot above a section heading */
+.cs-avatar { display: block; width: 120px; height: 120px; margin: 0 auto 16px; border-radius: 50%; overflow: hidden; box-shadow: 0 4px 14px rgba(20, 30, 60, .18); }
+.cs-avatar img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: center top; }
+
+/* job application: no sideways overflow on phones */
+.apply-side, .apply-form { min-width: 0; width: 100%; box-sizing: border-box; }
+.apply-form input, .apply-form select, .apply-form textarea { width: 100%; max-width: 100%; box-sizing: border-box; }
+@media (max-width: 767px) { .apply-grid, .apply-layout.has-side { grid-template-columns: minmax(0, 1fr); } .apply-side, .apply-form { padding-left: 18px; padding-right: 18px; } }
+
+/* inquiry CTA: second button outlined like the hero */
+.final-cta-actions .btn-cta-outline { background: transparent; color: #fff; border: 1.5px solid rgba(255, 255, 255, .7); }
+.final-cta-actions .btn-cta-outline:hover { background: rgba(255, 255, 255, .12); border-color: #fff; }

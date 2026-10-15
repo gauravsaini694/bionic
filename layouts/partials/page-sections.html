@@ -18,7 +18,7 @@
 </section>
 {{ end }}
 
-{{ $bgOf := dict "text-image" "white" "points" "cream" "cards" "cream" "faq" "white" "stats" "dark" "cta-band" "dark" "testimonial" "cream" "job-form" "cream" "children-grid" "white" "clinic-finder" "white" "leadership" "white" "chip-list" "white" }}
+{{ $bgOf := dict "text-image" "white" "points" "cream" "cards" "cream" "product-cards" "cream" "faq" "white" "stats" "dark" "cta-band" "dark" "testimonial" "cream" "job-form" "cream" "children-grid" "white" "clinic-finder" "white" "leadership" "white" "chip-list" "white" }}
 {{ range $i, $s := .Params.sections }}
 {{ $last := $.Scratch.Get "lastbg" | default "cream" }}
 {{ $mine := cond (eq $s.type "richtext") (cond (eq $last "cream") "white" "cream") (index $bgOf $s.type | default "white") }}
@@ -41,6 +41,49 @@
       {{ with $s.buttons }}<div class="cs-btn-row">{{ range . }}<a href="{{ .link | safeURL }}" class="btn btn-primary"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a>{{ end }}</div>{{ end }}
       {{ with $s.note_html }}<p class="section-note">{{ . | safeHTML }}</p>{{ end }}
     </div>
+  </div>
+</section>
+
+{{ else if eq $s.type "product-cards" }}
+<section class="section product-section"{{ with $s.id }} id="{{ . }}"{{ end }}>
+  <div class="container">
+    <div class="section-heading reveal" data-reveal="fade">
+      {{ with $s.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
+      <h2>{{ $s.title }}</h2>
+      {{ with $s.body }}<p class="lead">{{ partial "rt.html" . }}</p>{{ end }}
+    </div>
+    <div class="product-grid{{ if eq (len $s.items) 4 }} is-quad{{ end }}">
+      {{ range $j, $item := $s.items }}
+      <article class="product-card reveal" data-reveal="up" style="--delay: {{ mul (mod $j 3) 0.08 }}s">
+        <div class="product-media tone-{{ .tone | default "light" }}">{{ partial "img.html" (dict "src" .image "alt" .image_alt "sizes" "(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px") }}</div>
+        <div class="product-body">
+          <h3>{{ .title }}</h3>
+          {{ with .subtitle }}<p class="product-sub">{{ . }}</p>{{ end }}
+          <p class="product-desc">{{ partial "rt.html" .description }}</p>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ else if eq $s.type "edition-covers" }}
+<section class="section edition-section"{{ with $s.id }} id="{{ . }}"{{ end }}>
+  <div class="container">
+    <div class="section-heading reveal" data-reveal="fade">
+      <h2>{{ $s.title }}</h2>
+      {{ with $s.intro }}<p class="edition-intro">{{ . }}</p>{{ end }}
+    </div>
+    <ul class="edition-grid">
+      {{ range $s.items }}
+      <li class="edition-card">
+        <a href="{{ .pdf | safeURL }}" target="_blank" rel="noopener">
+          <span class="edition-cover">{{ partial "img.html" (dict "src" .image "alt" .image_alt "sizes" "(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 260px") }}</span>
+          <span class="edition-label">{{ .label }}</span>
+        </a>
+      </li>
+      {{ end }}
+    </ul>
   </div>
 </section>
 
@@ -79,11 +122,32 @@
     <div class="card-grid services-grid">
       {{ range $j, $item := $s.items }}
       <a href="{{ .link }}" class="service-card reveal" data-reveal="up" style="--delay: {{ mul $j 0.1 }}s">
+        {{ with .image }}<div class="service-card-media">{{ partial "img.html" (dict "src" . "alt" $item.image_alt "sizes" "(max-width: 768px) 100vw, 480px") }}</div>{{ end }}
         <div class="service-icon service-icon-{{ .icon }}">{{ partial "icon.html" .icon }}</div>
         <h3>{{ .title }}</h3>
         <p>{{ partial "rt.html" .description }}</p>
         <span class="card-link">Learn more <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span></span>
       </a>
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+{{ else if eq $s.type "wide-image" }}
+<section class="section wide-image-section">
+  <div class="container">
+    <figure class="wide-image reveal" data-reveal="up">
+      {{ partial "img.html" (dict "src" $s.image "alt" $s.image_alt "sizes" "(max-width: 1440px) 100vw, 1360px") }}
+    </figure>
+  </div>
+</section>
+
+{{ else if eq $s.type "photo-pair" }}
+<section class="section photo-pair-section">
+  <div class="container">
+    <div class="photo-pair">
+      {{ range first 2 $s.images }}
+      <figure class="photo-pair-item reveal" data-reveal="up">{{ partial "img.html" (dict "src" .src "alt" .alt "sizes" "(max-width: 767px) 100vw, 660px") }}</figure>
       {{ end }}
     </div>
   </div>
@@ -161,7 +225,7 @@
 {{ else if eq $s.type "testimonial" }}
 <section class="section testimonials-section">
   <div class="container">
-    <div class="card-grid testimonial-grid">
+    <div class="card-grid testimonial-grid testimonial-single">
       <div class="testimonial-card reveal" data-reveal="up">
         <div class="star-row" aria-hidden="true">
           {{ range seq 5 }}<span class="star-ic">{{ partial "icon.html" "star" }}</span>{{ end }}
@@ -228,7 +292,9 @@
       {{ with $s.cta_primary }}<a href="{{ $s.cta_primary_link }}" class="btn btn-primary btn-lg"{{ if $s.cta_primary_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ . }}</a>{{ end }}
       {{ with $s.cta_secondary }}<a href="{{ $s.cta_secondary_link }}" class="btn btn-outline btn-lg"{{ if $s.cta_secondary_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ . }}</a>{{ end }}
       {{ range $s.extra_buttons }}<a href="{{ .link | safeURL }}" class="btn btn-primary btn-lg"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}{{ with .aria_label }} aria-label="{{ . }}"{{ end }}>{{ with .icon }}<span class="icon-sm">{{ partial "icon.html" . }}</span> {{ end }}{{ .text }}</a>{{ end }}
+      {{ with $s.call }}<a href="{{ .link | safeURL }}" class="btn btn-primary btn-lg"><span class="icon-sm">{{ partial "icon.html" "phone" }}</span> {{ .text }}</a>{{ end }}
     </div>
+    {{ with $s.call }}{{ with .alt_text }}<p class="final-cta-alt"><a href="{{ $s.call.alt_link | safeURL }}">{{ . }}</a></p>{{ end }}{{ end }}
   </div>
 </section>
 
@@ -236,4 +302,7 @@
 {{ partial "content-section.html" (dict "s" $s "bg" $mine "scratch" $.Scratch) }}
 
 {{ end }}
+{{ end }}
+{{ with .Params.cta_key }}{{ $c := index hugo.Data.cta . }}
+{{ partial "cta-band.html" (dict "title" $c.title "body" $c.body "primary" $c.primary "primary_link" $c.primary_link "extra_buttons" (slice (dict "text" (printf "Call %s" hugo.Data.site.phone) "link" (printf "tel:%s" (partial "tel.html" hugo.Data.site.phone)) "icon" "phone" "outline" true))) }}
 {{ end }}

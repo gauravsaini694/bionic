@@ -11,7 +11,7 @@
 {{- with $reg }}{{ $postal = merge $postal (dict "addressRegion" (substr (index . 0) 0 2)) }}{{ end -}}
 {{- with findRE `\b\d{5}\s*$` ($addr | strings.TrimSpace) 1 }}{{ $postal = merge $postal (dict "postalCode" (strings.TrimSpace (index . 0))) }}{{ end -}}
 {{- with .Params.zip }}{{ $postal = merge $postal (dict "postalCode" (printf "%v" .)) }}{{ end -}}
-{{- $s := dict "@context" "https://schema.org" "@type" (slice "MedicalClinic" "LocalBusiness") "name" (printf "%s — %s" site.Title .Title) "url" .Permalink "address" $postal "parentOrganization" (dict "@type" "Organization" "name" site.Title "url" site.Home.Permalink) -}}
+{{- $s := dict "@context" "https://schema.org" "@type" (slice "MedicalClinic" "LocalBusiness") "name" (printf "%s | %s" site.Title .Title) "url" .Permalink "address" $postal "parentOrganization" (dict "@type" "Organization" "name" site.Title "url" site.Home.Permalink) -}}
 {{- with .Params.description }}{{ $s = merge $s (dict "description" .) }}{{ end -}}
 {{- with .Params.phone }}{{ $s = merge $s (dict "telephone" .) }}{{ end -}}
 {{- with .Params.fax }}{{ $s = merge $s (dict "faxNumber" .) }}{{ end -}}

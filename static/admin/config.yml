@@ -155,7 +155,7 @@ collections:
         name: label
         widget: string
         required: false
-      summary: '{{fields.number}} — {{fields.label}}'
+      summary: '{{fields.number}}: {{fields.label}}'
     - label: 3. Our Approach
       name: about
       widget: object
@@ -703,7 +703,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -760,6 +760,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -785,6 +873,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -1117,7 +1213,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -1174,6 +1270,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -1199,6 +1383,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -1531,7 +1723,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -1588,6 +1780,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -1613,6 +1893,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -1953,7 +2241,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -2010,6 +2298,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -2035,6 +2411,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -2373,7 +2757,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -2430,6 +2814,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -2455,6 +2927,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -2787,7 +3267,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -2844,6 +3324,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -2869,6 +3437,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -3201,7 +3777,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -3258,6 +3834,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -3283,6 +3947,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -3615,7 +4287,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -3672,6 +4344,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -3697,6 +4457,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -4029,7 +4797,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -4086,6 +4854,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -4111,6 +4967,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -4449,7 +5313,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -4506,6 +5370,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -4531,6 +5483,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -4863,7 +5823,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -4920,6 +5880,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -4945,6 +5993,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -5277,7 +6333,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -5334,6 +6390,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -5359,6 +6503,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -5691,7 +6843,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -5748,6 +6900,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -5773,6 +7013,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -6105,7 +7353,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -6162,6 +7410,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -6187,6 +7523,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -6525,7 +7869,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -6582,6 +7926,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -6607,6 +8039,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -6939,7 +8379,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -6996,6 +8436,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -7021,6 +8549,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -7353,7 +8889,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -7410,6 +8946,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -7435,6 +9059,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -7767,7 +9399,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -7824,6 +9456,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -7849,6 +9569,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -8181,7 +9909,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -8238,6 +9966,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -8263,6 +10079,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -8595,7 +10419,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -8652,6 +10476,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -8677,6 +10589,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -9015,7 +10935,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -9072,6 +10992,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -9097,6 +11105,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -9429,7 +11445,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -9486,6 +11502,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -9511,6 +11615,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -9843,7 +11955,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -9900,6 +12012,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -9925,6 +12125,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -10257,7 +12465,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -10314,6 +12522,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -10339,6 +12635,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -10677,7 +12981,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -10734,6 +13038,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -10759,6 +13151,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -11091,7 +13491,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -11148,6 +13548,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -11173,6 +13661,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -11505,7 +14001,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -11562,6 +14058,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -11587,6 +14171,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -11919,7 +14511,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -11976,6 +14568,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -12001,6 +14681,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -12134,7 +14822,7 @@ collections:
   editor:
     preview: false
 - name: locations_pages
-  label: Locations — pages & states
+  label: "Locations: pages & states"
   files:
   - name: content_locations_index_md
     label: Locations landing page
@@ -12339,7 +15027,7 @@ collections:
             name: label
             widget: string
             required: false
-          summary: '{{fields.number}} — {{fields.label}}'
+          summary: '{{fields.number}}: {{fields.label}}'
       - label: FAQ
         name: faq
         widget: object
@@ -12396,6 +15084,94 @@ collections:
           name: cta_secondary_link
           widget: string
           required: false
+      - label: Photo cards
+        name: product-cards
+        widget: object
+        summary: 'Photo cards: {{fields.title}}'
+        fields:
+        - label: Small label above the heading
+          name: eyebrow
+          widget: string
+          required: false
+        - label: Heading
+          name: title
+          widget: string
+          required: false
+        - label: Paragraph
+          name: body
+          widget: text
+          required: false
+        - label: Cards
+          name: items
+          widget: list
+          summary: '{{fields.title}}'
+          fields:
+          - label: Heading
+            name: title
+            widget: string
+          - label: Small medical name (under the heading)
+            name: subtitle
+            widget: string
+            required: false
+          - label: Description
+            name: description
+            widget: text
+          - label: Photo
+            name: image
+            widget: image
+          - label: Photo description
+            name: image_alt
+            widget: string
+          - label: Photo background
+            name: tone
+            widget: select
+            options: [light, dark, photo]
+            default: light
+            hint: "light = white-background product photo, dark = black-background photo, photo = ordinary photo."
+      - label: Edition covers (Bionic Beats)
+        name: edition-covers
+        widget: object
+        summary: 'Covers: {{fields.title}}'
+        fields:
+        - label: Heading
+          name: title
+          widget: string
+        - label: Small line under the heading
+          name: intro
+          widget: string
+          required: false
+        - label: Editions
+          name: items
+          widget: list
+          summary: '{{fields.label}}'
+          fields:
+          - label: Label (e.g. December 2025)
+            name: label
+            widget: string
+          - label: PDF link
+            name: pdf
+            widget: string
+          - label: Cover image
+            name: image
+            widget: image
+          - label: Cover description
+            name: image_alt
+            widget: string
+      - label: Two photos side by side
+        name: photo-pair
+        widget: object
+        summary: 'Two photos'
+        fields:
+        - label: Photos (two)
+          name: images
+          widget: list
+          fields:
+          - label: Photo
+            name: src
+            widget: image
+          - label: Photo description
+            name: alt
+            widget: string
       - label: Rich text
         name: richtext
         widget: object
@@ -12421,6 +15197,14 @@ collections:
           widget: string
           required: false
           hint: 1, 2, 3 or 4 (cards layout only).
+        - label: Round headshot above the heading
+          name: avatar
+          widget: image
+          required: false
+        - label: Headshot description
+          name: avatar_alt
+          widget: string
+          required: false
         - label: Small label above the heading
           name: eyebrow
           widget: string
@@ -12904,7 +15688,7 @@ collections:
   sortable_fields:
   - date
   - title
-  summary: '{{title}} — {{date}}'
+  summary: '{{title}} | {{date}}'
   view_filters:
   - label: Drafts
     field: draft
@@ -13003,7 +15787,7 @@ collections:
   extension: md
   format: yaml-frontmatter
   slug: '{{slug}}'
-  summary: '{{name}} — {{role}}'
+  summary: '{{name}} | {{role}}'
   sortable_fields:
   - name
   - location
@@ -13088,7 +15872,7 @@ collections:
   extension: md
   format: yaml-frontmatter
   slug: '{{slug}}'
-  summary: '{{title}} — {{role}}'
+  summary: '{{title}} | {{role}}'
   sortable_fields:
   - weight
   - title
@@ -13129,7 +15913,7 @@ collections:
   - label: Matching Clinical Team page
     name: clinical_profile
     widget: string
-    hint: 'Example: /team/dheeraj-bhambhani — adds ''Also on our Clinical Team'' links.'
+    hint: 'Example: /team/dheeraj-bhambhani (adds ''Also on our Clinical Team'' links).'
     required: false
   - label: Short description (SEO)
     name: description
@@ -13168,7 +15952,7 @@ collections:
   extension: md
   format: yaml-frontmatter
   slug: '{{slug}}'
-  summary: '{{title}} — {{state}}'
+  summary: '{{title}} | {{state}}'
   sortable_fields:
   - title
   - state
@@ -13577,7 +16361,7 @@ collections:
           required: false
         summary: '{{fields.name}}'
       summary: '{{fields.name}}'
-    - label: Footer — Quick links
+    - label: "Footer: Quick links"
       name: footer_links
       widget: list
       required: false
@@ -13591,7 +16375,7 @@ collections:
         widget: string
         required: true
       summary: '{{fields.name}}'
-    - label: Footer — Services
+    - label: "Footer: Services"
       name: footer_services
       widget: list
       required: false
@@ -13605,7 +16389,7 @@ collections:
         widget: string
         required: true
       summary: '{{fields.name}}'
-    - label: Footer — bottom links (Privacy, Terms…)
+    - label: "Footer: bottom links (Privacy, Terms…)"
       name: footer_legal
       widget: list
       required: false

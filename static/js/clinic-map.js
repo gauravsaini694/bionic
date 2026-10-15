@@ -196,7 +196,7 @@
       resultsEl.hidden = false;
       resultsEl.innerHTML = '<p class="clinic-results-empty-sub">Searching…</p>';
       geocodeZip(q).then(function (pt) {
-        if (!pt) message("Search results", "No clinics found — we couldn’t locate ZIP " + q + ".");
+        if (!pt) message("Search results", "No clinics found, we couldn’t locate ZIP " + q + ".");
         else nearest(pt, "ZIP " + q.slice(0, 5));
       }).catch(function () {
         message("Search results", "We couldn’t look up that ZIP code right now. Try a city or state instead.");

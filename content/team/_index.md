@@ -29,7 +29,7 @@ sections:
   - type: "points"
     eyebrow: "WHAT OUR TEAM BRINGS"
     title: "Care Built Around You"
-    body: "Every clinician on our team is committed to understanding your goals and building a plan around them — not the other way around."
+    body: "Every clinician on our team is committed to understanding your goals and building a plan around them, not the other way around."
     points:
       - "Board-certified and state-licensed prosthetists, orthotists, and fitters"
       - "Ongoing clinical education to stay current with the latest technology"

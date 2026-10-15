@@ -1,10 +1,10 @@
 {{- /* Turns authored HTML (CMS richtext) into designed markup without touching any text:
        classless <ul> -> check-list (2 columns when it has 4+ items), <h3> -> .cs-h3,
-       "quote"+"— name" paragraph pairs -> testimonial card, <blockquote> -> .cs-quote. Context: HTML string. */ -}}
+       "quote" + "- name" paragraph pairs -> testimonial card, <blockquote> -> .cs-quote. Context: HTML string. */ -}}
 {{- $h := . | string -}}
 {{- $h = replaceRE `<ul>` `<ul class="check-list">` $h -}}
 {{- $h = replaceRE `<ul class="check-list">((?:<li>.*?</li>){4,})</ul>` `<ul class="check-list cols-2">${1}</ul>` $h -}}
 {{- $h = replaceRE `<h3>` `<h3 class="cs-h3">` $h -}}
 {{- $h = replaceRE `<blockquote>` `<blockquote class="cs-quote">` $h -}}
-{{- $h = replaceRE `<p>([“"][^<]*)</p>\s*<p>([—–-][^<]*)</p>` `<figure class="cs-quote"><blockquote><p>${1}</p></blockquote><figcaption>${2}</figcaption></figure>` $h -}}
+{{- $h = replaceRE `<p>([“"][^<]*)</p>\s*<p>([–-][^<]*)</p>` `<figure class="cs-quote"><blockquote><p>${1}</p></blockquote><figcaption>${2}</figcaption></figure>` $h -}}
 {{- return ($h | safeHTML) -}}

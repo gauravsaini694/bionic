@@ -7,7 +7,7 @@ seo_description: "Find prosthetic and orthotic patient resources, support guides
 hero:
   eyebrow: "SUPPORT BEYOND THE CLINIC"
   title: "Patient Resources & Support"
-  subhead: "The resources listed below offer various types of support to amputees and their families — from general information to sports, veterans', and pediatric organizations."
+  subhead: "The resources listed below offer various types of support to amputees and their families, from general information to sports, veterans', and pediatric organizations."
   cta_primary: "Request a Consultation"
   cta_primary_link: "/contact/"
   cta_secondary: "Read Our FAQs"

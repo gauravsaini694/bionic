@@ -38,7 +38,7 @@ sections:
 
   - type: "cta-band"
     title: "Still Have Questions?"
-    body: "Our team is happy to walk you through your options. Reach out anytime — we're here to help."
+    body: "Our team is happy to walk you through your options. Reach out anytime, we're here to help."
     cta_primary: "Contact Us"
     cta_primary_link: "/contact/"
     cta_secondary: "Explore Patient Resources"

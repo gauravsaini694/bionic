@@ -20,4 +20,4 @@ With a strong command of project management, Rani has successfully overseen comp
 
 Beyond clinical leadership, Rani possesses a deep understanding of business operations in healthcare. She actively engages in strategic planning, financial oversight, marketing direction, and partnership development with hospitals, rehab centers, and referring providers. Her business-savvy mindset ensures that patient care never comes at the expense of efficiency or sustainability.
 
-Balancing her professional drive with a rich personal life, Rani is a proud mother of two and a dog. She believes leadership begins with listening, and she leads with compassion, clarity, and conviction—building not just a company, but a purpose-driven community committed to restoring mobility and dignity to those they serve.
+Balancing her professional drive with a rich personal life, Rani is a proud mother of two and a dog. She believes leadership begins with listening, and she leads with compassion, clarity, and conviction, building not just a company, but a purpose-driven community committed to restoring mobility and dignity to those they serve.

@@ -10,7 +10,7 @@
 {{- if $res -}}
   {{- $set := slice -}}
   {{- $def := "" -}}
-  {{- range (slice 480 800 1200) -}}
+  {{- range (slice 480 800 1200 1600) -}}
     {{- if lt . $res.Width -}}
       {{- $r := $res.Resize (printf "%dx webp q82" .) -}}
       {{- $set = $set | append (printf "%s %dw" $r.RelPermalink .) -}}

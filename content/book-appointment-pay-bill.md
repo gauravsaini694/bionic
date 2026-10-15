@@ -7,7 +7,7 @@ seo_description: "Schedule your prosthetic or orthotic appointment and securely 
 hero:
   eyebrow: "BILLING & APPOINTMENTS"
   title: "Book An Appointment and Pay Bill"
-  subhead: "Manage your care online — complete new-patient paperwork ahead of time, or securely pay your bill in just a few clicks."
+  subhead: "Manage your care online: complete new-patient paperwork ahead of time, or securely pay your bill in just a few clicks."
   cta_primary: "Request a Consultation"
   cta_primary_link: "/contact/"
   cta_secondary: "Find a Clinic Location"

@@ -17,10 +17,10 @@ Phantom limb pain refers to the sensation of pain in a limb that has been amputa
 
 Phantom limb pain can manifest in various forms, including:
 
-1. **Burning sensation** — A common feeling described as a burning or tingling pain, often in the areas where the limb used to be.
-2. **Cramping or shooting pains** — Intense, shooting pains that can resemble those of a muscle cramp or electric shock.
-3. **Itching** — Unexplainable itching sensations that seem to occur in the area where the limb was lost.
-4. **Feeling of movement** — Some amputees report the sensation that their missing limb is moving or positioned in different ways.
+1. **Burning sensation**: A common feeling described as a burning or tingling pain, often in the areas where the limb used to be.
+2. **Cramping or shooting pains**: Intense, shooting pains that can resemble those of a muscle cramp or electric shock.
+3. **Itching**: Unexplainable itching sensations that seem to occur in the area where the limb was lost.
+4. **Feeling of movement**: Some amputees report the sensation that their missing limb is moving or positioned in different ways.
 
 Each type varies in intensity and frequency, making it a unique experience for every individual.
 
@@ -32,35 +32,35 @@ The sensation of phantom limb pain can be overwhelming. It's often described as 
 
 The precise cause of phantom limb sensation remains a subject of scientific research. However, a few key factors contribute to the phenomenon:
 
-1. **Neural activity** — After amputation, the brain's sensory cortex, which processes sensations from the limb, may still send signals that are interpreted as pain.
-2. **Nerve damage** — The residual nerves at the amputation site may still send erroneous pain signals to the brain.
-3. **Psychological factors** — Stress, depression, and anxiety can heighten the perception of phantom pain.
+1. **Neural activity**: After amputation, the brain's sensory cortex, which processes sensations from the limb, may still send signals that are interpreted as pain.
+2. **Nerve damage**: The residual nerves at the amputation site may still send erroneous pain signals to the brain.
+3. **Psychological factors**: Stress, depression, and anxiety can heighten the perception of phantom pain.
 
 ## Risk Factors for Phantom Limb Pain
 
 While the exact reasons are not fully understood, certain risk factors can increase the likelihood of developing phantom pain, including:
 
-- **Pre-amputation pain** — If the limb was previously injured or painful, the chances of developing phantom pain may be higher.
-- **Psychological stress** — Individuals who experience more stress or depression may be at greater risk.
-- **Amputation level** — Those who lose a limb higher up on the body may experience more intense phantom pain.
-- **Age and overall health** — Older individuals or those with pre-existing health conditions may experience more severe symptoms.
+- **Pre-amputation pain**: If the limb was previously injured or painful, the chances of developing phantom pain may be higher.
+- **Psychological stress**: Individuals who experience more stress or depression may be at greater risk.
+- **Amputation level**: Those who lose a limb higher up on the body may experience more intense phantom pain.
+- **Age and overall health**: Older individuals or those with pre-existing health conditions may experience more severe symptoms.
 
 ## Medical Treatments for Phantom Limb Pain
 
 Several medical treatments may help manage phantom limb pain:
 
-1. **Medications** — Common treatments include pain relievers, antidepressants, and anticonvulsants, which may help reduce nerve-related pain.
-2. **Mirror therapy** — This technique involves using a mirror to trick the brain into thinking the missing limb is still there, helping to reduce the sensation of pain.
-3. **Nerve blocks and stimulation** — In some cases, nerve blocks or electrical stimulation can reduce pain sensations by interrupting nerve signals.
-4. **Cognitive behavioral therapy (CBT)** — CBT can help manage the psychological aspects of phantom pain by addressing stress, anxiety, or depression.
+1. **Medications**: Common treatments include pain relievers, antidepressants, and anticonvulsants, which may help reduce nerve-related pain.
+2. **Mirror therapy**: This technique involves using a mirror to trick the brain into thinking the missing limb is still there, helping to reduce the sensation of pain.
+3. **Nerve blocks and stimulation**: In some cases, nerve blocks or electrical stimulation can reduce pain sensations by interrupting nerve signals.
+4. **Cognitive behavioral therapy (CBT)**: CBT can help manage the psychological aspects of phantom pain by addressing stress, anxiety, or depression.
 
 ## Other Therapies for Managing Phantom Pain
 
 In addition to medical treatments, some alternative therapies may be helpful:
 
 - **Acupuncture:** Some amputees find relief through acupuncture, which helps to stimulate certain pressure points to ease pain.
-- **Massage therapy** — Massaging the residual limb can help alleviate tension and reduce phantom pain.
-- **Physical therapy** — Engaging in physical therapy can help with neuromuscular reeducation and may decrease pain sensations by re-training the brain to ignore phantom limb sensations.
+- **Massage therapy**: Massaging the residual limb can help alleviate tension and reduce phantom pain.
+- **Physical therapy**: Engaging in physical therapy can help with neuromuscular reeducation and may decrease pain sensations by re-training the brain to ignore phantom limb sensations.
 
 ## Remedies and Prevention for Phantom Pain
 

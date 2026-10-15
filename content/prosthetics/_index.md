@@ -15,8 +15,8 @@ sections:
   eyebrow: WHAT ARE PROSTHETICS?
   title: Devices Designed Around Your Life
   body: Prosthetics are artificial devices designed to replace missing or damaged body parts, helping individuals regain mobility and function. These devices can replace lost limbs, parts of limbs, or body structures, enabling users to continue with daily activities and lead more independent lives.
-  image: /images/blog/what-is-gait-training-and-how-can-it-help-after-amputation.jpg
-  image_alt: A Bionic clinician kneeling to adjust a seated patient's prosthetic leg during a gait training session
+  image: /images/prosthetics-what-is.webp
+  image_alt: A runner with a prosthetic leg jogging along a country road
   image_position: right
 - type: richtext
   body: <p>Not sure if a prosthetic is right for you? A conversation can help clarify your options.</p>
@@ -29,27 +29,33 @@ sections:
     description: The most common prosthetic category in the USA and the area where our clinicians have the deepest expertise. Whether you’ve just had an amputation or you’re replacing an outdated device, we build lower limb prosthetics around your body, your gait, and your goals.
     icon: prosthetic
     link: /lower-limb/
+    image: /images/lower-limb-prosthetics.webp
+    image_alt: A man seated on a park bench wearing a prosthetic leg
   - title: Upper Limb Prosthetics
     description: Upper Limb Prosthetics restore function for upper limb amputations, allowing you to engage in daily activities with ease. Thanks to advanced technology, we offer prosthetic solutions that help you regain independence and live life on your terms, whether it's a partial hand or full arm prosthesis.
     icon: prosthetic
     link: /upper-limb/
+    image: /images/prosthetics-upper-limb.webp
+    image_alt: A smiling man lifting a dumbbell with a prosthetic arm in a gym
 - type: richtext
   body: <h3>Prosthetic Sockets</h3><p>Prosthetic sockets are the critical interface between the residual limb and the prosthesis. Custom-fitted for comfort and stability, they ensure a secure and comfortable fit, allowing for natural movement and enhanced performance. At Bionic P&amp;O, we use advanced materials and 3D scanning technology to create sockets that provide the best possible fit and support for your unique needs.</p><h3>Prosthetic Liners</h3><p>Prosthetic liners provide a soft, cushioning layer between the residual limb and the prosthetic socket. Designed for comfort, they help reduce friction, absorb shock, and enhance the overall fit of the prosthesis. At Bionic P&amp;O, we offer customizable liners that ensure a secure, comfortable fit, improving both performance and daily comfort.</p><h3>Prosthetic Accessories</h3><p>Prosthetic accessories enhance the functionality, comfort, and durability of your prosthesis. From socks and suspension sleeves to cosmetic covers and maintenance tools, we offer a range of accessories designed to personalize and optimize your prosthetic experience. These accessories ensure a secure fit, long-term performance, and added convenience for daily use.</p>
-  layout: cards
-  cols: '3'
-  icons:
-  - prosthetic
-  - technology
-  - personalized
+  layout: rows
+  images:
+  - src: /images/prosthetics-sockets.webp
+    alt: A clinician holding a carbon fiber prosthetic socket against a patient's leg
+  - src: /images/prosthetics-liners.webp
+    alt: A clinician fitting a soft liner over a patient's residual limb
+  - src: /images/prosthetics-accessories.webp
+    alt: 'Prosthetic accessories laid out around a prosthetic leg: liners, sleeves, tools and cleaning supplies'
 - type: points
   eyebrow: HOW IT WORKS
   title: Prosthetic Care Is a Process, Not a One-Time Event
   body: Every Journey Starts with a Comprehensive Assessment At Bionic P&O, we follow a clear, transparent process to ensure your prosthetic fitting is precise and tailored to your needs.
   points:
-  - Evaluation and K-Level Assessment — Our certified prosthetists will assess your K-Level (from K0 to K4) to determine your mobility needs and goals. This ensures your prosthetic is designed for the right functionality and level of activity.
-  - Custom Design and Fitting — Using the latest technology, we design a prosthetic that fits comfortably and provides the support you need. The fitting process is personalized to ensure optimal comfort and performance.
-  - Testing and Adjustments — Once your prosthetic is ready, we walk through several real-world scenarios to ensure the fit, alignment, and functionality are appropriate for your needs. Adjustments are made based on feedback and movement analysis.
-  - Rehabilitation and Support — We provide comprehensive rehabilitation and follow-up care to ensure you adapt smoothly to your new prosthetic. From gait training to routine checkups, we're here every step of the way.
+  - 'Evaluation and K-Level Assessment: Our certified prosthetists will assess your K-Level (from K0 to K4) to determine your mobility needs and goals. This ensures your prosthetic is designed for the right functionality and level of activity.'
+  - 'Custom Design and Fitting: Using the latest technology, we design a prosthetic that fits comfortably and provides the support you need. The fitting process is personalized to ensure optimal comfort and performance.'
+  - 'Testing and Adjustments: Once your prosthetic is ready, we walk through several real-world scenarios to ensure the fit, alignment, and functionality are appropriate for your needs. Adjustments are made based on feedback and movement analysis.'
+  - 'Rehabilitation and Support: We provide comprehensive rehabilitation and follow-up care to ensure you adapt smoothly to your new prosthetic. From gait training to routine checkups, we''re here every step of the way.'
 - type: richtext
   title: Prosthetic Care Near You
   body: <p>At Bionic P&amp;O, we understand the importance of receiving local, accessible care that is both professional and compassionate. Whether you're in need of an initial consultation, a prosthetic fitting, or ongoing support, our dedicated team is here to assist you every step of the way.</p><p>With locations across the country, we bring expert prosthetic care right to your doorstep, ensuring you get the highest level of service, no matter where you are. Our clinics are equipped with the latest prosthetic technology, and our team of Board-Certified Prosthetists (CPOs) is committed to providing care that is tailored to your specific needs.</p>
@@ -60,8 +66,8 @@ sections:
   title: The Role of a Certified Prosthetist
   body: <p>A Certified Prosthetist (CP) is a licensed healthcare professional trained to design, fit, and manage prosthetic devices.</p><p>At Bionic P&amp;O, our prosthetists:</p><ul><li>Take time to understand your daily challenges and goals</li><li>Guide component selection based on function, not trends</li><li>Coordinate with physical therapists and care teams</li><li>Provide ongoing adjustments and follow-up care</li></ul>
   layout: split
-  image: /images/lower-limb-prosthetics.webp
-  image_alt: A man seated on a park bench wearing a prosthetic leg
+  image: /images/prosthetics-role-of-cp.webp
+  image_alt: A prosthetist adjusting a prosthetic leg for a smiling patient in a clinic
   image_position: left
 - type: richtext
   title: Why Choose Bionic P&O Prosthetics?
@@ -72,6 +78,8 @@ sections:
   - certified
   - personalized
   - star
+  image: /images/prosthetics-why-choose.webp
+  image_alt: Two women in a clinic examining a prosthetic knee joint together
 - type: richtext
   body: <p>“I have been a patient of Bionic Prosthetics &amp; Orthotics for 10 years and have always been treated with the utmost respect and care. The staff is knowledgeable, patient, and always willing to go the extra mile to ensure my comfort and satisfaction. I highly recommend them!”</p><p>-Emily Power</p>
   layout: quote

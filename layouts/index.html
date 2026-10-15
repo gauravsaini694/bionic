@@ -115,6 +115,25 @@
       <h2>{{ $services.title }}</h2>
       <p class="lead">{{ $services.body }}</p>
     </div>
+    {{ $rows := false }}{{ range $services.items }}{{ if .image }}{{ $rows = true }}{{ end }}{{ end }}
+    {{ if $rows }}
+    <div class="service-rows">
+      {{ range $i, $item := $services.items }}
+      <article class="service-row{{ if eq (mod $i 2) 1 }} is-reversed{{ end }} reveal" data-reveal="up">
+        <div class="service-row-media">{{ partial "img.html" (dict "src" .image "alt" .image_alt "sizes" "(max-width: 900px) 100vw, 620px") }}</div>
+        <div class="service-row-body">
+          <div class="service-icon service-icon-{{ .icon }}">{{ partial "icon.html" .icon }}</div>
+          <h3>{{ .title }}</h3>
+          <p>{{ .description }}</p>
+          {{ with .lead }}<p class="service-lead">{{ . }}</p>{{ end }}
+          {{ with .bullets }}<ul class="check-list">{{ range . }}<li>{{ . }}</li>{{ end }}</ul>{{ end }}
+          {{ with .closing }}<p class="service-note">{{ . }}</p>{{ end }}
+          <a href="{{ .link }}" class="card-link">Learn more <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span></a>
+        </div>
+      </article>
+      {{ end }}
+    </div>
+    {{ else }}
     {{ $detailed := false }}{{ range $services.items }}{{ if .bullets }}{{ $detailed = true }}{{ end }}{{ end }}
     <div class="card-grid services-grid{{ if $detailed }} is-detailed{{ end }}">
       {{ range $i, $item := $services.items }}
@@ -129,6 +148,8 @@
       </a>
       {{ end }}
     </div>
+  </div>
+    {{ end }}
   </div>
 </section>
 
@@ -149,6 +170,17 @@
 
 <!-- ===== FIND A CLINIC ===== -->
 {{ partial "clinic-finder.html" (dict "page" . "params" $findClinic) }}
+
+<!-- ===== IMAGE BANNER ===== -->
+{{ with .Params.banner }}
+<section class="image-banner">
+  {{ partial "img.html" (dict "src" .image "alt" .image_alt "class" "image-banner-img" "sizes" "100vw") }}
+  <div class="image-banner-overlay" aria-hidden="true"></div>
+  <div class="container image-banner-inner reveal" data-reveal="fade">
+    <a href="{{ .cta_link }}" class="btn btn-primary btn-lg">{{ .cta_text }}</a>
+  </div>
+</section>
+{{ end }}
 
 <!-- ===== TESTIMONIALS ===== -->
 <section class="section testimonials-section">

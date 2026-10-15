@@ -1,0 +1,4 @@
+{{- /* Minified + fingerprinted CSS/JS (file name changes whenever the content changes, so browsers never serve a stale copy).
+       Context: path under assets/, e.g. "css/style.css". Returns the processed resource. */ -}}
+{{- $r := resources.Get . | resources.Minify | resources.Fingerprint -}}
+{{- return $r -}}

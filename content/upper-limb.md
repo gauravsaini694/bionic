@@ -2,8 +2,8 @@
 breadcrumbs:
 - /prosthetics
 title: Upper Limb Prosthetics
-seo_title: "Upper Limb | Bionic Prosthetics and Orthotics"
-seo_description: "Advanced upper limb prosthetic solutions, including myoelectric and bionic hands. Bionic P&O offers custom fittings across states to restore function."
+seo_title: Upper Limb | Bionic Prosthetics and Orthotics
+seo_description: Advanced upper limb prosthetic solutions, including myoelectric and bionic hands. Bionic P&O offers custom fittings across states to restore function.
 hero:
   eyebrow: PROSTHETICS
   title: Upper Limb Prostheses
@@ -20,16 +20,40 @@ sections:
   image: /images/clinical-team.png
   image_alt: A person's black bionic hand resting on their lap during a visit in a clinic
   image_position: right
-- type: points
+- type: product-cards
   eyebrow: LEVELS OF CARE
   title: Prosthetic Options by Level of Amputation
   body: We build upper limb prostheses to match your specific level of loss and your day-to-day needs.
-  points:
-  - Shoulder (Shoulder Disarticulation / Forequarter) — Prosthetic solutions for patients with amputation through or above the shoulder joint. Continuing advances in technology provide these patients with a highly functional prosthesis.
-  - Above the Elbow (Transhumeral / Elbow Disarticulation) — Individualized care for patients with amputation through the elbow joint or bone of the upper arm. Bionic offers everything from passive, cosmetic options to computerized, integrated systems.
-  - Below the Elbow (Transradial) — Prosthetic solutions for patients with amputation through the long bones of the forearm. Numerous componentry options can restore patients' fine motor skills.
-  - Hand & Partial Hand (Wrist Disarticulation / Partial Hand) — Solutions for patients with amputation through the wrist or hand. Bionic offers lightweight, highly cosmetic devices which can restore the patient’s wrist and hand function as closely as possible to their ability prior to amputation.
-  - Silicone Restoration — Silicone restoration replicates the patient’s intact limb in fine detail such as wrinkles, hair, freckles, skin tone and shape.
+  items:
+  - title: Shoulder
+    subtitle: Shoulder Disarticulation / Forequarter
+    description: Prosthetic solutions for patients with amputation through or above the shoulder joint. Continuing advances in technology provide these patients with a highly functional prosthesis.
+    image: /images/upper-limb-shoulder.webp
+    image_alt: Shoulder prosthesis fitted to a mannequin
+    tone: dark
+  - title: Above the Elbow
+    subtitle: Transhumeral / Elbow Disarticulation
+    description: Individualized care for patients with amputation through the elbow joint or bone of the upper arm. Bionic offers everything from passive, cosmetic options to computerized, integrated systems.
+    image: /images/upper-limb-above-the-elbow-transhumeral.webp
+    image_alt: Above-elbow prosthetic arm
+    tone: light
+  - title: Below the Elbow
+    subtitle: Transradial
+    description: Prosthetic solutions for patients with amputation through the long bones of the forearm. Numerous componentry options can restore patients' fine motor skills.
+    image: /images/upper-limb-below-the-elbow-transradial.webp
+    image_alt: Below-elbow prosthetic arm
+    tone: light
+  - title: Hand & Partial Hand
+    subtitle: Wrist Disarticulation / Partial Hand
+    description: Solutions for patients with amputation through the wrist or hand. Bionic offers lightweight, highly cosmetic devices which can restore the patient’s wrist and hand function as closely as possible to their ability prior to amputation.
+    image: /images/upper-limb-hand-and-partial-hand.webp
+    image_alt: Prosthetic hand
+    tone: light
+  - title: Silicone Restoration
+    description: Silicone restoration replicates the patient’s intact limb in fine detail such as wrinkles, hair, freckles, skin tone and shape.
+    image: /images/upper-limb-silicone-restoration.webp
+    image_alt: Silicone restoration of the hands
+    tone: photo
 - type: cta-band
   title: Call Today to Schedule Your Free Consultation
   body: Our certified prosthetists will work with you and your care team to find the upper limb solution that fits your goals.
@@ -37,11 +61,9 @@ sections:
   cta_primary_link: /contact/
   cta_secondary: Find a Clinic Near You
   cta_secondary_link: /locations/
-  extra_buttons:
-    - text: "CALL TODAY"
-      link: "tel:2197919200"
-    - text: "(219) 400-2201"
-      link: "tel:2194002201"
-      icon: "phone"
-      aria_label: "Call (219) 400-2201"
+  call:
+    text: Call Today (219) 791-9200
+    link: tel:2197919200
+    alt_text: or call (219) 400-2201
+    alt_link: tel:2194002201
 ---

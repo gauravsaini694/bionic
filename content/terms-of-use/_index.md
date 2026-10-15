@@ -4,7 +4,7 @@ description: "Terms for using this website."
 hero:
   eyebrow: "LEGAL"
   title: "Terms of Use"
-  subhead: "PLACEHOLDER — this text must be replaced with your legal team's approved Terms of Use before launch."
+  subhead: "PLACEHOLDER: this text must be replaced with your legal team's approved Terms of Use before launch."
 sections:
   - type: "richtext"
     title: "Placeholder"

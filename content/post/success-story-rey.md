@@ -41,7 +41,7 @@ Reynaldo is thrilled to be back on the court at his local YMCA. Bionic’s prost
 
 Now Reynaldo is looking forward to taking the next big step in his life, as he stands in his upcoming wedding.
 
-At every turn, Rey seems thrilled by the Bionic difference. “I’ve got an extreme, wide experience with different builders—and let me tell you, they are the best one. And that’s not just sugar coating.”
+At every turn, Rey seems thrilled by the Bionic difference. “I’ve got an extreme, wide experience with different builders, and let me tell you, they are the best one. And that’s not just sugar coating.”
 
 Are you curious about the difference that Bionic could make for you? Take a look at [our locations](/locations/#_blank) nationwide to find one near you and call for a [free consultation](/about-us/#_blank)!
 

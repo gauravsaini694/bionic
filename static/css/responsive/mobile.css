@@ -116,3 +116,22 @@ body { padding-bottom: 72px; }
 
 .cs-callout { padding: 20px 18px; font-size: 16px; }
 .cs-prose { font-size: 16px; }
+
+.cs-testimonials { grid-template-columns: 1fr; gap: 40px; }
+.service-row-body h3 { font-size: 25px; }
+.image-banner { min-height: 280px; }
+.image-banner-inner { padding-block: 60px; }
+.wide-image { aspect-ratio: 4 / 3; border-radius: 16px; }
+.cs-row-body .cs-h3 { font-size: 22px; }
+.cs-rows { gap: 40px; }
+
+.product-grid { grid-template-columns: 1fr; gap: 22px; }
+.product-media { height: 240px; }
+.product-body { padding: 20px 20px 24px; }
+.product-grid.is-quad { grid-template-columns: 1fr; }
+
+.cs-overlay-inner { padding-block: 56px; }
+.cs-overlay-inner .cs-prose { font-size: 16px; }
+
+.cs-overlay-inner { padding-block: 70px; }
+.cs-features-stack .cs-card { padding: 18px; }

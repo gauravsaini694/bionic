@@ -127,3 +127,13 @@ h2 { font-size: 28px; }
 .apply-layout.has-side { grid-template-columns: 1fr; }
 
 .cl-glance { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.service-row, .cs-row, .cs-feature-lead { grid-template-columns: 1fr; gap: 28px; }
+.service-row.is-reversed .service-row-media, .cs-row.is-reversed .cs-row-media { order: 0; }
+.service-rows { gap: 56px; }
+.image-banner { min-height: 340px; }
+
+.product-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.cs-feature-split { grid-template-columns: 1fr; gap: 28px; }
+.cs-feature-split .cs-feature-media { position: static; min-height: 0; aspect-ratio: 3 / 2; height: auto; }

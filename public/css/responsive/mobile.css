@@ -1,0 +1,137 @@
+/* ==========================================================================
+   Mobile overrides (loaded via <link media="(max-width: 640px)">)
+   Loads after tablet.css, so its rules win at these narrower widths.
+   ========================================================================== */
+
+:root {
+  --section-py: 52px;
+}
+
+.container { padding: 0 16px; }
+
+h1 { font-size: 30px; line-height: 1.15; }
+h2 { font-size: 24px; }
+
+/* Utility bar */
+.utility-left { gap: 12px; }
+.utility-link:nth-child(3) { display: none; }
+.utility-right { gap: 10px; }
+
+/* Header */
+.header-inner { padding-block: 14px; }
+.header-cta .btn-primary { padding: 9px 14px; font-size: 12.5px; }
+.brand-logo { height: 36px; }
+
+/* Hero */
+.hero { padding-block: 32px; }
+.hero-actions { flex-direction: column; align-items: stretch; }
+.hero-actions .btn { width: 100%; }
+.quick-pills { flex-direction: column; align-items: stretch; }
+.quick-pill { justify-content: center; }
+.hero-media { height: 240px; border-radius: 14px; }
+.hero-badge { position: static; margin-top: 16px; box-shadow: none; border: 1px solid var(--border); }
+
+/* Stat band */
+.stat-grid { grid-template-columns: 1fr 1fr; gap: 20px 12px; }
+.stat-item { border-right: none !important; }
+.stat-item .stat-number { font-size: 22px; }
+
+/* About */
+.about-media { height: 220px; }
+.about-inner { gap: 28px; }
+
+/* Credentials */
+.credentials-media { height: 200px; }
+
+/* Services / testimonials / resources grids */
+.services-grid,
+.testimonial-grid,
+.resources-grid { grid-template-columns: 1fr; }
+
+/* Testimonials media */
+.testimonials-media { max-height: 200px; }
+
+/* Technology banner */
+.technology-inner { padding-block: 36px; }
+.technology-media { height: 180px; }
+
+/* Find a clinic */
+.clinic-search-form { flex-direction: column; }
+.clinic-search-form .btn { width: 100%; padding: 13px; }
+.state-chip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+/* Final CTA */
+.final-cta-actions { flex-direction: column; align-items: stretch; }
+.final-cta-actions .btn { width: 100%; }
+
+/* Footer */
+.footer-grid { grid-template-columns: 1fr; padding: 40px 16px 20px; }
+.footer-brand p { max-width: none; }
+.footer-bottom { padding: 16px; }
+.footer-bottom-links { flex-wrap: wrap; gap: 14px; justify-content: center; }
+
+.clinic-map { height: 300px; }
+.mega-grid { grid-template-columns: 1fr; }
+.clinic-search-form { flex-direction: column; }
+.clinic-search-form .btn { padding: 12px 22px; }
+
+/* Clinic detail page */
+.cl-hero { padding-block: 28px 40px; }
+.cl-hero-actions { flex-direction: column; }
+.cl-hero-actions .btn { width: 100%; }
+.cl-card { padding: 20px; }
+.cl-map { height: 300px; }
+.cl-services-grid { grid-template-columns: 1fr; }
+.cl-step { padding: 16px; }
+.cl-insurance { flex-direction: column; }
+.team-grid, .clinic-list-grid { grid-template-columns: 1fr; }
+.st-map-col .cl-map { height: 300px; }
+.st-chips { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.clinic-card-actions .btn { flex: 1; }
+
+.testimonial-grid.is-carousel > * { flex-basis: 88%; }
+
+.mobile-bar { display: flex; gap: 10px; position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; padding: 10px 14px calc(10px + env(safe-area-inset-bottom)); background: #fff; border-top: 1px solid var(--border); box-shadow: 0 -6px 18px rgba(20, 30, 60, 0.08); }
+.mobile-bar .btn { flex: 1; padding: 12px 10px; }
+body { padding-bottom: 72px; }
+
+.section-note { font-size: 15px; }
+
+.apply-form { padding: 20px 16px; }
+.apply-grid { grid-template-columns: 1fr; }
+
+.cs-heading { margin-bottom: 30px; }
+.cs-grid.cols-2, .cs-grid.cols-3, .cs-grid.cols-4 { grid-template-columns: 1fr; }
+.check-list.cols-2 { grid-template-columns: 1fr; }
+.cs-card { padding: 24px 20px; }
+.cs-quote { padding: 40px 22px 26px; }
+.cs-quote blockquote p, blockquote.cs-quote { font-size: 17.5px; }
+.program-card { padding: 26px 20px; }
+.program-copy h2 { font-size: 25px; }
+.services-grid.is-detailed .service-card { padding: 26px 20px; }
+.cs-subhead { font-size: 21px; }
+
+.cl-glance { grid-template-columns: 1fr; }
+.cl-team-panel { padding: 22px 16px; }
+
+.cs-callout { padding: 20px 18px; font-size: 16px; }
+.cs-prose { font-size: 16px; }
+
+.cs-testimonials { grid-template-columns: 1fr; gap: 40px; }
+.service-row-body h3 { font-size: 25px; }
+.image-banner { min-height: 280px; }
+.image-banner-inner { padding-block: 60px; }
+.wide-image { aspect-ratio: 4 / 3; border-radius: 16px; }
+.cs-row-body .cs-h3 { font-size: 22px; }
+.cs-rows { gap: 40px; }
+
+.product-grid { grid-template-columns: 1fr; gap: 22px; }
+.product-media { height: 240px; }
+.product-body { padding: 20px 20px 24px; }
+.product-grid.is-quad { grid-template-columns: 1fr; }
+
+.cs-overlay-inner { padding-block: 56px; }
+.cs-overlay-inner .cs-prose { font-size: 16px; }
+
+.cs-overlay-inner { padding-block: 70px; }
+.cs-features-stack .cs-card { padding: 18px; }

@@ -29,7 +29,7 @@
   </main>
   {{ partial "footer.html" . }}
   {{ partial "mobile-bar.html" . }}
-  <script src="/js/main.js" defer></script>
-  <script src="/js/clinic-search.js" defer></script>
+  {{ $j := partial "asset.html" "js/main.js" }}<script src="{{ $j.RelPermalink }}" integrity="{{ $j.Data.Integrity }}" defer></script>
+  {{ $j2 := partial "asset.html" "js/clinic-search.js" }}<script src="{{ $j2.RelPermalink }}" integrity="{{ $j2.Data.Integrity }}" defer></script>
 </body>
 </html>

@@ -1035,3 +1035,98 @@ figure.cs-quote { display: block; }
 .cs-callout p { margin: 0 0 .8em; }
 .cs-callout p:last-child { margin-bottom: 0; }
 .cs-callout a { color: var(--brand); font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+
+/* alternating service rows (home) */
+.service-rows { display: grid; gap: 72px; }
+.service-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 64px; align-items: center; }
+.service-row.is-reversed .service-row-media { order: 2; }
+.service-row-media { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); aspect-ratio: 4 / 3; background: var(--bg-tan); }
+.service-row-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.service-row-body .service-icon { margin-bottom: 18px; }
+.service-row-body h3 { font-size: 30px; margin-bottom: 12px; }
+.service-row-body > p { font-size: 16px; line-height: 1.7; color: var(--ink-muted); }
+.service-row-body .service-note { margin-top: 18px; }
+.service-row-body .card-link { margin-top: 20px; display: inline-flex; align-items: center; gap: 6px; font-weight: 700; color: var(--brand); }
+.service-row-body .check-list li { font-size: 15.5px; }
+
+/* full-width image banner with overlay + CTA */
+.image-banner { position: relative; min-height: 520px; display: grid; place-items: center; overflow: hidden; background: #111; }
+.image-banner-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 18%; }
+.image-banner-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(0,0,0,.55), rgba(10,20,60,.65)); }
+.image-banner-inner { position: relative; text-align: center; padding-block: 90px; }
+
+/* wide, rounded feature image */
+.wide-image-section { padding-block: 0 var(--section-py); margin-top: -34px; position: relative; z-index: 2; }
+.wide-image { margin: 0; border-radius: 24px; overflow: hidden; box-shadow: var(--shadow-float); aspect-ratio: 16 / 9; background: var(--bg-tan); }
+.wide-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 35%; display: block; }
+
+/* card with picture on top */
+.service-card-media { margin: -4px -4px 18px; border-radius: 12px; overflow: hidden; aspect-ratio: 3 / 2; background: var(--bg-tan); }
+.service-card-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+
+/* image + text rows inside richtext (layout: rows) */
+.cs-rows { display: grid; gap: 56px; }
+.cs-row { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: center; }
+.cs-row.is-reversed .cs-row-media { order: 2; }
+.cs-row-media { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); aspect-ratio: 3 / 2; background: var(--bg-tan); }
+.cs-row-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cs-row-body .cs-h3 { font-size: 26px; margin-bottom: 14px; }
+.cs-row-body p { font-size: 16.5px; line-height: 1.75; color: var(--ink-muted); margin: 0 0 1em; }
+
+/* feature-list with a lead image */
+.cs-feature-lead { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 48px; align-items: center; margin-bottom: 40px; }
+.cs-feature-media { border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); aspect-ratio: 3 / 2; }
+.cs-feature-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.cs-feature-lead .cs-subhead-top { text-align: left; grid-column: auto; margin-top: 0; }
+.cs-feature-lead .cs-prose { margin: 0; }
+
+/* testimonials grid */
+.cs-testimonials { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 44px 28px; padding-top: 22px; }
+.cs-testimonials .cs-quote { height: 100%; display: flex; flex-direction: column; padding: 44px 32px 28px; }
+.cs-testimonials .cs-quote p { font-size: 18px; margin: 0; }
+.cs-testimonials .cs-quote figcaption { margin-top: auto; }
+.cs-testimonials .cs-quote .cs-quote-text { margin-bottom: 20px; }
+.cs-after { margin-top: 36px; }
+.cs-testimonials .cs-quote blockquote { margin-bottom: 24px; }
+
+/* product cards (photo + heading + medical name + description) */
+.product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; align-items: stretch; }
+.product-card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--border-soft); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); transition: box-shadow .2s ease, transform .2s ease; }
+.product-card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-4px); }
+.product-media { position: relative; height: 280px; background: #f3f4f6; overflow: hidden; }
+.product-media img { position: absolute; inset: 18px; width: calc(100% - 36px); height: calc(100% - 36px); object-fit: contain; display: block; }
+.product-media.tone-light img { mix-blend-mode: multiply; }
+.product-media.tone-dark { background: #000; }
+.product-media.tone-photo img, .product-media.tone-dark img { inset: 0; width: 100%; height: 100%; }
+.product-body { padding: 24px 26px 28px; display: flex; flex-direction: column; flex: 1; }
+.product-body h3 { font-size: 22px; margin-bottom: 4px; color: var(--ink-strong); }
+.product-sub { font-size: 12.5px; font-weight: 700; letter-spacing: .3px; color: var(--brand); text-transform: none; margin: 0 0 12px; line-height: 1.45; }
+.product-desc { font-size: 15px; line-height: 1.7; color: var(--ink-muted); margin: 0; }
+.cs-quote-wrap { max-width: 980px; }
+.product-body h3 + .product-desc { margin-top: 8px; }
+.product-grid.is-quad { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+.cs-overlay { min-height: 440px; }
+.cs-overlay .image-banner-overlay { background: rgba(8, 16, 48, 0.66); }
+.cs-overlay-inner { position: relative; text-align: center; max-width: 860px; padding-block: 90px; color: #fff; }
+.cs-overlay-inner h2 { color: #fff; margin-bottom: 18px; }
+.cs-overlay-inner .cs-prose { color: rgba(255,255,255,.94); font-size: 18px; max-width: 70ch; }
+
+/* phone CTA: primary button + small alternate number */
+.final-cta-alt { margin: 16px 0 0; font-size: 15px; }
+.final-cta-alt a { color: #fff; font-weight: 600; text-decoration: underline; text-underline-offset: 4px; opacity: .92; }
+.final-cta-alt a:hover { opacity: 1; }
+/* feature split: photo left, heading + stacked cards right */
+.cs-feature-split { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 44px; align-items: start; }
+.cs-feature-split .cs-feature-media { aspect-ratio: auto; height: 100%; min-height: 360px; position: sticky; top: 100px; }
+.cs-feature-split .cs-subhead-top { text-align: left; margin: 0 0 18px; }
+.cs-features-stack { gap: 16px; }
+.cs-features-stack .cs-card { flex-direction: row; align-items: flex-start; gap: 18px; padding: 22px 24px; }
+.cs-features-stack .cs-card .cs-icon { margin: 0; }
+.cs-features-stack .cs-card p { margin: 0; }
+/* orthotics near-you banner: always readable */
+.cs-overlay { min-height: 500px; }
+.cs-overlay .image-banner-overlay { background: rgba(8, 16, 48, 0.72); }
+.cs-overlay-inner { padding-block: 110px; }
+.cs-overlay-inner h2, .cs-overlay-inner .cs-prose, .cs-overlay-inner .cs-prose p { color: #fff !important; }
+.cs-quote-wrap { max-width: 1100px; }

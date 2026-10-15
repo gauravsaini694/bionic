@@ -30,6 +30,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/css/style.css">
-<link rel="stylesheet" href="/css/responsive/tablet.css" media="(max-width: 1024px)">
-<link rel="stylesheet" href="/css/responsive/mobile.css" media="(max-width: 640px)">
+{{ $css := slice (resources.Get "css/style.css") (resources.Get "css/components.css") | resources.Concat "css/site.css" | resources.Minify | resources.Fingerprint }}<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{ $tab := partial "asset.html" "css/responsive/tablet.css" }}<link rel="stylesheet" href="{{ $tab.RelPermalink }}" integrity="{{ $tab.Data.Integrity }}" media="(max-width: 1024px)">
+{{ $mob := partial "asset.html" "css/responsive/mobile.css" }}<link rel="stylesheet" href="{{ $mob.RelPermalink }}" integrity="{{ $mob.Data.Integrity }}" media="(max-width: 640px)">

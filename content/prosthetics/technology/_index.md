@@ -5,7 +5,7 @@ description: "Microprocessor-controlled joints, functional electrical stimulatio
 hero:
   eyebrow: "TECHNOLOGY"
   title: "Technology That Moves With You"
-  subhead: "We evaluate and fit advanced prosthetic and orthotic technology — matched carefully to what actually helps you move, not just what is newest."
+  subhead: "We evaluate and fit advanced prosthetic and orthotic technology, matched carefully to what actually helps you move, not just what is newest."
   cta_primary: "Request a Consultation"
   cta_primary_link: "/contact/"
   cta_secondary: "Find a Clinic Near You"

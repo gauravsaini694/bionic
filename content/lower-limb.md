@@ -2,12 +2,12 @@
 breadcrumbs:
 - /prosthetics
 title: Lower Limb Prosthetics
-seo_title: "Lower Limb | Bionic Prosthetics and Orthotics"
-seo_description: "Restore mobility with advanced lower limb prosthetics. Bionic P&O provides custom above-knee, below-knee, and hip solutions across the states. Visit us today."
+seo_title: Lower Limb | Bionic Prosthetics and Orthotics
+seo_description: Restore mobility with advanced lower limb prosthetics. Bionic P&O provides custom above-knee, below-knee, and hip solutions across the states. Visit us today.
 hero:
   eyebrow: PROSTHETICS
   title: Lower Limb Prostheses
-  subhead: Restoring mobility for patients at every level of lower limb loss — from the hip to the partial foot.
+  subhead: Restoring mobility for patients at every level of lower limb loss, from the hip to the partial foot.
   cta_primary: Request a Consultation
   cta_primary_link: /contact/
   cta_secondary: Explore Upper Limb Prosthetics
@@ -20,16 +20,40 @@ sections:
   image: /images/lower-limb-prosthetics.webp
   image_alt: A man in jeans sitting on a park bench with a black prosthetic leg and sneaker visible below the knee
   image_position: right
-- type: points
+- type: product-cards
   eyebrow: LEVELS OF CARE
   title: Prosthetic Options by Level of Amputation
   body: We build lower limb prostheses to match your specific level of loss, your gait, and your daily goals.
-  points:
-  - Hip (Hip Disarticulation / Hemipelvectomy) — Highly personalized and innovative design for patients having amputation through the hip joint or through the pelvis. These patients require replacement of all three lower extremity joints (hip, knee, ankle/foot) to optimize walking and reduce energy expenditure.
-  - Above the Knee (Transfemoral / Knee Disarticulation) — Personalized prosthetic care for patients with amputation through the thigh bone or knee joint. Bionic offers functional, energy efficient and cosmetic lower extremity prostheses allowing patients to stand and walk again.
-  - Below the Knee (Transtibial / Ankle Disarticulation) — Prosthetic care for patients with an amputation through the bones of the lower leg. Below knee prosthetic users exhibit little to no deficit with a well-designed, well fit BK prosthesis.
-  - Foot & Partial Foot (Partial Calcanectomy / Transmetatarsal) — Partial foot prostheses restore the functional lever arm of the foot and improve patient cosmesis.
-  - Silicone Restoration — Silicone restoration replicates the patient’s intact limb in fine detail such as wrinkles, hair, freckles, skin tone and shape.
+  items:
+  - title: Hip
+    subtitle: Hip Disarticulation / Hemipelvectomy
+    description: Highly personalized and innovative design for patients having amputation through the hip joint or through the pelvis. These patients require replacement of all three lower extremity joints (hip, knee, ankle/foot) to optimize walking and reduce energy expenditure.
+    image: /images/lower-limb-hip.webp
+    image_alt: Hip disarticulation prosthesis
+    tone: light
+  - title: Above the Knee
+    subtitle: Transfemoral / Knee Disarticulation
+    description: Personalized prosthetic care for patients with amputation through the thigh bone or knee joint. Bionic offers functional, energy efficient and cosmetic lower extremity prostheses allowing patients to stand and walk again.
+    image: /images/lower-limb-above-the-knee-transfemoral.webp
+    image_alt: Above-knee prosthetic leg
+    tone: light
+  - title: Below the Knee
+    subtitle: Transtibial / Ankle Disarticulation
+    description: Prosthetic care for patients with an amputation through the bones of the lower leg. Below knee prosthetic users exhibit little to no deficit with a well-designed, well fit BK prosthesis.
+    image: /images/lower-limb-below-the-knee-transtibial.webp
+    image_alt: Below-knee prosthetic leg
+    tone: light
+  - title: Foot & Partial Foot
+    subtitle: Partial Calcanectomy / Transmetatarsal
+    description: Partial foot prostheses restore the functional lever arm of the foot and improve patient cosmesis.
+    image: /images/lower-limb-foot-and-partial-foot.webp
+    image_alt: Partial foot prosthesis
+    tone: dark
+  - title: Silicone Restoration
+    description: Silicone restoration replicates the patient’s intact limb in fine detail such as wrinkles, hair, freckles, skin tone and shape.
+    image: /images/lower-limb-silicone-restoration.webp
+    image_alt: Silicone restoration of the feet
+    tone: dark
 - type: cta-band
   title: Call Today to Schedule Your Free Consultation
   body: Our certified prosthetists will work with you and your care team to find the lower limb solution that fits your goals.
@@ -37,11 +61,9 @@ sections:
   cta_primary_link: /contact/
   cta_secondary: Find a Clinic Near You
   cta_secondary_link: /locations/
-  extra_buttons:
-    - text: "CALL TODAY"
-      link: "tel:2197919200"
-    - text: "(219) 400-2201"
-      link: "tel:2194002201"
-      icon: "phone"
-      aria_label: "Call (219) 400-2201"
+  call:
+    text: Call Today (219) 791-9200
+    link: tel:2197919200
+    alt_text: or call (219) 400-2201
+    alt_link: tel:2194002201
 ---

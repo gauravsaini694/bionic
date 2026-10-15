@@ -7,7 +7,7 @@ seo_description: Explore career opportunities with Bionic Prosthetics & Orthotic
 hero:
   eyebrow: EXPERIENCED PROFESSIONALS
   title: Become A Part of the Bionic Family
-  subhead: We're looking for certified prosthetists, orthotists, and clinic leaders who want to build a career with real growth — and real impact on patients' lives.
+  subhead: We're looking for certified prosthetists, orthotists, and clinic leaders who want to build a career with real growth, and real impact on patients' lives.
   cta_primary: Contact HR
   cta_primary_link: /contact/
   cta_secondary: Explore the Residency Program
@@ -17,12 +17,12 @@ sections:
   eyebrow: WHY GROW WITH BIONIC
   title: Real Growth, Real Benefits
   body: We promote from within and invest in your future, with full support from day one.
-  image: /images/blog/bionic-patients-and-team-shine-at-aopa-2024-a-journey-of-learning-and-innovation.png
-  image_alt: Bionic team members in matching light-blue shirts posing together at the Bionic booth at the AOPA 2024 conference
+  image: /images/careers/grow-team-2.jpg
+  image_alt: Bionic team at work
   points:
   - Full-time clinical and leadership roles available in Indiana, Kentucky, Texas, Ohio, Florida, New Jersey, and Wisconsin
   - Competitive salary with performance incentives
-  - Full benefits from day one — health, dental, vision, and 401(k)
+  - 'Full benefits from day one: health, dental, vision, and 401(k)'
   - Relocation assistance available for qualifying roles
   - CEU support and ongoing professional development
 - type: points
@@ -33,6 +33,12 @@ sections:
   - Regional & Clinic Managers
   - Clinic Office Administrators
   - O&P Trainees
+- type: photo-pair
+  images:
+  - src: /images/careers/grow-team-1.jpg
+    alt: Bionic team at work
+  - src: /images/careers/grow-team-3.jpg
+    alt: Bionic team at work
 - type: richtext
   title: Why Bionic?
   body: <p>Do you want to be part of a team where your work makes a meaningful difference in people's lives? At Bionic Prosthetics &amp; Orthotics, we believe great care starts with great people.</p><p>Founded in Merrillville, Indiana, Bionic has expanded from a local clinic into a network of clinics across 12 states. While we've expanded, we've stayed connected to our roots and remain committed to the communities we serve.</p><p>We're looking for people who are passionate about their work, care about the people they serve, and want to develop their careers alongside a team that values collaboration, compassion, and innovation.</p><p>At each of our clinics, our team works together to advance prosthetic and orthotic care while keeping the patient at the center of everything we do.</p><p>At Bionic, you'll have the opportunity to build your career, make a meaningful impact, and be part of a company that helps change lives every day.</p><h3>Available Opportunities</h3><p>View All Open Positions</p><p>Multiple Locations</p><h3>Come Work With Us</h3><p>Thanks for submitting!</p><p>If you have any questions about our hiring process, feel free to reach out!</p>
@@ -77,7 +83,7 @@ sections:
   - Munster, IN - Certified Prosthetist and/or Orthotist
 - type: cta-band
   title: Ready to Start Something Meaningful?
-  body: Email our Human Resources team at [[hr@bionicpo.com|mailto:hr@bionicpo.com]] or call (219) 791-9200 ext. 5 — please include your location and area of interest.
+  body: Email our Human Resources team at [[hr@bionicpo.com|mailto:hr@bionicpo.com]] or call (219) 791-9200 ext. 5; please include your location and area of interest.
   cta_primary: Contact Us
   cta_primary_link: /contact/
   cta_secondary: Learn About Our Residency Program

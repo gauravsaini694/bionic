@@ -47,3 +47,8 @@ state:
   primary_link: /contact/
   secondary: See All States
   secondary_link: /locations/
+inquiry:
+  title: Ready to Get Started?
+  body: Our certified clinical team is here to help guide your next step.
+  primary: Request a Consultation
+  primary_link: /contact/
