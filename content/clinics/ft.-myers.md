@@ -1,5 +1,6 @@
 ---
-title: "Fort Myers"
+title: "Ft. Myers"
+match_names: ["Fort Myers"]
 seo_title: "Ft. Myers"
 state: "Florida"
 address: "10060 Amberwood Rd, Unit #4"

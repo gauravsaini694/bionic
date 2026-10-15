@@ -158,7 +158,7 @@
     <div class="about-copy reveal" data-reveal="fade">
       <span class="eyebrow">ABOUT THE CLINIC</span>
       {{ if $customAbout }}
-      <h2>About Our {{ $city }} Clinic</h2>
+      <h2>{{ $defAbout.title | default "About Us" }}</h2>
       {{ with .Params.description }}<p class="lead">{{ . }}</p>{{ end }}
       <div class="cl-prose">{{ .Content }}</div>
       {{ else }}
@@ -212,8 +212,12 @@
   </div>
 </section>
 {{ else }}
-<section class="section">
+<section class="section services-section">
   <div class="container">
+    <div class="section-heading reveal" data-reveal="fade">
+      <span class="eyebrow">YOUR CARE TEAM</span>
+      <h2>Clinical Team</h2>
+    </div>
     <div class="cl-team-panel"><span class="cs-icon">{{ partial "icon.html" "people" }}</span><a href="/team/" class="btn btn-outline-dark">Click here to view the full list of clinicians</a></div>
   </div>
 </section>

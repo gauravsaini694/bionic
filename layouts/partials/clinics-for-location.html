@@ -5,7 +5,7 @@
   {{- $city := lower (trim (index $parts 0) " ") -}}
   {{- $st := trim (index $parts 1) " " -}}
   {{- range where site.RegularPages "Type" "clinic" -}}
-    {{- if and (eq (lower (.Params.city | default .Title)) $city) (in (partial "clinic-address.html" .) (printf ", %s" $st)) -}}{{- $res = . -}}{{- end -}}
+    {{- if and (or (eq (lower (.Params.city | default .Title)) $city) (in (apply (.Params.match_names | default slice) "lower" ".") $city)) (in (partial "clinic-address.html" .) (printf ", %s" $st)) -}}{{- $res = . -}}{{- end -}}
   {{- end -}}
 {{- end -}}
 {{- return $res -}}

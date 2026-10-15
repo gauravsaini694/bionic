@@ -74,6 +74,9 @@ sections:
   image: /images/prosthetics-role-of-cp.webp
   image_alt: A prosthetist adjusting a prosthetic leg for a smiling patient in a clinic
   image_position: left
+  buttons:
+  - text: Contact Us for Your Consultation
+    link: tel:2197919200
 - type: richtext
   title: Why Choose Bionic P&O Prosthetics?
   body: '<h3>Proven Excellence in Prosthetics &amp; Patient Care</h3><p>As a leader in prosthetic care, Bionic P&amp;O combines innovative technology, expert craftsmanship, and personalized care to create life-changing prosthetics for our patients. Here''s why we''re trusted by individuals and healthcare professionals alike:</p><ul><li>Cutting-Edge Technology: We use advanced microprocessor-controlled limbs (MPKs) that adapt to your walking pattern for smoother, more natural movement.</li><li>Experienced Prosthetists: Our team consists of Board-Certified Prosthetists (CPOs) with decades of experience working with diverse patient needs and mobility levels.</li><li>Patient-Centered Care: Your goals and well-being drive every decision, ensuring a prosthetic solution that aligns with your unique needs and lifestyle.</li><li>Clinical Outcomes: Trusted by clinics, hospitals, and rehabilitation centers nationwide for our consistent, positive patient outcomes.</li></ul>'
@@ -85,6 +88,9 @@ sections:
   - star
   image: /images/prosthetics-why-choose.webp
   image_alt: Two women in a clinic examining a prosthetic knee joint together
+  buttons:
+  - text: Schedule Your Free Consultation
+    link: tel:2197919200
 - type: richtext
   body: <p>“I have been a patient of Bionic Prosthetics &amp; Orthotics for 10 years and have always been treated with the utmost respect and care. The staff is knowledgeable, patient, and always willing to go the extra mile to ensure my comfort and satisfaction. I highly recommend them!”</p><p>-Emily Power</p>
   layout: quote
@@ -105,10 +111,10 @@ sections:
 - type: cta-band
   title: Take the Next Step Toward Regaining Your Independence
   body: Prosthetic success depends as much on the clinician as it does on the device. At Bionic P&O, we are dedicated to helping you live life without limits. Whether you're looking to regain mobility with advanced lower limb prosthetics, restore function with upper limb solutions, or receive personalized care, our team is here to guide you every step of the way. Don’t wait to experience the freedom that comes with customized prosthetic care. Start your journey today with a consultation that’s tailored to your unique needs.
-  cta_primary: Schedule Your Free Consultation
-  cta_primary_link: tel:2197919200
-  cta_secondary: Contact Us for Your Consultation
-  cta_secondary_link: tel:2197919200
+  cta_primary: Book a Free Consultation
+  cta_primary_link: /book-appointment-pay-bill/
+  cta_secondary: Find a Clinic Near You
+  cta_secondary_link: /locations/
   extra_buttons:
   - text: CALL TODAY
     link: tel:2197919200

@@ -34,7 +34,7 @@
         {{ end }}{{ end }}{{ end }}{{ end }}
         {{ with .Params.email }}<p class="tm-email"><a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
         {{ with .Params.clinic_details }}
-        <h3 class="tm-label">Clinic{{ if gt (len .) 1 }}s{{ end }}</h3>
+        <h3 class="tm-label">Clinics</h3>
         <ul class="tm-list">
           {{ range . }}
           {{ $c := site.GetPage (printf "/clinics/%s" (.clinic | default (.name | urlize))) }}
@@ -43,7 +43,7 @@
         </ul>
         {{ else }}
         {{ if $locs }}
-        <h3 class="tm-label">Clinic{{ if gt (len $locs) 1 }}s{{ end }}</h3>
+        <h3 class="tm-label">Clinics</h3>
         <ul class="tm-list">
           {{ range $locs }}
           {{ $c := partial "clinics-for-location.html" . }}
