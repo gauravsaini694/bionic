@@ -5,15 +5,15 @@ main:
   children:
   - name: About Us
     url: /about-us/
-    icon: certified
+    icon: info
     desc: Who we are and our mission
   - name: Clinical Team
     url: /team/
-    icon: people
+    icon: stethoscope
     desc: Meet our board-certified clinicians
   - name: Executive Team
     url: /executive-team/
-    icon: certified
+    icon: briefcase
     desc: The leaders guiding Bionic
   - name: Success Stories
     url: /success-stories/
@@ -24,45 +24,45 @@ main:
   children:
   - name: All Prosthetics
     url: /prosthetics/
-    icon: prosthetic
+    icon: layout-grid
     desc: Explore all prosthetic care options
   - name: Upper Limb
     url: /upper-limb/
-    icon: personalized
+    icon: hand
     desc: Arm and hand prosthetic solutions
   - name: Lower Limb
     url: /lower-limb/
-    icon: technology
+    icon: footprints
     desc: Leg and foot prosthetic solutions
 - name: Orthotics
   url: /orthotics/
   children:
   - name: All Orthotics
     url: /orthotics/
-    icon: orthotic
+    icon: layout-grid
     desc: Explore all orthotic care options
   - name: Cranial & Spinal
     url: /cranial-spinal/
-    icon: pediatric
+    icon: baby
     desc: Helmets and spinal bracing support
   - name: Upper Extremity
     url: /upper-extremity/
-    icon: personalized
+    icon: hand
     desc: Arm, wrist and hand bracing
   - name: Lower Extremity
     url: /lower-extremity/
-    icon: technology
+    icon: footprints
     desc: Leg, knee and ankle bracing
   - name: Diabetic Foot Care
     url: /diabetic-foot/
-    icon: diabetic
+    icon: droplet
     desc: Protective footwear and foot care
 - name: Resources
   url: /resources/
   children:
   - name: All Resources
     url: /resources/
-    icon: insurance
+    icon: book-open
     desc: Browse all patient resources
   - name: Pay My Bill
     url: /book-appointment-pay-bill/
@@ -70,38 +70,38 @@ main:
     desc: Book an appointment or pay online
   - name: Patient Resources
     url: /patient-resources/
-    icon: personalized
+    icon: file-text
     desc: Forms, insurance info and guides
   - name: FAQs
     url: /faqs/
-    icon: check
+    icon: circle-help
     desc: Answers to common questions
   - name: Blog
     url: /blog/
-    icon: photo
+    icon: newspaper
     desc: Patient education and real stories
   - name: Bionic Beats
     url: /bionic-beats/
-    icon: star
+    icon: podcast
     desc: Our podcast and video series
 - name: Careers
   url: /careers/
   children:
   - name: All Careers
     url: /careers/
-    icon: people
+    icon: user-plus
     desc: Explore careers at Bionic
   - name: Grow With Us
     url: /grow/
-    icon: personalized
+    icon: trending-up
     desc: Open roles for experienced clinicians
   - name: Residency Program
     url: /residency-program/
-    icon: certified
+    icon: graduation-cap
     desc: Start your clinical career with us
   - name: Shadowing Opportunities
     url: /shadowingopportunities/
-    icon: people
+    icon: eye
     desc: Observe our clinical team in action
 footer_links:
 - name: About Us

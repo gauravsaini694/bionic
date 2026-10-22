@@ -48,12 +48,12 @@ sections:
     description: Partial foot prostheses restore the functional lever arm of the foot and improve patient cosmesis.
     image: /images/lower-limb-foot-and-partial-foot.webp
     image_alt: Partial foot prosthesis
-    tone: dark
+    tone: light
   - title: Silicone Restoration
     description: Silicone restoration replicates the patient’s intact limb in fine detail such as wrinkles, hair, freckles, skin tone and shape.
     image: /images/lower-limb-silicone-restoration.webp
     image_alt: Silicone restoration of the feet
-    tone: dark
+    tone: light
 - type: cta-band
   title: Call Today to Schedule Your Free Consultation
   body: Our certified prosthetists will work with you and your care team to find the lower limb solution that fits your goals.

@@ -20,7 +20,7 @@
     }
   </script>
 </head>
-<body>
+<body{{ with .Params.body_class }} class="{{ . }}"{{ end }}>
   {{ partial "gtm-body.html" . }}
   <a href="#main" class="skip-link">Skip to main content</a>
   {{ partial "header.html" . }}

@@ -184,7 +184,7 @@
     var stateMatch = clinics.some(function (c) { return c.state.toLowerCase() === n; });
     if (stateMatch) selectState(list[0].state); else selectState(null);
     clearUser();
-    showResults(list.length + (list.length === 1 ? " clinic" : " clinics") + " matching “" + q + "”", list);
+    showResults("Clinics matching “" + q + "”", list);
     fit(list);
   }
 

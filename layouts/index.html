@@ -60,7 +60,7 @@
 
 <!-- ===== STAT / TRUST BAND ===== -->
 <section class="stat-band">
-  <div class="container stat-grid">
+  <div class="container stat-grid" style="--stat-cols: {{ len $stats }}">
     {{ range $stats }}
     <div class="stat-item">
       <div class="stat-number">{{ .number }}</div>
@@ -122,7 +122,7 @@
       <article class="service-row{{ if eq (mod $i 2) 1 }} is-reversed{{ end }} reveal" data-reveal="up">
         <div class="service-row-media">{{ partial "img.html" (dict "src" .image "alt" .image_alt "sizes" "(max-width: 900px) 100vw, 620px") }}</div>
         <div class="service-row-body">
-          <div class="service-icon service-icon-{{ .icon }}">{{ partial "icon.html" .icon }}</div>
+          <div class="service-icon service-icon-{{ .tone | default .icon }}">{{ partial "icon.html" .icon }}</div>
           <h3>{{ .title }}</h3>
           <p>{{ .description }}</p>
           {{ with .lead }}<p class="service-lead">{{ . }}</p>{{ end }}
@@ -138,7 +138,7 @@
     <div class="card-grid services-grid{{ if $detailed }} is-detailed{{ end }}">
       {{ range $i, $item := $services.items }}
       <a href="{{ .link }}" class="service-card reveal" data-reveal="up" style="--delay: {{ mul $i 0.1 }}s">
-        <div class="service-icon service-icon-{{ .icon }}">{{ partial "icon.html" .icon }}</div>
+        <div class="service-icon service-icon-{{ .tone | default .icon }}">{{ partial "icon.html" .icon }}</div>
         <h3>{{ .title }}</h3>
         <p>{{ .description }}</p>
         {{ with .lead }}<p class="service-lead">{{ . }}</p>{{ end }}

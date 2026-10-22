@@ -125,7 +125,7 @@
       {{ range $j, $item := $s.items }}
       <a href="{{ .link }}" class="service-card reveal" data-reveal="up" style="--delay: {{ mul $j 0.1 }}s">
         {{ with .image }}<div class="service-card-media">{{ partial "img.html" (dict "src" . "alt" $item.image_alt "sizes" "(max-width: 768px) 100vw, 480px") }}</div>{{ end }}
-        <div class="service-icon service-icon-{{ .icon }}">{{ partial "icon.html" .icon }}</div>
+        <div class="service-icon service-icon-{{ .tone | default .icon }}">{{ partial "icon.html" .icon }}</div>
         <h3>{{ .title }}</h3>
         <p>{{ partial "rt.html" .description }}</p>
         <span class="card-link">{{ .link_text | default "Learn more" }} <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span></span>
@@ -149,7 +149,8 @@
   <div class="container">
     <div class="photo-pair">
       {{ range first 2 $s.images }}
-      <figure class="photo-pair-item reveal" data-reveal="up">{{ partial "img.html" (dict "src" .src "alt" .alt "sizes" "(max-width: 767px) 100vw, 660px") }}</figure>
+      {{ $ar := 1.333 }}{{ if fileExists (path.Join "static" .src) }}{{ $ic := imageConfig (path.Join "static" .src) }}{{ $ar = div (float $ic.Width) (float $ic.Height) }}{{ end }}
+      <figure class="photo-pair-item reveal" data-reveal="up" style="--ar: {{ $ar }}">{{ partial "img.html" (dict "src" .src "alt" .alt "sizes" "(max-width: 767px) 100vw, 660px") }}</figure>
       {{ end }}
     </div>
   </div>
@@ -157,7 +158,7 @@
 
 {{ else if eq $s.type "stats" }}
 <section class="stat-band">
-  <div class="container stat-grid">
+  <div class="container stat-grid" style="--stat-cols: {{ len $s.items }}">
     {{ range $s.items }}
     <div class="stat-item">
       <div class="stat-number">{{ .number }}</div>

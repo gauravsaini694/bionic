@@ -56,7 +56,7 @@ We continue to expand our research partnerships and have worked with Valparaiso 
 
 ## Opportunities for Outreach Around the World
 
-In the spring of 2019, I was offered an opportunity to go and assist one of our 10 clinics in India for some complex clinical cases. We were able to partner with a local rehabilitation hospital in Ghaziabad to offer clinical care to an underserved community.
+In the spring of 2019, I was offered an opportunity to go and assist one of our clinics in India for some complex clinical cases. We were able to partner with a local rehabilitation hospital in Ghaziabad to offer clinical care to an underserved community.
 
 In 4 days, we were able to partner with our local clinicians to evaluate, treat, and design prosthetic solutions for over 30 patients. This was such a magical opportunity where we were able to provide care for some patients who either had nothing or a homemade prosthesis.
 

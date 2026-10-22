@@ -4,6 +4,7 @@ breadcrumbs:
 title: 'Now Hiring: Experienced Professionals'
 seo_title: Careers & Job Openings at Bionic Prosthetics and Orthotics
 seo_description: Explore career opportunities with Bionic Prosthetics & Orthotics, including prosthetist, orthotic, admin, and trainee roles. Grow with a leading P&O team nationwide.
+body_class: page-hiring
 hero:
   eyebrow: EXPERIENCED PROFESSIONALS
   title: Become A Part of the Bionic Family
@@ -41,7 +42,7 @@ sections:
     alt: Bionic team at work
 - type: richtext
   title: Why Bionic?
-  body: <p>Do you want to be part of a team where your work makes a meaningful difference in people's lives? At Bionic Prosthetics &amp; Orthotics, we believe great care starts with great people.</p><p>Founded in Merrillville, Indiana, Bionic has expanded from a local clinic into a network of clinics across 12 states. While we've expanded, we've stayed connected to our roots and remain committed to the communities we serve.</p><p>We're looking for people who are passionate about their work, care about the people they serve, and want to develop their careers alongside a team that values collaboration, compassion, and innovation.</p><p>At each of our clinics, our team works together to advance prosthetic and orthotic care while keeping the patient at the center of everything we do.</p><p>At Bionic, you'll have the opportunity to build your career, make a meaningful impact, and be part of a company that helps change lives every day.</p><h3>Available Opportunities</h3><p>View All Open Positions</p><p>Multiple Locations</p><h3>Come Work With Us</h3><p>Thanks for submitting!</p><p>If you have any questions about our hiring process, feel free to reach out!</p>
+  body: <p>Do you want to be part of a team where your work makes a meaningful difference in people's lives? At Bionic Prosthetics &amp; Orthotics, we believe great care starts with great people.</p><p>Founded in Merrillville, Indiana, Bionic has expanded from a local clinic into a network of clinics across the country. While we've expanded, we've stayed connected to our roots and remain committed to the communities we serve.</p><p>We're looking for people who are passionate about their work, care about the people they serve, and want to develop their careers alongside a team that values collaboration, compassion, and innovation.</p><p>At each of our clinics, our team works together to advance prosthetic and orthotic care while keeping the patient at the center of everything we do.</p><p>At Bionic, you'll have the opportunity to build your career, make a meaningful impact, and be part of a company that helps change lives every day.</p><h3>Available Opportunities</h3><p>View All Open Positions</p><p>Multiple Locations</p><h3>Come Work With Us</h3><p>Thanks for submitting!</p><p>If you have any questions about our hiring process, feel free to reach out!</p>
   buttons:
   - text: Learn More
     link: https://www.indeed.com/cmp/Prosthetics-and-Orthotics-Company/jobs

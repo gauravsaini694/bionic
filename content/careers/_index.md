@@ -2,6 +2,7 @@
 title: Careers
 seo_title: Careers at Bionic Prosthetics & Orthotics | Join Our Team
 seo_description: Explore careers and job openings at Bionic Prosthetics & Orthotics. Join a compassionate P&O team with opportunities for clinicians, support staff, and growth.
+body_class: page-hiring
 hero:
   eyebrow: JOIN OUR TEAM
   title: Build a Career That Moves People
@@ -14,7 +15,7 @@ sections:
 - type: text-image
   eyebrow: A FAMILY BUILT ON PURPOSE
   title: A Family Built on Purpose and Progress
-  body: 'We started in Merrillville, Indiana with a simple belief: that prosthetic and orthotic care should be personal, innovative, and accessible. Today we operate across 12 states and we still carry those roots in everything we do. When you join Bionic, you join a team that''s building something bigger than any one of us.'
+  body: 'We started in Merrillville, Indiana with a simple belief: that prosthetic and orthotic care should be personal, innovative, and accessible. Today we operate across the country and we still carry those roots in everything we do. When you join Bionic, you join a team that''s building something bigger than any one of us.'
   image: /images/blog/what-is-gait-training-and-how-can-it-help-after-amputation.jpg
   image_alt: A Bionic clinician kneeling to adjust a seated patient's prosthetic leg during a gait training session
   image_position: right
@@ -24,8 +25,8 @@ sections:
   icons:
   - certified
   - technology
+  - trending-up
   - personalized
-  - star
 - type: cards
   eyebrow: THREE PATHWAYS TO JOIN US
   title: Wherever You Are in Your Career, We Have a Place for You
@@ -37,11 +38,11 @@ sections:
     link: /grow/
   - title: O&P Residency Program
     description: Our nationally recognized post-graduate residency gives you real-world clinical experience, mentorship, and access to advanced technology to become a confident, capable clinician.
-    icon: award
+    icon: graduation-cap
     link: /residency-program/
   - title: Students & Early Explorers
     description: Hands-on unpaid internships and job shadowing opportunities across clinical, fabrication, and business disciplines, your first step into the world of O&P.
-    icon: people
+    icon: graduation-cap
     link: /shadowingopportunities/
     link_text: Explore Internships →
 - type: richtext
@@ -56,8 +57,6 @@ sections:
     link: /shadowingopportunities/
 - type: stats
   items:
-  - number: '12'
-    label: States of Operation
   - number: 5,000 sq ft
     label: In-House Fabrication Center
   - number: 12–18 Months

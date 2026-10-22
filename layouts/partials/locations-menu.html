@@ -5,12 +5,12 @@
     <ul class="clinic-qs-results" role="listbox" hidden></ul>
   </div>
   <div class="mega-head">
-    <strong>{{ $d.total }} clinics in {{ $d.stateCount }} states</strong>
+    <strong>Find a clinic near you</strong>
     <a href="/locations/" class="mega-all">View all locations <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span></a>
   </div>
   <ul class="mega-grid">
     {{ range $d.states }}
-    <li><a href="{{ .url }}" class="mega-link"><span>{{ .name }}</span> <span class="mega-count">({{ .count }})</span></a></li>
+    <li><a href="{{ .url }}" class="mega-link"><span>{{ .name }}</span></a></li>
     {{ end }}
   </ul>
 </div>

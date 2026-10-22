@@ -24,10 +24,10 @@ sections:
   layout: cards
   cols: '2'
   icons:
-  - personalized
-  - certified
+  - ruler
+  - stethoscope
   - technology
-  - people
+  - life-buoy
 - type: cards
   eyebrow: ORTHOTIC SOLUTIONS WE PROVIDE
   title: Explore Our Orthotic Care
@@ -35,28 +35,32 @@ sections:
   items:
   - title: Cranial & Spinal Orthotics
     description: Our cranial orthotics are designed for infants to treat cranial deformities, such as flat head syndrome (plagiocephaly). For adults, our spinal orthotics provide essential support for posture and back pain relief, improving overall spinal alignment and comfort.
-    icon: orthotic
+    icon: baby
+    tone: orthotic
     link: /cranial-spinal/
     link_text: Explore Cranial & Spinal Solutions
     image: /images/orthotics-cranial-spinal.webp
     image_alt: Two children wearing cranial remolding helmets
   - title: Upper Extremity Orthotics
     description: Upper extremity orthotics help provide support and stability for conditions affecting the arm, wrist, or hand. Whether you need a brace for carpal tunnel, fractures, or rehabilitation post-surgery, our solutions help restore functionality and reduce pain, so you can regain the freedom to move.
-    icon: orthotic
+    icon: hand
+    tone: orthotic
     link: /upper-extremity/
     link_text: Explore Upper Extremity Solutions
     image: /images/orthotics-upper-extremity.webp
     image_alt: A person wearing a black forearm and wrist brace
   - title: Lower Extremity Orthotics
     description: For those dealing with foot pain, ankle instability, or knee conditions, our lower extremity orthotics are designed to improve alignment, reduce discomfort, and enhance mobility. From custom foot insoles to knee braces, we ensure a perfect fit for your lifestyle needs.
-    icon: orthotic
+    icon: footprints
+    tone: orthotic
     link: /lower-extremity/
     link_text: Explore Lower Extremity Solutions
     image: /images/orthotics-lower-extremity.webp
     image_alt: A person walking in a hinged knee brace and sneakers
   - title: Diabetic Foot Care
     description: Our diabetic foot care solutions offer additional support, absorb more shock, and provides a greater degree of cushioning than standard footwear. This support and protection reduce the amount of pressure and stress placed on the foot, and the level of wear and rubbing on the skin.
-    icon: diabetic
+    icon: droplet
+    tone: diabetic
     link: /diabetic-foot/
     link_text: Explore Diabetic foot care Solutions
     image: /images/orthotics-diabetic-foot-care.webp
@@ -76,10 +80,10 @@ sections:
   layout: cards
   cols: '2'
   icons:
-  - orthotic
-  - star
+  - heart-pulse
+  - trending-up
   - personalized
-  - check
+  - person-standing
 - type: richtext
   title: The Role of a Certified Orthotist
   body: <p>A Certified Orthotist (CO) is a licensed healthcare professional who designs, fits, and manages orthotic devices to improve mobility and comfort. At Bionic P&amp;O, our orthotists provide:</p><ul><li>Personalized care tailored to your unique needs</li><li>Expert guidance in selecting the right orthotic device</li><li>Collaborative care with your healthcare team</li><li>Ongoing adjustments and follow-up support</li></ul><p>Their expertise ensures that your orthotic device is both functional and comfortable, helping you achieve the best possible outcomes.</p>
@@ -102,9 +106,9 @@ sections:
   layout: feature-list
   icons:
   - technology
-  - certified
+  - user-check
   - personalized
-  - star
+  - clipboard-check
   image: /images/orthotics-why-choose.webp
   image_alt: An orthotist and a patient talking in a clinic exam room
 - type: richtext

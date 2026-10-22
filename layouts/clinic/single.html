@@ -50,8 +50,8 @@
         <ul class="cl-list">
           {{ with $addr }}<li><span class="icon-sm">{{ partial "icon.html" "pin" }}</span><span>{{ . }}{{ with $.Params.address2 }}<br>{{ . }}{{ end }}</span></li>{{ end }}
           {{ with $phone }}<li><span class="icon-sm">{{ partial "icon.html" "phone" }}</span><span><strong>Phone</strong> <a href="tel:{{ partial "tel.html" . }}">{{ . }}</a></span></li>{{ end }}
-          {{ with .Params.fax }}<li><span class="icon-sm">{{ partial "icon.html" "card" }}</span><span><strong>Fax</strong> {{ . }}</span></li>{{ end }}
-          {{ with .Params.email }}<li><span class="icon-sm">{{ partial "icon.html" "insurance" }}</span><span><strong>Email</strong> <a href="mailto:{{ . }}">{{ . }}</a></span></li>{{ end }}
+          {{ with .Params.fax }}<li><span class="icon-sm">{{ partial "icon.html" "printer" }}</span><span><strong>Fax</strong> {{ . }}</span></li>{{ end }}
+          {{ with .Params.email }}<li><span class="icon-sm">{{ partial "icon.html" "mail" }}</span><span><strong>Email</strong> <a href="mailto:{{ . }}">{{ . }}</a></span></li>{{ end }}
         </ul>
       </div>
       {{ end }}
@@ -111,18 +111,18 @@
     </div>
     <div class="card-grid cl-services-grid">
       {{ range $i, $s := . }}
-      {{ $title := $s }}{{ $desc := "" }}{{ $icon := "" }}{{ $link := "" }}
-      {{ if reflect.IsMap $s }}{{ $title = $s.title }}{{ $desc = $s.description }}{{ $icon = $s.icon }}{{ $link = $s.link }}{{ end }}
+      {{ $title := $s }}{{ $desc := "" }}{{ $icon := "" }}{{ $tone := "" }}{{ $link := "" }}
+      {{ if reflect.IsMap $s }}{{ $title = $s.title }}{{ $desc = $s.description }}{{ $icon = $s.icon }}{{ $tone = $s.tone }}{{ $link = $s.link }}{{ end }}
       {{ if not $icon }}
         {{ $l := lower $title }}
-        {{ if findRE `prosthe|limb|amput` $l }}{{ $icon = "prosthetic" }}
-        {{ else if findRE `orthot|brac|splint` $l }}{{ $icon = "orthotic" }}
-        {{ else if findRE `pediatric|child|kid` $l }}{{ $icon = "pediatric" }}
-        {{ else if findRE `diabet|foot|shoe` $l }}{{ $icon = "diabetic" }}
-        {{ else if findRE `cranial|helmet|spin|scolio` $l }}{{ $icon = "certified" }}
-        {{ else }}{{ $icon = "personalized" }}{{ end }}
+        {{ if findRE `prosthe|limb|amput` $l }}{{ $icon = "layout-grid" }}{{ $tone = "prosthetic" }}
+        {{ else if findRE `orthot|brac|splint` $l }}{{ $icon = "layout-grid" }}{{ $tone = "orthotic" }}
+        {{ else if findRE `pediatric|child|kid` $l }}{{ $icon = "baby" }}{{ $tone = "pediatric" }}
+        {{ else if findRE `diabet|foot|shoe` $l }}{{ $icon = "droplet" }}{{ $tone = "diabetic" }}
+        {{ else if findRE `cranial|helmet|spin|scolio` $l }}{{ $icon = "baby" }}{{ $tone = "pediatric" }}
+        {{ else }}{{ $icon = "personalized" }}{{ $tone = "prosthetic" }}{{ end }}
       {{ end }}
-      {{ $tone := cond (in (slice "prosthetic" "orthotic" "diabetic" "pediatric") $icon) $icon "prosthetic" }}
+      {{ if not $tone }}{{ $tone = cond (in (slice "prosthetic" "orthotic" "diabetic" "pediatric") $icon) $icon "prosthetic" }}{{ end }}
       {{ if $title }}
       {{ if $link }}<a href="{{ $link }}" class="service-card reveal" data-reveal="up" style="--delay: {{ mul $i 0.05 }}s">{{ else }}<div class="service-card reveal" data-reveal="up" style="--delay: {{ mul $i 0.05 }}s">{{ end }}
         <div class="service-icon service-icon-{{ $tone }}">{{ partial "icon.html" $icon }}</div>
@@ -176,7 +176,7 @@
     <div class="cl-glance">
       {{ if $addr }}<div class="cl-glance-card"><span class="cs-icon">{{ partial "icon.html" "pin" }}</span><strong>Address</strong><p>{{ $addr }}{{ with .Params.address2 }}<br>{{ . }}{{ end }}</p></div>{{ end }}
       {{ if $phone }}<div class="cl-glance-card"><span class="cs-icon">{{ partial "icon.html" "phone" }}</span><strong>Phone</strong><p><a href="tel:{{ partial "tel.html" $phone }}">{{ $phone }}</a></p></div>{{ end }}
-      {{ with $hoursStr }}<div class="cl-glance-card"><span class="cs-icon">{{ partial "icon.html" "star" }}</span><strong>Hours</strong><p>{{ . }}</p></div>{{ end }}
+      {{ with $hoursStr }}<div class="cl-glance-card"><span class="cs-icon">{{ partial "icon.html" "clock" }}</span><strong>Hours</strong><p>{{ . }}</p></div>{{ end }}
       {{ with .Params.email }}<div class="cl-glance-card"><span class="cs-icon">{{ partial "icon.html" "mail" }}</span><strong>Email</strong><p><a href="mailto:{{ . }}">{{ . }}</a></p></div>{{ end }}
     </div>
   </div>
@@ -243,7 +243,7 @@
 
     {{ if or .Params.insurance $plans }}
     <div class="cl-insurance reveal" data-reveal="up">
-      <span class="service-icon service-icon-prosthetic">{{ partial "icon.html" "insurance" }}</span>
+      <span class="service-icon service-icon-prosthetic">{{ partial "icon.html" "shield-check" }}</span>
       <div>
         <h3>Insurance &amp; Payment</h3>
         {{ with .Params.insurance }}<p>{{ . | markdownify }}</p>{{ end }}
@@ -290,7 +290,7 @@
       {{ partial "clinic-card.html" (dict "page" .page "dist" .dist) }}
       {{ end }}
     </div>
-    <p class="cl-all-link"><a href="{{ $state.RelPermalink }}" class="card-link">See all {{ add (len $near) 1 }} clinics in {{ $state.Title }} <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span></a></p>
+    <p class="cl-all-link"><a href="{{ $state.RelPermalink }}" class="card-link">See all clinics in {{ $state.Title }} <span class="icon-sm">{{ partial "icon.html" "arrow-right" }}</span></a></p>
   </div>
 </section>
 {{ end }}

@@ -6,7 +6,6 @@
     <div class="find-clinic-copy reveal" data-reveal="fade">
       {{ with $p.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
       <h2>{{ $p.title }}</h2>
-      <p class="clinic-total"><strong>{{ $d.total }}</strong> clinics across <strong>{{ $d.stateCount }}</strong> states</p>
       {{ with $p.body }}<p class="lead">{{ . }}</p>{{ end }}
       <form class="clinic-search-form" role="search" id="clinic-search-form" novalidate>
         <label for="clinic-search" class="visually-hidden">Search by ZIP, city, or state</label>
@@ -27,14 +26,12 @@
         <div class="state-card-wrap">
           <button type="button" class="state-card" data-state="{{ .name }}" aria-pressed="false">
             <span class="state-card-name">{{ .name }}</span>
-            <span class="state-card-count">{{ .count }} {{ cond (eq .count 1) "Location" "Locations" }}</span>
           </button>
           <a href="{{ .url }}" class="state-card-link" aria-label="View Locations in {{ .name }}">View Locations <span aria-hidden="true">→</span></a>
         </div>
         {{ else }}
         <button type="button" class="state-card" data-state="{{ .name }}" aria-pressed="false">
           <span class="state-card-name">{{ .name }}</span>
-          <span class="state-card-count">{{ .count }} {{ cond (eq .count 1) "Location" "Locations" }}</span>
         </button>
         {{ end }}
         {{ end }}

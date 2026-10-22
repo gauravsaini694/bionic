@@ -1,7 +1,7 @@
 ---
 breadcrumbs: ["/resources"]
 title: "FAQs"
-seo_title: "Prosthetics & Orthotics FAQs | Bionic PO"
+seo_title: "Prosthetics & Orthotics FAQs | Bionic P&O"
 seo_description: "Find answers to common questions about prosthetics, orthotics, appointments, insurance, and care from Bionic Prosthetics & Orthotics trusted patient FAQs."
 
 hero:

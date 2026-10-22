@@ -6,7 +6,7 @@
       <a href="/" class="footer-brand-mark">
         <img src="{{ $s.logo_footer }}" alt="{{ site.Title }}" class="footer-logo">
       </a>
-      <p>{{ replace $s.footer.blurb "{states}" (printf "%v" (partialCached "locations-data.html" .).stateCount) }}</p>
+      <p>{{ $s.footer.blurb }}</p>
       <div class="footer-contact">
         {{ $s.phone }}<br>
         {{ $s.email }}<br>

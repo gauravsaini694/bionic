@@ -29,8 +29,6 @@ hero:
 stats:
 - number: '2007'
   label: Founded & Still Growing
-- number: 12 States
-  label: Clinic Network Coverage
 - number: Board-Certified
   label: Prosthetists & Orthotists
 - number: FES Enabled
@@ -67,7 +65,8 @@ services:
     - Reducing energy loss and fatigue during walking or daily activities
     - Supporting work, recreation, and independent living
     closing: Each prosthesis is carefully selected and customized based on your anatomy, mobility goals, and lifestyle, with ongoing adjustments as your needs evolve.
-    icon: prosthetic
+    icon: layout-grid
+    tone: prosthetic
     link: /prosthetics/
     image: /images/home-service-prosthetic-care.webp
     image_alt: A man seated in a clinic wearing a black prosthetic arm
@@ -80,7 +79,8 @@ services:
     - Post-injury and post-surgical recovery
     - Long-term musculoskeletal conditions
     closing: Our goal is to improve comfort, stability, and movement efficiency while helping reduce pain and prevent further complications.
-    icon: orthotic
+    icon: layout-grid
+    tone: orthotic
     link: /orthotics/
     image: /images/home-service-orthotic-care.webp
     image_alt: A close-up of a hand wearing a black custom wrist and forearm brace
@@ -92,7 +92,8 @@ services:
     - Protecting sensitive or vulnerable tissue
     - Supporting safe, confident walking
     closing: We design specialized footwear and orthotic solutions to help lower the risk of ulcers and other complications while supporting long-term mobility.
-    icon: diabetic
+    icon: droplet
+    tone: diabetic
     link: /diabetic-foot/
     image: /images/home-service-diabetic-foot-care.webp
     image_alt: A person in jeans standing in a protective black walking boot
@@ -104,7 +105,8 @@ services:
     - Supporting healthy movement and development
     - Encouraging confidence at home, school, and play
     closing: We work closely with families and care teams to ensure each solution adapts over time, supporting both physical development and independence.
-    icon: pediatric
+    icon: baby
+    tone: pediatric
     link: /prosthetics/pediatric/
     image: /images/home-service-pediatric.webp
     image_alt: A smiling baby wearing a pink cranial helmet with an orange bow
@@ -149,11 +151,11 @@ resources:
     title: Book an Appointment & Pay Your Bill Online
     link: /book-appointment-pay-bill/
   - category: PATIENT RESOURCES
-    icon: insurance
+    icon: file-text
     title: Forms, Insurance Info & Getting Started Guides
     link: /patient-resources/
   - category: FAQS
-    icon: check
+    icon: circle-help
     title: Answers to Common Prosthetic & Orthotic Questions
     link: /faqs/
 final_cta:

@@ -20,26 +20,30 @@ accessibility: "Wheelchair-accessible entrance, accessible restrooms and step-fr
 services:
   - title: "Prosthetics"
     description: "Custom upper and lower limb prosthetic design, fitting and follow-up."
-    icon: "prosthetic"
+    icon: "layout-grid"
+    tone: prosthetic
     link: "/prosthetics/"
   - title: "Orthotics"
     description: "Custom braces and supports for mobility, comfort and function."
-    icon: "orthotic"
+    icon: "layout-grid"
+    tone: orthotic
     link: "/orthotics/"
   - title: "Pediatric Care"
     description: "Specialized prosthetic and orthotic care that grows with your child."
-    icon: "pediatric"
+    icon: "baby"
+    tone: pediatric
   - title: "Cranial & Spinal"
     description: "Cranial remolding helmets and spinal bracing."
-    icon: "certified"
+    icon: "baby"
     link: "/cranial-spinal/"
   - title: "Diabetic Foot Care"
     description: "Protective footwear and custom inserts to keep feet healthy."
-    icon: "diabetic"
+    icon: "droplet"
+    tone: diabetic
     link: "/diabetic-foot/"
   - title: "Rehabilitation Support"
     description: "Post-fitting training and follow-up to help you get the most from your device."
-    icon: "personalized"
+    icon: "heart-pulse"
 first_visit:
   - title: "Schedule your visit"
     text: "Call or request a consultation online. We will confirm a time that works for you."

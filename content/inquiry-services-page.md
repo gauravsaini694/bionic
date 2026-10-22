@@ -10,8 +10,8 @@ sections:
   layout: cards
   cols: '3'
   icons:
-  - personalized
-  - people
-  - certified
+  - ruler
+  - clipboard-list
+  - compass
 cta_key: inquiry
 ---

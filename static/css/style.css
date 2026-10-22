@@ -25,6 +25,7 @@
   --bg-cream: #F4F4F4;
   --bg-white: #FFFFFF;
   --bg-tan: #F0F0F0;
+  --bg-product: #F0F0F0; /* one light-gray backdrop for every product photo */
 
   --border: rgba(0, 0, 0, 0.12);
   --border-soft: rgba(0, 0, 0, 0.08);
@@ -298,7 +299,7 @@ button { font-family: inherit; cursor: pointer; }
    Stat band
    ========================================================================== */
 .stat-band { background: var(--brand); }
-.stat-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); padding-block: 34px; }
+.stat-grid { display: grid; grid-template-columns: repeat(var(--stat-cols, 4), minmax(0, 1fr)); padding-block: 34px; }
 .stat-item { text-align: center; padding: 0 10px; border-right: 1px solid rgba(255, 255, 255, 0.14); }
 .stat-item:last-child { border-right: none; }
 .stat-item .stat-number { font-family: var(--font-serif); font-size: 30px; font-weight: 600; color: #fff; }
@@ -1093,10 +1094,10 @@ figure.cs-quote { display: block; }
 .product-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 26px; align-items: stretch; }
 .product-card { display: flex; flex-direction: column; background: #fff; border: 1px solid var(--border-soft); border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-card); transition: box-shadow .2s ease, transform .2s ease; }
 .product-card:hover { box-shadow: var(--shadow-card-hover); transform: translateY(-4px); }
-.product-media { position: relative; height: 280px; background: #f3f4f6; overflow: hidden; }
+.product-media { position: relative; height: 280px; background: var(--bg-product); overflow: hidden; }
 .product-media img { position: absolute; inset: 18px; width: calc(100% - 36px); height: calc(100% - 36px); object-fit: contain; display: block; }
 .product-media.tone-light img { mix-blend-mode: multiply; }
-.product-media.tone-dark { background: #000; }
+.product-media.tone-dark { background: var(--bg-product); }
 .product-media.tone-photo img, .product-media.tone-dark img { inset: 0; width: 100%; height: 100%; }
 .product-body { padding: 24px 26px 28px; display: flex; flex-direction: column; flex: 1; }
 .product-body h3 { font-size: 22px; margin-bottom: 4px; color: var(--ink-strong); }

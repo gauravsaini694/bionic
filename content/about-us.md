@@ -5,7 +5,7 @@ seo_description: Learn about Bionic Prosthetics & Orthotics, leading provider of
 hero:
   eyebrow: TRUSTED CARE SINCE 2007
   title: 'About Us: Bionic Prosthetics and Orthotics'
-  subhead: Founded in 2007, Bionic Prosthetics & Orthotics is a nationally recognized provider of personalized prosthetic and orthotic care, serving patients through clinical locations across 12 states, including Florida, Illinois, Indiana, Kentucky, Michigan, New Jersey, North Carolina, Ohio, Pennsylvania, Tennessee, Texas, and Wisconsin.
+  subhead: Founded in 2007, Bionic Prosthetics & Orthotics is a nationally recognized provider of personalized prosthetic and orthotic care, serving patients through clinical locations across the country.
   cta_primary: Request a Consultation
   cta_primary_link: /contact/
   cta_secondary: Meet Our Clinical Team
@@ -22,8 +22,8 @@ sections:
   title: Care That Adapts to Your Life
   icons:
   - personalized
-  - technology
-  - people
+  - eye
+  - target
   body: <h3>Our Mission</h3><p>Our mission is to provide advanced, personalized prosthetic and orthotic care that supports comfort, function, and confidence in everyday life. We strive to deliver clinical excellence through thoughtful solutions and compassionate patient care.</p><h3>Our Vision</h3><p>Our vision is to build a collaborative community of dedicated clinicians and partners who share a commitment to improving mobility and quality of life. By expanding our clinical presence nationally and internationally, we aim to strengthen partnerships across the healthcare continuum and elevate the standard of prosthetic and orthotic care.</p><h3>Our Purpose</h3><p>We are committed to creating awareness and access to high-quality prosthetic and orthotic care, becoming a trusted and active part of the communities we serve. Our goal is to support patients, families, and caregivers through education, engagement, and long-term care relationships.</p>
 - type: points
   eyebrow: WHAT DRIVES US
@@ -31,11 +31,11 @@ sections:
   image: /images/blog/bionic-patients-and-team-shine-at-aopa-2024-a-journey-of-learning-and-innovation.png
   image_alt: Bionic team members in matching light-blue shirts posing together at the Bionic booth at the AOPA 2024 conference
   points:
-  - Compassion - We listen first and treat every patient with respect, empathy, and understanding.
-  - Clinical Excellence - We uphold the highest standards of care through expertise, precision, and ongoing education.
-  - Integrity - We act with honesty, transparency, and accountability in everything we do.
-  - Community - We believe strong relationships and local engagement are essential to meaningful care.
-  - Commitment to Patients - We are dedicated to improving lives through competent, compassionate, and personalized care.
+  - "**Compassion** - We listen first and treat every patient with respect, empathy, and understanding."
+  - "**Clinical Excellence** - We uphold the highest standards of care through expertise, precision, and ongoing education."
+  - "**Integrity** - We act with honesty, transparency, and accountability in everything we do."
+  - "**Community** - We believe strong relationships and local engagement are essential to meaningful care."
+  - "**Commitment to Patients** - We are dedicated to improving lives through competent, compassionate, and personalized care."
 - type: richtext
   title: Our Commitment to Community
   body: <p>We aim to be more than a clinic; we strive to be a trusted partner within every community we serve. By creating awareness around prosthetic and orthotic care, supporting local needs, and fostering connection, we work toward a world where mobility challenges don’t limit a person’s potential.</p>
@@ -49,8 +49,8 @@ sections:
   body: From the clinicians behind your care to the patients we've helped along the way, here's more of our story.
   items:
   - title: Meet Our Clinical Team
-    description: Board-certified prosthetists and orthotists across 12 states, dedicated to personalized, ongoing care.
-    icon: certified
+    description: Board-certified prosthetists and orthotists across the country, dedicated to personalized, ongoing care.
+    icon: stethoscope
     link: /team/
   - title: Patient Success Stories
     description: Real stories from patients who regained mobility, confidence, and independence with our team.
@@ -58,18 +58,18 @@ sections:
     link: /success-stories/
   - title: Prosthetic Care
     description: Upper- and lower-limb prosthetic solutions built around your body and your goals.
-    icon: prosthetic
+    icon: layout-grid
+    tone: prosthetic
     link: /prosthetics/
   - title: Orthotic Care
     description: Custom bracing solutions that restore comfort, alignment, and mobility.
-    icon: orthotic
+    icon: layout-grid
+    tone: orthotic
     link: /orthotics/
 - type: stats
   items:
   - number: '2007'
     label: Founded & Still Growing
-  - number: 12 States
-    label: Clinic Network Coverage
   - number: Board-Certified
     label: Prosthetists & Orthotists
   - number: ABC Accredited

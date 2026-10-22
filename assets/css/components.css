@@ -104,3 +104,31 @@
 .site-footer .footer-newsletter { flex-wrap: wrap; }
 .site-footer .footer-newsletter input { flex: 1 1 180px; min-width: 180px; }
 .site-footer .footer-newsletter .btn { min-height: 42px; }
+
+/* Clinician card: location and Read More on their own lines */
+.team-card .team-location { display: flex; justify-content: center; }
+.team-card .team-readmore { display: flex; justify-content: center; margin-top: 18px; }
+
+/* Clinician profile: each clinic is its own block with its own pin icon */
+.tm-aside .tm-list { align-items: stretch; gap: 0; text-align: left; }
+.tm-list li { align-items: flex-start; gap: 10px; padding: 14px 0; border-top: 1px solid var(--border-soft, rgba(0,0,0,.1)); line-height: 1.5; }
+.tm-list li:first-child { border-top: 0; padding-top: 0; }
+.tm-list li:last-child { padding-bottom: 0; }
+.tm-list .icon-sm { margin-top: 3px; }
+
+/* One-line description under a list item (rt.html: "text :: description") */
+.point-desc { display: block; margin-top: 3px; font-size: 13px; font-weight: 400; line-height: 1.45; color: var(--ink-soft); }
+
+/* ---- hiring pages (careers, grow, residency, shadowing): show photos uncropped, faces stay in frame ---- */
+.page-hiring .about-media { height: auto; background: transparent; }
+.page-hiring .about-media img { height: auto; max-height: 560px; object-fit: cover; object-position: center 20%; display: block; }
+.page-hiring .cs-row-media { aspect-ratio: auto; }
+.page-hiring .cs-row-media img { height: auto; max-height: 520px; object-position: center 20%; }
+/* photo pair: each photo keeps its own aspect ratio; widths are proportional so both end up the same height */
+.photo-pair { display: flex; gap: 24px; align-items: flex-start; }
+.photo-pair-item { aspect-ratio: var(--ar, 4 / 3); flex: var(--ar, 1.333) 1 0; min-width: 0; }
+.photo-pair-item img { object-position: center 20%; }
+@media (max-width: 767px) { .photo-pair { flex-direction: column; gap: 16px; } .photo-pair-item { flex: none; width: 100%; } }
+
+/* stat band with an odd item count: last item centered on the full row in the 2-column layouts */
+@media (max-width: 1024px) { .stat-grid > .stat-item:last-child:nth-child(odd) { grid-column: 1 / -1; } }

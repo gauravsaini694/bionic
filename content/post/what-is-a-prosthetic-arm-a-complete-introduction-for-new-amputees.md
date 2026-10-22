@@ -96,7 +96,7 @@ Early prosthetic fitting and training has been consistently linked to higher rat
 
 ## Take the First Step With Bionic Prosthetics & Orthotics
 
-At Bionic Prosthetics & Orthotics, our board-certified prosthetists specialize in upper- and lower-limb prosthetic care, with advanced options including myoelectric systems, 3D-printed sockets, and custom activity-specific devices. We serve patients through more than 45 clinic locations across 12 states.
+At Bionic Prosthetics & Orthotics, our board-certified prosthetists specialize in upper- and lower-limb prosthetic care, with advanced options including myoelectric systems, 3D-printed sockets, and custom activity-specific devices. We serve patients through clinic locations across the country.
 
 Every person’s journey is different, and we believe your prosthetic solution should reflect your body, your goals, and your daily life. We start with a detailed clinical evaluation, at no charge and work alongside your physician and therapy team to develop a care plan built around you.
 

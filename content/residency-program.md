@@ -4,6 +4,7 @@ breadcrumbs:
 title: O&P Residency Program
 seo_title: Residency Program | Bionic Prosthetics and Orthotics
 seo_description: Bionic offers a 12-month single or 18-months combined Orthotic and Prosthetic Residency Program. The primary objective is for residents to graduate ready to practice independently as Board Eligible Clinicians and to pass their ABC exams.
+body_class: page-hiring
 hero:
   eyebrow: Residency Program
   title: Train Where It Matters. Graduate Ready.
@@ -32,7 +33,7 @@ sections:
   - text: Email Us
     link: mailto:residency@bionicpo.com
   title: Residency Background & Expectations
-  body: Bionic Prosthetics and Orthotics is an ABC accredited Prosthetic and Orthotic practice with multiple NCOPE residency sites across the country. Bionic currently operates over 30 clinics and is continuing to grow rapidly. We take immense pride in the competent and compassionate care we have been able to provide to the communities we serve since our inception over a decade ago.
+  body: Bionic Prosthetics and Orthotics is an ABC accredited Prosthetic and Orthotic practice with multiple NCOPE residency sites across the country. Bionic operates clinics across the country and is continuing to grow rapidly. We take immense pride in the competent and compassionate care we have been able to provide to the communities we serve since our inception over a decade ago.
   image: /images/blog/preventing-muscle-contractures-after-amputation.jpg
   image_alt: A clinician kneeling to fit a prosthetic leg on a seated patient in a clinic
   image_position: left
@@ -51,28 +52,28 @@ sections:
   items:
   - title: Patient Evaluations
     description: Conduct and document detailed patient evaluations with increasing independence over the program.
-    icon: certified
+    icon: clipboard-check
   - title: Device Fitting & Delivery
     description: Fit, align, and deliver prosthetic and orthotic devices, progressively taking the lead under supervision.
-    icon: certified
+    icon: package-check
   - title: Fabrication
     description: Assist in plaster model modifications, CAD software use, and full device assembly in our fabrication lab.
-    icon: certified
+    icon: wrench
   - title: Coding & Documentation
     description: Learn justification and coding protocols for prescribed O&P devices and insurance documentation.
-    icon: certified
+    icon: file-text
   - title: Policy Adherence
     description: Uphold company policies on patient privacy, clinical ethics, and quality of care protocol.
-    icon: certified
+    icon: shield-check
   - title: Educational Participation
     description: Participate in outreach, in services, CEU events, and manufacturer training opportunities.
-    icon: certified
+    icon: graduation-cap
   - title: Administrative Support
     description: Support administrative staff with insurance claims, prior authorizations, and compliance tasks.
-    icon: certified
+    icon: folder-cog
   - title: Community Outreach
     description: Represent Bionic at community events, referral partner meetings, and clinical in-services.
-    icon: certified
+    icon: users
 - type: stats
   items:
   - number: 30+

@@ -71,7 +71,7 @@
       </div>
       <span class="eyebrow">REQUEST RECEIVED</span>
       <h1>Thank you<span id="tyName"></span>!</h1>
-      <p>Your consultation request is on its way to our patient care team. We'll reach out <span id="tyWhen">within one business day</span> to help you take the next step.</p>
+      <p>Your consultation request is on its way to our patient care team. We'll call you <span id="tyWhen">within one business day</span> to help you take the next step.</p>
       <div class="ty-ref">Reference&nbsp;No. <b id="tyRef">—</b></div>
     </div>
   </section>
@@ -94,7 +94,7 @@
             <p class="sub">A simple, guided path to your care plan.</p>
             <ol class="ty-steps">
               <li class="done"><span class="ty-num">✓</span><div><strong>Request received</strong><span>Your details are now with our patient care team.</span></div></li>
-              <li><span class="ty-num">2</span><div><strong>We contact you</strong><span id="tyStep2">A care coordinator will reach out within one business day.</span></div></li>
+              <li><span class="ty-num">2</span><div><strong>We contact you</strong><span id="tyStep2">A care coordinator will call you within one business day to find a time that works.</span></div></li>
               <li><span class="ty-num">3</span><div><strong>Insurance &amp; prescription check</strong><span>We help verify coverage and gather any paperwork from your physician.</span></div></li>
               <li><span class="ty-num">4</span><div><strong>Complimentary consultation</strong><span>Meet a board-certified clinician at the clinic closest to you.</span></div></li>
             </ol>
@@ -111,7 +111,7 @@
       <div class="ty-links">
         <a class="ty-link" href="/locations/">
           <span class="ty-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
-          <div><strong>Find your nearest clinic</strong><span>Clinics across 12 states, close to home.</span></div>
+          <div><strong>Find your nearest clinic</strong><span>Clinics across the country, close to home.</span></div>
         </a>
         <a class="ty-link" href="/patient-resources/">
           <span class="ty-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></span>
@@ -144,23 +144,17 @@
   var slot = d.best_time ? d.best_time.split(' (')[0].toLowerCase() : '';
   var when = slot ? (slot === 'midday' ? ' around midday' : ' in the ' + slot) : '';
   if (how) {
-    document.getElementById('tyWhen').textContent = how + ' within one business day';
+    document.getElementById('tyWhen').textContent = 'within one business day';
     document.getElementById('tyStep2').textContent =
       'A care coordinator will reach out ' + how + when + ' within one business day.';
   }
 
   var rows = [
     ['Name', [d.first_name, d.last_name].filter(Boolean).join(' ')],
-    ['I am a', d.contact_role],
-    ['Email', d.email],
     ['Phone', d.phone],
-    ['Preferred contact', d.preferred_contact + (d.best_time ? ' · ' + d.best_time : '')],
-    ['Reason', d.reason],
-    ['Service', d.service],
-    ['Patient age group', d.patient_age_group],
-    ['Prescription', d.has_prescription],
-    ['Location', [d.state, d.zip].filter(Boolean).join(' · ')],
-    ['Insurance', d.insurance],
+    ['Email', d.email],
+    ['How can we help', d.reason],
+    ['ZIP code', d.zip],
     ['Message', d.message, true]
   ];
   var dl = document.getElementById('tyList');

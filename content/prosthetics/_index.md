@@ -5,7 +5,7 @@ seo_description: Find personalized prosthetic limb solutions at Bionic Prostheti
 hero:
   eyebrow: YOUR PROSTHETIC JOURNEY STARTS HERE
   title: Prosthetic Care Built Around You
-  subhead: Over 2 million Americans live with limb loss. Getting the right prosthetics--one that fits your body, your job, your life, makes all the difference. At Bionic PO, we build that device with you, not just for you.
+  subhead: Over 2 million Americans live with limb loss. Getting the right prosthetics--one that fits your body, your job, your life, makes all the difference. At Bionic P&O, we build that device with you, not just for you.
   cta_primary: Book a Consultation
   cta_primary_link: tel:2197919200
   cta_secondary: Find Nearest Clinic
@@ -26,15 +26,17 @@ sections:
   body: We provide personalized prosthetic solutions designed to support comfort, function, and long-term mobility. Every prosthetic is selected and fitted based on individual needs, activity level, and daily life.
   items:
   - title: Lower Limb Prosthetics
-    description: The most common prosthetic category in the USA and the area where our clinicians have the deepest expertise. Whether you’ve just had an amputation or you’re replacing an outdated device, we build lower limb prosthetics around your body, your gait, and your goals.
-    icon: prosthetic
+    description: The most common prosthetic category in the USA. Whether you’ve just had an amputation or you’re replacing an outdated device, we build lower limb prosthetics around your body, your gait, and your goals.
+    icon: footprints
+    tone: prosthetic
     link: /lower-limb/
     link_text: Explore Lower Limb Solutions
     image: /images/lower-limb-prosthetics.webp
     image_alt: A man seated on a park bench wearing a prosthetic leg
   - title: Upper Limb Prosthetics
     description: Upper Limb Prosthetics restore function for upper limb amputations, allowing you to engage in daily activities with ease. Thanks to advanced technology, we offer prosthetic solutions that help you regain independence and live life on your terms, whether it's a partial hand or full arm prosthesis.
-    icon: prosthetic
+    icon: hand
+    tone: prosthetic
     link: /upper-limb/
     link_text: Explore Upper Limb Solutions
     image: /images/prosthetics-upper-limb.webp
@@ -52,7 +54,7 @@ sections:
 - type: points
   eyebrow: HOW IT WORKS
   title: Prosthetic Care Is a Process, Not a One-Time Event
-  body: Every Journey Starts with a Comprehensive Assessment At Bionic P&O, we follow a clear, transparent process to ensure your prosthetic fitting is precise and tailored to your needs.
+  body: Every journey starts with a comprehensive assessment. At Bionic P&O, we follow a clear, transparent process to ensure your prosthetic fitting is precise and tailored to your needs.
   points:
   - 'Evaluation and K-Level Assessment: Our certified prosthetists will assess your K-Level (from K0 to K4) to determine your mobility needs and goals. This ensures your prosthetic is designed for the right functionality and level of activity.'
   - 'Custom Design and Fitting: Using the latest technology, we design a prosthetic that fits comfortably and provides the support you need. The fitting process is personalized to ensure optimal comfort and performance.'
@@ -83,9 +85,9 @@ sections:
   layout: feature-list
   icons:
   - technology
-  - certified
+  - user-check
   - personalized
-  - star
+  - clipboard-check
   image: /images/prosthetics-why-choose.webp
   image_alt: Two women in a clinic examining a prosthetic knee joint together
   buttons:

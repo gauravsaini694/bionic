@@ -30,15 +30,17 @@ sections:
         link: "/lower-limb/"
       - title: "Myoelectric Arms & Hands"
         description: "Devices controlled by the electrical signals of your own muscles for natural, adjustable grip."
-        icon: "prosthetic"
+        icon: "hand"
+        tone: prosthetic
         link: "/upper-limb/"
       - title: "Functional Electrical Stimulation (FES)"
         description: "Systems that stimulate nerves to help lift the foot or support movement after neurological conditions."
-        icon: "orthotic"
+        icon: "technology"
+        tone: orthotic
         link: "/lower-extremity/"
       - title: "3D Printing & Digital Scanning"
         description: "Digital scans and 3D-printed designs for faster, precisely customized sockets and orthoses."
-        icon: "personalized"
+        icon: "box"
         link: "/contact/"
 
   - type: "cta-band"

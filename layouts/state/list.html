@@ -22,7 +22,7 @@
     <span class="eyebrow eyebrow-light">FIND CARE NEAR YOU</span>
     <h1>{{ .Params.hero.title | default (printf "Bionic Clinics in %s" .Title) }}</h1>
     {{ with .Params.hero.subhead }}<p class="cl-hero-address">{{ . }}</p>{{ end }}
-    <span class="cl-badge is-closed">{{ $n }} {{ cond (eq $n 1) "Location" "Locations" }} in {{ .Title }}</span>
+    <span class="cl-badge is-closed">Our Locations in {{ .Title }}</span>
     <div class="cl-hero-actions">
       <a href="/contact/" class="btn btn-primary btn-lg">Request a Consultation</a>
       <a href="/locations/" class="btn btn-outline btn-lg">Back to States</a>
@@ -83,7 +83,7 @@
     </div>
     <div class="state-chip-grid st-chips">
       {{ range $all.states }}{{ if ne .name $state.Title }}
-      <a href="{{ .url }}" class="state-chip">{{ .name }} ({{ .count }})</a>
+      <a href="{{ .url }}" class="state-chip">{{ .name }}</a>
       {{ end }}{{ end }}
     </div>
   </div>

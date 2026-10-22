@@ -1,9 +1,10 @@
 ---
 breadcrumbs: ["/careers"]
 title: "Shadowing & Internship Opportunities"
-seo_title: "Start Your Career with an Internship | Bionic PO"
+seo_title: "Start Your Career with an Internship | Bionic P&O"
 seo_description: "Explore hands-on prosthetics and orthotics internships at Bionic Prosthetics. Gain real clinical experience, professional skills, and career growth opportunities."
 
+body_class: page-hiring
 hero:
   eyebrow: "STUDENTS & EARLY EXPLORERS"
   title: "Your First Step Into the World of O&P"

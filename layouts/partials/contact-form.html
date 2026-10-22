@@ -32,7 +32,7 @@
     padding: 12px 14px; transition: border-color .2s, box-shadow .2s; appearance: none; -webkit-appearance: none;
   }
   .cf-field select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' fill='none' stroke='%23000' stroke-width='1.6'%3E%3Cpath d='M1 1.5l5 5 5-5'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; padding-right: 38px; }
-  .cf-field textarea { min-height: 130px; resize: vertical; }
+  .cf-field textarea { min-height: 96px; resize: vertical; }
   .cf-field input:focus, .cf-field select:focus, .cf-field textarea:focus { outline: none; border-color: var(--brand); box-shadow: 0 0 0 3px var(--brand-light-strong); }
   .cf-field.invalid input, .cf-field.invalid select, .cf-field.invalid textarea { border-color: #C0392B; }
   .cf-error { display: none; font-size: 13px; color: #C0392B; }
@@ -90,7 +90,7 @@
     <div class="cf-intro">
       <span class="eyebrow">HOW TO REACH US</span>
       <h2>We're Here to Help</h2>
-      <p class="lead">Answer a few quick questions and a member of our patient care team will contact you within one business day to schedule your complimentary consultation.</p>
+      <p class="lead">Share a few details and our patient care team will call you within one business day to schedule your free, no-obligation consultation.</p>
 
       <div class="cf-cards">
         <a class="cf-card" href="tel:18555246642">
@@ -119,25 +119,13 @@
     <!-- Right: form -->
     <div class="cf-form-card" id="cfCard">
       <div class="cf-head">
-        <h3>Request a Consultation</h3>
-        <p>Fields marked <span style="color:#C0392B">*</span> are required. Please don't include detailed medical information.</p>
+        <h3>Request a Free Consultation</h3>
+        <p>Takes less than a minute. Please don't share medical details here — we'll go over everything privately when we speak.</p>
       </div>
 
-      <!-- Endpoint comes from hugo.toml params.contactFormEndpoint (Apps Script /exec URL); empty = demo mode -->
-      <form id="cfForm" data-thankyou="/thank-you/" {{ with site.Params.contactFormEndpoint }}action="{{ . }}" {{ end }}method="POST" novalidate>
+      <!-- Paste your Google Apps Script Web App URL (ends with /exec) in action="" -->
+      <form id="cfForm" {{ with site.Params.contactFormEndpoint }}action="{{ . }}" {{ end }} method="POST" data-thankyou="/thank-you/" novalidate>
         <div class="cf-fields">
-
-          <div class="cf-legend">About you</div>
-
-          <div class="cf-field full">
-            <span class="cf-label">I am a…</span>
-            <div class="cf-pills" role="radiogroup" aria-label="I am a">
-              <input type="radio" id="role-patient" name="contact_role" value="Patient" checked><label for="role-patient">Patient</label>
-              <input type="radio" id="role-family" name="contact_role" value="Family member / Caregiver"><label for="role-family">Family / Caregiver</label>
-              <input type="radio" id="role-provider" name="contact_role" value="Referring provider"><label for="role-provider">Referring Provider</label>
-              <input type="radio" id="role-other" name="contact_role" value="Other"><label for="role-other">Other</label>
-            </div>
-          </div>
 
           <div class="cf-field">
             <label for="cf-first">First name<span class="req">*</span></label>
@@ -150,126 +138,39 @@
             <span class="cf-error">Please enter your last name.</span>
           </div>
           <div class="cf-field">
+            <label for="cf-phone">Phone<span class="req">*</span></label>
+            <input id="cf-phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 555-5555" required pattern="[\d\s()+\-.]{10,}">
+            <span class="cf-error">Please enter a valid phone number.</span>
+          </div>
+          <div class="cf-field">
             <label for="cf-email">Email<span class="req">*</span></label>
             <input id="cf-email" name="email" type="email" autocomplete="email" required>
             <span class="cf-error">Please enter a valid email address.</span>
           </div>
           <div class="cf-field">
-            <label for="cf-phone">Phone<span class="req">*</span></label>
-            <input id="cf-phone" name="phone" type="tel" autocomplete="tel" placeholder="(555) 555-5555" required pattern="[\d\s()+\-.]{10,}">
-            <span class="cf-error">Please enter a valid phone number.</span>
-          </div>
-          <div class="cf-field full">
-            <span class="cf-label">Preferred contact method</span>
-            <div class="cf-pills">
-              <input type="radio" id="pc-phone" name="preferred_contact" value="Phone" checked><label for="pc-phone">Phone call</label>
-              <input type="radio" id="pc-text" name="preferred_contact" value="Text"><label for="pc-text">Text message</label>
-              <input type="radio" id="pc-email" name="preferred_contact" value="Email"><label for="pc-email">Email</label>
-            </div>
-          </div>
-
-          <div class="cf-legend">How can we help?</div>
-
-          <div class="cf-field">
-            <label for="cf-reason">Reason for contacting<span class="req">*</span></label>
+            <label for="cf-reason">How can we help?<span class="req">*</span></label>
             <select id="cf-reason" name="reason" required>
               <option value="">Select one</option>
-              <option>Schedule a free consultation</option>
-              <option>New prescription / referral</option>
-              <option>Insurance &amp; coverage question</option>
-              <option>Adjustment or repair of existing device</option>
-              <option>Second opinion</option>
-              <option>General question</option>
-            </select>
-            <span class="cf-error">Please choose a reason.</span>
-          </div>
-          <div class="cf-field">
-            <label for="cf-service">Service of interest<span class="req">*</span></label>
-            <select id="cf-service" name="service" required>
-              <option value="">Select a service</option>
-              <optgroup label="Prosthetics">
-                <option>Upper limb prosthetics</option>
-                <option>Lower limb prosthetics</option>
-              </optgroup>
-              <optgroup label="Orthotics">
-                <option>Cranial &amp; spinal (helmets, bracing)</option>
-                <option>Upper extremity bracing</option>
-                <option>Lower extremity bracing</option>
-              </optgroup>
+              <option>Book a free consultation</option>
+              <option>Prosthetic care (arm or leg)</option>
+              <option>Orthotics &amp; bracing</option>
+              <option>Cranial helmet for my baby</option>
               <option>Diabetic foot care</option>
-              <option>Not sure yet</option>
+              <option>Repair or adjust my device</option>
+              <option>Insurance or billing question</option>
+              <option>Something else</option>
             </select>
-            <span class="cf-error">Please choose a service.</span>
-          </div>
-          <div class="cf-field">
-            <label for="cf-patient-age">Patient age group</label>
-            <select id="cf-patient-age" name="patient_age_group">
-              <option value="">Select</option>
-              <option>Infant (0–2)</option>
-              <option>Child (3–12)</option>
-              <option>Teen (13–17)</option>
-              <option>Adult (18–64)</option>
-              <option>Senior (65+)</option>
-            </select>
-          </div>
-          <div class="cf-field">
-            <label for="cf-prescription">Do you have a prescription?</label>
-            <select id="cf-prescription" name="has_prescription">
-              <option value="">Select</option>
-              <option>Yes</option>
-              <option>No</option>
-              <option>Not sure</option>
-            </select>
-          </div>
-
-          <div class="cf-legend">Location &amp; coverage</div>
-
-          <div class="cf-field">
-            <label for="cf-state">State<span class="req">*</span></label>
-            <select id="cf-state" name="state" required>
-              <option value="">Select your state</option>
-              <option>Florida</option><option>Illinois</option><option>Indiana</option><option>Kentucky</option>
-              <option>Michigan</option><option>New Jersey</option><option>North Carolina</option><option>Ohio</option>
-              <option>Pennsylvania</option><option>Tennessee</option><option>Texas</option><option>Wisconsin</option>
-              <option>Other / Outside service area</option>
-            </select>
-            <span class="cf-error">Please choose your state.</span>
+            <span class="cf-error">Please choose an option.</span>
           </div>
           <div class="cf-field">
             <label for="cf-zip">ZIP code<span class="req">*</span></label>
-            <input id="cf-zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="10" pattern="\d{5}(-\d{4})?" required>
+            <input id="cf-zip" name="zip" type="text" inputmode="numeric" autocomplete="postal-code" maxlength="10" pattern="\d{5}(-\d{4})?" placeholder="To find your nearest clinic" required>
             <span class="cf-error">Please enter a 5-digit ZIP code.</span>
-          </div>
-          <div class="cf-field">
-            <label for="cf-insurance">Insurance provider <span class="opt">(optional)</span></label>
-            <input id="cf-insurance" name="insurance" type="text" placeholder="e.g. Medicare, BCBS, Aetna">
-          </div>
-          <div class="cf-field">
-            <label for="cf-time">Best time to reach you</label>
-            <select id="cf-time" name="best_time">
-              <option value="">Any time</option>
-              <option>Morning (8–11 AM)</option>
-              <option>Midday (11 AM–2 PM)</option>
-              <option>Afternoon (2–5 PM)</option>
-            </select>
-          </div>
-          <div class="cf-field full">
-            <label for="cf-source">How did you hear about us? <span class="opt">(optional)</span></label>
-            <select id="cf-source" name="referral_source">
-              <option value="">Select</option>
-              <option>Physician / therapist referral</option>
-              <option>Hospital</option>
-              <option>Google / online search</option>
-              <option>Social media</option>
-              <option>Friend or family</option>
-              <option>Support group / event</option>
-              <option>Other</option>
-            </select>
           </div>
 
           <div class="cf-field full">
             <label for="cf-message">Message <span class="opt">(optional)</span></label>
-            <textarea id="cf-message" name="message" maxlength="1500" placeholder="Tell us briefly how we can help — goals, questions, or anything you'd like us to know."></textarea>
+            <textarea id="cf-message" name="message" maxlength="1000" rows="3" placeholder="Anything you'd like us to know before we call?"></textarea>
           </div>
 
           <!-- Honeypot (spam trap). Neutral name so browser autofill never fills it. -->
@@ -281,20 +182,14 @@
           <div class="cf-field full">
             <label class="cf-check" for="cf-consent">
               <input id="cf-consent" name="consent" type="checkbox" value="yes" required>
-              <span>I agree to be contacted by Bionic Prosthetics &amp; Orthotics by phone, text or email about my inquiry, and I have read the <a href="/privacy-policy/">Privacy Policy</a>.<span class="req" style="color:#C0392B">*</span></span>
+              <span>I agree that Bionic Prosthetics &amp; Orthotics may contact me by phone, text or email about my inquiry. Msg &amp; data rates may apply; reply STOP to opt out. <a href="/privacy-policy/">Privacy Policy</a><span class="req" style="color:#C0392B">*</span></span>
             </label>
             <span class="cf-error">Please confirm you agree to be contacted.</span>
           </div>
-          <div class="cf-field full">
-            <label class="cf-check" for="cf-news">
-              <input id="cf-news" name="newsletter" type="checkbox" value="yes">
-              <span>Send me monthly care tips and clinic news from Bionic Beats.</span>
-            </label>
-          </div>
 
           <div class="cf-submit full cf-field">
-            <button type="submit" class="btn btn-primary btn-lg" id="cfBtn">Send Request</button>
-            <small>We typically respond within one business day.</small>
+            <button type="submit" class="btn btn-primary btn-lg" id="cfBtn">Request My Free Consultation</button>
+            <small>We'll call you within one business day.</small>
           </div>
         </div>
       </form>
