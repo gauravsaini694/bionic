@@ -18,6 +18,8 @@
 </section>
 {{ end }}
 
+{{ if .Params.contact_form }}{{ partial "contact-form.html" . }}{{ end }}
+
 {{ $bgOf := dict "text-image" "white" "points" "cream" "cards" "cream" "product-cards" "cream" "faq" "white" "stats" "dark" "cta-band" "dark" "testimonial" "cream" "job-form" "cream" "children-grid" "white" "clinic-finder" "white" "leadership" "white" "chip-list" "white" }}
 {{ range $i, $s := .Params.sections }}
 {{ $last := $.Scratch.Get "lastbg" | default "cream" }}

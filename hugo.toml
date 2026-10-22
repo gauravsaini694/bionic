@@ -43,6 +43,8 @@ title = "Bionic Prosthetics & Orthotics"
   googleAdsIDs = ["AW-677614629", "AW-849212221"]
   brandColor = "#1D3F96"
   accentColor = "#F2994A"
+  # Google Apps Script Web App URL (ends with /exec) for the /contact/ form. Empty = demo mode.
+  contactFormEndpoint = "https://script.google.com/macros/s/AKfycbzi7W_p5p3s9mdAxAvZ5zfvi4SrtuwfYvRJlSwILaZBXeYFWXhhPSv5jHMPDTW1nGfn/exec"
 
 [params.contactPoint]
   contactType = "customer service"

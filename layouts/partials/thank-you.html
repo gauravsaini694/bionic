@@ -1,0 +1,179 @@
+{{- /* Thank You page body. Rendered by layouts/_default/thank-you.html (content/thank-you.md, layout "thank-you"). Details come from sessionStorage "bionicSubmission", written by the contact form before redirecting; nothing personal is in the URL. */ -}}
+<style>
+  .ty-hero { background: var(--brand, #25318D); color: #fff; padding: 72px 0 120px; text-align: center; position: relative; overflow: hidden; }
+  .ty-hero::after { content: ""; position: absolute; inset: auto -10% -60% -10%; height: 70%; background: radial-gradient(closest-side, rgba(147,194,81,.28), transparent); pointer-events: none; }
+  .ty-badge { width: 84px; height: 84px; margin: 0 auto 22px; border-radius: 50%; display: grid; place-items: center; background: var(--accent, #93C251); color: #fff; box-shadow: 0 0 0 10px rgba(147,194,81,.22); animation: ty-pop .6s var(--ease) both; }
+  .ty-badge svg { width: 40px; height: 40px; }
+  .ty-badge path { stroke-dasharray: 30; stroke-dashoffset: 30; animation: ty-draw .5s .35s ease forwards; }
+  @keyframes ty-pop { from { transform: scale(.4); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  @keyframes ty-draw { to { stroke-dashoffset: 0; } }
+  @media (prefers-reduced-motion: reduce) { .ty-badge, .ty-badge path { animation: none; stroke-dashoffset: 0; } }
+  .ty-hero .eyebrow { color: rgba(255,255,255,.75); }
+  .ty-hero h1 { font-family: var(--font-serif); font-size: clamp(34px, 4.6vw, 54px); line-height: 1.1; margin: 10px 0 14px; color: #fff; }
+  .ty-hero p { max-width: 620px; margin: 0 auto; font-size: 17px; line-height: 1.6; color: rgba(255,255,255,.86); }
+  .ty-ref { display: inline-flex; gap: 10px; align-items: center; margin-top: 22px; padding: 10px 18px; border-radius: var(--radius-pill, 999px); background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22); font-size: 14px; }
+  .ty-ref b { letter-spacing: .06em; font-size: 15px; }
+
+  .ty-body { background: var(--bg-cream, #F4F4F4); padding: 0 0 80px; }
+  .ty-grid { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); gap: 28px; margin-top: -72px; position: relative; z-index: 1; align-items: start; }
+  .ty-card { background: #fff; border-radius: var(--radius-lg, 20px); box-shadow: var(--shadow-card); border: 1px solid var(--border-soft); padding: 32px; }
+  .ty-card h2 { font-family: var(--font-serif); font-size: 26px; margin: 0 0 6px; color: var(--ink); }
+  .ty-card > p.sub { margin: 0 0 22px; color: var(--ink-soft); font-size: 15px; }
+  .ty-dl { display: grid; grid-template-columns: 1fr 1fr; gap: 0; margin: 0; border: 1px solid var(--border-soft); border-radius: var(--radius-md, 14px); overflow: hidden; }
+  .ty-dl div { padding: 14px 18px; border-bottom: 1px solid var(--border-soft); min-width: 0; }
+  .ty-dl div:nth-child(odd) { border-right: 1px solid var(--border-soft); }
+  .ty-dl div.full { grid-column: 1 / -1; border-right: 0; }
+  .ty-dl dt { font-size: 12px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 4px; }
+  .ty-dl dd { margin: 0; font-size: 15px; color: var(--ink); word-wrap: break-word; white-space: pre-wrap; }
+  .ty-edit { margin-top: 16px; font-size: 14px; color: var(--ink-soft); }
+  .ty-edit a { color: var(--brand); font-weight: 600; }
+
+  .ty-steps { list-style: none; margin: 0; padding: 0; display: grid; gap: 0; }
+  .ty-steps li { display: grid; grid-template-columns: 40px 1fr; gap: 14px; position: relative; padding-bottom: 22px; }
+  .ty-steps li:last-child { padding-bottom: 0; }
+  .ty-steps li:not(:last-child)::before { content: ""; position: absolute; left: 19px; top: 40px; bottom: 0; width: 2px; background: var(--brand-light-strong); }
+  .ty-num { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; background: var(--brand-light); color: var(--brand); font-weight: 700; }
+  .ty-steps li.done .ty-num { background: var(--accent); color: #fff; }
+  .ty-steps strong { display: block; font-size: 15px; color: var(--ink); margin: 2px 0 3px; }
+  .ty-steps span { font-size: 14px; color: var(--ink-soft); line-height: 1.5; }
+
+  .ty-help { margin-top: 20px; background: var(--brand); color: #fff; border-radius: var(--radius-lg, 20px); padding: 26px 28px; }
+  .ty-help h3 { font-family: var(--font-serif); font-size: 22px; margin: 0 0 6px; color: #fff; }
+  .ty-help p { margin: 0 0 16px; color: rgba(255,255,255,.82); font-size: 15px; }
+  .ty-help .btn { width: 100%; justify-content: center; }
+
+  .ty-links { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 28px; }
+  .ty-link { display: flex; gap: 14px; align-items: flex-start; background: #fff; border-radius: var(--radius-md, 14px); border: 1px solid var(--border-soft); box-shadow: var(--shadow-card); padding: 20px; text-decoration: none; color: inherit; transition: transform .25s var(--ease), box-shadow .25s var(--ease); }
+  .ty-link:hover { transform: translateY(-2px); box-shadow: var(--shadow-card-hover); }
+  .ty-ico { flex: 0 0 42px; height: 42px; border-radius: 12px; display: grid; place-items: center; background: var(--accent-light); color: var(--accent-hover); }
+  .ty-ico svg { width: 20px; height: 20px; }
+  .ty-link strong { display: block; font-size: 15px; color: var(--ink); margin-bottom: 3px; }
+  .ty-link span { font-size: 14px; color: var(--ink-soft); line-height: 1.45; }
+
+  .ty-generic .ty-dl, .ty-generic .ty-edit, .ty-generic .ty-ref { display: none; }
+  .ty-nodata { display: none; color: var(--ink-soft); }
+  .ty-generic .ty-nodata { display: block; }
+
+  @media (max-width: 960px) { .ty-grid { grid-template-columns: 1fr; } .ty-links { grid-template-columns: 1fr; } }
+  @media (max-width: 600px) {
+    .ty-hero { padding: 56px 0 100px; }
+    .ty-card { padding: 24px 18px; }
+    .ty-dl { grid-template-columns: 1fr; }
+    .ty-dl div:nth-child(odd) { border-right: 0; }
+  }
+</style>
+
+<div id="tyRoot" class="ty-generic">
+  <section class="ty-hero">
+    <div class="container">
+      <div class="ty-badge" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+      </div>
+      <span class="eyebrow">REQUEST RECEIVED</span>
+      <h1>Thank you<span id="tyName"></span>!</h1>
+      <p>Your consultation request is on its way to our patient care team. We'll reach out <span id="tyWhen">within one business day</span> to help you take the next step.</p>
+      <div class="ty-ref">Reference&nbsp;No. <b id="tyRef">—</b></div>
+    </div>
+  </section>
+
+  <section class="ty-body">
+    <div class="container">
+      <div class="ty-grid">
+
+        <div class="ty-card">
+          <h2>Your request summary</h2>
+          <p class="sub">Here's what you shared with us. Please keep your reference number handy if you call.</p>
+          <p class="ty-nodata">Your request was submitted successfully. A member of our team will contact you soon using the details you provided.</p>
+          <dl class="ty-dl" id="tyList"></dl>
+          <p class="ty-edit">Something not right? Call us at <a href="tel:18555246642">1-855-524-6642</a> and mention your reference number.</p>
+        </div>
+
+        <div>
+          <div class="ty-card">
+            <h2>What happens next</h2>
+            <p class="sub">A simple, guided path to your care plan.</p>
+            <ol class="ty-steps">
+              <li class="done"><span class="ty-num">✓</span><div><strong>Request received</strong><span>Your details are now with our patient care team.</span></div></li>
+              <li><span class="ty-num">2</span><div><strong>We contact you</strong><span id="tyStep2">A care coordinator will reach out within one business day.</span></div></li>
+              <li><span class="ty-num">3</span><div><strong>Insurance &amp; prescription check</strong><span>We help verify coverage and gather any paperwork from your physician.</span></div></li>
+              <li><span class="ty-num">4</span><div><strong>Complimentary consultation</strong><span>Meet a board-certified clinician at the clinic closest to you.</span></div></li>
+            </ol>
+          </div>
+
+          <div class="ty-help">
+            <h3>Need help sooner?</h3>
+            <p>Our team is available Monday – Friday, 8:00 AM – 5:00 PM. New patients, press option 1.</p>
+            <a href="tel:18555246642" class="btn btn-primary btn-lg">Call 1-855-524-6642</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="ty-links">
+        <a class="ty-link" href="/locations/">
+          <span class="ty-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+          <div><strong>Find your nearest clinic</strong><span>Clinics across 12 states, close to home.</span></div>
+        </a>
+        <a class="ty-link" href="/patient-resources/">
+          <span class="ty-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h6"/></svg></span>
+          <div><strong>Prepare for your visit</strong><span>Forms, insurance info and what to bring.</span></div>
+        </a>
+        <a class="ty-link" href="/success-stories/">
+          <span class="ty-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l8.84-8.84a5.5 5.5 0 0 0 0-7.78z"/></svg></span>
+          <div><strong>Read patient stories</strong><span>Real outcomes from people like you.</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+(function () {
+  var raw = null, d = null;
+  try { raw = sessionStorage.getItem('bionicSubmission'); } catch (e) {}
+  try { d = raw ? JSON.parse(raw) : null; } catch (e) { d = null; }
+  // Only show details for a recent submission (within 2 hours)
+  if (!d || !d._ts || Date.now() - d._ts > 2 * 60 * 60 * 1000) return;
+
+  var root = document.getElementById('tyRoot');
+  root.classList.remove('ty-generic');
+
+  if (d.first_name) document.getElementById('tyName').textContent = ', ' + d.first_name;
+  if (d.ref_id) document.getElementById('tyRef').textContent = d.ref_id;
+
+  var how = { 'Phone': 'by phone', 'Text': 'by text message', 'Email': 'by email' }[d.preferred_contact] || '';
+  var slot = d.best_time ? d.best_time.split(' (')[0].toLowerCase() : '';
+  var when = slot ? (slot === 'midday' ? ' around midday' : ' in the ' + slot) : '';
+  if (how) {
+    document.getElementById('tyWhen').textContent = how + ' within one business day';
+    document.getElementById('tyStep2').textContent =
+      'A care coordinator will reach out ' + how + when + ' within one business day.';
+  }
+
+  var rows = [
+    ['Name', [d.first_name, d.last_name].filter(Boolean).join(' ')],
+    ['I am a', d.contact_role],
+    ['Email', d.email],
+    ['Phone', d.phone],
+    ['Preferred contact', d.preferred_contact + (d.best_time ? ' · ' + d.best_time : '')],
+    ['Reason', d.reason],
+    ['Service', d.service],
+    ['Patient age group', d.patient_age_group],
+    ['Prescription', d.has_prescription],
+    ['Location', [d.state, d.zip].filter(Boolean).join(' · ')],
+    ['Insurance', d.insurance],
+    ['Message', d.message, true]
+  ];
+  var dl = document.getElementById('tyList');
+  rows.forEach(function (r) {
+    if (!r[1] || !String(r[1]).trim()) return;
+    var wrap = document.createElement('div');
+    if (r[2]) wrap.className = 'full';
+    var dt = document.createElement('dt'); dt.textContent = r[0];
+    var dd = document.createElement('dd'); dd.textContent = r[1];
+    wrap.appendChild(dt); wrap.appendChild(dd); dl.appendChild(wrap);
+  });
+  // Odd count: stretch the last cell so the grid has no gap
+  var half = dl.querySelectorAll('div:not(.full)');
+  if (half.length % 2) half[half.length - 1].classList.add('full');
+})();
+</script>
