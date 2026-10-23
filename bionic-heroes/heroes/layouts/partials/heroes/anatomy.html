@@ -1,0 +1,51 @@
+{{- /*
+  Anatomy — a line-drawn body with the treated region glowing, plus labelled sub-types.
+  (Upper Limb, Lower Limb, Upper Extremity, Lower Extremity, Cranial & Spinal)
+  Front matter:
+    hero_region: arm | hand | upper | leg | lower | foot | head | spine | headspine
+    hero_chips: ["Partial hand", "Below elbow", "Above elbow", "Shoulder"]
+*/ -}}
+{{- $r := .Params.hero_region | default "arm" -}}
+{{- $on := dict
+    "arm" (slice "arm-r" "hand-r")
+    "hand" (slice "hand-r")
+    "upper" (slice "arm-r" "hand-r" "arm-l" "hand-l")
+    "leg" (slice "leg-r" "foot-r")
+    "lower" (slice "leg-r" "foot-r" "leg-l" "foot-l")
+    "foot" (slice "foot-r" "foot-l")
+    "head" (slice "head")
+    "spine" (slice "spine")
+    "headspine" (slice "head" "spine") -}}
+{{- $parts := index $on $r | default (slice) -}}
+{{- $chips := .Params.hero_chips | default (slice) -}}
+<section class="hx hx-anatomy hx-r-{{ $r }}">
+  <div class="container hx-grid">
+    <div class="hx-copy">
+      {{ partial "heroes/parts/head.html" . }}
+      {{ partial "heroes/parts/actions.html" (dict "p" .) }}
+    </div>
+    <div class="hx-figure" aria-hidden="true">
+      <div class="hx-figure-card">
+        <svg viewBox="0 0 200 400" class="hx-body">
+          <circle class="pt {{ if in $parts "head" }}is-on{{ end }}" cx="100" cy="42" r="26"/>
+          <path class="pt pt-fill" d="M76 80 Q100 70 124 80 L132 192 Q100 204 68 192 Z"/>
+          <path class="pt pt-line {{ if in $parts "spine" }}is-on{{ end }}" d="M100 82 L100 192"/>
+          <path class="pt pt-limb {{ if in $parts "arm-l" }}is-on{{ end }}" d="M76 86 L56 150 L50 200"/>
+          <path class="pt pt-limb {{ if in $parts "arm-r" }}is-on{{ end }}" d="M124 86 L144 150 L150 200"/>
+          <circle class="pt {{ if in $parts "hand-l" }}is-on{{ end }}" cx="48" cy="214" r="10"/>
+          <circle class="pt {{ if in $parts "hand-r" }}is-on{{ end }}" cx="152" cy="214" r="10"/>
+          <path class="pt pt-limb pt-leg {{ if in $parts "leg-l" }}is-on{{ end }}" d="M86 198 L80 296 L78 362"/>
+          <path class="pt pt-limb pt-leg {{ if in $parts "leg-r" }}is-on{{ end }}" d="M114 198 L120 296 L122 362"/>
+          <ellipse class="pt {{ if in $parts "foot-l" }}is-on{{ end }}" cx="72" cy="378" rx="15" ry="8"/>
+          <ellipse class="pt {{ if in $parts "foot-r" }}is-on{{ end }}" cx="128" cy="378" rx="15" ry="8"/>
+        </svg>
+        <span class="hx-pulse"></span>
+      </div>
+      {{- with $chips }}
+      <ul class="hx-chips">
+        {{- range . }}<li><span></span>{{ . }}</li>{{ end }}
+      </ul>
+      {{- end }}
+    </div>
+  </div>
+</section>

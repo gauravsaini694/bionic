@@ -1,0 +1,17 @@
+{{- /* Seal — a slowly rotating accreditation ring around a badge, beside the copy. (Accredited) */ -}}
+{{- $ring := .Params.hero_ring | default "ABC ACCREDITED • QUALITY • SAFETY • PATIENT CARE • " -}}
+<section class="hx hx-seal">
+  <div class="container hx-grid">
+    <div class="hx-badgewrap" aria-hidden="true">
+      <svg class="hx-sealring" viewBox="0 0 300 300">
+        <defs><path id="hx-circle" d="M150,150 m-118,0 a118,118 0 1,1 236,0 a118,118 0 1,1 -236,0"/></defs>
+        <text><textPath href="#hx-circle">{{ $ring }}{{ $ring }}</textPath></text>
+      </svg>
+      <div class="hx-medal">{{ partial "heroes/parts/icon.html" "award" }}<b>ABC</b><small>Accredited</small></div>
+    </div>
+    <div class="hx-copy">
+      {{ partial "heroes/parts/head.html" . }}
+      {{ partial "heroes/parts/actions.html" (dict "p" .) }}
+    </div>
+  </div>
+</section>

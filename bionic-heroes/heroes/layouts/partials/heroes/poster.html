@@ -1,0 +1,29 @@
+{{- /*
+  Poster — oversized stacked type with outlined words + an endless photo strip. (Careers, Grow With Us)
+  Front matter: hero_lines: ["Build a career", "that moves", "people."]   hero_images: [...]
+*/ -}}
+{{- $p := . -}}
+{{- $lines := .Params.hero_lines | default (slice .Title) -}}
+{{- $imgs := slice -}}
+{{- range (.Params.hero_images | default (slice)) -}}{{- $imgs = $imgs | append (partial "heroes/parts/img.html" (dict "p" $p "src" .)) -}}{{- end -}}
+{{- if not $imgs -}}{{- with partial "heroes/parts/img.html" (dict "p" $p) -}}{{- $imgs = slice . . . -}}{{- end -}}{{- end -}}
+<section class="hx hx-poster">
+  <div class="container">
+    {{ partial "heroes/parts/crumbs.html" . }}
+    <div class="hx-grid">
+      <h1 class="hx-title">
+        {{- range $i, $l := $lines }}<span class="hx-line{{ if eq (mod $i 2) 1 }} is-outline{{ end }}">{{ $l }}</span>{{ end -}}
+      </h1>
+      <div class="hx-side">
+        {{- with .Params.eyebrow }}<span class="eyebrow hx-eyebrow">{{ . }}</span>{{ end }}
+        {{- with (.Params.subhead | default .Description) }}<p class="hx-sub">{{ . }}</p>{{ end }}
+        {{ partial "heroes/parts/actions.html" (dict "p" . "default" (slice (dict "label" "View Open Roles" "url" "#roles") (dict "label" "Contact HR" "url" "/contact/"))) }}
+      </div>
+    </div>
+  </div>
+  {{- with $imgs }}
+  <div class="hx-strip" aria-hidden="true"><div class="hx-track">
+    {{- range seq 2 }}{{ range $imgs }}<span style="background-image:url('{{ . }}')"></span>{{ end }}{{ end }}
+  </div></div>
+  {{- end }}
+</section>

@@ -234,6 +234,14 @@
     });
     form.addEventListener("submit", onSubmit);
     locateBtn.addEventListener("click", onLocate);
+    /* /locations/?q=ZIP (from the hero search boxes) starts a search straight away */
+    var qp = new URLSearchParams(location.search).get("q");
+    if (qp && qp.trim()) {
+      input.value = qp.trim();
+      onSubmit({ preventDefault: function () {} });
+      var sec = document.getElementById("find-a-clinic");
+      if (sec) sec.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   }
 
   function start() {

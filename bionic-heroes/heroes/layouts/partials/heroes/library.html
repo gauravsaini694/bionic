@@ -1,0 +1,22 @@
+{{- /*
+  Library — a shelf of tall colourful "book spine" tiles, one per resource area. (Resources hub)
+  Front matter: hero_shelf: [{ label, url, icon }]
+*/ -}}
+{{- $shelf := .Params.hero_shelf | default (slice
+      (dict "label" "Patient Resources" "url" "/patient-resources/" "icon" "file")
+      (dict "label" "Pay My Bill" "url" "/book-appointment-pay-bill/" "icon" "card")
+      (dict "label" "FAQs" "url" "/faqs/" "icon" "help")
+      (dict "label" "Blog" "url" "/blog/" "icon" "book")
+      (dict "label" "Bionic Beats" "url" "/bionic-beats/" "icon" "mic")) -}}
+<section class="hx hx-library">
+  <div class="container hx-grid">
+    <div class="hx-copy">
+      {{ partial "heroes/parts/head.html" . }}
+    </div>
+    <ul class="hx-shelf">
+      {{- range $i, $b := $shelf }}
+      <li class="hx-spine s{{ $i }}"><a href="{{ $b.url | relURL }}">{{ partial "heroes/parts/icon.html" ($b.icon | default "book") }}<span>{{ $b.label }}</span></a></li>
+      {{- end }}
+    </ul>
+  </div>
+</section>

@@ -1,0 +1,22 @@
+{{- /*
+  Growth — a rising career ladder (bars climb as the page loads) beside the copy. (Grow With Us)
+  Front matter: hero_ladder: ["Fitter", "Resident", "Clinician", "Clinical Lead", "Director"]
+*/ -}}
+{{- $ladder := .Params.hero_ladder | default (slice "Student" "Resident" "Clinician" "Senior Clinician" "Clinical Leader") -}}
+{{- $img := partial "heroes/parts/img.html" (dict "p" .) -}}
+<section class="hx hx-growth">
+  <div class="container hx-grid">
+    <div class="hx-copy">
+      {{ partial "heroes/parts/head.html" . }}
+      {{ partial "heroes/parts/actions.html" (dict "p" . "default" (slice (dict "label" "Contact HR" "url" "/contact/") (dict "label" "Explore the Residency" "url" "/residency-program/"))) }}
+    </div>
+    <div class="hx-ladder"{{ with $img }} style="--bg:url('{{ . }}')"{{ end }}>
+      <ol>
+        {{- range $i, $s := $ladder }}
+        <li style="--h:{{ add 28 (mul $i 16) }}%;--i:{{ $i }}"><span>{{ $s }}</span></li>
+        {{- end }}
+      </ol>
+      <span class="hx-arrow">{{ partial "heroes/parts/icon.html" "arrow" }}</span>
+    </div>
+  </div>
+</section>

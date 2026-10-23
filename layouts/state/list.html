@@ -12,24 +12,7 @@
 {{- end -}}
 {{- $all := partialCached "locations-data.html" . -}}
 
-<section class="cl-hero">
-  <div class="container">
-    <nav class="cl-crumbs" aria-label="Breadcrumb">
-      <a href="/">Home</a><span aria-hidden="true">›</span>
-      <a href="/locations/">Locations</a><span aria-hidden="true">›</span>
-      <span aria-current="page">{{ .Title }}</span>
-    </nav>
-    <span class="eyebrow eyebrow-light">FIND CARE NEAR YOU</span>
-    <h1>{{ .Params.hero.title | default (printf "Bionic Clinics in %s" .Title) }}</h1>
-    {{ with .Params.hero.subhead }}<p class="cl-hero-address">{{ . }}</p>{{ end }}
-    <span class="cl-badge is-closed">Our Locations in {{ .Title }}</span>
-    <div class="cl-hero-actions">
-      <a href="/contact/" class="btn btn-primary btn-lg">Request a Consultation</a>
-      <a href="/locations/" class="btn btn-outline btn-lg">Back to States</a>
-      <a href="/book-appointment-pay-bill/" class="btn btn-outline btn-lg">Contact Us</a>
-    </div>
-  </div>
-</section>
+{{ partial "hero.html" . }}
 
 <section class="section">
   {{ with .Params.locations_title }}<div class="container"><h2 class="st-locations-title">{{ . }}</h2></div>{{ end }}

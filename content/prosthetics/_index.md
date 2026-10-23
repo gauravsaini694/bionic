@@ -2,6 +2,7 @@
 title: Prosthetics
 seo_title: Prosthetics | Bionic Prosthetics and Orthotics
 seo_description: Find personalized prosthetic limb solutions at Bionic Prosthetics & Orthotics. From upper to lower limb prostheses, get expert fitting, advanced technology, and restored function.
+hero_image: "/images/prosthetics-what-is.webp"
 hero:
   eyebrow: YOUR PROSTHETIC JOURNEY STARTS HERE
   title: Prosthetic Care Built Around You
@@ -15,8 +16,6 @@ sections:
   eyebrow: WHAT ARE PROSTHETICS?
   title: Devices Designed Around Your Life
   body: Prosthetics are artificial devices designed to replace missing or damaged body parts, helping individuals regain mobility and function. These devices can replace lost limbs, parts of limbs, or body structures, enabling users to continue with daily activities and lead more independent lives.
-  image: /images/prosthetics-what-is.webp
-  image_alt: A runner with a prosthetic leg jogging along a country road
   image_position: right
 - type: richtext
   body: <p>Not sure if a prosthetic is right for you? A conversation can help clarify your options.</p>

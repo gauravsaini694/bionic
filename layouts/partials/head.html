@@ -6,7 +6,7 @@
 {{- if not $desc }}{{ if and (not .IsHome) (eq .Kind "page") }}{{ $desc = .Summary | plainify | truncate 160 }}{{ end }}{{ end -}}
 {{- if not $desc }}{{ $desc = "Board-certified prosthetic and orthotic care for children and adults, with clinics across the country." }}{{ end -}}
 {{- if not $seoDesc }}{{ $desc = $desc | plainify | truncate 160 }}{{ end -}}
-{{- $title := .Params.seo_title | default (cond .IsHome (printf "%s | Custom Prosthetic & Orthotic Care" site.Title) (printf "%s | %s" .Title site.Title)) -}}
+{{- $title := .Params.seo_title | default (cond .IsHome .Title (printf "%s | %s" .Title site.Title)) -}}
 {{- $img := .Params.image -}}
 {{- if not $img }}{{ with .Params.hero }}{{ $img = .image }}{{ end }}{{ end -}}
 {{- if not $img }}{{ $img = site.Params.ogImage }}{{ end -}}
@@ -32,5 +32,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 {{ $css := slice (resources.Get "css/style.css") (resources.Get "css/components.css") | resources.Concat "css/site.css" | resources.Minify | resources.Fingerprint }}<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{ $hx := partial "asset.html" "css/heroes.css" }}<link rel="stylesheet" href="{{ $hx.RelPermalink }}" integrity="{{ $hx.Data.Integrity }}">
+{{ if eq .Type "blog-post" }}{{ $pc := partial "asset.html" "css/post.css" }}<link rel="stylesheet" href="{{ $pc.RelPermalink }}" integrity="{{ $pc.Data.Integrity }}">{{ end }}
 {{ $tab := partial "asset.html" "css/responsive/tablet.css" }}<link rel="stylesheet" href="{{ $tab.RelPermalink }}" integrity="{{ $tab.Data.Integrity }}" media="(max-width: 1024px)">
 {{ $mob := partial "asset.html" "css/responsive/mobile.css" }}<link rel="stylesheet" href="{{ $mob.RelPermalink }}" integrity="{{ $mob.Data.Integrity }}" media="(max-width: 640px)">

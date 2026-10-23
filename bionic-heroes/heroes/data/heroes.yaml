@@ -1,0 +1,46 @@
+# Which hero design each page uses. A page's own `hero_variant` front matter wins over this file.
+# Keys under `paths` are the page URL (RelPermalink). Keys under `sections` are "<section>/<single|list>".
+
+paths:
+  "/about-us/": split
+  "/prosthetics/": stride
+  "/prosthetics/pediatric/": playful
+  "/prosthetics/technology/": tech
+  "/upper-limb/": anatomy
+  "/lower-limb/": anatomy
+  "/upper-extremity/": anatomy
+  "/lower-extremity/": anatomy
+  "/cranial-spinal/": anatomy
+  "/orthotics/": mosaic
+  "/diabetic-foot/": care
+  "/team/": teamwall
+  "/executive-team/": leaders
+  "/success-stories/": stories
+  "/accredited/": seal
+  "/locations/": mapdots
+  "/contact/": actiondesk
+  "/book-appointment-pay-bill/": twinpath
+  "/patient-resources/": helpdesk
+  "/resources/": library
+  "/faqs/": faq
+  "/blog/": editorial
+  "/bionic-beats/": podcast
+  "/careers/": poster
+  "/grow/": growth
+  "/residency-program/": academy
+  "/shadowingopportunities/": observe
+  "/privacy-policy/": doc
+  "/terms-of-use/": doc
+  "/inquiry-services-page/": doc
+
+sections:
+  "post/single": article
+  "team/single": profile
+  "executive-team/single": profile
+  "clinics/single": local
+  "locations/list": local      # each state page (/locations/florida/ …); /locations/ itself is set above
+  "locations/single": local
+
+kinds:
+  term: editorial              # /blog/categories/<name>/
+  taxonomy: editorial          # /blog/categories/

@@ -1,0 +1,47 @@
+{{- /*
+  Homepage-only <head> additions: JSON-LD (MedicalOrganization + WebSite + FAQPage) and home.css.
+  Usage in baseof.html <head>:  {{ if .IsHome }}{{ partial "home/head.html" . }}{{ end }}
+  Title + description come from content/_index.md front matter (see prompt).
+*/ -}}
+<link rel="stylesheet" href="{{ "css/home.css" | relURL }}">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "MedicalOrganization",
+      "@id": "https://www.bionicpo.com/#org",
+      "name": "Bionic Prosthetics & Orthotics",
+      "alternateName": ["Bionic P&O", "Bionic PO"],
+      "url": "https://www.bionicpo.com/",
+      "logo": "https://www.bionicpo.com/images/Bionic-logo.avif",
+      "foundingDate": "2007",
+      "telephone": "+1-855-524-6642",
+      "email": "information@bionicpo.com",
+      "medicalSpecialty": ["Prosthetics", "Orthotics"],
+      "address": {"@type": "PostalAddress", "streetAddress": "8695 Connecticut St, Suite E", "addressLocality": "Merrillville", "addressRegion": "IN", "postalCode": "46410", "addressCountry": "US"},
+      "areaServed": ["Florida", "Illinois", "Indiana", "Kentucky", "Michigan", "New Jersey", "North Carolina", "Ohio", "Pennsylvania", "Tennessee", "Texas", "Wisconsin"],
+      "sameAs": ["https://www.linkedin.com/company/bionicpo"]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://www.bionicpo.com/#website",
+      "url": "https://www.bionicpo.com/",
+      "name": "Bionic Prosthetics & Orthotics",
+      "publisher": {"@id": "https://www.bionicpo.com/#org"}
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "What is the difference between a prosthetist and an orthotist?", "acceptedAnswer": {"@type": "Answer", "text": "A prosthetist designs and fits prostheses, which are artificial limbs that replace a missing arm, leg, hand, or foot. An orthotist designs and fits orthoses, which are braces that support, align, and protect the body."}},
+        {"@type": "Question", "name": "Does Medicare cover prosthetics and orthotics?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Medicare Part B covers prosthetic limbs and medically necessary arm, leg, back, and neck braces when your doctor orders them. After the Part B deductible, you pay 20% of the Medicare-approved amount."}},
+        {"@type": "Question", "name": "How much does a prosthetic leg cost?", "acceptedAnswer": {"@type": "Answer", "text": "It depends on the amputation level, your K-level, and the components you need. Insurance usually covers most of it, so what you pay comes down to your deductible and coinsurance."}},
+        {"@type": "Question", "name": "Do I need a prescription to see a prosthetist or orthotist?", "acceptedAnswer": {"@type": "Answer", "text": "Not to book a consultation. You will need a prescription from your doctor to receive a device, and we can help you get one."}},
+        {"@type": "Question", "name": "Is the first visit free?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Your first visit at Bionic costs nothing."}},
+        {"@type": "Question", "name": "What is a K-level?", "acceptedAnswer": {"@type": "Answer", "text": "A K-level is Medicare's rating, from K0 to K4, of how active you can be with a prosthetic leg. It decides which prosthetics insurance will cover."}},
+        {"@type": "Question", "name": "Can a prosthetist or orthotist visit me at home?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. If you can't get to a clinic, a Bionic specialist can see you at home, in a nursing facility, or in an assisted living facility at no charge."}}
+      ]
+    }
+  ]
+}
+</script>

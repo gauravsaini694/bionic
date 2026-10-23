@@ -1,0 +1,23 @@
+{{- /* Tech — dark circuit grid with glowing nodes, photo in a HUD frame, spec chips. (Prosthetic Technology) */ -}}
+{{- $img := partial "heroes/parts/img.html" (dict "p" .) -}}
+<section class="hx hx-tech">
+  <svg class="hx-circuit" viewBox="0 0 800 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <g fill="none" stroke="rgba(147,194,81,.28)" stroke-width="1.2">
+      <path d="M0 80 H180 L220 120 H420 L460 80 H800"/><path d="M0 300 H120 L160 260 H360 L400 300 H600 L640 340 H800"/>
+      <path d="M260 0 V60 L300 100 V400"/><path d="M560 0 V160 L600 200 V400"/>
+    </g>
+    <g fill="#93C251"><circle class="hx-node" cx="220" cy="120" r="4"/><circle class="hx-node" cx="460" cy="80" r="4"/><circle class="hx-node" cx="300" cy="100" r="4"/><circle class="hx-node" cx="600" cy="200" r="4"/><circle class="hx-node" cx="160" cy="260" r="4"/><circle class="hx-node" cx="640" cy="340" r="4"/></g>
+  </svg>
+  <div class="container hx-grid">
+    <div class="hx-copy">
+      {{ partial "heroes/parts/head.html" . }}
+      {{ partial "heroes/parts/actions.html" (dict "p" .) }}
+      <ul class="hx-specs">
+        {{- range (.Params.hero_chips | default (slice "Microprocessor knees" "Myoelectric hands" "3D scanning")) }}<li>{{ partial "heroes/parts/icon.html" "cpu" }}{{ . }}</li>{{ end }}
+      </ul>
+    </div>
+    {{- with $img }}
+    <div class="hx-hud"><img src="{{ . }}" alt=""><i class="c1"></i><i class="c2"></i><i class="c3"></i><i class="c4"></i><span class="hx-scan"></span></div>
+    {{- end }}
+  </div>
+</section>

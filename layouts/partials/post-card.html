@@ -7,7 +7,12 @@
       {{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>{{ end }}
     </div>
     <h3>{{ .Title }}</h3>
-    {{ $ex := .Params.description | default (.Summary | plainify | truncate 130) }}
+    {{- $ex := .Params.description -}}
+    {{- if not $ex -}}
+      {{- $t := .Summary | plainify | replaceRE `^\s*Updated:\s*[A-Za-z]{3,9}\.?\s*\d{1,2}(?:,\s*\d{4})?\s*` "" | strings.TrimSpace -}}
+      {{- $w := split $t " " -}}
+      {{- $ex = cond (gt (len $w) 25) (printf "%s…" (delimit (first 25 $w) " ")) $t -}}
+    {{- end -}}
     {{ with $ex }}<p class="blog-card-excerpt">{{ . }}</p>{{ end }}
   </div>
 </a>

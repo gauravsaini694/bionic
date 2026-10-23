@@ -1,0 +1,25 @@
+{{- /* Article — reading-first post header: category, big title, meta, wide image, reading progress bar. (Every blog post) */ -}}
+{{- $u := partial "heroes/parts/img.html" (dict "p" .) -}}
+<div class="hx-progress" aria-hidden="true"><span></span></div>
+<section class="hx hx-article">
+  <div class="container hx-narrow">
+    {{ partial "heroes/parts/crumbs.html" . }}
+    <div class="hx-cats">
+      {{- range .Params.categories }}<a href="{{ (printf "/blog/categories/%s/" (urlize .)) | relURL }}">{{ . }}</a>{{ end }}
+    </div>
+    <h1 class="hx-title">{{ .Title }}</h1>
+    <ul class="hx-meta">
+      <li>{{ partial "heroes/parts/icon.html" "calendar" }}{{ .Date.Format "January 2, 2006" }}</li>
+      <li>{{ partial "heroes/parts/icon.html" "clock" }}{{ .ReadingTime }} min read</li>
+      {{- with .Params.author }}<li>{{ partial "heroes/parts/icon.html" "users" }}{{ . }}</li>{{ end }}
+    </ul>
+  </div>
+  {{- with $u }}
+  <div class="container"><figure class="hx-cover"><img src="{{ . }}" alt="" fetchpriority="high"></figure></div>
+  {{- end }}
+</section>
+<script>
+(function(){var bar=document.querySelector('.hx-progress span');if(!bar)return;var art=document.querySelector('main article')||document.querySelector('main');
+  function f(){var r=art.getBoundingClientRect();var t=Math.min(1,Math.max(0,-r.top/(r.height-innerHeight)));bar.style.transform='scaleX('+t+')'}
+  addEventListener('scroll',f,{passive:true});f();})();
+</script>

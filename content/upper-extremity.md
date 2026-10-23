@@ -4,6 +4,9 @@ breadcrumbs:
 title: Upper Extremity Orthotics
 seo_title: Upper Extremity | Bionic Prosthetics and Orthotics | USA
 seo_description: Discover innovative upper extremity prosthetics and orthotics solutions at Bionic. Explore advanced technology and personalized care to restore functionality and improve quality of life.
+hero_region: upper
+hero_chips: ["Contracture management", "Fracture bracing", "Post-op bracing"]
+hero_image: "/images/upper-extremity-orthotics.webp"
 hero:
   eyebrow: ORTHOTICS
   title: Upper Extremity Orthoses
@@ -17,8 +20,6 @@ sections:
   eyebrow: OUR SOLUTIONS
   title: Support for the Upper Extremity Joints
   body: Whether you're managing a chronic condition or recovering from surgery, we design orthoses that support and stabilize the joints of the upper extremity.
-  image: /images/upper-extremity-orthotics.webp
-  image_alt: A person in a white t-shirt wearing a black custom wrist and forearm brace with three straps
   image_position: right
 - type: product-cards
   items:

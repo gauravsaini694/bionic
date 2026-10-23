@@ -1,0 +1,39 @@
+{{- /*
+  Stories — a big rotating patient quote with portrait dots. (Success Stories)
+  Front matter:
+    hero_quotes:
+      - { text: "…", name: "Michelle Evans", role: "Orthotic Patient", photo: "michelle.webp" }
+  Without it, testimonials already on the page (blockquote / .testimonial) are pulled in by JS.
+*/ -}}
+{{- $p := . -}}
+<section class="hx hx-stories">
+  <div class="container">
+    {{ partial "heroes/parts/crumbs.html" . }}
+    <div class="hx-grid">
+      <div class="hx-copy">
+        {{- with (partial "heroes/parts/f.html" (dict "p" $ "k" "eyebrow")) }}<span class="eyebrow hx-eyebrow">{{ . }}</span>{{ end }}
+        <h1 class="hx-title">{{ partial "heroes/parts/title.html" . }}</h1>
+        {{- with (partial "heroes/parts/f.html" (dict "p" $ "k" "subhead") | default .Description) }}<p class="hx-sub">{{ . }}</p>{{ end }}
+        {{ partial "heroes/parts/actions.html" (dict "p" .) }}
+      </div>
+      <figure class="hx-quote" data-auto="{{ if not .Params.hero_quotes }}1{{ end }}">
+        <span class="hx-qmark">{{ partial "heroes/parts/icon.html" "quote" }}</span>
+        <div class="hx-slides">
+          {{- range $i, $q := (.Params.hero_quotes | default (slice)) }}
+          <blockquote class="hx-slide{{ if eq $i 0 }} is-on{{ end }}"><p>{{ $q.text }}</p><footer><b>{{ $q.name }}</b>{{ with $q.role }} · {{ . }}{{ end }}</footer></blockquote>
+          {{- end }}
+        </div>
+        <div class="hx-dots"></div>
+      </figure>
+    </div>
+  </div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded",function(){var f=document.querySelector('.hx-stories .hx-quote');if(!f)return;var box=f.querySelector('.hx-slides');
+  if(f.dataset.auto){var src=[].slice.call(document.querySelectorAll('main blockquote, main .testimonial, main [class*=testimonial] p')).filter(function(e){return !e.closest('.hx')&&e.textContent.trim().length>40}).slice(0,5);
+    src.forEach(function(e,i){var b=document.createElement('blockquote');b.className='hx-slide'+(i?'':' is-on');var p=document.createElement('p');p.textContent=e.textContent.trim().replace(/\s+/g,' ').slice(0,220);b.appendChild(p);box.appendChild(b)})}
+  var s=box.children;if(!s.length){f.hidden=true;return}var dots=f.querySelector('.hx-dots'),k=0;
+  [].forEach.call(s,function(_,i){var d=document.createElement('button');d.setAttribute('aria-label','Story '+(i+1));d.onclick=function(){go(i)};dots.appendChild(d)});
+  function go(i){s[k].classList.remove('is-on');dots.children[k].classList.remove('is-on');k=i;s[k].classList.add('is-on');dots.children[k].classList.add('is-on')}
+  go(0);if(s.length>1&&!matchMedia('(prefers-reduced-motion: reduce)').matches)setInterval(function(){go((k+1)%s.length)},6000);});
+</script>

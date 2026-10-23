@@ -1,0 +1,32 @@
+{{- /*
+  Map dots — every clinic plotted as a glowing dot on a dark "night map", big ZIP search.
+  (Locations list) Reads clinic pages' lat/lng (lat|latitude, lng|lon|longitude — ADAPT).
+*/ -}}
+{{- $clinics := where site.RegularPages "Section" "clinics" -}}
+<section class="hx hx-mapdots">
+  <svg class="hx-map" viewBox="0 0 1000 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+    <defs>
+      <pattern id="hx-grid" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.3" fill="rgba(255,255,255,.12)"/></pattern>
+      <radialGradient id="hx-glow"><stop offset="0" stop-color="#93C251" stop-opacity=".9"/><stop offset="1" stop-color="#93C251" stop-opacity="0"/></radialGradient>
+    </defs>
+    <rect width="1000" height="520" fill="url(#hx-grid)"/>
+    {{- range $i, $c := $clinics }}
+      {{- $lat := $c.Params.lat | default $c.Params.latitude -}}
+      {{- $lng := $c.Params.lng | default $c.Params.lon | default $c.Params.longitude -}}
+      {{- if and $lat $lng }}
+        {{- $x := mul (div (add (float $lng) 125.0) 59.0) 1000.0 -}}
+        {{- $y := mul (div (sub 50.0 (float $lat)) 26.0) 520.0 -}}
+        <g class="hx-pin" style="--i:{{ mod $i 12 }}"><circle cx="{{ $x }}" cy="{{ $y }}" r="16" fill="url(#hx-glow)"/><circle cx="{{ $x }}" cy="{{ $y }}" r="3.4" fill="#fff"/></g>
+      {{- end }}
+    {{- end }}
+  </svg>
+  <div class="container hx-inner">
+    {{ partial "heroes/parts/head.html" . }}
+    <form class="hx-bigsearch" action="{{ "/locations/" | relURL }}" method="get">
+      {{ partial "heroes/parts/icon.html" "pin" }}
+      <input name="q" placeholder="Enter ZIP, city or state" aria-label="ZIP, city or state" autocomplete="postal-code">
+      <button type="submit" class="btn btn-primary">Find a Clinic</button>
+    </form>
+    <a class="hx-geo" href="#find-clinic">{{ partial "heroes/parts/icon.html" "spark" }} Use my current location</a>
+  </div>
+</section>

@@ -4,6 +4,9 @@ breadcrumbs:
 title: Cranial & Spinal Orthotics
 seo_title: Cranial & Spinal Orthotics | Custom Bracing & Helmets | BionicPO
 seo_description: Bionic P&O offers expert cranial remolding helmets and custom spinal orthoses. Our ABC-certified clinicians provide personalized care for scoliosis and plagiocephaly.
+hero_region: headspine
+hero_chips: ["Cranial remolding helmet", "Protective helmet", "Scoliosis orthoses", "Cervical orthoses", "Lumbar sacral (LSO)", "Thoracic lumbar sacral (TLSO)"]
+hero_image: "/images/blog/understanding-cranial-helmets-supporting-healthy-head-growth-in-babies.jpg"
 hero:
   eyebrow: ORTHOTICS
   title: Cranial and Spinal Orthoses
@@ -17,8 +20,6 @@ sections:
   eyebrow: CRANIAL SOLUTIONS
   title: Cranial Orthoses
   body: Custom-fabricated devices designed for infants and for patients recovering from injury or surgery.
-  image: /images/blog/understanding-cranial-helmets-supporting-healthy-head-growth-in-babies.jpg
-  image_alt: A baby in a decorated cranial remolding helmet sitting on a blanket outdoors, smiling and reaching out
   image_position: right
 - type: product-cards
   items:

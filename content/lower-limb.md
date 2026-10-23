@@ -4,6 +4,9 @@ breadcrumbs:
 title: Lower Limb Prosthetics
 seo_title: Lower Limb | Bionic Prosthetics and Orthotics
 seo_description: Restore mobility with advanced lower limb prosthetics. Bionic P&O provides custom above-knee, below-knee, and hip solutions across the states. Visit us today.
+hero_region: leg
+hero_chips: ["Hip", "Above the knee", "Below the knee", "Foot & partial foot", "Silicone restoration"]
+hero_image: "/images/lower-limb-prosthetics.webp"
 hero:
   eyebrow: PROSTHETICS
   title: Lower Limb Prostheses
@@ -17,8 +20,6 @@ sections:
   eyebrow: RETURNING TO MOTION
   title: Built to Get You Walking Again
   body: Lower extremity prostheses offer limb restoration to patients at all lower limb levels, ranging from amputation through the pelvis or hip joint down to partial foot amputations. The goal of lower extremity prostheses is to restore the limb and return gross motor function, allowing patients to walk again.
-  image: /images/lower-limb-prosthetics.webp
-  image_alt: A man in jeans sitting on a park bench with a black prosthetic leg and sneaker visible below the knee
   image_position: right
 - type: product-cards
   eyebrow: LEVELS OF CARE

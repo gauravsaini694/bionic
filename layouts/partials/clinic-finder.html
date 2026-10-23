@@ -7,48 +7,11 @@
       {{ with $p.eyebrow }}<span class="eyebrow">{{ . }}</span>{{ end }}
       <h2>{{ $p.title }}</h2>
       {{ with $p.body }}<p class="lead">{{ . }}</p>{{ end }}
-      <form class="clinic-search-form" role="search" id="clinic-search-form" novalidate>
-        <label for="clinic-search" class="visually-hidden">Search by ZIP, city, or state</label>
-        <input id="clinic-search" type="text" autocomplete="off" placeholder="{{ $p.search_placeholder | default "ZIP, city or state" }}">
-        <button type="submit" class="btn btn-primary">Search</button>
-      </form>
-      <button type="button" class="current-location-link" id="clinic-locate">
-        <span class="icon-sm">{{ partial "icon.html" "location" }}</span>
-        {{ $p.location_text | default "Use My Current Location" }}
-      </button>
-      <div class="clinic-results" id="clinic-results" aria-live="polite" hidden></div>
+      {{ partial "home/clinic-search.html" . }}
     </div>
     <div class="find-clinic-panel reveal" data-reveal="up">
       {{ with $p.states_title }}<h3 class="states-title">{{ . }}</h3>{{ end }}
-      <div class="state-chip-grid" role="group" aria-label="Filter map by state">
-        {{ range $d.states }}
-        {{ if eq $p.state_links "view" }}
-        <div class="state-card-wrap">
-          <button type="button" class="state-card" data-state="{{ .name }}" aria-pressed="false">
-            <span class="state-card-name">{{ .name }}</span>
-          </button>
-          <a href="{{ .url }}" class="state-card-link" aria-label="View Locations in {{ .name }}">View Locations <span aria-hidden="true">→</span></a>
-        </div>
-        {{ else }}
-        <button type="button" class="state-card" data-state="{{ .name }}" aria-pressed="false">
-          <span class="state-card-name">{{ .name }}</span>
-        </button>
-        {{ end }}
-        {{ end }}
-      </div>
-      {{ with $p.state_links }}{{ if ne . "view" }}
-      <ul class="state-links">
-        {{ range $d.states }}<li><a href="{{ .url }}"{{ if eq $p.state_links "view" }} aria-label="{{ .name }}"{{ end }}>{{ if eq $p.state_links "view" }}View Locations{{ else }}{{ .name }}{{ end }}</a></li>
-        {{ end }}
-      </ul>
-      {{ end }}{{ end }}
-      <div class="clinic-map-wrap">
-        <div id="clinic-map" class="clinic-map" data-src="{{ "locations/index.json" | relURL }}" role="region" aria-label="Map of Bionic clinic locations"></div>
-        <a href="/locations/" class="clinic-map-state-link" id="clinic-map-state-link" hidden></a>
-      </div>
+      {{ partial "home/clinic-map.html" . }}
     </div>
   </div>
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
-  {{ $j := partial "asset.html" "js/clinic-map.js" }}<script src="{{ $j.RelPermalink }}" integrity="{{ $j.Data.Integrity }}" defer></script>
 </section>

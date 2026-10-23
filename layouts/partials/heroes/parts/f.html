@@ -1,0 +1,21 @@
+{{- /*
+  Reads a hero field, preferring the new top-level names and falling back to the page's existing `hero:` block
+  (which the CMS edits). Context: dict "p" page  "k" "eyebrow" | "subhead" | "title" | "buttons"
+*/ -}}
+{{- $p := .p -}}
+{{- $h := $p.Params.hero | default dict -}}
+{{- $v := "" -}}
+{{- if eq .k "eyebrow" -}}{{- $v = $p.Params.eyebrow | default $h.eyebrow -}}
+{{- else if eq .k "subhead" -}}{{- $v = $p.Params.subhead | default $h.subhead -}}
+{{- else if eq .k "title" -}}{{- $v = $p.Params.hero_title | default $h.title -}}
+{{- else if eq .k "buttons" -}}
+  {{- $v = $p.Params.hero_buttons -}}
+  {{- if not $v -}}
+    {{- $b := slice -}}
+    {{- with $h.cta_primary }}{{ $b = $b | append (dict "label" . "url" ($h.cta_primary_link | default "/contact/")) }}{{ end -}}
+    {{- with $h.cta_secondary }}{{ $b = $b | append (dict "label" . "url" ($h.cta_secondary_link | default "/locations/")) }}{{ end -}}
+    {{- range $h.extra_buttons }}{{ $b = $b | append (dict "label" .text "url" .link) }}{{ end -}}
+    {{- if $b }}{{ $v = $b }}{{ end -}}
+  {{- end -}}
+{{- end -}}
+{{- return $v -}}

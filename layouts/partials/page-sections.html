@@ -1,22 +1,6 @@
 {{ $hero := .Params.hero }}
 
-{{ with $hero }}
-<section class="page-hero">
-  <div class="container page-hero-inner">
-    {{ if not $.IsHome }}{{ partial "breadcrumbs.html" (dict "page" $ "light" true) }}{{ end }}
-    {{ with .eyebrow }}<span class="eyebrow eyebrow-light">{{ . }}</span><br>{{ end }}
-    <h1>{{ .title }}</h1>
-    {{ with .subhead }}<p class="page-hero-subhead">{{ partial "rt.html" . }}</p>{{ end }}
-    {{ if or .cta_primary .cta_secondary }}
-    <div class="page-hero-actions">
-      {{ with .cta_primary }}<a href="{{ $hero.cta_primary_link | safeURL }}" class="btn btn-primary btn-lg"{{ if $hero.cta_primary_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ . }}</a>{{ end }}
-      {{ with .cta_secondary }}<a href="{{ $hero.cta_secondary_link | safeURL }}" class="btn btn-outline btn-lg"{{ if $hero.cta_secondary_new_tab }} target="_blank" rel="noopener"{{ end }}>{{ . }}</a>{{ end }}
-      {{ range .extra_buttons }}<a href="{{ .link | safeURL }}" class="btn btn-primary btn-lg"{{ if .new_tab }} target="_blank" rel="noopener"{{ end }}>{{ .text }}</a>{{ end }}
-    </div>
-    {{ end }}
-  </div>
-</section>
-{{ end }}
+{{ if or $hero (index (hugo.Data.heroes.paths | default dict) .RelPermalink) }}{{ partial "hero.html" . }}{{ end }}
 
 {{ if .Params.contact_form }}{{ partial "contact-form.html" . }}{{ end }}
 
@@ -260,9 +244,8 @@
       <ul class="check-list">{{ range . }}<li>{{ partial "rt.html" . }}</li>{{ end }}</ul>
     </aside>
     {{ end }}
-    <form class="apply-form reveal" data-reveal="up" name="job-application" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data">
-      <input type="hidden" name="form-name" value="job-application">
-      <p class="visually-hidden" aria-hidden="true"><label>Do not fill this out if you are human: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+    <form class="apply-form reveal" data-reveal="up" id="growForm" data-endpoint="{{ site.Params.grow_form_endpoint }}" novalidate>
+      <p class="visually-hidden" aria-hidden="true"><label>Do not fill this out if you are human: <input name="hp_g7x" tabindex="-1" autocomplete="off"></label></p>
       <div class="apply-grid">
         <div class="form-field"><label for="apply-first">First name</label><input id="apply-first" type="text" name="first-name" autocomplete="given-name" required></div>
         <div class="form-field"><label for="apply-last">Last name</label><input id="apply-last" type="text" name="last-name" autocomplete="family-name" required></div>
@@ -278,7 +261,7 @@
             <option value="" selected disabled>Select a location</option>
             {{ range $s.locations }}<option value="{{ . }}">{{ . }}</option>{{ end }}
           </select></div>
-        <div class="form-field form-field-wide"><label for="apply-resume">Upload Resume</label><input id="apply-resume" type="file" name="resume" accept=".pdf,.doc,.docx,.rtf,.txt"></div>
+        <div class="form-field form-field-wide"><label for="apply-resume">Upload Resume</label><input id="apply-resume" type="file" name="resume" accept=".pdf,.doc,.docx,.rtf,.txt"><small class="form-hint">PDF, DOC, DOCX, RTF or TXT, max 5 MB</small></div>
       </div>
       <button type="submit" class="btn btn-primary btn-lg">{{ $s.submit | default "Apply" }}</button>
     </form>

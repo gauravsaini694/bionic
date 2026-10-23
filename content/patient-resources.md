@@ -4,6 +4,11 @@ title: "Patient Resources"
 seo_title: "Patient Resources and Support | Bionic Prosthetics and Orthotics"
 seo_description: "Find prosthetic and orthotic patient resources, support guides, forms, and links to helpful organizations. Trusted tools for amputees and caregivers."
 
+hero_topics:
+  - { label: "Patient forms", url: "#patient-forms", icon: "file" }
+  - { label: "Insurance & billing", url: "/book-appointment-pay-bill/", icon: "card" }
+  - { label: "Support organizations", url: "#support-organizations", icon: "users" }
+  - { label: "FAQs", url: "/faqs/", icon: "help" }
 hero:
   eyebrow: "SUPPORT BEYOND THE CLINIC"
   title: "Patient Resources & Support"
@@ -47,6 +52,7 @@ sections:
       - "[[National Multiple Sclerosis Society|https://www.nationalmssociety.org/|_blank]] :: Information, support, and resources for people living with MS."
 
   - type: "richtext"
+    id: "patient-forms"
     title: "Patient Forms"
     body: "<p>Save time before your visit by completing your paperwork ahead of time, available through our <a href=\"/book-appointment-pay-bill/\">online registration</a>.</p><ul><li><a href=\"/_files/ugd/78f877_239ea826cc0b44ef99f2236e12112b1f.pdf\" target=\"_blank\" rel=\"noopener\">Diabetic Shoes and Inserts Packet</a> – paperwork for diabetic shoe and insert orders.</li><li><a href=\"https://www.oandp.com/opie/patients/Bionic\" target=\"_blank\" rel=\"noopener\">Patient Intake Form (Online Registration)</a> – complete your new-patient registration online before your visit.</li><li><a href=\"/_files/ugd/78f877_bf47e44ff0cb4afdbadf39ad0621f376.pdf\" target=\"_blank\" rel=\"noopener\">Patient Intake Form (download)</a> – a printable version to fill out and bring with you.</li></ul>"
 

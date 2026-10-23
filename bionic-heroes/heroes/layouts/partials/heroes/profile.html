@@ -1,0 +1,36 @@
+{{- /*
+  Profile — portrait with an accent ring, name, credentials, role and clinic chips.
+  (Every clinician & executive page)
+  Reads (ADAPT names if different): photo|headshot, role|position|job_title, email, clinics (list of names or dicts with name)
+*/ -}}
+{{- $u := partial "heroes/parts/img.html" (dict "p" . "src" (.Params.photo | default .Params.headshot)) -}}
+{{- $role := .Params.role | default .Params.position | default .Params.job_title -}}
+{{- $first := index (split .Title " ") 0 -}}
+{{- $isExec := eq .Section "executive-team" -}}
+<section class="hx hx-profile">
+  <div class="container">
+    {{ partial "heroes/parts/crumbs.html" . }}
+    <div class="hx-grid">
+      <div class="hx-portrait">
+        <span class="hx-ring"></span>
+        {{- if $u }}<img src="{{ $u }}" alt="{{ .Title }}">{{ else }}<span class="hx-initials">{{ substr $first 0 1 }}</span>{{ end }}
+      </div>
+      <div class="hx-copy">
+        <span class="eyebrow hx-eyebrow">{{ if $isExec }}Leadership{{ else }}Clinical Team{{ end }}</span>
+        <h1 class="hx-title">{{ .Title }}</h1>
+        {{- with $role }}<p class="hx-role">{{ . }}</p>{{ end }}
+        <ul class="hx-meta">
+          {{- range .Params.clinics }}
+          <li>{{ partial "heroes/parts/icon.html" "pin" }}{{ if reflect.IsMap . }}{{ .name | default .title }}{{ else }}{{ . }}{{ end }}</li>
+          {{- end }}
+          {{- with .Params.email }}<li>{{ partial "heroes/parts/icon.html" "mail" }}<a href="mailto:{{ . }}">{{ . }}</a></li>{{ end }}
+        </ul>
+        {{- if $isExec }}
+        {{ partial "heroes/parts/actions.html" (dict "p" . "default" (slice (dict "label" "Meet the Leadership Team" "url" "/executive-team/") (dict "label" "Request a Consultation" "url" "/contact/"))) }}
+        {{- else }}
+        {{ partial "heroes/parts/actions.html" (dict "p" . "default" (slice (dict "label" (printf "Book with %s" $first) "url" "/contact/") (dict "label" "All Clinicians" "url" "/team/"))) }}
+        {{- end }}
+      </div>
+    </div>
+  </div>
+</section>

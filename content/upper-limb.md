@@ -4,6 +4,9 @@ breadcrumbs:
 title: Upper Limb Prosthetics
 seo_title: Upper Limb | Bionic Prosthetics and Orthotics
 seo_description: Advanced upper limb prosthetic solutions, including myoelectric and bionic hands. Bionic P&O offers custom fittings across states to restore function.
+hero_region: arm
+hero_chips: ["Shoulder", "Above the elbow", "Below the elbow", "Hand & partial hand", "Silicone restoration"]
+hero_image: "/images/prosthetics-upper-limb.webp"
 hero:
   eyebrow: PROSTHETICS
   title: Upper Limb Prostheses

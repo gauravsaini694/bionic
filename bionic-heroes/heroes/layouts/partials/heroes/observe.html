@@ -1,0 +1,25 @@
+{{- /*
+  Observe — an "eye" lens photo with a what-you'll-see timeline. (Shadowing Opportunities)
+  Front matter: hero_steps: [{ t: "Patient evaluations", d: "See how clinicians assess needs" }, …]
+*/ -}}
+{{- $img := partial "heroes/parts/img.html" (dict "p" .) -}}
+{{- $steps := .Params.hero_steps | default (slice
+      (dict "t" "Patient evaluations" "d" "See how clinicians assess each person")
+      (dict "t" "Casting & scanning" "d" "Watch a device start to take shape")
+      (dict "t" "Fittings" "d" "Observe adjustments in real time")
+      (dict "t" "Ask questions" "d" "Talk with certified clinicians")) -}}
+<section class="hx hx-observe">
+  <div class="container hx-grid">
+    <div class="hx-lens">
+      <div class="hx-lens-img"{{ with $img }} style="background-image:url('{{ . }}')"{{ end }}></div>
+      <span class="hx-lens-ico">{{ partial "heroes/parts/icon.html" "users" }}</span>
+    </div>
+    <div class="hx-copy">
+      {{ partial "heroes/parts/head.html" . }}
+      <ol class="hx-timeline">
+        {{- range $steps }}<li><b>{{ .t }}</b><span>{{ .d }}</span></li>{{ end }}
+      </ol>
+      {{ partial "heroes/parts/actions.html" (dict "p" . "default" (slice (dict "label" "Request to Shadow" "url" "/contact/") (dict "label" "Residency Program" "url" "/residency-program/"))) }}
+    </div>
+  </div>
+</section>

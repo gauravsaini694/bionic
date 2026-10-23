@@ -2,6 +2,7 @@
 title: "Pediatric Prosthetics"
 description: "Prosthetic care for children, designed to grow and adapt with them."
 
+hero_image: "/images/blog/understanding-cranial-helmets-supporting-healthy-head-growth-in-babies.jpg"
 hero:
   eyebrow: "PEDIATRIC CARE"
   title: "Prosthetic Care That Grows With Your Child"
@@ -22,8 +23,6 @@ sections:
       - "Clinicians experienced in working with children and families"
       - "Help understanding insurance and what to plan for as your child grows"
       - "Support resources for families and young patients"
-    image: "/images/blog/understanding-cranial-helmets-supporting-healthy-head-growth-in-babies.jpg"
-    image_alt: "A baby in a decorated cranial remolding helmet sitting on a blanket outdoors, smiling and reaching out"
 
   - type: "cards"
     eyebrow: "RELATED CARE"

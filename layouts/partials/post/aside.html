@@ -1,0 +1,38 @@
+{{- /*
+  Blog post sidebar: "Your reading path" TOC + 2-step consultation form.
+  Usage in the post single layout (replaces the old <aside class="post-toc">):
+    {{ partial "post/aside.html" . }}
+  Needs: static/css/post.css + static/js/post-reading.js, and site param  blog_form_endpoint
+*/ -}}
+{{- $toc := .TableOfContents -}}
+<aside class="pr-aside" aria-label="Table of contents and consultation form">
+  <div class="pr-stick">
+    {{- if gt (len (plainify $toc)) 0 }}
+    <div class="pr-toc">
+      <div class="pr-toc-head">
+        <span class="pr-ring" aria-hidden="true"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.5"/><circle class="pr-ring-fill" cx="18" cy="18" r="15.5"/></svg><b class="pr-pct">0%</b></span>
+        <div>
+          <p class="pr-kicker">{{ partial "heroes/parts/icon.html" "book" }} Table of contents</p>
+          <p class="pr-status"><span class="pr-step">Start reading</span> · <span class="pr-left">{{ .ReadingTime }} min left</span></p>
+        </div>
+      </div>
+      {{ $toc }}
+    </div>
+    {{- end }}
+    {{ partial "post/lead-form.html" . }}
+  </div>
+</aside>
+
+{{- /* Mobile: floating "current chapter" pill that opens the TOC as a bottom sheet */}}
+<button class="pr-pill" type="button" aria-controls="pr-sheet" aria-expanded="false" hidden>
+  <span class="pr-ring" aria-hidden="true"><svg viewBox="0 0 36 36"><circle cx="18" cy="18" r="15.5"/><circle class="pr-ring-fill" cx="18" cy="18" r="15.5"/></svg></span>
+  <span class="pr-pill-text"><small>Table of contents</small><b class="pr-pill-title">Start reading</b></span>
+  <svg class="pr-pill-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg>
+</button>
+<div class="pr-sheet" id="pr-sheet" hidden>
+  <div class="pr-sheet-card" role="dialog" aria-label="Table of contents">
+    <div class="pr-sheet-head"><b>Table of contents</b><button type="button" class="pr-sheet-close" aria-label="Close">×</button></div>
+    <div class="pr-sheet-body"></div>
+    <a class="btn btn-primary pr-sheet-cta" href="#pr-form">Book a free consultation</a>
+  </div>
+</div>

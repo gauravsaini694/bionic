@@ -1,0 +1,25 @@
+{{- /*
+  Help desk — "How can we help?" search with quick topic tiles. (Patient Resources, Resources)
+  Front matter:
+    hero_topics:
+      - { label: "Insurance & billing", url: "#insurance", icon: "card" }
+      - { label: "Patient forms", url: "#forms", icon: "file" }
+*/ -}}
+{{- $topics := .Params.hero_topics | default (slice
+      (dict "label" "Patient forms" "url" "#forms" "icon" "file")
+      (dict "label" "Insurance & billing" "url" "/book-appointment-pay-bill/" "icon" "card")
+      (dict "label" "Support groups" "url" "#support" "icon" "users")
+      (dict "label" "FAQs" "url" "/faqs/" "icon" "help")) -}}
+<section class="hx hx-helpdesk">
+  <div class="container hx-inner">
+    {{ partial "heroes/parts/head.html" . }}
+    <form class="hx-bigsearch" onsubmit="var q=this.q.value.toLowerCase();var hit=[].find.call(document.querySelectorAll('main h2,main h3,main a'),function(e){return e.closest('.hx')==null&&e.textContent.toLowerCase().indexOf(q)>-1});if(hit){hit.scrollIntoView({behavior:'smooth',block:'center'});hit.classList.add('hx-flash');setTimeout(function(){hit.classList.remove('hx-flash')},1600)}return false;">
+      {{ partial "heroes/parts/icon.html" "search" }}
+      <input name="q" placeholder="Search forms, insurance, support groups…" aria-label="Search resources">
+      <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+    <ul class="hx-topics">
+      {{- range $topics }}<li><a href="{{ .url | relURL }}">{{ partial "heroes/parts/icon.html" (.icon | default "arrow") }}<span>{{ .label }}</span></a></li>{{ end }}
+    </ul>
+  </div>
+</section>

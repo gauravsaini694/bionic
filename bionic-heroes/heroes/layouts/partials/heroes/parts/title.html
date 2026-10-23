@@ -1,0 +1,14 @@
+{{- /* Hero title with the last word(s) in <em>. Override with hero_title / hero_em. */ -}}
+{{- $t := .Params.hero_title | default .Title -}}
+{{- $em := .Params.hero_em | default .Params.city -}}
+{{- if and $em (in $t $em) -}}
+  {{- replace $t $em (printf "<em>%s</em>" $em) | safeHTML -}}
+{{- else -}}
+  {{- $w := split $t " " -}}
+  {{- $n := len $w -}}
+  {{- if lt $n 3 -}}{{- $t -}}
+  {{- else -}}
+    {{- $k := cond (gt $n 4) 2 1 -}}
+    {{- delimit (first (sub $n $k) $w) " " }} <em>{{ delimit (last $k $w) " " }}</em>
+  {{- end -}}
+{{- end -}}

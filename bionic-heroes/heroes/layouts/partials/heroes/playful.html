@@ -1,0 +1,18 @@
+{{- /* Playful — soft colour blobs, a wobbly photo frame and floating shapes. (Pediatric) */ -}}
+{{- $img := partial "heroes/parts/img.html" (dict "p" .) -}}
+<section class="hx hx-playful">
+  <span class="hx-blob b1" aria-hidden="true"></span><span class="hx-blob b2" aria-hidden="true"></span>
+  <div class="container hx-grid">
+    <div class="hx-copy">
+      {{ partial "heroes/parts/head.html" . }}
+      {{ partial "heroes/parts/actions.html" (dict "p" .) }}
+      <ul class="hx-pills">
+        {{- range (.Params.hero_chips | default (slice "Fits as your child grows" "Family-centered care" "Home, school & play")) }}<li>{{ . }}</li>{{ end }}
+      </ul>
+    </div>
+    <div class="hx-frame">
+      {{- with $img }}<div class="hx-wobble" style="background-image:url('{{ . }}')"></div>{{ end }}
+      <span class="hx-shape s1" aria-hidden="true"></span><span class="hx-shape s2" aria-hidden="true"></span><span class="hx-shape s3" aria-hidden="true">{{ partial "heroes/parts/icon.html" "star" }}</span>
+    </div>
+  </div>
+</section>

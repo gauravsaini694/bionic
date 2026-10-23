@@ -1,0 +1,26 @@
+{{- /*
+  Bionic — page hero dispatcher
+  Usage (in every layout that used the old page-hero / cl-hero):  {{ partial "hero.html" . }}
+
+  Which design a page gets (first match wins):
+    1. front matter   hero_variant: "stride"
+    2. data/heroes.yaml  paths:    "/about-us/": split
+    3. data/heroes.yaml  sections: "post/single": article   (key = Section + "/" + single|list)
+    4. data/heroes.yaml  kinds:    term: editorial
+    5. "split"
+*/ -}}
+{{- $p := . -}}
+{{- $d := hugo.Data.heroes -}}
+{{- $v := $p.Params.hero_variant -}}
+{{- if not $v -}}{{- with $d.paths -}}{{- $v = index . $p.RelPermalink -}}{{- end -}}{{- end -}}
+{{- if not $v -}}
+  {{- $key := printf "%s/%s" $p.Section (cond $p.IsPage "single" "list") -}}
+  {{- with $d.sections -}}{{- $v = index . $key -}}{{- end -}}
+{{- end -}}
+{{- if not $v -}}{{- with $d.kinds -}}{{- $v = index . $p.Kind -}}{{- end -}}{{- end -}}
+{{- $v = $v | default "split" -}}
+{{- if templates.Exists (printf "partials/heroes/%s.html" $v) -}}
+  {{- partial (printf "heroes/%s.html" $v) $p -}}
+{{- else -}}
+  {{- partial "heroes/split.html" $p -}}
+{{- end -}}

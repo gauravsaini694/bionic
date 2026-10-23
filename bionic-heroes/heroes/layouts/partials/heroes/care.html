@@ -1,0 +1,21 @@
+{{- /*
+  Care — photo with a floating "daily foot check" checklist card. (Diabetic Foot Care)
+  Front matter: hero_checklist: ["Look for cuts, blisters or redness", ...]
+*/ -}}
+{{- $img := partial "heroes/parts/img.html" (dict "p" .) -}}
+{{- $list := .Params.hero_checklist | default (slice "Check both feet every day" "Look for cuts, blisters or redness" "Wear well-fitted, protective shoes" "Book regular foot-care visits") -}}
+<section class="hx hx-care">
+  <div class="container hx-grid">
+    <div class="hx-copy">
+      {{ partial "heroes/parts/head.html" . }}
+      {{ partial "heroes/parts/actions.html" (dict "p" .) }}
+    </div>
+    <div class="hx-visual">
+      {{- with $img }}<div class="hx-photo" style="background-image:url('{{ . }}')"></div>{{ end }}
+      <div class="hx-check">
+        <b>{{ partial "heroes/parts/icon.html" "droplet" }} Daily foot check</b>
+        <ul>{{ range $i, $c := $list }}<li style="--i:{{ $i }}"><span>{{ partial "heroes/parts/icon.html" "check" }}</span>{{ $c }}</li>{{ end }}</ul>
+      </div>
+    </div>
+  </div>
+</section>

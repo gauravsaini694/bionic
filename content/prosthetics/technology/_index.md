@@ -2,6 +2,8 @@
 title: "Prosthetic & Orthotic Technology"
 description: "Microprocessor-controlled joints, functional electrical stimulation, myoelectric devices and 3D printing at Bionic."
 
+hero_image: "/images/technology-device.png"
+hero_chips: ["Microprocessor-controlled joints", "Myoelectric arms & hands", "Electrical stimulation (FES)", "3D printing & scanning"]
 hero:
   eyebrow: "TECHNOLOGY"
   title: "Technology That Moves With You"
@@ -16,8 +18,6 @@ sections:
     eyebrow: "RIGHT TECHNOLOGY, RIGHT PERSON"
     title: "Advanced Options, Chosen Around Your Goals"
     body: "The best device is the one that fits your body, your activity level and your daily life. Your clinician will walk you through the options, what each one can and cannot do, and what your insurance may cover before anything is decided."
-    image: "/images/technology-device.png"
-    image_alt: "A man leaping in mid-air wearing a prosthetic leg"
     image_position: "right"
 
   - type: "cards"

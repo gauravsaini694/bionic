@@ -16,7 +16,7 @@
 <section class="section">
   <div class="container">
     {{ partial "section-header.html" (dict "eyebrow" ($p.eyebrow | default "LEADERSHIP") "title" ($p.title | default "Meet Our Leaders")) }}
-    <div class="card-grid team-grid">
+    <div class="card-grid team-grid exec-grid">
       {{ range $pg.Pages.ByWeight }}{{ partial "team-card.html" . }}{{ end }}
     </div>
   </div>

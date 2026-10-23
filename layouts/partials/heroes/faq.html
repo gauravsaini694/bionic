@@ -1,0 +1,29 @@
+{{- /*
+  FAQ — centred heading surrounded by floating question bubbles that jump to answers. (FAQs)
+  Front matter (optional): hero_questions: ["Does insurance cover a prosthesis?", ...]
+  Without it, the first 6 questions found on the page (h3 / summary / dt) are used by JS.
+*/ -}}
+<section class="hx hx-faq">
+  <ul class="hx-bubbles" aria-hidden="true" data-auto="{{ if not .Params.hero_questions }}1{{ end }}">
+    {{- range $i, $q := first 6 (.Params.hero_questions | default (slice "Do I need a prescription?" "Will insurance cover it?" "How long does a fitting take?" "Do you see children?" "What happens at my first visit?" "Can you repair my device?")) }}
+    <li class="hx-b{{ $i }}">{{ $q }}</li>
+    {{- end }}
+  </ul>
+  <div class="container hx-inner">
+    {{ partial "heroes/parts/head.html" . }}
+    <form class="hx-bigsearch" onsubmit="var q=this.q.value.toLowerCase();var items=document.querySelectorAll('main details, main .faq-item, main dt, main h3');var hit=[].find.call(items,function(e){return !e.closest('.hx')&&e.textContent.toLowerCase().indexOf(q)>-1});if(hit){if(hit.tagName==='DETAILS')hit.open=true;hit.scrollIntoView({behavior:'smooth',block:'center'});hit.classList.add('hx-flash');setTimeout(function(){hit.classList.remove('hx-flash')},1600)}return false;">
+      {{ partial "heroes/parts/icon.html" "help" }}
+      <input name="q" placeholder="Type your question…" aria-label="Search questions">
+      <button type="submit" class="btn btn-primary">Find answer</button>
+    </form>
+  </div>
+</section>
+<script>
+document.addEventListener("DOMContentLoaded",function(){var ul=document.querySelector('.hx-faq .hx-bubbles');if(!ul)return;
+  var qs=[].slice.call(document.querySelectorAll('main summary, main .faq-item h3, main dt, main h3')).filter(function(e){return !e.closest('.hx')&&/\?\s*$/.test(e.textContent.trim())});
+  if(ul.dataset.auto&&qs.length){[].forEach.call(ul.children,function(li,i){if(qs[i])li.textContent=qs[i].textContent.trim()})}
+  ul.removeAttribute('aria-hidden');
+  [].forEach.call(ul.children,function(li){var t=li.textContent.trim().toLowerCase();var hit=qs.find(function(q){return q.textContent.trim().toLowerCase()===t});if(!hit)return;li.tabIndex=0;li.setAttribute('role','button');
+    var go=function(){var d=hit.closest('details');if(d)d.open=true;hit.scrollIntoView({behavior:'smooth',block:'center'})};li.onclick=go;li.onkeydown=function(e){if(e.key==='Enter')go()}});
+});
+</script>

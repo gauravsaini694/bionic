@@ -1,0 +1,21 @@
+{{- /* A · Clarity split — text + trust row left, curved-corner photo right. (About Us) */ -}}
+{{- $img := partial "heroes/parts/img.html" (dict "p" .) -}}
+<section class="hx hx-split">
+  <div class="container hx-grid">
+    <div class="hx-copy">
+      {{ partial "heroes/parts/head.html" . }}
+      {{ partial "heroes/parts/actions.html" (dict "p" .) }}
+      <ul class="hx-trust">
+        <li>{{ partial "heroes/parts/icon.html" "shield" }}<span><b>Board-certified</b>clinicians</span></li>
+        <li>{{ partial "heroes/parts/icon.html" "pin" }}<span><b>Clinics near you</b>across the country</span></li>
+        <li>{{ partial "heroes/parts/icon.html" "phone" }}<span><b>{{ site.Params.phone | default "1-855-524-6642" }}</b>free consultation</span></li>
+      </ul>
+    </div>
+    {{- with $img }}
+    <figure class="hx-media">
+      <img src="{{ . }}" alt="" fetchpriority="high">
+      <figcaption class="hx-badge"><span class="hx-dot">{{ partial "heroes/parts/icon.html" "star" }}</span><span><b>Trusted since 2007</b>Care that moves with you</span></figcaption>
+    </figure>
+    {{- end }}
+  </div>
+</section>

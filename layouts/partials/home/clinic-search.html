@@ -1,0 +1,13 @@
+{{- /* Clinic search form + "use my location" button + results box (ids/classes used by js/clinic-map.js).
+       Context: the page (homepage) or dict "page" <page> "params" <finder params>. */ -}}
+{{- $p := dict -}}{{- if reflect.IsMap . }}{{ $p = .params | default dict }}{{ end -}}
+<form class="clinic-search-form" role="search" id="clinic-search-form" novalidate>
+  <label for="clinic-search" class="visually-hidden">Search by ZIP, city, or state</label>
+  <input id="clinic-search" type="text" autocomplete="off" placeholder="{{ $p.search_placeholder | default "ZIP, city or state" }}">
+  <button type="submit" class="btn btn-primary">Search</button>
+</form>
+<button type="button" class="current-location-link" id="clinic-locate">
+  <span class="icon-sm">{{ partial "icon.html" "location" }}</span>
+  {{ $p.location_text | default "Use My Current Location" }}
+</button>
+<div class="clinic-results" id="clinic-results" aria-live="polite" hidden></div>

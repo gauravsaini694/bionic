@@ -3,6 +3,8 @@ title: Careers
 seo_title: Careers at Bionic Prosthetics & Orthotics | Join Our Team
 seo_description: Explore careers and job openings at Bionic Prosthetics & Orthotics. Join a compassionate P&O team with opportunities for clinicians, support staff, and growth.
 body_class: page-hiring
+hero_lines: ["Build a career", "that moves", "people."]
+hero_images: ["/images/careers/grow-team-1.jpg", "/images/careers/grow-team-2.jpg", "/images/careers/grow-team-3.jpg", "/images/careers/residency-1.jpg"]
 hero:
   eyebrow: JOIN OUR TEAM
   title: Build a Career That Moves People

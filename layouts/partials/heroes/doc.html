@@ -1,0 +1,10 @@
+{{- /* Doc — calm, compact header for legal / utility pages, with last-updated date. (Privacy, Terms, Inquiry) */ -}}
+<section class="hx hx-doc">
+  <div class="container hx-narrow">
+    {{ partial "heroes/parts/crumbs.html" . }}
+    <span class="hx-docico">{{ partial "heroes/parts/icon.html" "file" }}</span>
+    <h1 class="hx-title">{{ .Title }}</h1>
+    {{- with (partial "heroes/parts/f.html" (dict "p" $ "k" "subhead") | default .Description) }}<p class="hx-sub">{{ . }}</p>{{ end }}
+    {{- if not .Lastmod.IsZero }}<p class="hx-updated">Last updated {{ .Lastmod.Format "January 2, 2006" }}</p>{{ end }}
+  </div>
+</section>

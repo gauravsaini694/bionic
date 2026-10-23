@@ -1,0 +1,258 @@
+{{- /*
+  Bionic homepage (v2): content from Bionic_PO_Homepage_Final.html, same section order.
+  Usage in layouts/index.html (inside the "main" block, replacing the old homepage sections):
+    {{ partial "home/sections.html" . }}
+  Needs: static/css/home.css (linked via home/head.html), partials heroes/parts/icon.html + home/pic.html,
+         and the EXISTING clinic finder markup split into two partials (same IDs/classes, unchanged):
+           home/clinic-search.html = form#clinic-search-form + button#clinic-locate + div#clinic-results
+           home/clinic-map.html    = div.state-chip-grid + div.clinic-map-wrap (map)
+*/ -}}
+{{- $phone := site.Params.phone | default "1-855-524-6642" -}}
+{{- $tel := replaceRE "[^0-9+]" "" $phone -}}
+{{- $book := "/book-appointment-pay-bill/" | relURL -}}
+
+<!-- 1 · Hero -->
+<section class="hm-hero" aria-labelledby="hm-hero-title">
+  <div class="container hm-hero-grid">
+    <div class="hm-hero-copy">
+      <span class="hm-eyebrow">{{ partial "heroes/parts/icon.html" "star" }}Prosthetics and orthotics services</span>
+      <h1 id="hm-hero-title" class="hm-h1">The right fit <em>changes everything</em></h1>
+      <p class="hm-lead">Custom prosthetic limbs and orthotic braces from certified clinicians across 12 states. Your first visit is free, no need for a prescription. Book now to take your first step forward.</p>
+      <div class="hm-actions">
+        <a class="btn btn-primary btn-lg" href="{{ $book }}">Request a Consultation</a>
+        <a class="btn btn-outline-dark btn-lg" href="#find-a-clinic">Find a Clinic</a>
+      </div>
+      <ul class="hm-stats">
+        <li><strong>2007</strong><span>Founded in Merrillville, Indiana</span></li>
+        <li><strong>12 states</strong><span>Across the nation</span></li>
+        <li><strong>ABC &amp; BOC</strong><span>Accredited care</span></li>
+      </ul>
+    </div>
+    <div class="hm-hero-media">
+      {{ partial "home/pic.html" (dict "src" "images/hero-care" "alt" "Collage of Bionic patients wearing prosthetic legs and orthotic braces, including a smiling baby in a cranial helmet" "w" 1200 "eager" true) }}
+      <div class="hm-float hm-float-a"><span class="hm-dot">{{ partial "heroes/parts/icon.html" "check" }}</span><span><b>First visit is free</b>No prescription needed to book</span></div>
+      <div class="hm-float hm-float-b"><span class="hm-dot is-navy">{{ partial "heroes/parts/icon.html" "shield" }}</span><span><b>Certified &amp; state-licensed</b>clinicians since 2007</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- 2 · Basics -->
+<section class="section hm-basics" aria-labelledby="hm-basics-title">
+  <div class="container hm-split">
+    <div class="hm-media hm-media-tilt">
+      {{ partial "home/pic.html" (dict "src" "images/about-empowering" "alt" "A Bionic clinician talking with a seated patient who wears a prosthetic leg" "w" 1000) }}
+    </div>
+    <div>
+      <span class="hm-eyebrow">Basics</span>
+      <h2 id="hm-basics-title" class="hm-h2">Prosthetic and orthotic services, explained simply</h2>
+      <div class="hm-define">
+        <div><b>Prosthetics</b><p>Artificial limbs that replace a missing arm, leg, hand, or foot.</p></div>
+        <div><b>Orthotics</b><p>Custom braces that support, align, and protect your body.</p></div>
+      </div>
+      <p class="hm-text">Your doctor prescribes them, and a certified prosthetist or orthotist designs, fits, and adjusts them.</p>
+      <p class="hm-text">At Bionic, that work is done by certified, state-licensed clinicians who have cared for patients since 2007. Our team includes experienced practitioners such as Jeff Phelps, CPO, and Sheri Harper, CPO, and Bionic is ABC and BOC accredited.</p>
+      <p class="hm-text">We care for adults and children living with limb loss or limb difference, and anyone who needs a brace after injury, surgery, stroke, or a spinal condition.</p>
+      <div class="hm-actions">
+        <a class="btn btn-primary" href="{{ "/about-us/" | relURL }}">Learn About Us</a>
+        <a class="btn btn-outline-dark" href="{{ "/team/" | relURL }}">Meet Our Team</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · Services We Offer -->
+<section class="section hm-services" aria-labelledby="hm-svc-title">
+  <div class="container">
+    <div class="hm-head">
+      <span class="hm-eyebrow">Services We Offer</span>
+      <h2 id="hm-svc-title" class="hm-h2">Prosthetic and orthotic care for every stage of life</h2>
+      <p class="hm-lead">One team handles your care from the first evaluation to the last adjustment, so you never have to explain your history twice.</p>
+    </div>
+    <div class="hm-cards">
+      {{- $svc := slice
+        (dict "img" "images/home-service-prosthetic-care" "alt" "A man seated in a clinic wearing a black prosthetic arm" "tag" "Prosthetic Care" "title" "Prosthetic legs and arms" "text" "For amputation caused by diabetes, vascular disease, trauma, or cancer, and for limb difference from birth." "url" "/prosthetics/")
+        (dict "img" "images/home-service-orthotic-care" "alt" "A hand wearing a black custom wrist and forearm brace" "tag" "Orthotic Care" "title" "Leg, foot, arm, and hand braces" "text" "Custom braces that steady a weak ankle, lift a dropped foot, protect a healing joint, or rest an overworked wrist." "url" "/orthotics/")
+        (dict "img" "images/cranial-spinal-scoliosis-orthoses" "alt" "A custom scoliosis back brace" "tag" "Spinal and Cranial Orthotics" "title" "Back braces, scoliosis braces, and baby helmets" "text" "Custom TLSO and LSO back braces, scoliosis braces, and bracing after spine surgery, plus cranial molding helmets for babies 4 to 12 months old." "url" "/cranial-spinal/")
+        (dict "img" "images/home-service-pediatric" "alt" "A smiling baby wearing a pink cranial helmet with an orange bow" "tag" "Pediatric Prosthetics & Orthotics" "title" "Prosthetics and braces for children" "text" "Kids grow fast and play hard. We fit devices that keep up, then adjust and replace them as your child grows." "url" "/prosthetics/pediatric/") -}}
+      {{- range $i, $s := $svc }}
+      <article class="hm-card">
+        <a class="hm-card-img" href="{{ $s.url | relURL }}" tabindex="-1" aria-hidden="true">{{ partial "home/pic.html" (dict "src" $s.img "alt" "" "w" 700) }}<span class="hm-card-n">0{{ add $i 1 }}</span></a>
+        <div class="hm-card-body">
+          <span class="hm-tag">{{ $s.tag }}</span>
+          <h3><a href="{{ $s.url | relURL }}">{{ $s.title }}</a></h3>
+          <p>{{ $s.text }}</p>
+          <span class="hm-more">Learn more {{ partial "heroes/parts/icon.html" "arrow" }}</span>
+        </div>
+      </article>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+<!-- 4 · How it works -->
+<section class="section hm-process" aria-labelledby="hm-proc-title">
+  <div class="container">
+    <div class="hm-head">
+      <span class="hm-eyebrow">From first visit to first steps</span>
+      <h2 id="hm-proc-title" class="hm-h2">How getting a prosthesis or brace works</h2>
+    </div>
+    <ol class="hm-steps">
+      <li><span class="hm-step-ico">{{ partial "heroes/parts/icon.html" "search" }}</span><h3>Evaluation</h3><p>A certified clinician looks at your limb, strength, mobility, and goals. For a prosthetic leg, we also assess your K-level.</p></li>
+      <li><span class="hm-step-ico">{{ partial "heroes/parts/icon.html" "file" }}</span><h3>Design and coverage</h3><p>We design your device, get your doctor's prescription, and help you through insurance approval.</p></li>
+      <li><span class="hm-step-ico">{{ partial "heroes/parts/icon.html" "spark" }}</span><h3>Fitting and testing</h3><p>We fit your device, watch how you move, and fine-tune it until it feels right.</p></li>
+      <li><span class="hm-step-ico">{{ partial "heroes/parts/icon.html" "heart" }}</span><h3>Training and follow-up</h3><p>Gait training helps you build confidence. After that, we see you whenever your body or goals change.</p></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 5 · Innovation in Motion -->
+<section class="hm-tech" aria-labelledby="hm-tech-title">
+  <div class="container hm-split">
+    <div>
+      <span class="hm-eyebrow is-light">Innovation in Motion</span>
+      <h2 id="hm-tech-title" class="hm-h2">Advanced bionic and microprocessor solutions</h2>
+      <p class="hm-lead">We evaluate and fit microprocessor-controlled devices and functional electrical stimulation (FES) options, matched to how each person moves. Bionic was also the first orthotic and prosthetic provider chosen to distribute the Ekso Indego&reg; Personal, a powered exoskeleton that helps people with spinal cord injuries stand and walk.</p>
+      <ul class="hm-chips">
+        <li>{{ partial "heroes/parts/icon.html" "cpu" }}Microprocessor devices</li>
+        <li>{{ partial "heroes/parts/icon.html" "spark" }}FES options</li>
+        <li>{{ partial "heroes/parts/icon.html" "award" }}Ekso Indego&reg; Personal</li>
+      </ul>
+      <a class="btn btn-primary btn-lg" href="{{ "/prosthetics/technology/" | relURL }}">Explore Technology</a>
+    </div>
+    <div class="hm-tech-media">
+      {{ partial "home/pic.html" (dict "src" "images/technology-device" "alt" "A man leaping in mid-air wearing a prosthetic leg" "w" 1000) }}
+    </div>
+  </div>
+</section>
+
+<!-- 6 · K-levels -->
+<section class="section hm-k" aria-labelledby="hm-k-title">
+  <div class="container">
+    <div class="hm-head">
+      <span class="hm-eyebrow">Know your mobility level</span>
+      <h2 id="hm-k-title" class="hm-h2">What is a K-level?</h2>
+      <p class="hm-lead">Medicare and most insurers rate how active you can be with a prosthetic leg on a scale from K0 to K4. Your K-level decides what your plan will cover, so we assess it carefully at your first visit.</p>
+    </div>
+    <div class="hm-kscale" role="list">
+      <div class="hm-kl" role="listitem" style="--k:0"><b>K0</b><strong>Non-ambulatory</strong><p>Can't walk or transfer safely, even with help. A prosthesis wouldn't improve mobility.</p></div>
+      <div class="hm-kl" role="listitem" style="--k:1"><b>K1</b><strong>Household walker</strong><p>Walks or transfers on level ground at a steady pace, mostly at home.</p></div>
+      <div class="hm-kl" role="listitem" style="--k:2"><b>K2</b><strong>Limited community walker</strong><p>Manages curbs, stairs, and uneven ground at a steady pace.</p></div>
+      <div class="hm-kl" role="listitem" style="--k:3"><b>K3</b><strong>Community walker</strong><p>Walks at different speeds and handles most obstacles, work, and exercise.</p></div>
+      <div class="hm-kl" role="listitem" style="--k:4"><b>K4</b><strong>High activity</strong><p>Goes beyond everyday walking, with high impact or stress. Typical of children, active adults, and athletes.</p></div>
+    </div>
+    <div class="hm-kbar" aria-hidden="true"><span>Less active</span><i></i><span>More active</span></div>
+    <p class="hm-kfoot">Not sure where you fit? <a href="{{ $book }}">Book a free evaluation</a> and we'll work it out together.</p>
+  </div>
+</section>
+
+<!-- 7 · Insurance and cost -->
+<section class="section hm-cost" aria-labelledby="hm-cost-title">
+  <div class="container">
+    <div class="hm-head">
+      <span class="hm-eyebrow">Insurance and cost</span>
+      <h2 id="hm-cost-title" class="hm-h2">What prosthetics and orthotics cost, and what insurance covers</h2>
+    </div>
+    <div class="hm-qa">
+      <div><span class="hm-qa-ico">{{ partial "heroes/parts/icon.html" "shield" }}</span><h3>Does Medicare cover prosthetics and braces?</h3><p>Yes. Medicare Part B covers prosthetic limbs and medically necessary arm, leg, back, and neck braces your doctor orders. After the Part B deductible, you pay 20% of the Medicare-approved amount.</p></div>
+      <div><span class="hm-qa-ico">{{ partial "heroes/parts/icon.html" "card" }}</span><h3>How much does a prosthetic leg cost?</h3><p>It depends on the amputation level, your K-level, and the components you need. Insurance usually covers most of it, so what you pay comes down to your deductible and coinsurance.</p></div>
+      <div class="is-hl"><span class="hm-qa-ico">{{ partial "heroes/parts/icon.html" "check" }}</span><h3>What's included?</h3><p>Your first visit is free, and routine visits and adjustments are included in your device cost. Home and facility visits are also free.</p></div>
+    </div>
+    <p class="hm-center"><a class="btn btn-primary btn-lg" href="{{ $book }}">Request a Consultation</a></p>
+  </div>
+</section>
+
+<!-- 8 · Find a Clinic (keeps the existing clinic search + map) -->
+<section class="section hm-find" id="find-a-clinic" aria-labelledby="hm-find-title">
+  <div class="container hm-find-grid">
+    <div class="hm-find-copy">
+      <span class="hm-eyebrow">Find a Clinic</span>
+      <h2 id="hm-find-title" class="hm-h2">Prosthetics and orthotics clinics in 12 states</h2>
+      <p class="hm-lead">Certified prosthetists and orthotists in Florida, Illinois, Indiana, Kentucky, Michigan, New Jersey, North Carolina, Ohio, Pennsylvania, Tennessee, Texas, and Wisconsin. Search by ZIP code or state to find your closest clinic.</p>
+      <div class="hm-search">{{ partial "home/clinic-search.html" . }}</div>
+      <a class="btn btn-primary" href="{{ $book }}">Request a Consultation</a>
+    </div>
+    <div class="hm-find-tool">
+      {{ partial "home/clinic-map.html" . }}
+    </div>
+  </div>
+</section>
+
+<!-- 9 · Patient stories -->
+<section class="section hm-stories" aria-labelledby="hm-stories-title">
+  <div class="container">
+    <div class="hm-head">
+      <span class="hm-eyebrow">Patient Stories</span>
+      <h2 id="hm-stories-title" class="hm-h2">Real patients, real progress</h2>
+    </div>
+    <div class="hm-quotes">
+      <figure>
+        <span class="hm-tag">Below-knee prosthesis · Merrillville, IN</span>
+        <h3>Peter Morrison</h3>
+        <p>After a truck crash cost Peter his lower leg, he was fitted with his prosthesis the same day his surgeon cleared him. Today he's back on horseback, caring for his animals, and traveling across the country.</p>
+        <blockquote>{{ partial "heroes/parts/icon.html" "quote" }}Today, I can do everything I did before the accident and then some.</blockquote>
+        <a class="hm-more" href="{{ "/post/success-story-peter/" | relURL }}">Read Peter's story {{ partial "heroes/parts/icon.html" "arrow" }}</a>
+      </figure>
+      <figure>
+        <span class="hm-tag">Above-knee prosthesis · Merrillville, IN</span>
+        <h3>Reynaldo "Rey" Morales</h3>
+        <p>Rey's socket was designed from a 3D scan and tested with 3D-printed versions before his final fitting. He's back to playing basketball at his local YMCA and swimming laps.</p>
+        <blockquote>{{ partial "heroes/parts/icon.html" "quote" }}Bionic is by far the best experience I've had thus far.</blockquote>
+        <a class="hm-more" href="{{ "/post/success-story-rey/" | relURL }}">Read Rey's story {{ partial "heroes/parts/icon.html" "arrow" }}</a>
+      </figure>
+      <figure>
+        <span class="hm-tag">Pediatric prosthesis · Cincinnati, OH</span>
+        <h3>Alexander Lecher</h3>
+        <p>Alexander had a full-foot amputation at age two. His custom silicone foot was designed in-house by our Cincinnati team. He climbs, runs, and jumps, and he puts his prosthesis on by himself.</p>
+        <blockquote>{{ partial "heroes/parts/icon.html" "quote" }}Amputee life is just life to him, and that includes his prosthesis.<cite>Katie Lecher, Alexander's mom</cite></blockquote>
+        <a class="hm-more" href="{{ "/post/the-bionic-difference-alexander-lecher/" | relURL }}">Read Alexander's story {{ partial "heroes/parts/icon.html" "arrow" }}</a>
+      </figure>
+    </div>
+    <p class="hm-center"><a class="btn btn-outline-dark btn-lg" href="{{ "/success-stories/" | relURL }}">Read More Success Stories</a></p>
+  </div>
+</section>
+
+<!-- 10 · FAQ -->
+<section class="section hm-faq" aria-labelledby="hm-faq-title">
+  <div class="container hm-faq-grid">
+    <div class="hm-faq-side">
+      <span class="hm-eyebrow">Prosthetics and orthotics FAQ</span>
+      <h2 id="hm-faq-title" class="hm-h2">Questions people ask before their first visit</h2>
+      <a class="hm-more" href="{{ "/faqs/" | relURL }}">See All FAQs {{ partial "heroes/parts/icon.html" "arrow" }}</a>
+      <div class="hm-callbox">
+        <span class="hm-dot">{{ partial "heroes/parts/icon.html" "phone" }}</span>
+        <div><small>Still have a question?</small><a href="tel:{{ $tel }}">{{ $phone }}</a></div>
+      </div>
+    </div>
+    <div class="hm-acc">
+      {{- $faq := slice
+        (slice "What is the difference between a prosthetist and an orthotist?" "A prosthetist designs and fits prostheses, which are artificial limbs that replace a missing arm, leg, hand, or foot. An orthotist designs and fits orthoses, which are braces that support, align, and protect the body.")
+        (slice "Does Medicare cover prosthetics and orthotics?" "Yes. Medicare Part B covers prosthetic limbs and medically necessary arm, leg, back, and neck braces when your doctor orders them. After the Part B deductible, you pay 20% of the Medicare-approved amount.")
+        (slice "How much does a prosthetic leg cost?" "It depends on the amputation level, your K-level, and the components you need. Insurance usually covers most of it, so what you pay comes down to your deductible and coinsurance.")
+        (slice "Do I need a prescription to see a prosthetist or orthotist?" "Not to book a consultation. You will need a prescription from your doctor to receive a device, and we can help you get one.")
+        (slice "Is the first visit free?" "Yes. Your first visit at Bionic costs nothing.")
+        (slice "What is a K-level?" "A K-level is Medicare's rating, from K0 to K4, of how active you can be with a prosthetic leg. It decides which prosthetics insurance will cover.")
+        (slice "Can a prosthetist or orthotist visit me at home?" "Yes. If you can't get to a clinic, a Bionic specialist can see you at home, in a nursing facility, or in an assisted living facility at no charge.") -}}
+      {{- range $i, $q := $faq }}
+      <details{{ if eq $i 0 }} open{{ end }}><summary>{{ index $q 0 }}</summary><p>{{ index $q 1 }}</p></details>
+      {{- end }}
+    </div>
+  </div>
+</section>
+
+<!-- 11 · Closing CTA -->
+<section class="hm-cta-wrap" aria-labelledby="hm-cta-title">
+  <div class="container">
+    <div class="hm-cta">
+      <div>
+        <span class="hm-eyebrow is-light">Free first visit</span>
+        <h2 id="hm-cta-title" class="hm-h2">Your first visit is on us</h2>
+        <p>Sit down with a certified clinician, see your options, and find out what your insurance covers. No prescription needed to book.</p>
+      </div>
+      <div class="hm-cta-actions">
+        <a class="btn btn-primary btn-lg" href="{{ $book }}">Request a Consultation</a>
+        <a class="btn hm-btn-ghost" href="#find-a-clinic">Find a Clinic</a>
+        <a class="btn hm-btn-ghost" href="{{ "/patient-resources/" | relURL }}">Explore Patient Resources</a>
+      </div>
+    </div>
+  </div>
+</section>

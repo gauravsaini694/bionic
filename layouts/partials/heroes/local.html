@@ -1,0 +1,45 @@
+{{- /*
+  Local — oversized outlined place name, clinic info card. (Each clinic page + each state page)
+  Clinic params (ADAPT): address, city, state, zip, phone, hours, email
+  State pages: lists child clinics as city chips.
+*/ -}}
+{{- $isState := not .IsPage -}}
+{{- $place := .Params.city | default .LinkTitle -}}
+{{- $img := partial "heroes/parts/img.html" (dict "p" .) -}}
+{{- $addr := cond .IsPage (partial "clinic-address.html" .) "" -}}
+{{- $hours := .Params.hours -}}
+{{- $phone := .Params.phone -}}
+{{- $clinicBtns := slice -}}
+{{- if .IsPage -}}
+  {{- with $phone }}{{ $clinicBtns = $clinicBtns | append (dict "label" (printf "Call %s" .) "url" (printf "tel:%s" (replaceRE "[^0-9+]" "" .))) }}{{ end -}}
+  {{- if $addr }}{{ $clinicBtns = $clinicBtns | append (dict "label" "Get Directions" "url" (printf "https://www.google.com/maps/dir/?api=1&destination=%s" ($addr | urlquery))) }}{{ end -}}
+  {{- $clinicBtns = $clinicBtns | append (dict "label" "Request a Consultation" "url" "/contact/") -}}
+  {{- $st := site.GetPage (printf "/locations/%s" (.Params.state | urlize)) -}}
+  {{- with $st }}{{ $clinicBtns = $clinicBtns | append (dict "label" "Back to State" "url" .RelPermalink) }}{{ end -}}
+{{- end -}}
+<section class="hx hx-local {{ if $isState }}is-state{{ end }}">
+  <div class="hx-bigname" aria-hidden="true">{{ $place }}</div>
+  <div class="container hx-grid">
+    <div class="hx-copy">
+      {{ partial "heroes/parts/head.html" . }}
+      {{ partial "heroes/parts/actions.html" (dict "p" . "default" (cond .IsPage $clinicBtns (slice (dict "label" "Request a Consultation" "url" "/contact/") (dict "label" "All Locations" "url" "/locations/")))) }}
+      {{- if and .IsPage (reflect.IsSlice $hours) }}<span class="cl-badge" id="clinic-open-badge" hidden></span>{{ end }}
+    </div>
+    <aside class="hx-info">
+      {{- if $isState }}
+        <b class="hx-info-title">{{ partial "heroes/parts/icon.html" "pin" }} Clinics in {{ .LinkTitle }}</b>
+        <ul class="hx-cities">
+          {{- range (where (where site.RegularPages "Type" "clinic") "Params.state" .Title).ByTitle }}<li><a href="{{ .RelPermalink }}">{{ .Params.city | default .LinkTitle }}</a></li>{{ end }}
+        </ul>
+      {{- else }}
+        {{- with $img }}<div class="hx-info-img" style="background-image:url('{{ . }}')"></div>{{ end }}
+        <ul class="hx-facts">
+          {{- with $addr }}<li>{{ partial "heroes/parts/icon.html" "pin" }}<span>{{ . }}</span></li>{{ end }}
+          {{- with .Params.phone }}<li>{{ partial "heroes/parts/icon.html" "phone" }}<a href="tel:{{ replaceRE "[^0-9+]" "" . }}">{{ . }}</a></li>{{ end }}
+          {{- with $hours }}<li>{{ partial "heroes/parts/icon.html" "clock" }}<span>{{ if reflect.IsSlice . }}{{ with index . 0 }}{{ if reflect.IsMap . }}{{ .days | default .day }} {{ .time | default .hours }}{{ else }}{{ . }}{{ end }}{{ end }}{{ else }}{{ . }}{{ end }}</span></li>{{ end }}
+          {{- with .Params.email }}<li>{{ partial "heroes/parts/icon.html" "mail" }}<a href="mailto:{{ . }}">{{ . }}</a></li>{{ end }}
+        </ul>
+      {{- end }}
+    </aside>
+  </div>
+</section>

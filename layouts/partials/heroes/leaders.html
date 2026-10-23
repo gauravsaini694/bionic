@@ -1,0 +1,42 @@
+{{- /*
+  Leaders (v2) — deep navy editorial statement + "Bionic at a glance" numbers.
+  Portraits are NOT repeated here (the leader cards below the hero already show them).
+  Numbers are counted from the site itself, so they stay true:
+    leaders    = pages in section "executive-team"
+    clinicians = pages in section "team"
+    clinics    = pages in section "clinics"
+    states     = sub-sections of /locations/
+  Override any of them in front matter:  hero_stats: [{ n: "40+", label: "Clinics" }, ...]
+*/ -}}
+{{- $leaders := len (where site.RegularPages "Section" "executive-team") -}}
+{{- $clin := len (where site.RegularPages "Section" "team") -}}
+{{- $clinics := len (where site.RegularPages "Section" "clinics") -}}
+{{- $states := 0 -}}{{- with site.GetPage "/locations" -}}{{- $states = len .Sections -}}{{- end -}}
+{{- $auto := slice -}}
+{{- if $leaders }}{{ $auto = $auto | append (dict "n" $leaders "label" "Leaders guiding our mission" "icon" "award") }}{{ end -}}
+{{- if $clin }}{{ $auto = $auto | append (dict "n" $clin "label" "Clinicians on our team" "icon" "users") }}{{ end -}}
+{{- if $clinics }}{{ $auto = $auto | append (dict "n" $clinics "label" "Clinics near patients" "icon" "pin") }}{{ end -}}
+{{- if $states }}{{ $auto = $auto | append (dict "n" $states "label" "States we serve" "icon" "shield") }}{{ end -}}
+{{- $stats := .Params.hero_stats | default $auto -}}
+<section class="hx hx-leaders">
+  <div class="container hx-inner">
+    {{ partial "heroes/parts/crumbs.html" . }}
+    <div class="hx-grid">
+      <div>
+        {{- with .Params.eyebrow }}<span class="eyebrow hx-eyebrow">{{ . }}</span>{{ end }}
+        <h1 class="hx-title">{{ partial "heroes/parts/title.html" . }}</h1>
+      </div>
+      <blockquote class="hx-statement">
+        {{ partial "heroes/parts/icon.html" "quote" }}
+        <p>{{ .Params.subhead | default .Description }}</p>
+      </blockquote>
+    </div>
+    {{- with $stats }}
+    <ul class="hx-glance">
+      {{- range . }}
+      <li>{{ partial "heroes/parts/icon.html" (.icon | default "star") }}<b>{{ .n }}</b><span>{{ .label }}</span></li>
+      {{- end }}
+    </ul>
+    {{- end }}
+  </div>
+</section>

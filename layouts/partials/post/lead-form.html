@@ -1,0 +1,54 @@
+{{- /*
+  Compact 2-step consultation form (same fields as the Contact page form).
+  Posts to the "Bionic Site Forms" Apps Script -> sheet tab "Blog Leads" + email.
+  Endpoint: site param blog_form_endpoint
+*/ -}}
+<form class="pr-form" id="pr-form" novalidate data-endpoint="{{ site.Params.blog_form_endpoint }}" data-thankyou="{{ "/thank-you/" | relURL }}">
+  <div class="pr-form-head">
+    <span class="pr-badge">{{ partial "heroes/parts/icon.html" "calendar" }}</span>
+    <div>
+      <p class="pr-form-title">Talk to a prosthetist</p>
+      <p class="pr-form-sub">Free consultation · we call back within one business day</p>
+    </div>
+  </div>
+  <ol class="pr-steps" aria-hidden="true"><li class="is-on">Your details</li><li>Your needs</li></ol>
+
+  <fieldset class="pr-fs" data-step="1">
+    <div class="pr-row">
+      <label><span>First name *</span><input name="first_name" autocomplete="given-name" required></label>
+      <label><span>Last name *</span><input name="last_name" autocomplete="family-name" required></label>
+    </div>
+    <label><span>Phone *</span><input name="phone" type="tel" autocomplete="tel" required></label>
+    <label><span>Email *</span><input name="email" type="email" autocomplete="email" required></label>
+    <button type="button" class="btn btn-primary pr-next">Continue</button>
+  </fieldset>
+
+  <fieldset class="pr-fs" data-step="2" hidden>
+    <div class="pr-row">
+      <label class="pr-grow"><span>How can we help? *</span>
+        <select name="reason" required>
+          <option value="">Select one</option>
+          <option>Book a free consultation</option>
+          <option>Prosthetic care (arm or leg)</option>
+          <option>Orthotics &amp; bracing</option>
+          <option>Cranial helmet for my baby</option>
+          <option>Diabetic foot care</option>
+          <option>Repair or adjust my device</option>
+          <option>Insurance or billing question</option>
+          <option>Something else</option>
+        </select>
+      </label>
+      <label class="pr-zip"><span>ZIP *</span><input name="zip" inputmode="numeric" autocomplete="postal-code" maxlength="10" required></label>
+    </div>
+    <label><span>Message <i>(optional)</i></span><textarea name="message" rows="2"></textarea></label>
+    <label class="pr-consent"><input type="checkbox" name="consent" value="Yes" required><span>I agree to be contacted about my inquiry. Please don't share medical details here.</span></label>
+    <input type="text" name="hp_b3q" tabindex="-1" autocomplete="off" class="pr-hp" aria-hidden="true">
+    <input type="hidden" name="post_title" value="{{ .Title }}">
+    <div class="pr-actions">
+      <button type="button" class="pr-back">Back</button>
+      <button type="submit" class="btn btn-primary">Request call back</button>
+    </div>
+  </fieldset>
+  <p class="pr-msg" role="status" aria-live="polite"></p>
+  <p class="pr-or">or call <a href="tel:{{ replaceRE "[^0-9+]" "" (site.Params.phone | default "1-855-524-6642") }}">{{ site.Params.phone | default "1-855-524-6642" }}</a></p>
+</form>

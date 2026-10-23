@@ -1,0 +1,22 @@
+{{- /*
+  Responsive image for the homepage.
+  Usage: {{ partial "home/pic.html" (dict "src" "images/hero-care" "alt" "..." "w" 1200 "eager" true) }}
+  "src" is the file name WITHOUT extension. Looks in assets/ first (any extension), then static/.
+*/ -}}
+{{- $w := .w | default 1000 -}}
+{{- $alt := .alt | default "" -}}
+{{- /* Prefer the raster file when an .svg placeholder with the same name also exists (GetMatch could return the svg, which has no Width). */ -}}
+{{- $img := "" -}}
+{{- range resources.Match (printf "%s.*" .src) }}{{ if and (not $img) (ne .MediaType.Type "image/svg+xml") }}{{ $img = . }}{{ end }}{{ end -}}
+{{- if $img -}}
+  {{- $r := $img -}}
+  {{- if and (in (slice "image/jpeg" "image/png" "image/webp") $img.MediaType.Type) (gt $img.Width $w) -}}
+    {{- $r = $img.Resize (printf "%dx webp q80" $w) -}}
+  {{- else if in (slice "image/jpeg" "image/png") $img.MediaType.Type -}}
+    {{- $r = $img.Process "webp q80" -}}
+  {{- end -}}
+  <img src="{{ $r.RelPermalink }}" width="{{ $r.Width }}" height="{{ $r.Height }}" alt="{{ $alt }}"{{ if .eager }} fetchpriority="high"{{ else }} loading="lazy" decoding="async"{{ end }}>
+{{- else -}}
+  {{- warnf "home/pic.html: image %q not found in assets/" .src -}}
+  <img src="{{ printf "/%s.webp" .src | relURL }}" alt="{{ $alt }}" loading="lazy">
+{{- end -}}

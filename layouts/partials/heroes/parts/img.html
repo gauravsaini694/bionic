@@ -1,0 +1,17 @@
+{{- /*
+  Resolves a hero image URL. Context: dict "p" page "src" (optional explicit src)
+  Looks at: src -> front matter hero_image -> image -> featured_image -> first page resource image.
+  Works with a page-bundle resource name, an assets/ path, or a static/ path.
+  If the site already has an image partial (resizing/webp), swap it in here.
+*/ -}}
+{{- $p := .p -}}
+{{- $src := .src | default $p.Params.hero_image | default (index ($p.Params.hero | default dict) "image") | default $p.Params.image | default $p.Params.featured_image -}}
+{{- $url := "" -}}
+{{- if $src -}}
+  {{- with $p.Resources.Get $src -}}{{- $url = .RelPermalink -}}
+  {{- else -}}{{- with resources.Get $src -}}{{- $url = .RelPermalink -}}
+  {{- else -}}{{- $url = $src | relURL -}}{{- end -}}{{- end -}}
+{{- else -}}
+  {{- with $p.Resources.ByType "image" -}}{{- with index . 0 -}}{{- $url = .RelPermalink -}}{{- end -}}{{- end -}}
+{{- end -}}
+{{- return $url -}}

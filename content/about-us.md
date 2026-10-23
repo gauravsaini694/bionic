@@ -2,6 +2,8 @@
 title: About Us
 seo_title: About Bionic Prosthetics & Orthotics | Mission & Values
 seo_description: Learn about Bionic Prosthetics & Orthotics, leading provider of customised prosthetic and orthotic solutions. Experience compassionate care nationwide.
+hero_title: "Bionic Prosthetics and Orthotics"
+hero_image: "/images/about-team-group-photo.webp"
 hero:
   eyebrow: TRUSTED CARE SINCE 2007
   title: 'About Us: Bionic Prosthetics and Orthotics'
@@ -11,9 +13,6 @@ hero:
   cta_secondary: Meet Our Clinical Team
   cta_secondary_link: /team/
 sections:
-- type: wide-image
-  image: /images/about-team-group-photo.webp
-  image_alt: The Bionic team gathered together for a group photo at a company event
 - type: richtext
   body: <p>We are a fully accredited orthotic and prosthetic facility, committed to delivering care that meets the highest clinical and professional standards. Our team includes certified and state-licensed prosthetists and orthotists with experience across a wide range of specialties, including upper and lower limb prosthetics, spinal and extremity orthotics, pediatric care, and functional electrical stimulation (FES).</p><p>At Bionic, we believe quality care begins with listening. Every patient’s needs, goals, and daily life are different, and our approach reflects that. From evaluation through long-term follow-up, we focus on providing thoughtful, personalized solutions designed to support comfort, function, and confidence.</p><p>We are here to provide competent, compassionate care every step of the way.</p>
 - type: richtext

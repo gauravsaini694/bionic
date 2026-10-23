@@ -1,0 +1,26 @@
+{{- /*
+  Team wall — a soft wall of real clinician portraits behind a centred card. (Clinical Team list)
+  Uses the team section's pages; photo param name: photo | image | headshot (ADAPT if different).
+*/ -}}
+{{- $people := where site.RegularPages "Section" "team" -}}
+{{- $faces := slice -}}
+{{- range $people -}}
+  {{- $u := partial "heroes/parts/img.html" (dict "p" . "src" (.Params.photo | default .Params.headshot)) -}}
+  {{- with $u }}{{ $faces = $faces | append . }}{{ end -}}
+{{- end -}}
+<section class="hx hx-teamwall">
+  <div class="hx-wall" aria-hidden="true">
+    {{- range $i, $u := first 28 $faces }}<span style="background-image:url('{{ $u }}');--d:{{ mod (mul $i 7) 10 }}"></span>{{ end }}
+  </div>
+  <div class="container hx-inner">
+    <div class="hx-card">
+      {{ partial "heroes/parts/head.html" . }}
+      <form class="hx-search" action="#clinicians" onsubmit="var q=this.q.value.toLowerCase();document.querySelectorAll('[data-clinician]').forEach(function(c){c.hidden=q&&c.textContent.toLowerCase().indexOf(q)<0});location.hash='clinicians';return false;">
+        {{ partial "heroes/parts/icon.html" "search" }}
+        <input name="q" placeholder="Search by name, city or specialty" aria-label="Search clinicians">
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+      <p class="hx-count">{{ partial "heroes/parts/icon.html" "shield" }} Board-certified prosthetists, orthotists and fitters</p>
+    </div>
+  </div>
+</section>

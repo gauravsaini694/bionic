@@ -1,0 +1,31 @@
+{{- /*
+  Academy — copy beside a "program ticket" card with perforated edge and key facts.
+  (Residency Program, Shadowing Opportunities)
+  Front matter:
+    hero_facts:
+      - { label: "Length", value: "18 months" }
+      - { label: "Accreditation", value: "NCOPE" }
+    hero_ticket_title: "O&P Residency"
+*/ -}}
+{{- $facts := .Params.hero_facts | default (slice
+      (dict "label" "Who it's for" "value" "Students & new clinicians")
+      (dict "label" "Mentorship" "value" "Certified prosthetists & orthotists")
+      (dict "label" "Where" "value" "Clinics across the country")) -}}
+<section class="hx hx-academy">
+  <div class="container hx-grid">
+    <div class="hx-copy">
+      {{ partial "heroes/parts/head.html" . }}
+      {{ partial "heroes/parts/actions.html" (dict "p" . "default" (slice (dict "label" "Apply Now" "url" "/contact/") (dict "label" "Explore Careers" "url" "/careers/"))) }}
+    </div>
+    <div class="hx-ticket">
+      <div class="hx-ticket-top">
+        <span class="hx-ticket-ico">{{ partial "heroes/parts/icon.html" "cap" }}</span>
+        <div><small>Bionic P&amp;O</small><b>{{ .Params.hero_ticket_title | default .LinkTitle }}</b></div>
+      </div>
+      <dl>
+        {{- range $facts }}<div><dt>{{ .label }}</dt><dd>{{ .value }}</dd></div>{{ end }}
+      </dl>
+      <div class="hx-ticket-foot"><span>{{ .Params.hero_ticket_note | default "Learn · Practice · Grow" }}</span><span class="hx-barcode" aria-hidden="true"></span></div>
+    </div>
+  </div>
+</section>

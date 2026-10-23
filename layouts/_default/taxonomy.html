@@ -1,11 +1,5 @@
 {{ define "main" }}
-<section class="page-hero">
-  <div class="container page-hero-inner">
-    <span class="eyebrow eyebrow-light">STAY A STEP AHEAD</span><br>
-    <h1>{{ .Title }}</h1>
-    <p class="page-hero-subhead">{{ len .Pages }} {{ cond (eq (len .Pages) 1) "article" "articles" }} in this category.</p>
-  </div>
-</section>
+{{ partial "hero.html" . }}
 {{ partial "blog-index.html" (dict "page" . "pages" .Pages.ByDate.Reverse "params" (dict "eyebrow" "CATEGORY" "title" .Title) "active" .Title) }}
 {{ $c := hugo.Data.cta.blog_category }}
 {{ partial "cta-band.html" (dict "title" $c.title "body" $c.body "primary" $c.primary "primary_link" $c.primary_link "secondary" $c.secondary "secondary_link" $c.secondary_link) }}

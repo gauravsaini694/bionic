@@ -5,6 +5,7 @@ seo_title: "Start Your Career with an Internship | Bionic P&O"
 seo_description: "Explore hands-on prosthetics and orthotics internships at Bionic Prosthetics. Gain real clinical experience, professional skills, and career growth opportunities."
 
 body_class: page-hiring
+hero_image: "/images/blog/bionic-s-brad-watson-named-to-naaop-board-of-directors.jpg"
 hero:
   eyebrow: "STUDENTS & EARLY EXPLORERS"
   title: "Your First Step Into the World of O&P"
@@ -19,8 +20,6 @@ sections:
     eyebrow: "JUMPSTART YOUR CAREER"
     title: "Hands-On Learning Across Every Discipline"
     body: "If you are interested in working with your hands, we also have lab technician job shadowing opportunities in our fabrication facility in Merrillville, IN. Here, you will gain experience in different stages of prosthetic and orthotic fabrication."
-    image: "/images/blog/bionic-s-brad-watson-named-to-naaop-board-of-directors.jpg"
-    image_alt: "An instructor presenting a Bionic slide to a classroom of students, with anatomical skeleton models in the background"
     image_position: "right"
 
   - type: "richtext"

@@ -1,0 +1,5 @@
+{{- /* Breadcrumb + eyebrow + H1 + subhead. Context: page. */ -}}
+{{- partial "heroes/parts/crumbs.html" . -}}
+{{- with (partial "heroes/parts/f.html" (dict "p" $ "k" "eyebrow")) }}<span class="eyebrow hx-eyebrow">{{ . }}</span>{{ end }}
+<h1 class="hx-title">{{ partial "heroes/parts/title.html" . }}</h1>
+{{- with (partial "heroes/parts/f.html" (dict "p" $ "k" "subhead") | default .Description) }}<p class="hx-sub">{{ . | markdownify }}</p>{{ end -}}

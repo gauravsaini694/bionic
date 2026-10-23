@@ -4,6 +4,7 @@
   {{ partial "gtm-head.html" . }}
   {{ partial "google-ads.html" . }}
   {{ partial "head.html" . }}
+  {{ if .IsHome }}{{ partial "home/head.html" . }}{{ end }}
   {{ block "head" . }}{{ end }}
   <script>
     // CMS invite / password-recovery links land on the home page with a token in the URL hash:
@@ -31,5 +32,7 @@
   {{ partial "mobile-bar.html" . }}
   {{ $j := partial "asset.html" "js/main.js" }}<script src="{{ $j.RelPermalink }}" integrity="{{ $j.Data.Integrity }}" defer></script>
   {{ $j2 := partial "asset.html" "js/clinic-search.js" }}<script src="{{ $j2.RelPermalink }}" integrity="{{ $j2.Data.Integrity }}" defer></script>
+  {{ if eq .Type "blog-post" }}{{ $j3 := partial "asset.html" "js/post-reading.js" }}<script src="{{ $j3.RelPermalink }}" integrity="{{ $j3.Data.Integrity }}" defer></script>{{ end }}
+  {{ if eq .RelPermalink "/grow/" }}{{ $j4 := partial "asset.html" "js/grow-form.js" }}<script src="{{ $j4.RelPermalink }}" integrity="{{ $j4.Data.Integrity }}" defer></script>{{ end }}
 </body>
 </html>

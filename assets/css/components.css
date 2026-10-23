@@ -132,3 +132,9 @@
 
 /* stat band with an odd item count: last item centered on the full row in the 2-column layouts */
 @media (max-width: 1024px) { .stat-grid > .stat-item:last-child:nth-child(odd) { grid-column: 1 / -1; } }
+
+/* hint under a form field (Grow application: resume types and size) */
+.form-hint { display: block; margin-top: 6px; font-size: 13px; color: var(--ink-soft, rgba(0,0,0,.6)); }
+
+/* blog post: category chips now sit after the share row at the end of the article */
+.post-main .filter-chips { justify-content: flex-start; margin: 28px 0 0; }

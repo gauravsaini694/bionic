@@ -1,0 +1,33 @@
+{{- /*
+  Editorial — magazine masthead + latest post featured + category tabs. (Blog list, blog categories)
+  Posts section name: "post" (ADAPT if different). Category taxonomy: "categories".
+*/ -}}
+{{- $posts := (where site.RegularPages "Section" "post").ByDate.Reverse -}}
+{{- if eq .Kind "term" }}{{ $posts = .Pages.ByDate.Reverse }}{{ end -}}
+{{- $feat := index $posts 0 -}}
+<section class="hx hx-editorial">
+  <div class="container">
+    {{ partial "heroes/parts/crumbs.html" . }}
+    <div class="hx-mast">
+      <span class="hx-issue">The Bionic Journal</span>
+      <h1 class="hx-title">{{ partial "heroes/parts/title.html" . }}</h1>
+      {{- with (partial "heroes/parts/f.html" (dict "p" $ "k" "subhead") | default .Description) }}<p class="hx-sub">{{ . }}</p>{{ end }}
+    </div>
+    <nav class="hx-tabs" aria-label="Blog categories">
+      <a href="{{ "/blog/" | relURL }}"{{ if eq .Section "blog" }}{{ if not (eq .Kind "term") }} aria-current="page"{{ end }}{{ end }}>All</a>
+      {{- range site.Taxonomies.categories }}<a href="{{ .Page.RelPermalink }}"{{ if eq $.RelPermalink .Page.RelPermalink }} aria-current="page"{{ end }}>{{ .Page.Title }}</a>{{ end }}
+    </nav>
+    {{- with $feat }}
+    {{- $u := partial "heroes/parts/img.html" (dict "p" .) }}
+    <a class="hx-feature" href="{{ .RelPermalink }}">
+      <div class="hx-feature-img"{{ with $u }} style="background-image:url('{{ . }}')"{{ end }}><span class="hx-tag">Latest</span></div>
+      <div class="hx-feature-body">
+        <span class="hx-meta">{{ with .Params.categories }}{{ index . 0 }} · {{ end }}{{ .Date.Format "Jan 2, 2006" }} · {{ .ReadingTime }} min read</span>
+        <h2>{{ .Title }}</h2>
+        <p>{{ .Description | default (.Summary | plainify | replaceRE `^\s*Updated:\s*\w+\s*\d+\s*` "" | truncate 150) }}</p>
+        <span class="hx-read">Read article {{ partial "heroes/parts/icon.html" "arrow" }}</span>
+      </div>
+    </a>
+    {{- end }}
+  </div>
+</section>

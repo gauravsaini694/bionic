@@ -1,0 +1,27 @@
+{{- /* State buttons + Leaflet map (ids/classes used by js/clinic-map.js); also loads Leaflet and clinic-map.js.
+       Context: the page (homepage) or dict "page" <page> "params" <finder params>. */ -}}
+{{- $p := dict -}}{{- $pg := . -}}{{- if reflect.IsMap . }}{{ $p = .params | default dict }}{{ $pg = .page }}{{ end -}}
+{{- $d := partialCached "locations-data.html" $pg -}}
+<div class="state-chip-grid" role="group" aria-label="Filter map by state">
+  {{ range $d.states }}
+  {{ if eq $p.state_links "view" }}
+  <div class="state-card-wrap">
+    <button type="button" class="state-card" data-state="{{ .name }}" aria-pressed="false">
+      <span class="state-card-name">{{ .name }}</span>
+    </button>
+    <a href="{{ .url }}" class="state-card-link" aria-label="View Locations in {{ .name }}">View Locations <span aria-hidden="true">→</span></a>
+  </div>
+  {{ else }}
+  <button type="button" class="state-card" data-state="{{ .name }}" aria-pressed="false">
+    <span class="state-card-name">{{ .name }}</span>
+  </button>
+  {{ end }}
+  {{ end }}
+</div>
+<div class="clinic-map-wrap">
+  <div id="clinic-map" class="clinic-map" data-src="{{ "locations/index.json" | relURL }}" role="region" aria-label="Map of Bionic clinic locations"></div>
+  <a href="/locations/" class="clinic-map-state-link" id="clinic-map-state-link" hidden></a>
+</div>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+{{ $j := partial "asset.html" "js/clinic-map.js" }}<script src="{{ $j.RelPermalink }}" integrity="{{ $j.Data.Integrity }}" defer></script>

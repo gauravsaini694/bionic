@@ -4,6 +4,9 @@ breadcrumbs:
 title: Lower Extremity Orthotics
 seo_title: Lower Extremity | Bionic Prosthetics and Orthotics | USA
 seo_description: Expert lower extremity care specializing in custom leg bracing, AFOs, and advanced prosthetic legs. Our ABC-certified clinicians restore mobility and function.
+hero_region: lower
+hero_chips: ["Neuro-rehab", "Off-loading", "Foot & ankle", "Knee", "Hip"]
+hero_image: "/images/lower-extremity-orthotics.webp"
 hero:
   eyebrow: ORTHOTICS
   title: Lower Extremity Orthoses

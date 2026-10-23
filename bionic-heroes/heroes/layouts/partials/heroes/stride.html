@@ -1,0 +1,28 @@
+{{- /* B · Stride — navy, logo-curve photo with green edge, journey steps, ZIP box. (Prosthetics) */ -}}
+{{- $img := partial "heroes/parts/img.html" (dict "p" .) -}}
+{{- $steps := .Params.hero_steps | default (slice
+      (dict "t" "Listen" "d" "Free consultation")
+      (dict "t" "Assess" "d" "Clinical evaluation")
+      (dict "t" "Design & fit" "d" "Custom device")
+      (dict "t" "Move" "d" "Ongoing support")) -}}
+<section class="hx hx-stride {{ if not $img }}hx-noimg{{ end }}">
+  {{- with $img }}<div class="hx-edge" aria-hidden="true"></div><div class="hx-photo" style="background-image:url('{{ . }}')"></div>{{ end }}
+  <div class="hx-ghost" aria-hidden="true">{{ .LinkTitle }}</div>
+  <div class="container hx-inner">
+    <div class="hx-copy">
+      {{ partial "heroes/parts/head.html" . }}
+      {{ partial "heroes/parts/actions.html" (dict "p" .) }}
+    </div>
+    <div class="hx-foot">
+      <ol class="hx-steps">
+        {{- range $i, $s := $steps }}
+        <li{{ if eq $i 0 }} class="is-on"{{ end }}><span class="hx-n">{{ add $i 1 }}</span><b>{{ $s.t }}</b>{{ $s.d }}</li>
+        {{- end }}
+      </ol>
+      <form class="hx-zip" action="{{ "/locations/" | relURL }}" method="get">
+        <label for="hx-zip-input">Find care near you</label>
+        <div><input id="hx-zip-input" name="q" placeholder="ZIP, city or state" autocomplete="postal-code"><button type="submit">Go</button></div>
+      </form>
+    </div>
+  </div>
+</section>

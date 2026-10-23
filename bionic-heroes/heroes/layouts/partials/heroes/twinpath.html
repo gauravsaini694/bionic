@@ -1,0 +1,27 @@
+{{- /*
+  Twin path — the hero splits into two big doors: Book an Appointment | Pay My Bill.
+  (Book Appointment & Pay Bill)
+  Front matter: hero_book_url, hero_pay_url
+*/ -}}
+<section class="hx hx-twinpath">
+  <div class="container">
+    {{ partial "heroes/parts/crumbs.html" . }}
+    <div class="hx-head">
+      {{- with .Params.eyebrow }}<span class="eyebrow hx-eyebrow">{{ . }}</span>{{ end }}
+      <h1 class="hx-title">{{ partial "heroes/parts/title.html" . }}</h1>
+      {{- with (.Params.subhead | default .Description) }}<p class="hx-sub">{{ . }}</p>{{ end }}
+    </div>
+    <div class="hx-doors">
+      <a class="hx-door is-book" href="{{ .Params.hero_book_url | default "#book" }}">
+        <span class="hx-door-ico">{{ partial "heroes/parts/icon.html" "calendar" }}</span>
+        <b>Book an appointment</b><span>Pick a clinic and a time that works for you.</span>
+        <em>Start booking {{ partial "heroes/parts/icon.html" "arrow" }}</em>
+      </a>
+      <a class="hx-door is-pay" href="{{ .Params.hero_pay_url | default "#pay" }}">
+        <span class="hx-door-ico">{{ partial "heroes/parts/icon.html" "card" }}</span>
+        <b>Pay my bill</b><span>Secure online payment in a few minutes.</span>
+        <em>Pay now {{ partial "heroes/parts/icon.html" "arrow" }}</em>
+      </a>
+    </div>
+  </div>
+</section>

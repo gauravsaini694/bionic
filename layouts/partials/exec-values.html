@@ -1,0 +1,34 @@
+{{- /*
+  Executive Team — "What guides our leadership" values band.
+  Usage in the executive-team list layout, right after the leader cards section:
+    {{ partial "exec-values.html" . }}
+  Copy can be overridden in front matter:
+    values_eyebrow / values_title / values_intro
+    values: [{ title: "...", text: "...", icon: "heart" }]
+  NOTE: default copy below is placeholder — get it approved by the client.
+*/ -}}
+{{- $vals := .Params.values | default (slice
+    (dict "icon" "heart"  "title" "Patients first" "text" "Every decision starts with one question: will this help a patient move, work and live with more confidence?")
+    (dict "icon" "award"  "title" "Clinical excellence" "text" "We support our clinicians with certification, ongoing training and the time they need to get every fitting right.")
+    (dict "icon" "spark"  "title" "Innovation that matters" "text" "We bring new prosthetic and orthotic technology into our clinics when it truly improves outcomes, not just because it is new.")
+    (dict "icon" "shield" "title" "Integrity & accountability" "text" "Clear communication, honest billing and responsible governance, for patients, partners and our team.")) -}}
+<section class="section xv">
+  <div class="container">
+    <div class="xv-grid">
+      <div class="xv-head">
+        <span class="eyebrow">{{ .Params.values_eyebrow | default "Our Values" }}</span>
+        <h2>{{ .Params.values_title | default "What Guides Our Leadership" | markdownify }}</h2>
+        <p>{{ .Params.values_intro | default "Behind every clinic, every fitting and every follow-up is a leadership team focused on the same thing: care that helps people step ahead." }}</p>
+        <a class="btn btn-outline" href="{{ "/about-us/" | relURL }}">Read our story</a>
+      </div>
+      <ol class="xv-list">
+        {{- range $i, $v := $vals }}
+        <li>
+          <span class="xv-ico">{{ partial "heroes/parts/icon.html" ($v.icon | default "check") }}</span>
+          <div><small>0{{ add $i 1 }}</small><h3>{{ $v.title }}</h3><p>{{ $v.text }}</p></div>
+        </li>
+        {{- end }}
+      </ol>
+    </div>
+  </div>
+</section>

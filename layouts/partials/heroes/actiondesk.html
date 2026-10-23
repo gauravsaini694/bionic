@@ -1,0 +1,16 @@
+{{- /* Action desk — heading + three big "do it now" tiles: Call, Email, Visit. (Contact) */ -}}
+{{- $phone := site.Params.phone | default "1-855-524-6642" -}}
+{{- $email := site.Params.email | default "information@bionicpo.com" -}}
+<section class="hx hx-actiondesk">
+  <div class="container">
+    <div class="hx-top">
+      <div class="hx-copy">{{ partial "heroes/parts/head.html" . }}</div>
+      {{- with site.Params.hours }}<p class="hx-hours">{{ partial "heroes/parts/icon.html" "clock" }}<span><b>Office hours</b>{{ . }}</span></p>{{ end }}
+    </div>
+    <div class="hx-tiles">
+      <a class="hx-tile is-call" href="tel:{{ replaceRE "[^0-9+]" "" $phone }}">{{ partial "heroes/parts/icon.html" "phone" }}<small>Call us</small><b>{{ $phone }}</b><span>New patients press 1</span></a>
+      <a class="hx-tile" href="#contact-form">{{ partial "heroes/parts/icon.html" "calendar" }}<small>Request online</small><b>Free consultation</b><span>We call back within one business day</span></a>
+      <a class="hx-tile" href="{{ "/locations/" | relURL }}">{{ partial "heroes/parts/icon.html" "pin" }}<small>Visit</small><b>Find a clinic</b><span>Care close to home</span></a>
+    </div>
+  </div>
+</section>

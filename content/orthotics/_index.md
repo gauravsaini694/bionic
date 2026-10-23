@@ -2,6 +2,7 @@
 title: Orthotics
 seo_title: Orthotics | Bionic Prosthetics and Orthotics
 seo_description: Discover custom orthotics and support solutions at Bionic Prosthetics. Personalized braces and inserts designed for comfort, alignment, and improved mobility.
+hero_images: ["/images/orthotics-overview.webp", "/images/home-service-orthotic-care.webp", "/images/upper-extremity-orthotics.webp", "/images/lower-extremity-orthotics.webp"]
 hero:
   eyebrow: YOUR PATH TO BETTER MOVEMENT
   title: Orthotic Solutions for Every Stage of Life
@@ -15,8 +16,6 @@ sections:
   eyebrow: WHAT ARE ORTHOTICS?
   title: Personalized Support, Not an Off-the-Shelf Fix
   body: Orthotics are custom-made devices designed to support, align, or correct body parts, especially the feet, ankles, knees, and spine. These devices are used to alleviate pain, improve mobility, and restore natural function. Whether you’re dealing with foot pain, joint instability, or post-surgery rehabilitation, orthotics can provide the support needed to enhance your quality of life and mobility.
-  image: /images/orthotics-overview.webp
-  image_alt: Four smiling men in polo shirts standing on a golf course, some wearing a knee brace, elbow brace and ankle brace
   image_position: right
   note_html: A conversation can help clarify your options.
 - type: richtext

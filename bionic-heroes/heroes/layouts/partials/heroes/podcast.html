@@ -1,0 +1,19 @@
+{{- /* Podcast — dark studio look, animated waveform, "on air" badge. (Bionic Beats) */ -}}
+{{- $img := partial "heroes/parts/img.html" (dict "p" .) -}}
+<section class="hx hx-podcast">
+  <div class="container hx-grid">
+    <div class="hx-copy">
+      {{ partial "heroes/parts/crumbs.html" . }}
+      <span class="hx-onair"><i></i> Podcast &amp; video series</span>
+      <h1 class="hx-title">{{ partial "heroes/parts/title.html" . }}</h1>
+      {{- with (.Params.subhead | default .Description) }}<p class="hx-sub">{{ . }}</p>{{ end }}
+      {{ partial "heroes/parts/actions.html" (dict "p" . "default" (slice (dict "label" "Watch the Latest" "url" "#episodes") (dict "label" "All Episodes" "url" "#episodes"))) }}
+    </div>
+    <div class="hx-studio">
+      <div class="hx-cover"{{ with $img }} style="background-image:url('{{ . }}')"{{ end }}>
+        <span class="hx-play">{{ partial "heroes/parts/icon.html" "play" }}</span>
+      </div>
+      <div class="hx-wave" aria-hidden="true">{{ range seq 40 }}<i style="--i:{{ . }}"></i>{{ end }}</div>
+    </div>
+  </div>
+</section>

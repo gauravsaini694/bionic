@@ -1,0 +1,22 @@
+{{- /*
+  Mosaic — staggered 3-photo collage beside the copy. (Orthotics)
+  Front matter: hero_images: ["a.webp","b.webp","c.webp"]   (falls back to hero_image)
+*/ -}}
+{{- $p := . -}}
+{{- $imgs := slice -}}
+{{- range ($p.Params.hero_images | default (slice)) -}}{{- $imgs = $imgs | append (partial "heroes/parts/img.html" (dict "p" $p "src" .)) -}}{{- end -}}
+{{- if not $imgs -}}{{- with partial "heroes/parts/img.html" (dict "p" $p) -}}{{- $imgs = slice . -}}{{- end -}}{{- end -}}
+<section class="hx hx-mosaic">
+  <div class="container hx-grid">
+    <div class="hx-copy">
+      {{ partial "heroes/parts/head.html" . }}
+      {{ partial "heroes/parts/actions.html" (dict "p" .) }}
+    </div>
+    <div class="hx-mtiles hx-n{{ len $imgs }}">
+      {{- range $i, $u := first 3 $imgs }}
+      <div class="hx-mtile hx-t{{ $i }}" style="background-image:url('{{ $u }}')"></div>
+      {{- end }}
+      <div class="hx-mtile hx-stat"><b>Custom</b><span>braces built for your body</span></div>
+    </div>
+  </div>
+</section>

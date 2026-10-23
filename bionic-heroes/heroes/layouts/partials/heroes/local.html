@@ -1,0 +1,33 @@
+{{- /*
+  Local — oversized outlined place name, clinic info card. (Each clinic page + each state page)
+  Clinic params (ADAPT): address, city, state, zip, phone, hours, email
+  State pages: lists child clinics as city chips.
+*/ -}}
+{{- $isState := not .IsPage -}}
+{{- $place := .Params.city | default .LinkTitle -}}
+{{- $img := partial "heroes/parts/img.html" (dict "p" .) -}}
+<section class="hx hx-local {{ if $isState }}is-state{{ end }}">
+  <div class="hx-bigname" aria-hidden="true">{{ $place }}</div>
+  <div class="container hx-grid">
+    <div class="hx-copy">
+      {{ partial "heroes/parts/head.html" . }}
+      {{ partial "heroes/parts/actions.html" (dict "p" . "default" (slice (dict "label" "Request a Consultation" "url" "/contact/") (dict "label" "All Locations" "url" "/locations/"))) }}
+    </div>
+    <aside class="hx-info">
+      {{- if $isState }}
+        <b class="hx-info-title">{{ partial "heroes/parts/icon.html" "pin" }} Clinics in {{ .LinkTitle }}</b>
+        <ul class="hx-cities">
+          {{- range .Pages }}<li><a href="{{ .RelPermalink }}">{{ .Params.city | default .LinkTitle }}</a></li>{{ end }}
+        </ul>
+      {{- else }}
+        {{- with $img }}<div class="hx-info-img" style="background-image:url('{{ . }}')"></div>{{ end }}
+        <ul class="hx-facts">
+          {{- with .Params.address }}<li>{{ partial "heroes/parts/icon.html" "pin" }}<span>{{ . }}{{ with $.Params.city }}<br>{{ . }}{{ end }}{{ with $.Params.state }}, {{ . }}{{ end }} {{ $.Params.zip }}</span></li>{{ end }}
+          {{- with .Params.phone }}<li>{{ partial "heroes/parts/icon.html" "phone" }}<a href="tel:{{ replaceRE "[^0-9+]" "" . }}">{{ . }}</a></li>{{ end }}
+          {{- with .Params.hours }}<li>{{ partial "heroes/parts/icon.html" "clock" }}<span>{{ . }}</span></li>{{ end }}
+          {{- with .Params.email }}<li>{{ partial "heroes/parts/icon.html" "mail" }}<a href="mailto:{{ . }}">{{ . }}</a></li>{{ end }}
+        </ul>
+      {{- end }}
+    </aside>
+  </div>
+</section>

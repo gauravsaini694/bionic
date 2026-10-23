@@ -4,6 +4,7 @@ breadcrumbs:
 title: Diabetic Foot Care
 seo_title: Diabetic Foot Care Solutions | Bionic Prosthetics and Orthotics
 seo_description: Explore expert diabetic foot care solutions at Bionic Prosthetics & Orthotics. Learn about custom orthotics, preventive treatments, and how our prosthetics help manage foot complications.
+hero_image: "/images/home-service-diabetic-foot-care.webp"
 hero:
   eyebrow: ORTHOTICS
   title: Diabetic Foot Care

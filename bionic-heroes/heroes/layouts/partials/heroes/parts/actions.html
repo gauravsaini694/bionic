@@ -1,0 +1,15 @@
+{{- /*
+  Buttons. Context: dict "p" page  "default" (slice of dicts label/url)  "tone" "light"|"dark"
+  Page can override with front matter:
+    hero_buttons:
+      - { label: "Request a Consultation", url: "/contact/" }
+      - { label: "Find a Clinic", url: "/locations/" }
+*/ -}}
+{{- $btns := .p.Params.hero_buttons | default .default | default (slice
+      (dict "label" "Request a Consultation" "url" "/contact/")
+      (dict "label" "Find a Clinic" "url" "/locations/")) -}}
+<div class="hx-actions">
+  {{- range $i, $b := $btns }}
+  <a class="btn btn-lg {{ if eq $i 0 }}btn-primary{{ else }}btn-outline hx-btn-ghost{{ end }}" href="{{ $b.url | relURL }}">{{ $b.label }}</a>
+  {{- end }}
+</div>

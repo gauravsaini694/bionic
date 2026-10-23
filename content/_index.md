@@ -1,7 +1,6 @@
 ---
-title: Home
-seo_title: Bionic Prosthetics & Orthotics | Advanced Care & Services
-seo_description: Discover advanced orthotics and prosthetics services at Bionic Prosthetics and Orthotics. Our expert solutions ensure comfort, mobility, and personalized care tailored to your needs.
+title: "Advanced Prosthetics & Orthotics Care | Bionic P&O"
+description: "Advanced prosthetics and orthotics care since 2007. Custom limbs and braces from certified, state-licensed clinicians. Your first consultation is free."
 hero:
   eyebrow: TRUSTED CARE SINCE 2007
   headline_start: 'Personalized Prosthetic and Orthotic Care:'
@@ -84,19 +83,6 @@ services:
     link: /orthotics/
     image: /images/home-service-orthotic-care.webp
     image_alt: A close-up of a hand wearing a black custom wrist and forearm brace
-  - title: Diabetic Foot Care
-    description: Diabetes can significantly affect foot health, circulation, and sensation, making proper support essential.
-    lead: 'Our diabetic foot care services focus on:'
-    bullets:
-    - Reducing pressure on high-risk areas
-    - Protecting sensitive or vulnerable tissue
-    - Supporting safe, confident walking
-    closing: We design specialized footwear and orthotic solutions to help lower the risk of ulcers and other complications while supporting long-term mobility.
-    icon: droplet
-    tone: diabetic
-    link: /diabetic-foot/
-    image: /images/home-service-diabetic-foot-care.webp
-    image_alt: A person in jeans standing in a protective black walking boot
   - title: Pediatric Prosthetics & Orthotics
     description: Children’s prosthetic and orthotic needs change as they grow, develop, and become more active.
     lead: 'Our pediatric care emphasizes:'
@@ -119,7 +105,6 @@ technology:
   image: /images/technology-device.png
   image_alt: A man leaping in mid-air wearing a prosthetic leg
 find_clinic:
-  state_links: names
   eyebrow: FIND CARE NEAR YOU
   title: Locate a Certified Prosthetics & Orthotics Clinic
   body: Our board-certified prosthetists and orthotists provide personalized care focused on comfort, function, and long-term support. With clinics across multiple locations, expert care is always within reach; use our location finder to connect with a clinician near you.
@@ -140,24 +125,11 @@ testimonials:
   - quote: '"My case was very complex, and after trying out a couple of other prosthetic providers, I''m glad I found Bionic. They worked with me throughout the entire process and were very accommodating. Shawn did a great job."'
     name: Tobey Cunnigham
     role: Prosthetic Patient
-resources:
-  eyebrow: RESOURCES
-  title: Support Beyond the Clinic
-  cta_text: Visit the Resource Center
-  cta_link: /resources/
-  items:
-  - category: BILLING
-    icon: card
-    title: Book an Appointment & Pay Your Bill Online
-    link: /book-appointment-pay-bill/
-  - category: PATIENT RESOURCES
-    icon: file-text
-    title: Forms, Insurance Info & Getting Started Guides
-    link: /patient-resources/
-  - category: FAQS
-    icon: circle-help
-    title: Answers to Common Prosthetic & Orthotic Questions
-    link: /faqs/
+blog:
+  eyebrow: FROM OUR BLOG
+  title: Latest Articles & Patient Stories
+  cta_text: View All Articles
+  cta_link: /blog/
 final_cta:
   title: Take the Next Step with Confidence
   body: Choosing prosthetic or orthotic care is a personal decision and you don’t have to make it alone. Our certified clinicians listen, explain your options, and guide you through a care plan tailored to your needs and daily life. Whether you’re exploring care or ready to schedule a visit, we’re here to support you at every step.
@@ -167,9 +139,4 @@ final_cta:
   cta_secondary_link: /locations/
   cta_tertiary: Explore Patient Resources
   cta_tertiary_link: /patient-resources/
-banner:
-  image: /images/home-banner-para-athletes.webp
-  image_alt: Two para athletes sharing a fist bump on a running track, one in a racing wheelchair and one with a prosthetic leg
-  cta_text: Request a Consultation
-  cta_link: /contact/
 ---

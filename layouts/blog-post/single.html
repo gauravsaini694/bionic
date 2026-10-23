@@ -8,30 +8,12 @@
 
 {{ define "main" }}
 {{- $author := .Params.author | default hugo.Data.site.default_author -}}
-{{- $toc := and (gt .WordCount 700) (gt (len .TableOfContents) 120) -}}
-<section class="page-hero">
-  <div class="container page-hero-inner">
-    <span class="eyebrow eyebrow-light">BIONIC BLOG</span><br>
-    <h1>{{ .Title }}</h1>
-    <div class="article-meta">
-      {{ with .GetTerms "categories" }}{{ with index . 0 }}<a href="{{ .Page.RelPermalink }}" class="article-category-badge">{{ .Page.Title }}</a>{{ end }}{{ end }}
-      {{ if not .Date.IsZero }}<time class="article-date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Params.date_label | default (.Date.Format "January 2, 2006") }}</time>{{ end }}
-      <span class="article-date">{{ .ReadingTime }} min read</span>
-      {{ with ($.Params.byline | default $author) }}<span class="article-date">By {{ partial "rt.html" . }}</span>{{ end }}
-    </div>
-  </div>
-</section>
+{{ partial "hero.html" . }}
 
 <section class="section">
   <div class="container">
-    <div class="filter-chips" role="navigation" aria-label="Blog categories">
-      <a href="/blog/" class="filter-chip">All Posts</a>
-      {{ range site.Taxonomies.categories.Alphabetical }}<a href="{{ .Page.RelPermalink }}" class="filter-chip">{{ lower .Page.Title }}</a>{{ end }}
-    </div>
-    {{ partial "breadcrumbs.html" (dict "page" .) }}
-    <div class="post-layout{{ if $toc }} has-toc{{ end }}">
+    <div class="post-layout has-toc">
       <article class="post-main">
-        {{ with .Params.image }}{{ partial "img.html" (dict "src" . "alt" ($.Params.image_alt | default $.Title) "class" "post-featured" "loading" "eager" "sizes" "(max-width: 900px) 100vw, 780px") }}{{ end }}
         <div class="article-body">{{ .Content }}</div>
         <div class="share-row">
           <span class="share-label">Share this article</span>
@@ -42,13 +24,12 @@
           <a class="share-btn" href="mailto:?subject={{ $t }}&body={{ $u }}" aria-label="Share by email">{{ partial "icon.html" "mail" }}</a>
           <button type="button" class="share-btn" data-copy-link="{{ .Permalink }}" aria-label="Copy link">{{ partial "icon.html" "link" }}</button>
         </div>
+        <div class="filter-chips" role="navigation" aria-label="Blog categories">
+          <a href="/blog/" class="filter-chip">All Posts</a>
+          {{ range site.Taxonomies.categories.Alphabetical }}<a href="{{ .Page.RelPermalink }}" class="filter-chip">{{ lower .Page.Title }}</a>{{ end }}
+        </div>
       </article>
-      {{ if $toc }}
-      <aside class="post-toc" aria-label="Table of contents">
-        <h2 class="tm-label">On this page</h2>
-        {{ .TableOfContents }}
-      </aside>
-      {{ end }}
+      {{ partial "post/aside.html" . }}
     </div>
   </div>
 </section>

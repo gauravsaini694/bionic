@@ -1,0 +1,26 @@
+{{- /* Leaders — deep navy editorial statement with a row of executive portraits. (Executive Team list) */ -}}
+{{- $execs := where site.RegularPages "Section" "executive-team" -}}
+<section class="hx hx-leaders">
+  <div class="container hx-inner">
+    {{ partial "heroes/parts/crumbs.html" . }}
+    <div class="hx-grid">
+      <div>
+        {{- with .Params.eyebrow }}<span class="eyebrow hx-eyebrow">{{ . }}</span>{{ end }}
+        <h1 class="hx-title">{{ partial "heroes/parts/title.html" . }}</h1>
+      </div>
+      <blockquote class="hx-statement">
+        {{ partial "heroes/parts/icon.html" "quote" }}
+        <p>{{ .Params.subhead | default .Description }}</p>
+      </blockquote>
+    </div>
+    <ul class="hx-portraits">
+      {{- range $execs }}
+      {{- $u := partial "heroes/parts/img.html" (dict "p" . "src" (.Params.photo | default .Params.headshot)) }}
+      <li><a href="{{ .RelPermalink }}">
+        <span class="hx-face"{{ with $u }} style="background-image:url('{{ . }}')"{{ end }}></span>
+        <b>{{ .Title }}</b><small>{{ .Params.role | default .Params.position | default .Params.job_title }}</small>
+      </a></li>
+      {{- end }}
+    </ul>
+  </div>
+</section>

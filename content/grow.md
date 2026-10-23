@@ -5,6 +5,7 @@ title: 'Now Hiring: Experienced Professionals'
 seo_title: Careers & Job Openings at Bionic Prosthetics and Orthotics
 seo_description: Explore career opportunities with Bionic Prosthetics & Orthotics, including prosthetist, orthotic, admin, and trainee roles. Grow with a leading P&O team nationwide.
 body_class: page-hiring
+hero_image: "/images/careers/grow-team-2.jpg"
 hero:
   eyebrow: EXPERIENCED PROFESSIONALS
   title: Become A Part of the Bionic Family
@@ -18,8 +19,6 @@ sections:
   eyebrow: WHY GROW WITH BIONIC
   title: Real Growth, Real Benefits
   body: We promote from within and invest in your future, with full support from day one.
-  image: /images/careers/grow-team-2.jpg
-  image_alt: Bionic team at work
   points:
   - Full-time clinical and leadership roles available in Indiana, Kentucky, Texas, Ohio, Florida, New Jersey, and Wisconsin
   - Competitive salary with performance incentives
