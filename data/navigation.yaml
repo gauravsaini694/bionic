@@ -53,10 +53,6 @@ main:
     url: /lower-extremity/
     icon: footprints
     desc: Leg, knee and ankle bracing
-  - name: Diabetic Foot Care
-    url: /diabetic-foot/
-    icon: droplet
-    desc: Protective footwear and foot care
 - name: Resources
   url: /resources/
   children:
@@ -127,8 +123,6 @@ footer_services:
   url: /prosthetics/
 - name: Orthotics
   url: /orthotics/
-- name: Diabetic Foot Care
-  url: /diabetic-foot/
 - name: Find a Clinic
   url: /locations/
 - name: Pay My Bill

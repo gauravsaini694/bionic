@@ -36,11 +36,6 @@ services:
     description: "Cranial remolding helmets and spinal bracing."
     icon: "baby"
     link: "/cranial-spinal/"
-  - title: "Diabetic Foot Care"
-    description: "Protective footwear and custom inserts to keep feet healthy."
-    icon: "droplet"
-    tone: diabetic
-    link: "/diabetic-foot/"
   - title: "Rehabilitation Support"
     description: "Post-fitting training and follow-up to help you get the most from your device."
     icon: "heart-pulse"

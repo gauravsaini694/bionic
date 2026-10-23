@@ -347,7 +347,6 @@ button { font-family: inherit; cursor: pointer; }
 .service-icon svg { width: 26px; height: 26px; }
 .service-icon-prosthetic { background: var(--brand-light); color: var(--brand); }
 .service-icon-orthotic { background: var(--accent-light); color: var(--accent-hover); }
-.service-icon-diabetic { background: var(--black-tint); color: #000; }
 .service-icon-pediatric { background: var(--brand-light-strong); color: var(--brand); }
 .service-card h3 { color: var(--ink-strong); font-size: 18.5px; margin-bottom: 9px; }
 .service-card p { font-size: 13.8px; line-height: 1.6; color: var(--ink-soft); margin-bottom: 16px; }

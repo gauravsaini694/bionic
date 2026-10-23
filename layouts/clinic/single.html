@@ -99,11 +99,10 @@
         {{ if findRE `prosthe|limb|amput` $l }}{{ $icon = "layout-grid" }}{{ $tone = "prosthetic" }}
         {{ else if findRE `orthot|brac|splint` $l }}{{ $icon = "layout-grid" }}{{ $tone = "orthotic" }}
         {{ else if findRE `pediatric|child|kid` $l }}{{ $icon = "baby" }}{{ $tone = "pediatric" }}
-        {{ else if findRE `diabet|foot|shoe` $l }}{{ $icon = "droplet" }}{{ $tone = "diabetic" }}
         {{ else if findRE `cranial|helmet|spin|scolio` $l }}{{ $icon = "baby" }}{{ $tone = "pediatric" }}
         {{ else }}{{ $icon = "personalized" }}{{ $tone = "prosthetic" }}{{ end }}
       {{ end }}
-      {{ if not $tone }}{{ $tone = cond (in (slice "prosthetic" "orthotic" "diabetic" "pediatric") $icon) $icon "prosthetic" }}{{ end }}
+      {{ if not $tone }}{{ $tone = cond (in (slice "prosthetic" "orthotic" "pediatric") $icon) $icon "prosthetic" }}{{ end }}
       {{ if $title }}
       {{ if $link }}<a href="{{ $link }}" class="service-card reveal" data-reveal="up" style="--delay: {{ mul $i 0.05 }}s">{{ else }}<div class="service-card reveal" data-reveal="up" style="--delay: {{ mul $i 0.05 }}s">{{ end }}
         <div class="service-icon service-icon-{{ $tone }}">{{ partial "icon.html" $icon }}</div>

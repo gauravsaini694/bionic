@@ -56,14 +56,6 @@ sections:
     link_text: Explore Lower Extremity Solutions
     image: /images/orthotics-lower-extremity.webp
     image_alt: A person walking in a hinged knee brace and sneakers
-  - title: Diabetic Foot Care
-    description: Our diabetic foot care solutions offer additional support, absorb more shock, and provides a greater degree of cushioning than standard footwear. This support and protection reduce the amount of pressure and stress placed on the foot, and the level of wear and rubbing on the skin.
-    icon: droplet
-    tone: diabetic
-    link: /diabetic-foot/
-    link_text: Explore Diabetic foot care Solutions
-    image: /images/orthotics-diabetic-foot-care.webp
-    image_alt: A person in jeans wearing a protective black walking boot
 - type: points
   eyebrow: OUR PROCESS
   title: Your Path to Better Movement

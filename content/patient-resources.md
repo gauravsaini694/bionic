@@ -54,7 +54,7 @@ sections:
   - type: "richtext"
     id: "patient-forms"
     title: "Patient Forms"
-    body: "<p>Save time before your visit by completing your paperwork ahead of time, available through our <a href=\"/book-appointment-pay-bill/\">online registration</a>.</p><ul><li><a href=\"/_files/ugd/78f877_239ea826cc0b44ef99f2236e12112b1f.pdf\" target=\"_blank\" rel=\"noopener\">Diabetic Shoes and Inserts Packet</a> – paperwork for diabetic shoe and insert orders.</li><li><a href=\"https://www.oandp.com/opie/patients/Bionic\" target=\"_blank\" rel=\"noopener\">Patient Intake Form (Online Registration)</a> – complete your new-patient registration online before your visit.</li><li><a href=\"/_files/ugd/78f877_bf47e44ff0cb4afdbadf39ad0621f376.pdf\" target=\"_blank\" rel=\"noopener\">Patient Intake Form (download)</a> – a printable version to fill out and bring with you.</li></ul>"
+    body: "<p>Save time before your visit by completing your paperwork ahead of time, available through our <a href=\"/book-appointment-pay-bill/\">online registration</a>.</p><ul><li><a href=\"https://www.oandp.com/opie/patients/Bionic\" target=\"_blank\" rel=\"noopener\">Patient Intake Form (Online Registration)</a> – complete your new-patient registration online before your visit.</li><li><a href=\"/_files/ugd/78f877_bf47e44ff0cb4afdbadf39ad0621f376.pdf\" target=\"_blank\" rel=\"noopener\">Patient Intake Form (download)</a> – a printable version to fill out and bring with you.</li></ul>"
 
   - type: "points"
     eyebrow: "SPORTS & RECREATION"

@@ -12,7 +12,6 @@ paths:
   "/lower-extremity/": anatomy
   "/cranial-spinal/": anatomy
   "/orthotics/": mosaic
-  "/diabetic-foot/": care
   "/team/": teamwall
   "/executive-team/": leaders
   "/success-stories/": stories
