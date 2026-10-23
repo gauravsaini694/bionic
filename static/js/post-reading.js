@@ -144,28 +144,50 @@
     if (e.key === 'Enter') { e.preventDefault(); form.querySelector('.pr-next').click(); }
   });
 
+  var busy = false;
+  function lock(on, text) {
+    var btn = form.querySelector('[type="submit"]');
+    var back = form.querySelector('.pr-back');
+    busy = on;
+    if (!btn.dataset.label) btn.dataset.label = btn.textContent;
+    btn.disabled = on;
+    btn.classList.toggle('is-loading', on);
+    btn.setAttribute('aria-busy', on ? 'true' : 'false');
+    btn.textContent = on ? (text || 'Sending…') : btn.dataset.label;
+    if (back) back.disabled = on;
+  }
+
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
+    if (busy) return;                       // ignore double clicks / Enter while sending
     if (!valid(steps[0])) { go(0); return; }
     if (!valid(steps[1])) return;
     var endpoint = form.getAttribute('data-endpoint');
     if (!endpoint) { say('Form is not set up yet. Please call us at 1-855-524-6642.'); return; }
-    var btn = form.querySelector('[type="submit"]');
     var data = new URLSearchParams(new FormData(form));
     data.set('form', 'blog');
     data.set('elapsed_ms', String(Date.now() - started));
     data.set('page_url', location.href.split('#')[0].split('?')[0]);
-    btn.disabled = true; var label = btn.textContent; btn.textContent = 'Sending…'; say('');
+    // Same as the Contact page form: reference number, kept for the Thank You page (sessionStorage only)
+    var now = new Date();
+    data.set('ref_id', 'BPO-' + String(now.getFullYear()).slice(2) + ('0' + (now.getMonth() + 1)).slice(-2) + ('0' + now.getDate()).slice(-2) +
+      '-' + Math.random().toString(36).slice(2, 6).toUpperCase());
+    var summary = { _ts: Date.now() };
+    data.forEach(function (v, k) { if (k !== 'hp_b3q' && k !== 'elapsed_ms' && k !== 'form') summary[k] = v; });
+    try { sessionStorage.setItem('bionicSubmission', JSON.stringify(summary)); } catch (x) {}
+    lock(true); say('');
     try {
-      var r = await fetch(endpoint, { method: 'POST', body: data });
-      var res = await r.json();
-      if (!res.ok) throw new Error(res.error || 'Something went wrong');
+      // same as the Contact form: no-cors POST (Google's redirect reply can't always be read by the browser,
+      // but the row is saved). Field checks already happened in the browser above.
+      await fetch(endpoint, { method: 'POST', mode: 'no-cors', body: data });
       var ty = form.getAttribute('data-thankyou');
-      if (ty) { location.href = ty; return; }
+      if (ty) { lock(true, 'Sent ✓'); location.href = ty; return; }   // stays disabled while the thank-you page loads
       form.reset(); go(0);
       say('Thank you! We will call you within one business day.', true);
+      lock(false);
     } catch (err) {
       say((err && err.message && err.message !== 'Failed to fetch' ? err.message : 'Could not send') + '. Please try again or call 1-855-524-6642.');
-    } finally { btn.disabled = false; btn.textContent = label; }
+      lock(false);
+    }
   });
 })();

@@ -45,8 +45,8 @@ title = "Bionic Prosthetics & Orthotics"
   accentColor = "#F2994A"
   # Google Apps Script Web App URL (ends with /exec) for the /contact/ form. Empty = demo mode.
   # Apps Script /exec URL for the blog-post lead form and the Grow application form (empty = form shows "not configured")
-  blog_form_endpoint = ""
-  grow_form_endpoint = ""
+  blog_form_endpoint = "https://script.google.com/macros/s/AKfycbzi7W_p5p3s9mdAxAvZ5zfvi4SrtuwfYvRJlSwILaZBXeYFWXhhPSv5jHMPDTW1nGfn/exec"
+  grow_form_endpoint = "https://script.google.com/macros/s/AKfycbzi7W_p5p3s9mdAxAvZ5zfvi4SrtuwfYvRJlSwILaZBXeYFWXhhPSv5jHMPDTW1nGfn/exec"
   contactFormEndpoint = "https://script.google.com/macros/s/AKfycbzi7W_p5p3s9mdAxAvZ5zfvi4SrtuwfYvRJlSwILaZBXeYFWXhhPSv5jHMPDTW1nGfn/exec"
 
 [params.contactPoint]
