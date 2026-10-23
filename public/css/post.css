@@ -101,6 +101,10 @@
 .pr-actions{display:flex;gap:10px;align-items:center}
 .pr-back{background:none;border:0;color:rgba(255,255,255,.8);font:inherit;font-size:14px;font-weight:600;cursor:pointer;padding:10px 6px;text-decoration:underline;text-underline-offset:3px}
 .pr-actions .btn{flex:1}
+.pr-form .btn:disabled,.pr-back:disabled{opacity:.75;cursor:not-allowed;pointer-events:none}
+.btn.is-loading{position:relative;gap:10px}
+.btn.is-loading::before{content:"";width:16px;height:16px;flex:0 0 auto;border-radius:50%;border:2px solid currentColor;border-right-color:transparent;animation:pr-spin .7s linear infinite}
+@keyframes pr-spin{to{transform:rotate(360deg)}}
 .pr-msg{margin:10px 0 0;font-size:13px;line-height:1.4}
 .pr-msg:empty{display:none}
 .pr-msg.is-ok{color:#d7f0b5}.pr-msg.is-err{color:#ffd0d0}

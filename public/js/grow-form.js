@@ -7,6 +7,24 @@
   if (!form) return;
   var endpoint = form.getAttribute('data-endpoint');
   var started = Date.now();
+  var busy = false;
+  // spinner + disabled look for the submit button (scoped to this form)
+  var css = document.createElement('style');
+  css.textContent = '#growForm [type=submit]:disabled{opacity:.75;cursor:not-allowed}' +
+    '#growForm .is-loading{display:inline-flex;align-items:center;justify-content:center;gap:10px}' +
+    '#growForm .is-loading::before{content:"";width:16px;height:16px;border-radius:50%;border:2px solid currentColor;border-right-color:transparent;animation:gf-spin .7s linear infinite}' +
+    '@keyframes gf-spin{to{transform:rotate(360deg)}}';
+  document.head.appendChild(css);
+  function lock(on, text) {
+    var btn = form.querySelector('[type="submit"]');
+    busy = on;
+    if (!btn) return;
+    if (!btn.dataset.label) btn.dataset.label = btn.textContent;
+    btn.disabled = on;
+    btn.classList.toggle('is-loading', on);
+    btn.setAttribute('aria-busy', on ? 'true' : 'false');
+    btn.textContent = on ? (text || 'Sending…') : btn.dataset.label;
+  }
   var MAX_MB = 5;
   var OK_EXT = ['pdf', 'doc', 'docx', 'rtf', 'txt'];
 
@@ -34,10 +52,10 @@
 
   form.addEventListener('submit', async function (e) {
     e.preventDefault();
+    if (busy) return;                       // ignore double clicks / Enter while sending
     if (!form.reportValidity()) return;
     if (!endpoint) { say('Form is not configured yet. Please call us at 1-855-524-6642.'); return; }
 
-    var btn = form.querySelector('[type="submit"]');
     var body = new URLSearchParams({
       form: 'grow',
       first_name: val('first-name'),
@@ -59,7 +77,7 @@
       if (file.size > MAX_MB * 1024 * 1024) { say('Resume must be smaller than ' + MAX_MB + ' MB.'); return; }
     }
 
-    if (btn) { btn.disabled = true; btn.dataset.label = btn.textContent; btn.textContent = 'Sending…'; }
+    lock(true);
     say('', true);
     try {
       if (file) {
@@ -67,18 +85,19 @@
         body.append('resume_type', file.type || '');
         body.append('resume_data', await readFile(file));
       }
-      var r = await fetch(endpoint, { method: 'POST', body: body });
-      var data = await r.json();
-      if (!data.ok) throw new Error(data.error || 'Something went wrong');
+      // same as the Contact form: no-cors POST (Google's redirect reply can't always be read by the browser,
+      // but the row is saved). Field checks already happened in the browser above.
+      await fetch(endpoint, { method: 'POST', mode: 'no-cors', body: body });
+      var data = {};
       var ty = form.getAttribute('data-thankyou');
-      if (ty) { location.href = ty; return; }
+      if (ty) { lock(true, 'Sent ✓'); location.href = ty; return; }   // stays disabled while the thank-you page loads
       form.reset();
       say('Thank you! Your application was received' + (data.ref ? ' (ref ' + data.ref + ')' : '') + '. We will be in touch soon.', true);
+      lock(false);
     } catch (err) {
       say((err && err.message && err.message !== 'Failed to fetch' ? err.message : 'Could not send your application') +
           '. Please try again or call 1-855-524-6642.');
-    } finally {
-      if (btn) { btn.disabled = false; btn.textContent = btn.dataset.label || 'Submit'; }
+      lock(false);
     }
   });
 })();

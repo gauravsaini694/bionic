@@ -347,7 +347,6 @@ button { font-family: inherit; cursor: pointer; }
 .service-icon svg { width: 26px; height: 26px; }
 .service-icon-prosthetic { background: var(--brand-light); color: var(--brand); }
 .service-icon-orthotic { background: var(--accent-light); color: var(--accent-hover); }
-.service-icon-diabetic { background: var(--black-tint); color: #000; }
 .service-icon-pediatric { background: var(--brand-light-strong); color: var(--brand); }
 .service-card h3 { color: var(--ink-strong); font-size: 18.5px; margin-bottom: 9px; }
 .service-card p { font-size: 13.8px; line-height: 1.6; color: var(--ink-soft); margin-bottom: 16px; }
@@ -580,12 +579,6 @@ button.current-location-link:disabled { opacity: 0.6; cursor: wait; }
 .footer-link { font-size: 13.5px; color: rgba(255, 255, 255, 0.72); transition: color 0.15s ease; }
 .footer-link:hover { color: var(--accent); }
 .footer-col p { font-size: 13px; color: rgba(255, 255, 255, 0.6); line-height: 1.6; margin-bottom: 14px; }
-.footer-newsletter { display: flex; gap: 8px; }
-.footer-newsletter input {
-  flex: 1; min-width: 0; border: 1px solid rgba(255, 255, 255, 0.18); background: rgba(255, 255, 255, 0.06);
-  border-radius: 8px; padding: 11px 13px; font-size: 13px; color: #fff; font-family: var(--font-sans);
-}
-.footer-newsletter .btn { padding: 0 16px; border-radius: 8px; font-size: 13px; }
 .footer-bottom {
   display: flex; align-items: center; justify-content: space-between;
   padding: 22px 40px; border-top: 1px solid rgba(255, 255, 255, 0.12);
