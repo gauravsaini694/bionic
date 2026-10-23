@@ -54,18 +54,6 @@
         {{ end }}
       </ul>
     </div>
-
-    <div class="footer-col footer-news">
-      <h4>{{ $s.footer.newsletter_heading }}</h4>
-      <p>{{ $s.footer.newsletter_text }}</p>
-      <form class="footer-newsletter" name="newsletter" method="POST" data-netlify="true" data-netlify-honeypot="bot-field">
-        <input type="hidden" name="form-name" value="newsletter">
-        <p class="visually-hidden" aria-hidden="true"><label>Do not fill this out if you are human: <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
-        <label for="footer-email" class="visually-hidden">Email address</label>
-        <input id="footer-email" type="email" name="email" required placeholder="{{ $s.footer.newsletter_placeholder }}">
-        <button type="submit" class="btn btn-primary">{{ $s.footer.newsletter_button }}</button>
-      </form>
-    </div>
   </div>
 
   <div class="container footer-bottom">
