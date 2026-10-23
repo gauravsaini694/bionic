@@ -1,5 +1,5 @@
 {{- /*
-  FAQ — centred heading surrounded by floating question bubbles that jump to answers. (FAQs)
+  FAQ — centred heading surrounded by floating question bubbles that jump to answers. (FAQs) — no search box
   Front matter (optional): hero_questions: ["Does insurance cover a prosthesis?", ...]
   Without it, the first 6 questions found on the page (h3 / summary / dt) are used by JS.
 */ -}}
@@ -11,11 +11,6 @@
   </ul>
   <div class="container hx-inner">
     {{ partial "heroes/parts/head.html" . }}
-    <form class="hx-bigsearch" onsubmit="var q=this.q.value.toLowerCase();var items=document.querySelectorAll('main details, main .faq-item, main dt, main h3');var hit=[].find.call(items,function(e){return !e.closest('.hx')&&e.textContent.toLowerCase().indexOf(q)>-1});if(hit){if(hit.tagName==='DETAILS')hit.open=true;hit.scrollIntoView({behavior:'smooth',block:'center'});hit.classList.add('hx-flash');setTimeout(function(){hit.classList.remove('hx-flash')},1600)}return false;">
-      {{ partial "heroes/parts/icon.html" "help" }}
-      <input name="q" placeholder="Type your question…" aria-label="Search questions">
-      <button type="submit" class="btn btn-primary">Find answer</button>
-    </form>
   </div>
 </section>
 <script>
