@@ -1,0 +1,32 @@
+/* =====================================================================
+   Bionic — site-wide typography (like vizitorapp.com)
+   Headings: Poppins (same as vizitorapp)   Body: Nunito Sans (free, close to Sofia Pro)
+   Load AFTER every other stylesheet. Needs the Google Fonts <link> from the prompt.
+   ===================================================================== */
+:root{
+  --font-serif:'Poppins',system-ui,-apple-system,"Segoe UI",sans-serif;   /* used by all headings/titles */
+  --font-sans:'Nunito Sans',system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+body,button,input,select,textarea{font-family:var(--font-sans)}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-serif);font-weight:600;letter-spacing:-.015em}
+
+/* Headings in ONE colour, never italic (no 2-tone "The right fit / changes everything") */
+h1 em,h2 em,h3 em,h4 em,
+h1 i,h2 i,h3 i,
+.hx-title em,.hm-h1 em,.hm-h2 em,.section-heading em,.final-cta em{
+  font-style:normal!important;
+  color:inherit!important;
+  font-weight:inherit;
+}
+
+/* Careers "poster" hero: the 2nd line was an outlined italic word -> same solid colour, upright */
+.hx-line.is-outline{color:inherit!important;-webkit-text-stroke:0!important;font-style:normal!important}
+
+/* other places that used the serif italic style */
+.hm-quotes blockquote,.hx blockquote,.testimonial blockquote{font-style:normal}
+
+/* Poppins is wider than Fraunces: keep the big hero titles from getting too large */
+.hm-h1{font-size:clamp(36px,4.6vw,62px);line-height:1.08;letter-spacing:-.025em}
+.hx .hx-title{letter-spacing:-.02em;line-height:1.1}
+.hx-stride .hx-title{font-size:clamp(36px,4.6vw,64px)}
+.hx-leaders .hx-title{font-size:clamp(38px,4.8vw,68px)}

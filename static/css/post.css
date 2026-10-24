@@ -19,7 +19,7 @@
 .article-body > p:first-child{font-size:21px;line-height:1.65;color:var(--ink,#000)}
 .article-body p{margin:0 0 1.15em}
 .article-body h2,.article-body h3{scroll-margin-top:calc(var(--pr-top) + 16px)}
-.article-body h2{counter-increment:pr-ch;font-family:var(--font-serif,'Fraunces',serif);font-size:clamp(26px,2.6vw,34px);line-height:1.2;margin:2.2em 0 .6em;padding-top:1.4em;border-top:1px solid var(--pr-line)}
+.article-body h2{counter-increment:pr-ch;font-family:var(--font-serif);font-size:clamp(26px,2.6vw,34px);line-height:1.2;margin:2.2em 0 .6em;padding-top:1.4em;border-top:1px solid var(--pr-line)}
 .article-body h2::before{content:"Section " counter(pr-ch,decimal-leading-zero);display:block;margin-bottom:10px;font-family:var(--font-sans,inherit);font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--pr-green-d)}
 .article-body h3{font-size:20px;margin:1.6em 0 .4em;padding-left:14px;border-left:3px solid var(--pr-green)}
 .article-body a{color:var(--pr-navy);text-decoration:underline;text-decoration-color:rgba(37,49,141,.3);text-underline-offset:3px}
@@ -78,7 +78,7 @@
 .pr-form-head{display:flex;gap:12px;align-items:center}
 .pr-badge{width:42px;height:42px;border-radius:12px;display:grid;place-items:center;background:var(--pr-green);flex:0 0 auto}
 .pr-badge .hx-ico{width:22px;height:22px;color:#fff}
-.pr-form-title{margin:0;font-family:var(--font-serif,'Fraunces',serif);font-size:20px;font-weight:600;line-height:1.2;color:#fff}
+.pr-form-title{margin:0;font-family:var(--font-serif);font-size:20px;font-weight:600;line-height:1.2;color:#fff}
 .pr-form-sub{margin:2px 0 0;font-size:12.5px;line-height:1.4;color:rgba(255,255,255,.75)}
 .pr-steps{list-style:none;display:flex;gap:8px;margin:12px 0 10px;padding:0;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:rgba(255,255,255,.55)}
 .pr-steps li{flex:1;padding-top:7px;border-top:3px solid rgba(255,255,255,.2)}

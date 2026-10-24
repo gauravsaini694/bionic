@@ -5,6 +5,7 @@
   {{ partial "google-ads.html" . }}
   {{ partial "head.html" . }}
   {{ if .IsHome }}{{ partial "home/head.html" . }}{{ end }}
+  {{ $ty := partial "asset.html" "css/typography.css" }}<link rel="stylesheet" href="{{ $ty.RelPermalink }}" integrity="{{ $ty.Data.Integrity }}">
   {{ block "head" . }}{{ end }}
   <script>
     // CMS invite / password-recovery links land on the home page with a token in the URL hash:
