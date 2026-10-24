@@ -17,7 +17,7 @@
     <div class="hm-hero-copy">
       <span class="hm-eyebrow">{{ partial "heroes/parts/icon.html" "star" }}Prosthetics and orthotics services</span>
       <h1 id="hm-hero-title" class="hm-h1">The right fit <em>changes everything</em></h1>
-      <p class="hm-lead">Custom prosthetic limbs and orthotic braces from certified clinicians across 12 states. Your first visit is free, no need for a prescription. Book now to take your first step forward.</p>
+      <p class="hm-lead">Custom prosthetic limbs and orthotic braces from certified clinicians across 12 states. All consultations are free, no need for a prescription. Book now to take your first step forward.</p>
       <div class="hm-actions">
         <a class="btn btn-primary btn-lg" href="{{ $book }}">Request a Consultation</a>
         <a class="btn btn-outline-dark btn-lg" href="#find-a-clinic">Find a Clinic</a>
@@ -25,12 +25,12 @@
       <ul class="hm-stats">
         <li><strong>2007</strong><span>Founded in Merrillville, Indiana</span></li>
         <li><strong>12 states</strong><span>Across the nation</span></li>
-        <li><strong>ABC &amp; BOC</strong><span>Accredited care</span></li>
+        <li><strong>ABC</strong><span>Accredited facilities</span></li>
       </ul>
     </div>
     <div class="hm-hero-media">
       {{ partial "home/pic.html" (dict "src" "images/hero-care" "alt" "Collage of Bionic patients wearing prosthetic legs and orthotic braces, including a smiling baby in a cranial helmet" "w" 1200 "eager" true) }}
-      <div class="hm-float hm-float-a"><span class="hm-dot">{{ partial "heroes/parts/icon.html" "check" }}</span><span><b>First visit is free</b>No prescription needed to book</span></div>
+      <div class="hm-float hm-float-a"><span class="hm-dot">{{ partial "heroes/parts/icon.html" "check" }}</span><span><b>All consultations are free</b>No prescription needed to book</span></div>
       <div class="hm-float hm-float-b"><span class="hm-dot is-navy">{{ partial "heroes/parts/icon.html" "shield" }}</span><span><b>Certified &amp; state-licensed</b>clinicians since 2007</span></div>
     </div>
   </div>
@@ -50,8 +50,8 @@
         <div><b>Orthotics</b><p>Custom braces that support, align, and protect your body.</p></div>
       </div>
       <p class="hm-text">Your doctor prescribes them, and a certified prosthetist or orthotist designs, fits, and adjusts them.</p>
-      <p class="hm-text">At Bionic, that work is done by certified, state-licensed clinicians who have cared for patients since 2007. Our team includes experienced practitioners such as Jeff Phelps, CPO, and Sheri Harper, CPO, and Bionic is ABC and BOC accredited.</p>
-      <p class="hm-text">We care for adults and children living with limb loss or limb difference, and anyone who needs a brace after injury, surgery, stroke, or a spinal condition.</p>
+      <p class="hm-text">At Bionic, that work is done by certified, state-licensed clinicians who have cared for patients since 2007. Our team includes experienced practitioners and all Bionic facilities are ABC accredited.</p>
+      <p class="hm-text">We provide services to all age groups living with limb loss or limb difference, and anyone who needs a brace after injury, surgery, stroke, or a spinal condition.</p>
       <div class="hm-actions">
         <a class="btn btn-primary" href="{{ "/about-us/" | relURL }}">Learn About Us</a>
         <a class="btn btn-outline-dark" href="{{ "/team/" | relURL }}">Meet Our Team</a>
@@ -66,14 +66,14 @@
     <div class="hm-head">
       <span class="hm-eyebrow">Services We Offer</span>
       <h2 id="hm-svc-title" class="hm-h2">Prosthetic and orthotic care for every stage of life</h2>
-      <p class="hm-lead">One team handles your care from the first evaluation to the last adjustment, so you never have to explain your history twice.</p>
+      <p class="hm-lead">One team handles your care from the first evaluation to the last adjustment.</p>
     </div>
     <div class="hm-cards">
       {{- $svc := slice
         (dict "img" "images/home-service-prosthetic-care" "alt" "A man seated in a clinic wearing a black prosthetic arm" "tag" "Prosthetic Care" "title" "Prosthetic legs and arms" "text" "For amputation caused by diabetes, vascular disease, trauma, or cancer, and for limb difference from birth." "url" "/prosthetics/")
         (dict "img" "images/home-service-orthotic-care" "alt" "A hand wearing a black custom wrist and forearm brace" "tag" "Orthotic Care" "title" "Leg, foot, arm, and hand braces" "text" "Custom braces that steady a weak ankle, lift a dropped foot, protect a healing joint, or rest an overworked wrist." "url" "/orthotics/")
-        (dict "img" "images/cranial-spinal-scoliosis-orthoses" "alt" "A custom scoliosis back brace" "tag" "Spinal and Cranial Orthotics" "title" "Back braces, scoliosis braces, and baby helmets" "text" "Custom TLSO and LSO back braces, scoliosis braces, and bracing after spine surgery, plus cranial molding helmets for babies 4 to 12 months old." "url" "/cranial-spinal/")
-        (dict "img" "images/home-service-pediatric" "alt" "A smiling baby wearing a pink cranial helmet with an orange bow" "tag" "Pediatric Prosthetics & Orthotics" "title" "Prosthetics and braces for children" "text" "Kids grow fast and play hard. We fit devices that keep up, then adjust and replace them as your child grows." "url" "/prosthetics/pediatric/") -}}
+        (dict "img" "images/cranial-spinal-scoliosis-orthoses" "alt" "A custom scoliosis back brace" "tag" "Spinal and Cranial Orthotics" "title" "Back braces, scoliosis braces, and cranial helmets" "text" "Custom TLSO and LSO back braces, scoliosis braces, and bracing after spine surgery, plus cranial molding helmets for babies 4 to 12 months old." "url" "/cranial-spinal/")
+        (dict "img" "images/home-service-pediatric" "alt" "A smiling baby wearing a pink cranial helmet with an orange bow" "tag" "Pediatric Prosthetics & Orthotics" "title" "Prosthetics for children" "text" "Kids grow fast and play hard. We fit devices that keep up, then adjust and replace them as your child grows." "url" "/prosthetics/pediatric/") -}}
       {{- range $i, $s := $svc }}
       <article class="hm-card">
         <a class="hm-card-img" href="{{ $s.url | relURL }}" tabindex="-1" aria-hidden="true">{{ partial "home/pic.html" (dict "src" $s.img "alt" "" "w" 700) }}<span class="hm-card-n">0{{ add $i 1 }}</span></a>
@@ -94,7 +94,7 @@
   <div class="container">
     <div class="hm-head">
       <span class="hm-eyebrow">From first visit to first steps</span>
-      <h2 id="hm-proc-title" class="hm-h2">How getting a prosthesis or brace works</h2>
+      <h2 id="hm-proc-title" class="hm-h2">How getting a device works</h2>
     </div>
     <ol class="hm-steps">
       <li><span class="hm-step-ico">{{ partial "heroes/parts/icon.html" "search" }}</span><h3>Evaluation</h3><p>A certified clinician looks at your limb, strength, mobility, and goals. For a prosthetic leg, we also assess your K-level.</p></li>
@@ -111,7 +111,7 @@
   <div class="container hm-split">
     <div>
       <span class="hm-eyebrow is-light">Innovation in Motion</span>
-      <h2 id="hm-tech-title" class="hm-h2">Advanced bionic and microprocessor solutions</h2>
+      <h2 id="hm-tech-title" class="hm-h2">Advanced solutions</h2>
       <p class="hm-lead">We evaluate and fit microprocessor-controlled devices and functional electrical stimulation (FES) options, matched to how each person moves. Bionic was also the first orthotic and prosthetic provider chosen to distribute the Ekso Indego&reg; Personal, a powered exoskeleton that helps people with spinal cord injuries stand and walk.</p>
       <ul class="hm-chips">
         <li>{{ partial "heroes/parts/icon.html" "cpu" }}Microprocessor devices</li>
@@ -151,12 +151,12 @@
   <div class="container">
     <div class="hm-head">
       <span class="hm-eyebrow">Insurance and cost</span>
-      <h2 id="hm-cost-title" class="hm-h2">What prosthetics and orthotics cost, and what insurance covers</h2>
+      <h2 id="hm-cost-title" class="hm-h2">Cost and Coverage</h2>
     </div>
     <div class="hm-qa">
       <div><span class="hm-qa-ico">{{ partial "heroes/parts/icon.html" "shield" }}</span><h3>Does Medicare cover prosthetics and braces?</h3><p>Yes. Medicare Part B covers prosthetic limbs and medically necessary arm, leg, back, and neck braces your doctor orders. After the Part B deductible, you pay 20% of the Medicare-approved amount.</p></div>
       <div><span class="hm-qa-ico">{{ partial "heroes/parts/icon.html" "card" }}</span><h3>How much does a prosthetic leg cost?</h3><p>It depends on the amputation level, your K-level, and the components you need. Insurance usually covers most of it, so what you pay comes down to your deductible and coinsurance.</p></div>
-      <div class="is-hl"><span class="hm-qa-ico">{{ partial "heroes/parts/icon.html" "check" }}</span><h3>What's included?</h3><p>Your first visit is free, and routine visits and adjustments are included in your device cost. Home and facility visits are also free.</p></div>
+      <div class="is-hl"><span class="hm-qa-ico">{{ partial "heroes/parts/icon.html" "check" }}</span><h3>What's included?</h3><p>All consultations are free, and routine visits and adjustments are included in your device cost. Home and facility visits are also free.</p></div>
     </div>
     <p class="hm-center"><a class="btn btn-primary btn-lg" href="{{ $book }}">Request a Consultation</a></p>
   </div>
@@ -220,7 +220,7 @@
   <div class="container hm-faq-grid">
     <div class="hm-faq-side">
       <span class="hm-eyebrow">Prosthetics and orthotics FAQ</span>
-      <h2 id="hm-faq-title" class="hm-h2">Questions people ask before their first visit</h2>
+      <h2 id="hm-faq-title" class="hm-h2">FAQs</h2>
       <a class="hm-more" href="{{ "/faqs/" | relURL }}">See All FAQs {{ partial "heroes/parts/icon.html" "arrow" }}</a>
       <div class="hm-callbox">
         <span class="hm-dot">{{ partial "heroes/parts/icon.html" "phone" }}</span>
@@ -233,7 +233,7 @@
         (slice "Does Medicare cover prosthetics and orthotics?" "Yes. Medicare Part B covers prosthetic limbs and medically necessary arm, leg, back, and neck braces when your doctor orders them. After the Part B deductible, you pay 20% of the Medicare-approved amount.")
         (slice "How much does a prosthetic leg cost?" "It depends on the amputation level, your K-level, and the components you need. Insurance usually covers most of it, so what you pay comes down to your deductible and coinsurance.")
         (slice "Do I need a prescription to see a prosthetist or orthotist?" "Not to book a consultation. You will need a prescription from your doctor to receive a device, and we can help you get one.")
-        (slice "Is the first visit free?" "Yes. Your first visit at Bionic costs nothing.")
+        (slice "Are consultations free?" "Yes. All consultations at Bionic are free.")
         (slice "What is a K-level?" "A K-level is Medicare's rating, from K0 to K4, of how active you can be with a prosthetic leg. It decides which prosthetics insurance will cover.")
         (slice "Can a prosthetist or orthotist visit me at home?" "Yes. If you can't get to a clinic, a Bionic specialist can see you at home, in a nursing facility, or in an assisted living facility at no charge.") -}}
       {{- range $i, $q := $faq }}
@@ -248,8 +248,8 @@
   <div class="container">
     <div class="hm-cta">
       <div>
-        <span class="hm-eyebrow is-light">Free first visit</span>
-        <h2 id="hm-cta-title" class="hm-h2">Your first visit is on us</h2>
+        <span class="hm-eyebrow is-light">Free consultations</span>
+        <h2 id="hm-cta-title" class="hm-h2">Your consultation is on us</h2>
         <p>Sit down with a certified clinician, see your options, and find out what your insurance covers. No prescription needed to book.</p>
       </div>
       <div class="hm-cta-actions">

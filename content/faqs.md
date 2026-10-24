@@ -20,8 +20,8 @@ sections:
     items:
       - question: "How do I schedule an appointment?"
         answer: "Call us! We are always more than happy to help (219) 791-9200."
-      - question: "Is the initial consultation free?"
-        answer: "Yes! So make sure you stop by and see us today."
+      - question: "Are consultations free?"
+        answer: "Yes. All consultations at Bionic are free."
       - question: "Are prescriptions required?"
         answer: "A prescription is not required for a consultation. However, a prescription is required in order for us to provide a device to a patient. We strongly recommend each patient obtain a prescription for consultation prior to the initial visit. If this is not possible, Bionic will be happy to assist patients in this process. If requested, we will give a written plan outlining our course of treatment at no charge."
       - question: "Do you charge for an office visit?"

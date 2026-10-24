@@ -1,6 +1,6 @@
 ---
 title: "Advanced Prosthetics & Orthotics Care | Bionic P&O"
-description: "Advanced prosthetics and orthotics care since 2007. Custom limbs and braces from certified, state-licensed clinicians. Your first consultation is free."
+description: "Advanced prosthetics and orthotics care since 2007. Custom limbs and braces from certified, state-licensed clinicians. All consultations are free."
 hero:
   eyebrow: TRUSTED CARE SINCE 2007
   headline_start: 'Personalized Prosthetic and Orthotic Care:'

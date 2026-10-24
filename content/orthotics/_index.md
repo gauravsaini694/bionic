@@ -5,7 +5,7 @@ seo_description: Discover custom orthotics and support solutions at Bionic Prost
 hero_images: ["/images/orthotics-overview.webp", "/images/home-service-orthotic-care.webp", "/images/upper-extremity-orthotics.webp", "/images/lower-extremity-orthotics.webp"]
 hero:
   eyebrow: YOUR PATH TO BETTER MOVEMENT
-  title: Orthotic Solutions for Every Stage of Life
+  title: Orthotic Solutions
   subhead: At Bionic P&O, we offer personalized orthotic solutions designed to restore comfort, improve function, and enhance your quality of life. Whether you're recovering from injury, managing a condition, or in need of post-surgery support, our custom-crafted devices are built with advanced technology and expert care to help you regain mobility and independence.
   cta_primary: Request a Consultation
   cta_primary_link: /contact/

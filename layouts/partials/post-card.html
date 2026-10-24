@@ -4,7 +4,6 @@
   <div class="blog-card-body">
     <div class="blog-card-meta">
       {{ with .GetTerms "categories" }}<span class="blog-card-category">{{ (index . 0).Page.Title }}</span>{{ end }}
-      {{ if not .Date.IsZero }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2, 2006" }}</time>{{ end }}
     </div>
     <h3>{{ .Title }}</h3>
     {{- $ex := .Params.description -}}

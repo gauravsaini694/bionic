@@ -9,7 +9,7 @@ hero_chips: ["Cranial remolding helmet", "Protective helmet", "Scoliosis orthose
 hero_image: "/images/blog/understanding-cranial-helmets-supporting-healthy-head-growth-in-babies.jpg"
 hero:
   eyebrow: ORTHOTICS
-  title: Cranial and Spinal Orthoses
+  title: Cranial and Spinal Orthotics
   subhead: A cranial orthosis is generally used for achieving corrective or protective goals for the head and face. A spinal orthosis is a back brace that is designed to hold your spine in place. Some spinal orthoses are used for both adults and children.
   cta_primary: Request a Consultation
   cta_primary_link: /contact/

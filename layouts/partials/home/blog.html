@@ -1,6 +1,6 @@
 {{- /*
   Homepage — latest blog articles (3 newest posts), same card design as the /blog/ list (.blog-card).
-  Uses the shared post-card.html partial (the same one the /blog/ list uses), so the card is identical in both places.
+  Uses the shared post-card.html partial (the same one the /blog/ list uses, no date), so the card is identical in both places.
 */ -}}
 {{- $posts := first 3 (where site.RegularPages "Section" "post").ByDate.Reverse -}}
 {{- with $posts }}

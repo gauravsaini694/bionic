@@ -5,8 +5,8 @@ seo_description: Find personalized prosthetic limb solutions at Bionic Prostheti
 hero_image: "/images/prosthetics-what-is.webp"
 hero:
   eyebrow: YOUR PROSTHETIC JOURNEY STARTS HERE
-  title: Prosthetic Care Built Around You
-  subhead: Over 2 million Americans live with limb loss. Getting the right prosthetics--one that fits your body, your job, your life, makes all the difference. At Bionic P&O, we build that device with you, not just for you.
+  title: Prosthetic Solutions
+  subhead: Over 2 million Americans live with limb loss. Getting the right prosthetic – one that fits your body, your job, your life, makes all the difference. At Bionic P&O, we build that device with you, not just for you.
   cta_primary: Book a Consultation
   cta_primary_link: tel:2197919200
   cta_secondary: Find Nearest Clinic
